@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Sheherazade's Lantern</title>
+    <link>https://bossman-lab.github.io/sheherazades-lantern</link>
+    <description>Ancient tales from the Arabian nights, rekindled for modern souls — anime-style audio drama with full voice cast. Journey across the Silk Road with the Lantern Keeper as your guide.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 07 May 2026 12:00:00 +0000</lastBuildDate>
+    <itunes:author>The Lantern Keeper</itunes:author>
+    <itunes:summary>Ancient tales from the Arabian nights, rekindled for modern souls — anime-style audio drama with full voice cast. Each character has their own voice, each scene its own rhythm.</itunes:summary>
+    <itunes:category text="Fiction"/>
+    <itunes:category text="Arts"/>
+    <itunes:subcategory text="Storytelling"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/podcast_cover.jpg"/>
+    <itunes:owner>
+      <itunes:name>The Lantern Keeper</itunes:name>
+      <itunes:email>lantern.keeper@sheherazadeslantern.com</itunes:email>
+    </itunes:owner>
+
+    <!-- EPISODE 01 -->
+    <item>
+      <title>The Map of the Moving Streets</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/episodes/01</link>
+      <description>In the Caravanserai of Whispers, they call him the mapmaker who lost his maps. But Rashid would tell you the maps didn't get lost — they just went where they wanted. When Yueya the young astronomer notices his drawings match a sky that hasn't risen yet, they discover the Brass City — a place built by King Solomon's djinn that swallows travelers whole. Features Rashid (Irish-accented comic relief) and Yueya (British young astronomer). Anime-style audio drama with full voice cast.</description>
+      <pubDate>Thu, 07 May 2026 10:00:00 +0000</pubDate>
+      <guid isPermaLink="false">anime-ep01-map-moving-streets</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep01_anime.mp3" length="10026984" type="audio/mpeg"/>
+      <itunes:duration>8:21</itunes:duration>
+      <itunes:episode>1</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_01_cover.jpg"/>
+    </item>
+
+    <!-- EPISODE 02 -->
+    <item>
+      <title>The Spice of Forgotten Things</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/episodes/02</link>
+      <description>A city is forgetting itself — streets, names, even the call to prayer. Karim of Samarkand arrives at a silent spice souk where Nadia the Spice Merchant offers him a taste of every life he never lived. The Recollector's shelves hold every road not taken, every love never spoken. But the silver pepper box in Karim's pocket shows only one future — his own. Features Nadia (American warm voice) and Karim (British thoughtful voice).</description>
+      <pubDate>Thu, 07 May 2026 10:30:00 +0000</pubDate>
+      <guid isPermaLink="false">anime-ep02-spice-forgotten</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep02_anime.mp3" length="11527445" type="audio/mpeg"/>
+      <itunes:duration>9:36</itunes:duration>
+      <itunes:episode>2</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_02_cover.jpg"/>
+    </item>
+
+    <!-- EPISODE 03 -->
+    <item>
+      <title>The Blade That Was Never Finished</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/episodes/03</link>
+      <description>On the edge of the Empty Quarter, a haunted swordsmith named Khalid hammers plowshares in a forge that has not gone cold in forty years. The unfinished blade on his wall gathers dust — until a boy arrives seeking a sword to avenge his father. But the Jackal who killed at the Pass of Bones is closer than the boy knows. Features Khalid (deep American voice, barely speaks — his silence tells the story).</description>
+      <pubDate>Thu, 07 May 2026 11:00:00 +0000</pubDate>
+      <guid isPermaLink="false">anime-ep03-blade-unfinished</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep03_anime.mp3" length="5919609" type="audio/mpeg"/>
+      <itunes:duration>4:55</itunes:duration>
+      <itunes:episode>3</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_03_cover.jpg"/>
+    </item>
+
+    <!-- EPISODE 04 -->
+    <item>
+      <title>The Book of Things Never Said</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/episodes/04</link>
+      <description>Once a century, the Caravanserai of Whispers falls silent. A door appears that no one remembers being there. Yueya walks through and discovers the Archive — an infinite library where every unspoken story waits in a blank book. Inside sits Dunyazad, the Story-Catcher, Scheherazade's sister, who appears once every hundred years to collect one truth too heavy to carry alone. Features Dunyazad (Indian ethereal voice, pauses between sentences) and Yueya (British earnest voice).</description>
+      <pubDate>Thu, 07 May 2026 11:30:00 +0000</pubDate>
+      <guid isPermaLink="false">anime-ep04-book-unsaid</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep04_anime.mp3" length="10302005" type="audio/mpeg"/>
+      <itunes:duration>8:35</itunes:duration>
+      <itunes:episode>4</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_04_cover.jpg"/>
+    </item>
+
+    <!-- EPISODE 05 -->
+    <item>
+      <title>The Sand That Sang Twice</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/episodes/05</link>
+      <description>Deep in the Empty Quarter, Karim of Samarkand hears a song rising from the dunes — a hum so old it has forgotten it was music. He finds Layla, an oracle cursed to speak only in riddles, who holds a single glowing grain of sand. The song reveals what Karim has been searching for his entire life: a daughter he never knew existed. Features Layla (Australian dreamlike voice) and Karim (British world-weary voice).</description>
+      <pubDate>Thu, 07 May 2026 12:00:00 +0000</pubDate>
+      <guid isPermaLink="false">anime-ep05-sand-sang</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep05_anime.mp3" length="5820240" type="audio/mpeg"/>
+      <itunes:duration>4:50</itunes:duration>
+      <itunes:episode>5</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_05_cover.jpg"/>
+    </item>
+  </channel>
+</rss>
