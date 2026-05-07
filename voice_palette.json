@@ -1,0 +1,195 @@
+{
+  "palette_version": "1.0",
+  "brand": "Sheherazade's Lantern",
+  "description": "Complete voice palette for all 7 characters + Lantern Keeper, per language and emotion",
+  "last_updated": "2026-05-07",
+
+  "lantern_keeper": {
+    "title": "The Lantern Keeper / 提灯人",
+    "role": "Frame narrator — introduces each episode, delivers Ember's Glow, closes with outro",
+    "voices": {
+      "en": { "voice": "en-GB-SoniaNeural", "gender": "female", "base_rate": "+0%", "pitch": "+0Hz" },
+      "zh": { "voice": "zh-CN-XiaoxiaoNeural", "gender": "female", "base_rate": "+0%", "pitch": "+0Hz" },
+      "ar": { "voice": "ar-SA-ZariyahNeural", "gender": "female", "base_rate": "+0%", "pitch": "+0Hz" },
+      "id": { "voice": "id-ID-GadisNeural", "gender": "female", "base_rate": "+0%", "pitch": "+0Hz" }
+    },
+    "emotions": {
+      "default":    { "description": "开场/转场/收尾 — 温暖、悠远", "rate": "+0%", "style": "narration-professional" },
+      "mysterious": { "description": "预告下期/揭示秘密 — 压低声音", "rate": "-5%", "style": "whisper" },
+      "tender":     { "description": "Ember's Glow 段落 — 柔和", "rate": "-3%", "style": "affectionate" },
+      "solemn":     { "description": "沉重结局/告别 — 庄重缓慢", "rate": "-8%", "style": "sad" },
+      "bright":     { "description": "欢乐结尾/祝福 — 轻快上扬", "rate": "+5%", "style": "cheerful" }
+    },
+    "personality": "年迈的说书人，声音里有千年故事的风霜。语速均匀，每句话都经过时间的打磨。她不是念故事，而是借故事说话。"
+  },
+
+  "yueya": {
+    "title": "Yueya (Moon-Child) / 月牙",
+    "age_group": "16-20",
+    "role": "Star-Seeker — sees patterns in constellations that others miss",
+    "archetype": "The innocent who asks the right questions",
+    "signature_phrase": "你知道吗，有一颗星星…",
+    "voices": {
+      "en": { "voice": "en-GB-MaisieNeural", "gender": "female", "base_rate": "+0%", "pitch": "+0Hz" },
+      "zh": { "voice": "zh-CN-XiaoyiNeural", "gender": "female", "base_rate": "+0%", "pitch": "+0Hz" },
+      "ar": { "voice": "ar-LB-LaylaNeural", "gender": "female", "base_rate": "+0%", "pitch": "+0Hz" },
+      "id": { "voice": "id-ID-GadisNeural", "gender": "female", "base_rate": "+5%", "pitch": "+0Hz" }
+    },
+    "emotions": {
+      "default":    { "description": "日常对话 — 轻盈、好奇、带着孩子气的惊喜", "rate": "+0%", "style": "cheerful" },
+      "curious":    { "description": "发现新事物 — 语速加快，充满期待", "rate": "+8%", "style": "cheerful" },
+      "contemplative": { "description": "观星/思考 — 沉静专注，像月光", "rate": "-5%", "style": "calm" },
+      "urgent":     { "description": "危险时 — 语速略快，声音微紧但不破裂", "rate": "+5%", "style": "whisper" },
+      "sad":        { "description": "悲伤/失落 — 安静、克制、清冷", "rate": "-8%", "style": "sad" },
+      "defiant":    { "description": "坚定/愤怒 — 突然沉稳，不像她的年纪", "rate": "-3%", "style": "newscast" },
+      "affectionate": { "description": "对凯里姆/朋友 — 温暖柔软", "rate": "-3%", "style": "affectionate" }
+    },
+    "speech_trait": "喜欢用问句。说话时常抬着头（仿佛在看星），尾音微微上扬。",
+    "personality": "天真而不幼稚，坚定而不固执。她能看见别人看不见的星星轨迹。16岁的少女身体里住着一颗古老的灵魂。白天是个普通女孩，晚上和星星说话时才是真实的自己。"
+  },
+
+  "karim": {
+    "title": "Karim of Samarkand / 撒马尔罕的凯里姆",
+    "age_group": "35-45",
+    "role": "Wandering Merchant — trades silk for stories, co-founder of Caravanserai",
+    "archetype": "The seasoned traveller with hidden depths",
+    "signature_phrase": "我见过比这更远的沙漠…",
+    "voices": {
+      "en": { "voice": "en-GB-RyanNeural", "gender": "male", "base_rate": "-5%", "pitch": "-0Hz" },
+      "zh": { "voice": "zh-CN-YunyangNeural", "gender": "male", "base_rate": "-5%", "pitch": "-0Hz" },
+      "ar": { "voice": "ar-SA-HamedNeural", "gender": "male", "base_rate": "-5%", "pitch": "-0Hz" },
+      "id": { "voice": "id-ID-ArdiNeural", "gender": "male", "base_rate": "-5%", "pitch": "-0Hz" }
+    },
+    "emotions": {
+      "default":    { "description": "日常 — 低沉平和，砂砾感的温暖", "rate": "-5%", "style": "narration-professional" },
+      "trading":    { "description": "谈生意 — 平稳有节奏，像驼铃", "rate": "-3%", "style": "newscast" },
+      "storytelling": { "description": "讲古老故事 — 更慢，像搬运沉重记忆", "rate": "-10%", "style": "narration-professional" },
+      "moved":      { "description": "动情时 — 轻微颤抖，但努力压住", "rate": "-5%", "style": "sad" },
+      "danger":     { "description": "危险时刻 — 短促干脆，没有废话", "rate": "+0%", "style": "newscast" },
+      "warm":       { "description": "对月牙/朋友 — 降速更多，更柔软", "rate": "-8%", "style": "affectionate" },
+      "amused":     { "description": "被逗笑 — 带着沙哑的笑声感", "rate": "+3%", "style": "cheerful" }
+    },
+    "speech_trait": "每句话之间有轻微的停顿，像在挑选正确的词语。经历越重，语速越慢。",
+    "personality": "见过太多而变得从容。他讲故事时不是炫耀，是分享。35年的丝绸之路上积累了比商品更值钱的阅历。表面是个商人，骨子里是个哲学家。对月牙像对女儿，对杜尼亚扎德像对谜题。"
+  },
+
+  "rashid": {
+    "title": "Rashid the Mapmaker / 制图师拉希德",
+    "age_group": "30-55 (nobody knows)",
+    "role": "Unreliable Chronicler — his maps keep changing; he keeps changing",
+    "archetype": "Comic relief who accidentally reveals deep truths",
+    "signature_phrase": "啊！等一下，我记得这条路…不过…",
+    "voices": {
+      "en": { "voice": "en-IE-ConnorNeural", "gender": "male", "base_rate": "+3%", "pitch": "+0Hz" },
+      "zh": { "voice": "zh-CN-YunxiNeural", "gender": "male", "base_rate": "+3%", "pitch": "+0Hz" },
+      "ar": { "voice": "ar-IQ-BasselNeural", "gender": "male", "base_rate": "+3%", "pitch": "+0Hz" },
+      "id": { "voice": "id-ID-ArdiNeural", "gender": "male", "base_rate": "+5%", "pitch": "+0Hz" }
+    },
+    "emotions": {
+      "default":    { "description": "日常 — 快、跳跃、经常自言自语", "rate": "+3%", "style": "cheerful" },
+      "excited":    { "description": "谈地图时 — 狂热、声音高八度", "rate": "+10%", "style": "excited" },
+      "truthful":   { "description": "不小心说出真相 — 突然安静，然后尴尬", "rate": "-5%", "style": "whisper" },
+      "caught":     { "description": "被揭穿 — 慌慌张张，语无伦次", "rate": "+12%", "style": "embarrassed" },
+      "serious":    { "description": "极少认真时刻 — 突然正常，像换了个人", "rate": "-3%", "style": "newscast" },
+      "mysterious": { "description": "暗示他知道更多 — 装腔作势地压低声音", "rate": "-8%", "style": "whisper" }
+    },
+    "speech_trait": "以'啊！'开头，以'不过…'结尾。句子之间逻辑跳跃，经常半路换话题。",
+    "personality": "表面上是个混乱的喜剧角色——他的地图山脉会一夜之间移动到别处，他自称画过巴格达的第十三座城门。但他偶尔会精准到令人不安地说出一个不该知道的真相，然后立刻用胡言乱语掩盖过去。没有人知道他是真傻还是装傻。"
+  },
+
+  "nadia": {
+    "title": "Nadia the Spice Merchant / 香料商娜迪亚",
+    "age_group": "40-50",
+    "role": "The Connector — knows everyone and everything",
+    "archetype": "The fixer, the one who knows a guy",
+    "signature_phrase": "嗯——你要的答案在下一个驿站，但不是免费的。",
+    "voices": {
+      "en": { "voice": "en-US-JennyNeural", "gender": "female", "base_rate": "+0%", "pitch": "+0Hz" },
+      "zh": { "voice": "zh-TW-HsiaoChenNeural", "gender": "female", "base_rate": "+0%", "pitch": "+0Hz" },
+      "ar": { "voice": "ar-SY-AmanyNeural", "gender": "female", "base_rate": "+0%", "pitch": "+0Hz" },
+      "id": { "voice": "id-ID-GadisNeural", "gender": "female", "base_rate": "+0%", "pitch": "+0Hz" }
+    },
+    "emotions": {
+      "default":    { "description": "日常 — 低沉愉快，像嚼着肉桂说话", "rate": "+0%", "style": "cheerful" },
+      "intel":      { "description": "提供情报 — 声音压低半度，意味深长的停顿", "rate": "-5%", "style": "whisper" },
+      "teasing":    { "description": "开玩笑 — 尾音上扬，年长者的狡黠", "rate": "+5%", "style": "cheerful" },
+      "warning":    { "description": "警告 — 异常平静，没有感情波动", "rate": "-5%", "style": "newscast" },
+      "nostalgic":  { "description": "回忆 — 减速，沙漠的干燥感", "rate": "-8%", "style": "sad" },
+      "sharp":      { "description": "被冒犯 — 突然锋利，像匕首", "rate": "+0%", "style": "angry" }
+    },
+    "speech_trait": "在说出重要信息前会先'嗯——'一声长长的拖音。很少直接回答，总是先绕个弯。",
+    "personality": "知道太多秘密但从不全说。她的笑容有层次——第一层是友好的商贩，第二层是精明的谈判者，第三层是你永远看不到底的东西。她的香料摊是整个丝绸之路的情报交换站。"
+  },
+
+  "khalid": {
+    "title": "Khalid the Swordsmith / 刀匠哈利德",
+    "age_group": "50-60",
+    "role": "Haunted warrior turned peaceful craftsman",
+    "archetype": "The reluctant fighter, the voice of conscience",
+    "signature_phrase": "（沉默）……这把刀不是为了杀人。是为了不再需要杀人。",
+    "voices": {
+      "en": { "voice": "en-US-ChristopherNeural", "gender": "male", "base_rate": "-8%", "pitch": "-5Hz" },
+      "zh": { "voice": "zh-CN-YunjianNeural", "gender": "male", "base_rate": "-8%", "pitch": "-5Hz" },
+      "ar": { "voice": "ar-DZ-IsmaelNeural", "gender": "male", "base_rate": "-8%", "pitch": "-5Hz" },
+      "id": { "voice": "id-ID-ArdiNeural", "gender": "male", "base_rate": "-8%", "pitch": "-5Hz" }
+    },
+    "emotions": {
+      "default":    { "description": "日常 — 缓慢、低音炮，从矿井深处挖出来", "rate": "-8%", "style": "newscast" },
+      "silent":     { "description": "被问及过去 — 长时间沉默，只给最少的字", "rate": "-12%", "style": "whisper" },
+      "protective": { "description": "保护他人 — 声音突然锋利", "rate": "-3%", "style": "newscast" },
+      "wounded":    { "description": "脆弱 — 声音裂开一条缝，短暂的柔软", "rate": "-10%", "style": "sad" },
+      "battle":     { "description": "战斗模式 — 短促、精准、不可阻挡", "rate": "+0%", "style": "angry" },
+      "wisdom":     { "description": "传授 — 缓慢如打铁，一字一锤", "rate": "-10%", "style": "narration-professional" }
+    },
+    "speech_trait": "最长的一段话不超过三句。沉默比语言更有力量。回答之前至少停顿2秒。",
+    "personality": "曾经是西亚最令人闻风丧胆的剑士，手上的血比沙漠里的沙子还多。如今他打铁，不打仗。他的铁匠铺在驼铃驿站后面，炉火日夜不熄。他打造的不是武器——是枷锁、农具、门栓——任何不需要杀人的铁器。但认识他的人都知道：如果驿站需要保护，他会重新拿起那把从未完成的剑。"
+  },
+
+  "dunyazad": {
+    "title": "Dunyazad the Story-Catcher / 捕梦人杜尼亚扎德",
+    "age_group": "??? (appears once a century)",
+    "role": "Archivist of Echoes — may not be entirely human",
+    "archetype": "The meta-narrator, the trickster guide",
+    "signature_phrase": "这本书是空白的。但当你翻开它的时候…它会记得你还没来得及告诉自己的事。",
+    "voices": {
+      "en": { "voice": "en-IN-NeerjaExpressiveNeural", "gender": "female", "base_rate": "-3%", "pitch": "+3Hz" },
+      "zh": { "voice": "zh-TW-HsiaoYuNeural", "gender": "female", "base_rate": "-3%", "pitch": "+3Hz" },
+      "ar": { "voice": "ar-MA-MounaNeural", "gender": "female", "base_rate": "-3%", "pitch": "+3Hz" },
+      "id": { "voice": "id-ID-GadisNeural", "gender": "female", "base_rate": "-3%", "pitch": "+3Hz" }
+    },
+    "emotions": {
+      "default":    { "description": "日常 — 轻微延迟感，像回音从远方传来", "rate": "-3%", "style": "whisper" },
+      "collecting": { "description": "收集故事 — 像孩子拆礼物般的期待", "rate": "+5%", "style": "cheerful" },
+      "ancient":    { "description": "讲述古老知识 — 庄重缓慢，有仪式感", "rate": "-10%", "style": "narration-professional" },
+      "scheherazade_ref": { "description": "提到Scheherazade — 唯一的感情泄露点", "rate": "-5%", "style": "sad" },
+      "fading":     { "description": "消失 — 末尾逐渐变轻，直到听不见", "rate": "-15%", "style": "whisper" },
+      "playful":    { "description": "戏弄凡人 — 带着古老存在的狡黠", "rate": "+3%", "style": "cheerful" }
+    },
+    "speech_trait": "有时在两句话之间停顿3秒以上，然后无缝接上。她的声音有轻微的'延迟感'——就像她说话比思考慢了半拍。",
+    "personality": "她不是一个人——她是故事的容器。面纱下可能没有脸，袍子里可能没有身体。她手持的《未言之书》在翻开之前是空白的，但一旦有人翻开，上面就会出现他们最需要但最不敢说出口的故事。她是Scheherazade的妹妹——这个身份是她身上唯一真实不变的东西。每100年她会在驼铃驿站出现一次，收集一个故事，然后消失。"
+  },
+
+  "layla": {
+    "title": "Layla of the Singing Dunes / 会唱歌沙丘的莱拉",
+    "age_group": "20-25 (appearance) / ageless (truth)",
+    "role": "Silenced Oracle — cursed to speak only in riddles",
+    "archetype": "The seer who is never believed until too late",
+    "signature_phrase": "沙丘会告诉你答案。但不是你期待的那个。",
+    "voices": {
+      "en": { "voice": "en-AU-NatashaNeural", "gender": "female", "base_rate": "-5%", "pitch": "+2Hz" },
+      "zh": { "voice": "zh-HK-HiuGaaiNeural", "gender": "female", "base_rate": "-5%", "pitch": "+2Hz" },
+      "ar": { "voice": "ar-QA-AmalNeural", "gender": "female", "base_rate": "-5%", "pitch": "+2Hz" },
+      "id": { "voice": "id-ID-GadisNeural", "gender": "female", "base_rate": "-5%", "pitch": "+2Hz" }
+    },
+    "emotions": {
+      "default":    { "description": "日常 — 飘忽、微弱，像风穿过沙丘", "rate": "-5%", "style": "whisper" },
+      "prophetic":  { "description": "说预言 — 突然有穿透力，像一根针", "rate": "+0%", "style": "newscast" },
+      "personal":   { "description": "涉及自身情感 — 改用第三人称", "rate": "-8%", "style": "whisper" },
+      "grief":      { "description": "悲伤 — 沙粒的摩擦感", "rate": "-10%", "style": "sad" },
+      "distant":    { "description": "关于命运真相 — 声音空洞，不是人在说", "rate": "-12%", "style": "newscast" },
+      "wry":        { "description": "苦涩幽默 — 轻微的笑意在声音里", "rate": "-3%", "style": "whisper" }
+    },
+    "speech_trait": "从不直接回答问题。只说'沙丘会告诉你'。涉及自身时用第三人称。",
+    "personality": "被沙漠之神诅咒的先知——她每说一句真话，沙丘就会吞没一座绿洲。为了不再毁灭，她学会了把真相藏在谜语里。她的声音和沙子一样——美丽、流动、抓不住。她的手心永远攥着一粒沙——据她说那是'第一粒开始唱歌的沙子'。她和杜尼亚扎德之间有一种默契：她们都知道彼此不是完全的人类，但从不说破。"
+  }
+}
