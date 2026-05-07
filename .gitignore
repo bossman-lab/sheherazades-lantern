@@ -1,0 +1,10 @@
+*.pyc
+__pycache__/
+.secrets/
+secrets/
+# Keep audio episodes but not test files
+audio/episodes/*_test*.mp3
+audio/episodes/*_fixed*.mp3
+content/drafts/demo_*
+content/drafts/test_*
+content/drafts/2026*
