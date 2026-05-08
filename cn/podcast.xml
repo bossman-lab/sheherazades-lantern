@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>舍赫拉查德之灯</title>
+    <link>https://bossman-lab.github.io/sheherazades-lantern/cn</link>
+    <description>一千零一夜的古老传说，为现代灵魂重新点燃。从丝绸之路驿站到黄铜之城，提灯人为你讲述每一个故事。全程中文配音，动画风格音频剧。</description>
+    <language>zh</language>
+    <lastBuildDate>Fri, 08 May 2026 10:00:00 +0000</lastBuildDate>
+    <itunes:author>提灯人</itunes:author>
+    <itunes:summary>一千零一夜的古老传说，为现代灵魂重新点燃。从丝绸之路驿站到黄铜之城，提灯人为你讲述每一个故事。七位角色各有不同的中文声线，每一场都有独特的节奏与情感。</itunes:summary>
+    <itunes:category text="Fiction"/>
+    <itunes:category text="Arts"/>
+    <itunes:subcategory text="Storytelling"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/podcast_cover.jpg"/>
+    <itunes:owner>
+      <itunes:name>提灯人</itunes:name>
+      <itunes:email>keeper.lantern@proton.me</itunes:email>
+    </itunes:owner>
+
+    <!-- EPISODE 01 -->
+    <item>
+      <title>会移动的街道地图</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/cn/episodes/01</link>
+      <description>在巴格达，有一个制图师画的地图全是错的。错的不是坐标——而是现实本身。当月芽——一个来自东方的年轻星象师——发现他的地图线条与一片尚未升起的天空吻合时，他们踏入了传说中的黄铜之城。由所罗门王的精灵建造的城市，正在等待新的旅人。主要角色：拉希德（制图师，粤语男声）、月芽（星象师，大陆女声）。原创中文配音动画风格音频剧。</description>
+      <pubDate>Fri, 08 May 2026 10:00:00 +0000</pubDate>
+      <guid isPermaLink="false">cn-anime-ep01-moving-streets</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_01_anime.mp3" length="9804728" type="audio/mpeg"/>
+      <itunes:duration>8:10</itunes:duration>
+      <itunes:episode>1</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_01_cover.jpg"/>
+    </item>
+
+    <!-- EPISODE 02 -->
+    <item>
+      <title>香料之镜</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/cn/episodes/02</link>
+      <description>纳迪亚的香料摊在驿站最深处。她的藏红花能让你察觉谎言，她的胡椒能让你说出真相。当卡里姆带来一种能让人看到内心最深欲望的「欲望之尘」时，纳迪亚必须决定：是告诉他真相，还是让他自己去发现代价。香料与记忆交织的故事。主要角色：纳迪亚（香料商人，台湾女声）、卡里姆（旅行商人，大陆男声）。</description>
+      <pubDate>Fri, 08 May 2026 10:30:00 +0000</pubDate>
+      <guid isPermaLink="false">cn-anime-ep02-spice-mirror</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_02_anime.mp3" length="6449036" type="audio/mpeg"/>
+      <itunes:duration>5:22</itunes:duration>
+      <itunes:episode>2</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_02_cover.jpg"/>
+    </item>
+
+    <!-- EPISODE 03 -->
+    <item>
+      <title>未竟之刃</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/cn/episodes/03</link>
+      <description>哈立德是驿站里的铁匠。四十年了，他一直在锻造同一把剑——一把永远无法完成的剑。那把剑上有一个缺口，是他战友的肋骨留下的印记。当莱拉——吟唱沙丘的预言者——来到他的铁匠铺，告诉他那把剑注定要被折断时，哈立德必须面对一个选择：放下过去，还是永远被困在其中。主要角色：哈立德（铁匠，大陆男声）、莱拉（预言者，香港女声）。</description>
+      <pubDate>Fri, 08 May 2026 11:00:00 +0000</pubDate>
+      <guid isPermaLink="false">cn-anime-ep03-unfinished-blade</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_03_anime.mp3" length="8176553" type="audio/mpeg"/>
+      <itunes:duration>6:48</itunes:duration>
+      <itunes:episode>3</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_03_cover.jpg"/>
+    </item>
+
+    <!-- EPISODE 04 -->
+    <item>
+      <title>未言之书</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/cn/episodes/04</link>
+      <description>驿站的图书馆深处有一本发光的书。它没有标题，没有作者——但它会记住每一个靠近它的人心中所想的故事。月芽发现了这本书，而保管这本书的神秘女子杜妮亚扎德告诉她：你可以用自己最珍贵的记忆，换回一个即将消失的故事。但那代价——你永远不会记得你失去了什么。主要角色：月芽（星象师，大陆女声）、杜妮亚扎德（藏书人，台湾女声）。</description>
+      <pubDate>Fri, 08 May 2026 11:30:00 +0000</pubDate>
+      <guid isPermaLink="false">cn-anime-ep04-unspoken-book</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_04_anime.mp3" length="7685516" type="audio/mpeg"/>
+      <itunes:duration>6:24</itunes:duration>
+      <itunes:episode>4</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_04_cover.jpg"/>
+    </item>
+
+    <!-- EPISODE 05 -->
+    <item>
+      <title>吟唱沙丘与消逝的故事</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/cn/episodes/05</link>
+      <description>卡里姆听到了吟唱沙丘在叫他的名字。他找到了莱拉——那个用谜语说话的预言者。她告诉他：有一个故事正在消失。如果没有人去记住它，一个绿洲将从世界上彻底消失。卡里姆必须穿越沙漠，找到那个即将被遗忘的故事，在它彻底消散之前把它重新讲出来。主要角色：卡里姆（旅行商人，大陆男声）、莱拉（预言者，香港女声）。</description>
+      <pubDate>Fri, 08 May 2026 12:00:00 +0000</pubDate>
+      <guid isPermaLink="false">cn-anime-ep05-singing-dunes</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_05_anime.mp3" length="4991294" type="audio/mpeg"/>
+      <itunes:duration>4:09</itunes:duration>
+      <itunes:episode>5</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_05_cover.jpg"/>
+    </item>
+  </channel>
+</rss>
