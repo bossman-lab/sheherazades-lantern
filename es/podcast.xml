@@ -5,7 +5,7 @@
     <link>https://bossman-lab.github.io/sheherazades-lantern/es</link>
     <description>Cuentos antiguos de Las mil y una noches, reavivados para almas modernas — audiodrama con voces completas al estilo anime. Del Caravansaray de los Susurros a la Ciudad de Bronce, el Guardián de la Lámpara te guía a través de historias que cruzan la Ruta de la Seda. Siete personajes, siete voces, siete mundos.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 08 May 2026 14:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2026 15:00:00 +0000</lastBuildDate>
     <itunes:author>El Guardián de la Lámpara</itunes:author>
     <itunes:summary>Cuentos antiguos de Las mil y una noches, reavivados para almas modernas — audiodrama con voces completas al estilo anime. Del Caravansaray de los Susurros a la Ciudad de Bronce, el Guardián de la Lámpara te guía a través de historias que cruzan la Ruta de la Seda. Cada personaje tiene su propia voz, cada escena su propio ritmo.</itunes:summary>
     <itunes:category text="Fiction"/>
@@ -18,17 +18,64 @@
       <itunes:email>keeper.lantern@proton.me</itunes:email>
     </itunes:owner>
 
-    <!-- EPISODE 01 -->
     <item>
       <title>El mapa de las calles movedizas</title>
       <link>https://bossman-lab.github.io/sheherazades-lantern/es/episodes/01</link>
-      <description>En Bagdad, hay un cartógrafo cuyos mapas están todos equivocados. No es que las coordenadas estén mal — es la realidad la que se mueve. Cuando Yueya, una joven astrónoma del este, descubre que las líneas de sus mapas coinciden con un cielo que aún no ha salido, se adentran en la legendaria Ciudad de Bronce. Construida por los djinn del Rey Salomón, la ciudad está esperando nuevos viajeros. Personajes principales: Rashid (cartógrafo, voz masculina española), Yueya (astrónoma, voz femenina joven). Audiodrama original en español con voces completas al estilo anime.</description>
+      <description>En Bagdad, el cartógrafo Rashid dibuja mapas que siempre están equivocados — pero Yueya, una joven astrónoma, descubre que sus líneas coinciden con un cielo que aún no ha salido. Juntos se adentran en la Ciudad de Bronce. Personajes: Rashid (voz masculina), Yueya (voz femenina joven).</description>
       <pubDate>Fri, 08 May 2026 14:00:00 +0000</pubDate>
       <guid isPermaLink="false">es-anime-ep01-moving-streets</guid>
-      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_01_anime.mp3" length="2350000" type="audio/mpeg"/>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_01_anime.mp3" length="2260605" type="audio/mpeg"/>
       <itunes:duration>6:16</itunes:duration>
       <itunes:episode>1</itunes:episode>
       <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_01_cover.jpg"/>
+    </item>
+
+    <item>
+      <title>La especia de las cosas olvidadas</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/es/episodes/02</link>
+      <description>Karim de Samarcanda llega a una ciudad que se está olvidando de sí misma. Encuentra a Nadia, una mercader que vende especias de recuerdos — y debe elegir qué recuerdo está dispuesto a intercambiar. Personajes: Karim (voz masculina), Nadia (voz femenina).</description>
+      <pubDate>Fri, 08 May 2026 14:30:00 +0000</pubDate>
+      <guid isPermaLink="false">es-anime-ep02-spice-forgotten</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_02_anime.mp3" length="2410000" type="audio/mpeg"/>
+      <itunes:duration>6:33</itunes:duration>
+      <itunes:episode>2</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_02_cover.jpg"/>
+    </item>
+
+    <item>
+      <title>La espada que nunca se terminó</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/es/episodes/03</link>
+      <description>En el Cuarto Vacío, el herrero Khalid ha mantenido una espada inacabada colgada en su pared durante cuarenta años. Cuando un muchacho llamado Tariq llega buscando un arma para vengar a su padre, Khalid debe enfrentar su propio pasado. Personajes: Khalid (voz masculina), Tariq (voz juvenil).</description>
+      <pubDate>Fri, 08 May 2026 15:00:00 +0000</pubDate>
+      <guid isPermaLink="false">es-anime-ep03-unfinished-blade</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_03_anime.mp3" length="1468000" type="audio/mpeg"/>
+      <itunes:duration>4:04</itunes:duration>
+      <itunes:episode>3</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_03_cover.jpg"/>
+    </item>
+
+    <item>
+      <title>El libro de lo nunca dicho</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/es/episodes/04</link>
+      <description>Una vez cada cien años aparece una puerta en el Caravansaray. Yueya la atraviesa y descubre el Archivo — una biblioteca infinita donde vive Dunyazad, la Recolectora de Historias. Cada libro contiene una historia nunca contada. Personajes: Dunyazad (voz femenina), Yueya (voz femenina joven).</description>
+      <pubDate>Fri, 08 May 2026 15:30:00 +0000</pubDate>
+      <guid isPermaLink="false">es-anime-ep04-unspoken-book</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_04_anime.mp3" length="1780000" type="audio/mpeg"/>
+      <itunes:duration>4:50</itunes:duration>
+      <itunes:episode>4</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_04_cover.jpg"/>
+    </item>
+
+    <item>
+      <title>La arena que cantó dos veces</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/es/episodes/05</link>
+      <description>Karim de Samarcanda escucha una canción en el desierto. Encuentra a Layla, una oráculo que habla en acertijos, que le entrega un solo grano de arena brillante — una canción destinada a una niña que aún no ha nacido. Personajes: Layla (voz femenina), Karim (voz masculina).</description>
+      <pubDate>Fri, 08 May 2026 16:00:00 +0000</pubDate>
+      <guid isPermaLink="false">es-anime-ep05-singing-dunes</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_05_anime.mp3" length="1200000" type="audio/mpeg"/>
+      <itunes:duration>3:30</itunes:duration>
+      <itunes:episode>5</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_05_cover.jpg"/>
     </item>
   </channel>
 </rss>
