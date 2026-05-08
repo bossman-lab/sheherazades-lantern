@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Sitemap: https://bossman-lab.github.io/sheherazades-lantern/sitemap.xml
+
+# Disallow audio files from direct indexing (they're linked from pages)
+Disallow: /audio/
+
+# Disallow drafts
+Disallow: /content/
+
+# Language-specific crawl delays
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Crawl-delay: 2
+
