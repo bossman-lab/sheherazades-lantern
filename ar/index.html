@@ -3,90 +3,134 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مصباح شهرزاد</title>
+<title>مصباح شهرزاد — دراما صوتية</title>
+<meta name="description" content="حكايات قديمة من ألف ليلة وليلة، تُروى بأسلوب الأنمي — دراما صوتية بأصوات متعددة. رحلة عبر طريق الحرير مع حارس المصباح.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  "name": "مصباح شهرزاد",
+  "description": "حكايات قديمة من ألف ليلة وليلة، تُروى بأسلوب الأنمي — دراما صوتية بأصوات متعددة. رحلة عبر طريق الحرير مع حارس المصباح.",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/ar/",
+  "image": "https://bossman-lab.github.io/sheherazades-lantern/audio/assets/podcast_cover.jpg",
+  "inLanguage": "ar",
+  "author": { "@type": "Person", "name": "حارس المصباح" },
+  "episode": [
+    {"@type":"PodcastEpisode","position":1,"name":"خريطة الشوارع المتحركة","url":"https://bossman-lab.github.io/sheherazades-lantern/ar/episodes/01"},
+    {"@type":"PodcastEpisode","position":2,"name":"بهار الأشياء المنسية","url":"https://bossman-lab.github.io/sheherazades-lantern/ar/episodes/02"},
+    {"@type":"PodcastEpisode","position":3,"name":"النصل الذي لم يكتمل","url":"https://bossman-lab.github.io/sheherazades-lantern/ar/episodes/03"},
+    {"@type":"PodcastEpisode","position":4,"name":"كتاب ما لم يُقل","url":"https://bossman-lab.github.io/sheherazades-lantern/ar/episodes/04"},
+    {"@type":"PodcastEpisode","position":5,"name":"الرمال التي غنَّت مرتين","url":"https://bossman-lab.github.io/sheherazades-lantern/ar/episodes/05"}
+  ]
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Inter:wght@300;400;600&display=swap');
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #0a0a14;
-    color: #e0d8c8;
-    font-family: 'Noto Naskh Arabic', 'Inter', sans-serif;
-    min-height: 100vh;
-  }
-  .hero {
-    text-align: center;
-    padding: 80px 20px 40px;
-    background: linear-gradient(180deg, rgba(10,10,20,0) 0%, rgba(10,10,20,1) 100%);
-  }
-  .hero img { width: 300px; height: 300px; border-radius: 20px; box-shadow: 0 20px 60px rgba(255,215,0,0.15); }
-  h1 {
-    font-family: 'Noto Naskh Arabic', serif;
-    font-size: 2.5em;
-    color: #ffd700;
-    margin: 30px 0 10px;
-  }
-  .tagline { color: #a09880; font-size: 1.1em; margin-bottom: 40px; }
-  .lang-switch {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: rgba(255,215,0,0.1);
-    border: 1px solid rgba(255,215,0,0.2);
-    border-radius: 8px;
-    padding: 8px 16px;
-    color: #ffd700;
-    text-decoration: none;
-    font-size: 0.9em;
-  }
-  .episodes {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 0 20px 60px;
-  }
-  .episode {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,215,0,0.1);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 16px;
-    transition: all 0.3s ease;
-  }
-  .episode:hover { border-color: rgba(255,215,0,0.3); background: rgba(255,255,255,0.06); }
-  .ep-number { color: #ffd700; font-size: 0.8em; font-weight: 600; }
-  .ep-title { font-size: 1.2em; font-weight: 600; margin: 4px 0 8px; }
-  .ep-desc { color: #8a8070; font-size: 0.9em; line-height: 1.8; }
-  .ep-chars { color: #c8b890; font-size: 0.8em; margin-top: 8px; }
-  audio { width: 100%; margin-top: 12px; border-radius: 8px; }
-  .footer {
-    text-align: center;
-    padding: 40px;
-    color: #5a5040;
-    font-size: 0.85em;
-    border-top: 1px solid rgba(255,215,0,0.05);
-  }
-  .donate {
-    background: rgba(255,215,0,0.05);
-    border: 1px solid rgba(255,215,0,0.15);
-    border-radius: 12px;
-    padding: 24px;
-    margin: 40px 0;
-    text-align: center;
-  }
-  .donate h3 { color: #ffd700; margin-bottom: 12px; }
-  .donate code {
-    background: rgba(255,255,255,0.05);
-    padding: 12px 20px;
-    border-radius: 8px;
-    display: inline-block;
-    font-size: 0.85em;
-    direction: ltr;
-    color: #c8b890;
-  }
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:#000;
+  color:#f5f5f7;
+  font-family:'Noto Naskh Arabic','Geeza Pro',-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.8
+}
+.container{max-width:680px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:flex-start;align-items:center;padding:20px 24px;gap:12px}
+nav a{color:#424245;text-decoration:none;font-size:13px;transition:color .2s}
+nav a:hover{color:#f5f5f7}
+nav span{color:#424245;font-size:11px}
+.lang-active{color:#f5f5f7!important}
+.hero{text-align:center;padding:80px 0 0}
+.hero img{width:280px;height:280px;border-radius:16px;box-shadow:0 24px 80px rgba(255,215,0,.08)}
+h1{
+  font-size:42px;
+  font-weight:700;
+  margin:40px 0 12px;
+  color:#f5f5f7;
+  line-height:1.4
+}
+.tagline{
+  font-size:18px;
+  font-weight:400;
+  color:#86868b;
+  max-width:520px;
+  margin:0 auto;
+  line-height:1.8
+}
+.episodes{padding:80px 0 60px}
+.ep-label{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.5px;
+  color:#424245;
+  margin-bottom:36px
+}
+.episode{padding:32px 0;border-top:1px solid rgba(255,255,255,.06)}
+.episode:last-child{border-bottom:1px solid rgba(255,255,255,.06)}
+.ep-number{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.2px;
+  color:#ffd700;
+  margin-bottom:6px
+}
+.ep-title{
+  font-size:22px;
+  font-weight:700;
+  color:#f5f5f7;
+  margin-bottom:8px
+}
+.ep-desc{
+  font-size:15px;
+  color:#86868b;
+  line-height:1.8;
+  margin-bottom:6px
+}
+.ep-chars{font-size:13px;color:#424245;margin-bottom:14px}
+audio{width:100%;height:36px;border-radius:6px;filter:invert(1);opacity:.7}
+audio::-webkit-media-controls-panel{background:#1a1a1a}
+.donate{text-align:center;padding:40px 0 20px;border-top:1px solid rgba(255,255,255,.06)}
+.donate p{font-size:13px;color:#424245;line-height:1.8}
+.donate code{font-size:12px;color:#86868b;word-break:break-all;direction:ltr;display:inline-block}
+.donate strong{color:#86868b}
+.rss{text-align:center;padding:24px 0 60px}
+.rss a{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:500;
+  color:#ffd700;text-decoration:none;
+  padding:8px 20px;
+  border:1px solid rgba(255,215,0,.2);
+  border-radius:20px;
+  transition:border-color .2s,background .2s
+}
+.rss a:hover{border-color:rgba(255,215,0,.4);background:rgba(255,215,0,.04)}
+footer{text-align:center;padding:24px 0 48px}
+footer p{font-size:12px;color:#424245;line-height:1.8}
+@media(max-width:480px){
+  .hero{padding:60px 0 0}
+  .hero img{width:200px;height:200px}
+  h1{font-size:30px;margin:32px 0 10px}
+  .tagline{font-size:16px}
+  .episodes{padding:60px 0 40px}
+  .ep-title{font-size:19px}
+}
 </style>
 </head>
 <body>
 
-<a href="../" class="lang-switch">English</a>
+<nav>
+  <a href="../">English</a>
+  <span>/</span>
+  <a href="../cn/">中文</a>
+  <span>/</span>
+  <a href="../es/">Español</a>
+  <span>/</span>
+  <a href="#" class="lang-active">العربية</a>
+</nav>
 
 <div class="hero">
   <img src="../audio/assets/podcast_cover.jpg" alt="مصباح شهرزاد">
@@ -94,15 +138,16 @@
   <p class="tagline">حكايات قديمة من ألف ليلة وليلة، تُروى بأسلوب الأنمي — دراما صوتية بأصوات متعددة</p>
 </div>
 
+<div class="container">
 <div class="episodes">
-  <h2 style="color:#ffd700; margin-bottom:20px;">الحلقات</h2>
+  <div class="ep-label">5 حلقات</div>
 
   <div class="episode">
     <div class="ep-number">الحلقة ١</div>
     <div class="ep-title">خريطة الشوارع المتحركة</div>
     <div class="ep-desc">رشيد صانع الخرائط الذي ضاع خرائطه. يويّا عالمة الفلك تكتشف أن رسوماته تطابق سماءً لم تطلع بعد. معًا يجدان مدينة النحاس — بناها جن سليمان.</div>
     <div class="ep-chars">🎭 رشيد (عراقي) · يويّا (لبنانية)</div>
-    <audio controls src="../audio/episodes/ar_ep01_anime.mp3"></audio>
+    <audio controls preload="none"><source src="../audio/episodes/ar_ep01_anime.mp3" type="audio/mpeg"></audio>
   </div>
 
   <div class="episode">
@@ -110,7 +155,7 @@
     <div class="ep-title">بهار الأشياء المنسية</div>
     <div class="ep-desc">مدينة تنسى نفسها. يلتقي كريم بنادية تاجرة البهارات، التي تعرض عليه تذوق كل حياة لم يعشها.</div>
     <div class="ep-chars">🎭 نادية (سورية) · كريم (سعودي)</div>
-    <audio controls src="../audio/episodes/ar_ep02_anime.mp3"></audio>
+    <audio controls preload="none"><source src="../audio/episodes/ar_ep02_anime.mp3" type="audio/mpeg"></audio>
   </div>
 
   <div class="episode">
@@ -118,7 +163,7 @@
     <div class="ep-title">النصل الذي لم يكتمل</div>
     <div class="ep-desc">حدّاد مسكون. صبي يبحث عن ثأر. نصل غير مكتمل على الحائط. خالد يحمل سرًا لا تستطيع نار المسبك حرقه.</div>
     <div class="ep-chars">🎭 خالد (جزائري)</div>
-    <audio controls src="../audio/episodes/ar_ep03_anime.mp3"></audio>
+    <audio controls preload="none"><source src="../audio/episodes/ar_ep03_anime.mp3" type="audio/mpeg"></audio>
   </div>
 
   <div class="episode">
@@ -126,7 +171,7 @@
     <div class="ep-title">كتاب ما لم يُقل</div>
     <div class="ep-desc">مرة كل قرن، يظهر باب في الخان. داخله تنتظر دنيازاد، أخت شهرزاد، مع كتاب صفحاته فارغة يحمل كل حقيقة غير منطوقة.</div>
     <div class="ep-chars">🎭 دنيازاد (مغربية) · يويّا (لبنانية)</div>
-    <audio controls src="../audio/episodes/ar_ep04_anime.mp3"></audio>
+    <audio controls preload="none"><source src="../audio/episodes/ar_ep04_anime.mp3" type="audio/mpeg"></audio>
   </div>
 
   <div class="episode">
@@ -134,24 +179,22 @@
     <div class="ep-title">الرمال التي غنَّت مرتين</div>
     <div class="ep-desc">في عمق الربع الخالي، يسمع كريم الكثبان تغنّي. تحمل ليلى حبة رمل واحدة تكشف ما كان يبحث عنه طوال حياته.</div>
     <div class="ep-chars">🎭 ليلى (قطرية) · كريم (سعودي)</div>
-    <audio controls src="../audio/episodes/ar_ep05_anime.mp3"></audio>
+    <audio controls preload="none"><source src="../audio/episodes/ar_ep05_anime.mp3" type="audio/mpeg"></audio>
   </div>
-
-  <div class="donate">
-    <h3>☕ أبقِ المصباح متقدًا</h3>
-    <p style="color:#8a8070; margin-bottom:16px;">إذا أنارت هذه الحكايات ليلك، أرسل حبة رمل إلى:</p>
-    <code>TNxQquGae5nCEdAwdUzbRYsMUuNtW9t8NT</code>
-    <p style="color:#5a5040; margin-top:12px; font-size:0.8em;">USDT (TRC-20)</p>
-  </div>
-
-  <p style="text-align:center; margin-top:30px;">
-    <a href="podcast.xml" style="color:#ffd700;">📡 RSS Feed</a>
-  </p>
 </div>
 
-<div class="footer">
+<div class="donate">
+  <p>☕ <strong>أبقِ المصباح متقدًا</strong> — <code>TNxQquGae5nCEdAwdUzbRYsMUuNtW9t8NT</code><br>USDT (TRC-20)</p>
+</div>
+
+<div class="rss">
+  <a href="podcast.xml">📡 RSS Feed</a>
+</div>
+
+<footer>
   <p>حارس المصباح · مصباح شهرزاد</p>
-  <p style="margin-top:8px;">حكايات قديمة من ألف ليلة وليلة، تُروى لأرواح حديثة.</p>
+  <p>حكايات قديمة من ألف ليلة وليلة، تُروى لأرواح حديثة.</p>
+</footer>
 </div>
 
 </body>

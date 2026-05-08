@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sheherazade's Lantern</title>
-  <meta name="description" content="Ancient tales from the Arabian nights, rekindled for modern souls — anime-style audio drama with full voice cast. Journey across the Silk Road with the Lantern Keeper as your guide.">
-  <script type="application/ld+json">
+<title>Sheherazade's Lantern — Audio Drama</title>
+<meta name="description" content="Ancient tales from the Arabian nights, rekindled for modern souls — anime-style audio drama with full voice cast.">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "PodcastSeries",
@@ -14,169 +14,197 @@
   "url": "https://bossman-lab.github.io/sheherazades-lantern/",
   "image": "https://bossman-lab.github.io/sheherazades-lantern/audio/assets/podcast_cover.jpg",
   "inLanguage": "en",
-  "author": {
-    "@type": "Person",
-    "name": "The Lantern Keeper"
-  },
-  "episode": [{"@type":"PodcastEpisode","position":1,"name":"The Map of the Moving Streets","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/01"},{"@type":"PodcastEpisode","position":2,"name":"The Spice of Forgotten Things","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/02"},{"@type":"PodcastEpisode","position":3,"name":"The Blade That Was Never Finished","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/03"},{"@type":"PodcastEpisode","position":4,"name":"The Book of Things Never Said","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/04"},{"@type":"PodcastEpisode","position":5,"name":"The Sand That Sang Twice","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/05"}]
+  "author": { "@type": "Person", "name": "The Lantern Keeper" },
+  "episode": [
+    {"@type":"PodcastEpisode","position":1,"name":"The Map of the Moving Streets","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/01"},
+    {"@type":"PodcastEpisode","position":2,"name":"The Spice of Forgotten Things","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/02"},
+    {"@type":"PodcastEpisode","position":3,"name":"The Blade That Was Never Finished","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/03"},
+    {"@type":"PodcastEpisode","position":4,"name":"The Book of Things Never Said","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/04"},
+    {"@type":"PodcastEpisode","position":5,"name":"The Sand That Sang Twice","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/05"}
+  ]
 }
 </script>
-  
 <link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
 <link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
 <link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
 <link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #0a0a14;
-    color: #e0d8c8;
-    font-family: 'Inter', sans-serif;
-    min-height: 100vh;
-  }
-  .hero {
-    text-align: center;
-    padding: 80px 20px 40px;
-    background: linear-gradient(180deg, rgba(10,10,20,0) 0%, rgba(10,10,20,1) 100%);
-  }
-  .hero img { width: 300px; height: 300px; border-radius: 20px; box-shadow: 0 20px 60px rgba(255,215,0,0.15); }
-  h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.5em;
-    color: #ffd700;
-    margin: 30px 0 10px;
-    letter-spacing: 3px;
-  }
-  .tagline { color: #a09880; font-size: 1.1em; margin-bottom: 40px; }
-  .episodes {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 0 20px 60px;
-  }
-  .episode {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,215,0,0.1);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 16px;
-    transition: all 0.3s ease;
-  }
-  .episode:hover { border-color: rgba(255,215,0,0.3); background: rgba(255,255,255,0.06); }
-  .ep-number { color: #ffd700; font-size: 0.8em; font-weight: 600; letter-spacing: 2px; }
-  .ep-title { font-size: 1.2em; font-weight: 600; margin: 4px 0 8px; }
-  .ep-desc { color: #8a8070; font-size: 0.9em; line-height: 1.5; }
-  .ep-chars { color: #c8b890; font-size: 0.8em; margin-top: 8px; }
-  audio { width: 100%; margin-top: 12px; border-radius: 8px; }
-  .footer {
-    text-align: center;
-    padding: 40px;
-    color: #5a5040;
-    font-size: 0.85em;
-    border-top: 1px solid rgba(255,215,0,0.05);
-};
-  .donate {
-    background: rgba(255,215,0,0.05);
-    border: 1px solid rgba(255,215,0,0.15);
-    border-radius: 12px;
-    padding: 24px;
-    margin: 40px 0;
-    text-align: center;
-  }
-  .donate h3 { color: #ffd700; margin-bottom: 12px; }
-  .donate code {
-    background: rgba(255,255,255,0.05);
-    padding: 12px 20px;
-    border-radius: 8px;
-    display: inline-block;
-    font-size: 0.85em;
-    word-break: break-all;
-    color: #c8b890;
-  }
-  .lang-switch {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: rgba(255,215,0,0.1);
-    border: 1px solid rgba(255,215,0,0.2);
-    border-radius: 8px;
-    padding: 8px 16px;
-    color: #ffd700;
-    text-decoration: none;
-    font-size: 0.9em;
-  }
-
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:#000;
+  color:#f5f5f7;
+  font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5
+}
+.container{max-width:680px;margin:0 auto;padding:0 24px}
+/* nav */
+nav{display:flex;justify-content:flex-end;align-items:center;padding:20px 24px;gap:16px}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:400;transition:color .2s}
+nav a:hover{color:#f5f5f7}
+nav span{color:#424245;font-size:11px}
+.lang-active{color:#f5f5f7!important}
+/* hero */
+.hero{text-align:center;padding:80px 0 0}
+.hero img{width:280px;height:280px;border-radius:16px;box-shadow:0 24px 80px rgba(255,215,0,.08)}
+h1{
+  font-size:44px;
+  font-weight:600;
+  letter-spacing:-.5px;
+  margin:40px 0 12px;
+  color:#f5f5f7
+}
+.tagline{
+  font-size:18px;
+  font-weight:400;
+  color:#86868b;
+  max-width:520px;
+  margin:0 auto;
+  line-height:1.6
+}
+/* episodes */
+.episodes{padding:80px 0 60px}
+.ep-label{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:#424245;
+  margin-bottom:36px
+}
+.episode{padding:32px 0;border-top:1px solid rgba(255,255,255,.06)}
+.episode:last-child{border-bottom:1px solid rgba(255,255,255,.06)}
+.ep-number{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  color:#ffd700;
+  margin-bottom:6px
+}
+.ep-title{
+  font-size:22px;
+  font-weight:600;
+  letter-spacing:-.2px;
+  color:#f5f5f7;
+  margin-bottom:8px
+}
+.ep-desc{
+  font-size:15px;
+  color:#86868b;
+  line-height:1.65;
+  margin-bottom:6px
+}
+.ep-chars{font-size:13px;color:#424245;margin-bottom:14px}
+audio{width:100%;height:36px;border-radius:6px;filter:invert(1);opacity:.7}
+audio::-webkit-media-controls-panel{background:#1a1a1a}
+/* donate */
+.donate{text-align:center;padding:40px 0 20px;border-top:1px solid rgba(255,255,255,.06)}
+.donate p{font-size:13px;color:#424245;line-height:1.8}
+.donate code{font-size:12px;color:#86868b;word-break:break-all}
+.donate strong{color:#86868b}
+/* rss */
+.rss{text-align:center;padding:24px 0 60px}
+.rss a{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:500;
+  color:#ffd700;text-decoration:none;
+  padding:8px 20px;
+  border:1px solid rgba(255,215,0,.2);
+  border-radius:20px;
+  transition:border-color .2s,background .2s
+}
+.rss a:hover{border-color:rgba(255,215,0,.4);background:rgba(255,215,0,.04)}
+/* footer */
+footer{text-align:center;padding:24px 0 48px}
+footer p{font-size:12px;color:#424245;line-height:1.8}
+/* responsive */
+@media(max-width:480px){
+  .hero{padding:60px 0 0}
+  .hero img{width:200px;height:200px}
+  h1{font-size:32px;letter-spacing:-.3px;margin:32px 0 10px}
+  .tagline{font-size:16px}
+  .episodes{padding:60px 0 40px}
+  .ep-title{font-size:19px}
+}
+</style>
 </head>
 <body>
 
-<div style="text-align:right; padding: 16px 24px;">
-  <a href="ar/" style="color:#ffd700; text-decoration:none; font-size:0.9em; border:1px solid rgba(255,215,0,0.2); border-radius:8px; padding:8px 16px;">🇸🇦 العربية</a>
-</div>
+<nav>
+  <a href="cn/">中文</a>
+  <span>/</span>
+  <a href="ar/">العربية</a>
+  <span>/</span>
+  <a href="es/">Español</a>
+  <span>/</span>
+  <a href="#" class="lang-active">English</a>
+</nav>
 
 <div class="hero">
   <img src="audio/assets/podcast_cover.jpg" alt="Sheherazade's Lantern">
-  <h1>SHEHERAZADE'S LANTERN</h1>
-  <p class="tagline">Ancient Tales, Rekindled for Modern Souls — Anime-Style Audio Drama</p>
+  <h1>Sheherazade's Lantern</h1>
+  <p class="tagline">Ancient tales from the Arabian nights, rekindled for modern souls — anime-style audio drama with full voice cast.</p>
 </div>
 
+<div class="container">
 <div class="episodes">
-  <h2 style="color:#ffd700; margin-bottom:20px; font-family:'Cinzel',serif;">Episodes</h2>
+  <div class="ep-label">5 Episodes</div>
 
   <div class="episode">
-    <div class="ep-number">EPISODE 01</div>
+    <div class="ep-number">Episode 01</div>
     <div class="ep-title">The Map of the Moving Streets</div>
     <div class="ep-desc">Rashid the Mapmaker draws cities that change overnight. Yueya the astronomer discovers his maps match a sky that hasn't risen yet. Together they find the Brass City — built by King Solomon's djinn.</div>
     <div class="ep-chars">🎭 Rashid (Irish) · Yueya (British)</div>
-    <audio controls src="audio/episodes/ep01_anime.mp3"></audio>
+    <audio controls preload="none"><source src="audio/episodes/ep01_anime.mp3" type="audio/mpeg"></audio>
   </div>
 
   <div class="episode">
-    <div class="ep-number">EPISODE 02</div>
+    <div class="ep-number">Episode 02</div>
     <div class="ep-title">The Spice of Forgotten Things</div>
     <div class="ep-desc">A city is forgetting itself. Karim meets Nadia the Spice Merchant, who offers him a taste of every life he never lived.</div>
     <div class="ep-chars">🎭 Nadia (American) · Karim (British)</div>
-    <audio controls src="audio/episodes/ep02_anime.mp3"></audio>
+    <audio controls preload="none"><source src="audio/episodes/ep02_anime.mp3" type="audio/mpeg"></audio>
   </div>
 
   <div class="episode">
-    <div class="ep-number">EPISODE 03</div>
+    <div class="ep-number">Episode 03</div>
     <div class="ep-title">The Blade That Was Never Finished</div>
     <div class="ep-desc">A haunted swordsmith. A boy seeking revenge. An unfinished blade on the wall. Khalid keeps a secret that the forge fire cannot burn away.</div>
     <div class="ep-chars">🎭 Khalid (American deep voice)</div>
-    <audio controls src="audio/episodes/ep03_anime.mp3"></audio>
+    <audio controls preload="none"><source src="audio/episodes/ep03_anime.mp3" type="audio/mpeg"></audio>
   </div>
 
   <div class="episode">
-    <div class="ep-number">EPISODE 04</div>
+    <div class="ep-number">Episode 04</div>
     <div class="ep-title">The Book of Things Never Said</div>
     <div class="ep-desc">Once a century, a door appears in the Caravanserai. Inside waits Dunyazad, Scheherazade's sister, with a book of blank pages that holds every unspoken truth.</div>
     <div class="ep-chars">🎭 Dunyazad (Indian ethereal) · Yueya (British)</div>
-    <audio controls src="audio/episodes/ep04_anime.mp3"></audio>
+    <audio controls preload="none"><source src="audio/episodes/ep04_anime.mp3" type="audio/mpeg"></audio>
   </div>
 
   <div class="episode">
-    <div class="ep-number">EPISODE 05</div>
+    <div class="ep-number">Episode 05</div>
     <div class="ep-title">The Sand That Sang Twice</div>
     <div class="ep-desc">Deep in the Empty Quarter, Karim hears the dunes singing. Layla holds a single grain of sand that reveals what he has been searching for his entire life.</div>
     <div class="ep-chars">🎭 Layla (Australian) · Karim (British)</div>
-    <audio controls src="audio/episodes/ep05_anime.mp3"></audio>
+    <audio controls preload="none"><source src="audio/episodes/ep05_anime.mp3" type="audio/mpeg"></audio>
   </div>
-
-  <div class="donate">
-    <h3>☕ Keep the Lantern Burning</h3>
-    <p style="color:#8a8070; margin-bottom:16px;">If these stories light your night, send a grain of sand:</p>
-    <code>TNxQquGae5nCEdAwdUzbRYsMUuNtW9t8NT</code>
-    <p style="color:#5a5040; margin-top:12px; font-size:0.8em;">USDT (TRC-20)</p>
-  </div>
-
-  <p style="text-align:center; margin-top:30px;">
-    <a href="podcast/podcast.xml" style="color:#ffd700;">📡 RSS Feed</a>
-  </p>
 </div>
 
-<div class="footer">
+<div class="donate">
+  <p>☕ <strong>Keep the Lantern Burning</strong> — <code>TNxQquGae5nCEdAwdUzbRYsMUuNtW9t8NT</code><br>USDT (TRC-20)</p>
+</div>
+
+<div class="rss">
+  <a href="podcast/podcast.xml">📡 RSS Feed</a>
+</div>
+
+<footer>
   <p>The Lantern Keeper · Sheherazade's Lantern</p>
-  <p style="margin-top:8px;">Ancient tales from the Arabian nights, rekindled for modern souls.</p>
+  <p>Ancient tales from the Arabian nights, rekindled for modern souls.</p>
+</footer>
 </div>
 
 </body>
