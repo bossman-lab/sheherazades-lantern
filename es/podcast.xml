@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>La Linterna de Sherezada</title>
+    <link>https://bossman-lab.github.io/sheherazades-lantern/es</link>
+    <description>Cuentos antiguos de Las mil y una noches, reavivados para almas modernas — audiodrama con voces completas al estilo anime. Del Caravansaray de los Susurros a la Ciudad de Bronce, el Guardián de la Lámpara te guía a través de historias que cruzan la Ruta de la Seda. Siete personajes, siete voces, siete mundos.</description>
+    <language>es</language>
+    <lastBuildDate>Fri, 08 May 2026 14:00:00 +0000</lastBuildDate>
+    <itunes:author>El Guardián de la Lámpara</itunes:author>
+    <itunes:summary>Cuentos antiguos de Las mil y una noches, reavivados para almas modernas — audiodrama con voces completas al estilo anime. Del Caravansaray de los Susurros a la Ciudad de Bronce, el Guardián de la Lámpara te guía a través de historias que cruzan la Ruta de la Seda. Cada personaje tiene su propia voz, cada escena su propio ritmo.</itunes:summary>
+    <itunes:category text="Fiction"/>
+    <itunes:category text="Arts"/>
+    <itunes:subcategory text="Storytelling"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/podcast_cover.jpg"/>
+    <itunes:owner>
+      <itunes:name>El Guardián de la Lámpara</itunes:name>
+      <itunes:email>keeper.lantern@proton.me</itunes:email>
+    </itunes:owner>
+
+    <!-- EPISODE 01 -->
+    <item>
+      <title>El mapa de las calles movedizas</title>
+      <link>https://bossman-lab.github.io/sheherazades-lantern/es/episodes/01</link>
+      <description>En Bagdad, hay un cartógrafo cuyos mapas están todos equivocados. No es que las coordenadas estén mal — es la realidad la que se mueve. Cuando Yueya, una joven astrónoma del este, descubre que las líneas de sus mapas coinciden con un cielo que aún no ha salido, se adentran en la legendaria Ciudad de Bronce. Construida por los djinn del Rey Salomón, la ciudad está esperando nuevos viajeros. Personajes principales: Rashid (cartógrafo, voz masculina española), Yueya (astrónoma, voz femenina joven). Audiodrama original en español con voces completas al estilo anime.</description>
+      <pubDate>Fri, 08 May 2026 14:00:00 +0000</pubDate>
+      <guid isPermaLink="false">es-anime-ep01-moving-streets</guid>
+      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_01_anime.mp3" length="2350000" type="audio/mpeg"/>
+      <itunes:duration>6:16</itunes:duration>
+      <itunes:episode>1</itunes:episode>
+      <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/episode_01_cover.jpg"/>
+    </item>
+  </channel>
+</rss>
