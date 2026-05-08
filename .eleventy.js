@@ -6,6 +6,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("pad", (num, len, char) => {
     return String(num).padStart(len || 2, char || '0');
   });
+  eleventyConfig.addFilter("json_str", (str) => {
+    return JSON.stringify(str).slice(1, -1); // remove surrounding quotes
+  });
 
   return {
     dir: {

@@ -9,15 +9,15 @@
 {
   "@context": "https://schema.org",
   "@type": "PodcastSeries",
-  "name": "{{ site.names[lang] }}",
-  "description": "{{ site.descriptions[lang] }}",
+  "name": "{{ site.names[lang] | json_str | safe }}",
+  "description": "{{ site.descriptions[lang] | json_str | safe }}",
   "url": "{{ site.url }}/{{ lang_prefix }}",
   "image": "{{ site.url }}{{ site.cover }}",
   "inLanguage": "{{ lang }}",
-  "author": { "@type": "Person", "name": "{{ site.authors[lang] }}" },
+  "author": { "@type": "Person", "name": "{{ site.authors[lang] | json_str | safe }}" },
   "episode": [
     {%- for ep in episodes %}
-    {"@type":"PodcastEpisode","position":{{ loop.index }},"name":"{{ ep.titles[lang] | e }}","url":"{{ site.url }}/{{ lang_prefix }}episodes/{{ ep.id }}"}{% if not loop.last %},{% endif %}
+    {"@type":"PodcastEpisode","position":{{ loop.index }},"name":"{{ ep.titles[lang] | json_str | safe }}","url":"{{ site.url }}/{{ lang_prefix }}episodes/{{ ep.id }}"}{% if not loop.last %},{% endif %}
     {%- endfor %}
   ]
 }
