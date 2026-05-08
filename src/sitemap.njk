@@ -1,0 +1,26 @@
+---
+permalink: "/sitemap.xml"
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- set all_urls = [
+  { "loc": "/", "priority": "1.0" },
+  { "loc": "/podcast/podcast.xml", "priority": "0.9" },
+  { "loc": "/cn/", "priority": "1.0" },
+  { "loc": "/cn/podcast.xml", "priority": "0.9" },
+  { "loc": "/ar/", "priority": "1.0" },
+  { "loc": "/ar/podcast.xml", "priority": "0.9" },
+  { "loc": "/es/", "priority": "1.0" },
+  { "loc": "/es/podcast.xml", "priority": "0.9" }
+] %}
+{%- for ep in episodes %}
+  {%- set all_urls = all_urls.concat([{ "loc": "/episodes/" + ep.id, "priority": "0.8" }]) %}
+{%- endfor %}
+{%- for url in all_urls %}
+  <url>
+    <loc>{{ site.url }}{{ url.loc }}</loc>
+    <lastmod>{{ site.lastmod }}</lastmod>
+    <priority>{{ url.priority }}</priority>
+  </url>
+{%- endfor %}
+</urlset>

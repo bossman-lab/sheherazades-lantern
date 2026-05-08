@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>{{ site.names[lang] }}</title>
+  <description>{{ site.descriptions[lang] }}</description>
+  <link>{{ site.url }}/{{ lang_prefix }}</link>
+  <language>{{ lang }}</language>
+  <image>
+    <url>{{ site.url }}{{ site.cover }}</url>
+    <title>{{ site.names[lang] }}</title>
+    <link>{{ site.url }}/{{ lang_prefix }}</link>
+  </image>
+  <itunes:author>{{ site.authors[lang] }}</itunes:author>
+  <itunes:summary>{{ site.taglines[lang] }}</itunes:summary>
+  <itunes:image href="{{ site.url }}{{ site.cover }}"/>
+  <atom:link href="{{ site.url }}/{{ lang_prefix }}podcast.xml" rel="self" type="application/rss+xml"/>
+
+  {%- for ep in episodes %}
+  <item>
+    <title>{{ ep.titles[lang] }}</title>
+    <description>{{ ep.descriptions[lang] }}</description>
+    <enclosure url="{{ site.url }}{{ ep.audio[lang] }}" type="audio/mpeg"/>
+    <guid isPermaLink="false">{{ site.url }}-{{ lang }}-ep{{ ep.id }}</guid>
+  </item>
+  {%- endfor %}
+</channel>
+</rss>

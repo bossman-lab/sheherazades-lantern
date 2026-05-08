@@ -1,0 +1,61 @@
+{
+  "url": "https://bossman-lab.github.io/sheherazades-lantern",
+  "donate": "TNxQquGae5nCEdAwdUzbRYsMUuNtW9t8NT",
+  "cover": "/audio/assets/podcast_cover.jpg",
+  "author": "The Lantern Keeper",
+  "languages": [
+    { "code": "en", "label": "English", "dir": "ltr", "active": true },
+    { "code": "cn", "label": "中文", "dir": "ltr", "active": true },
+    { "code": "ar", "label": "العربية", "dir": "rtl", "active": true },
+    { "code": "es", "label": "Español", "dir": "ltr", "active": true }
+  ],
+  "names": {
+    "en": "Sheherazade's Lantern",
+    "cn": "舍赫拉查德之灯",
+    "ar": "مصباح شهرزاد",
+    "es": "La Linterna de Sherezada"
+  },
+  "taglines": {
+    "en": "Ancient tales from the Arabian nights, rekindled for modern souls — anime-style audio drama with full voice cast.",
+    "cn": "一千零一夜的古老传说，为现代灵魂重新点燃。动画风格音频剧，多角色中文配音。",
+    "ar": "حكايات قديمة من ألف ليلة وليلة، تُروى بأسلوب الأنمي — دراما صوتية بأصوات متعددة",
+    "es": "Cuentos antiguos de Las mil y una noches, reavivados para almas modernas — audiodrama al estilo anime con voces completas."
+  },
+  "descriptions": {
+    "en": "Ancient tales from the Arabian nights, rekindled for modern souls — anime-style audio drama with full voice cast. Journey across the Silk Road with the Lantern Keeper as your guide.",
+    "cn": "一千零一夜的古老传说，为现代灵魂重新点燃。动画风格音频剧，多角色中文配音。丝绸之路上的奇幻旅程——地图师画出尚未建成的城市，香料商兜售从未活过的人生，铁匠锻造注定被折断的剑。提灯人为你引路。",
+    "ar": "حكايات قديمة من ألف ليلة وليلة، تُروى بأسلوب الأنمي — دراما صوتية بأصوات متعددة. رحلة على طريق الحرير: خرائط ترسم مدناً قبل وجودها، بهارات تمنحك مذاق حيوات لم تعشها، سيف لم يكتمل في أربعين عاماً. حارس المصباح ينتظرك.",
+    "es": "Cuentos antiguos de Las mil y una noches, reavivados para almas modernas — audiodrama al estilo anime con voces completas. Viaje por la Ruta de la Seda: mapas que dibujan ciudades antes de existir, especias que saben a vidas no vividas, una espada forjada durante cuarenta años. El Guardián de la Linterna te espera."
+  },
+  "authors": {
+    "en": "The Lantern Keeper",
+    "cn": "提灯人",
+    "ar": "حارس المصباح",
+    "es": "El Guardián de la Linterna"
+  },
+  "footer": {
+    "en": ["The Lantern Keeper · Sheherazade's Lantern", "Ancient tales from the Arabian nights, rekindled for modern souls."],
+    "cn": ["提灯人 · 舍赫拉查德之灯", "一千零一夜的古老传说，为现代灵魂重新点燃。"],
+    "ar": ["حارس المصباح · مصباح شهرزاد", "حكايات قديمة من ألف ليلة وليلة، تُروى لأرواح حديثة."],
+    "es": ["El Guardián de la Linterna · La Linterna de Sherezada", "Cuentos antiguos de Las mil y una noches, reavivados para almas modernas."]
+  },
+  "episode_labels": {
+    "en": "5 Episodes",
+    "cn": "已上线 5 集",
+    "ar": "5 حلقات",
+    "es": "5 Episodios"
+  },
+  "donate_labels": {
+    "en": "Keep the Lantern Burning",
+    "cn": "让灯一直亮着",
+    "ar": "أبقِ المصباح متقدًا",
+    "es": "Mantén la Linterna Encendida"
+  },
+  "rss_feeds": {
+    "en": "/podcast/podcast.xml",
+    "cn": "/cn/podcast.xml",
+    "ar": "/ar/podcast.xml",
+    "es": "/es/podcast.xml"
+  },
+  "lastmod": "2026-05-08"
+}

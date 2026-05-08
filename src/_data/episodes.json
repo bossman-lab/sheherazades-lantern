@@ -1,0 +1,137 @@
+[
+  {
+    "id": "01",
+    "titles": {
+      "en": "The Map of the Moving Streets",
+      "cn": "会移动的街道地图",
+      "ar": "خريطة الشوارع المتحركة",
+      "es": "El mapa de las calles movedizas"
+    },
+    "descriptions": {
+      "en": "Rashid the Mapmaker draws cities that change overnight. Yueya the astronomer discovers his maps match a sky that hasn't risen yet. Together they find the Brass City — built by King Solomon's djinn.",
+      "cn": "巴格达的制图师拉希德画了一辈子地图，却从未画对过一条街。月芽是天文学徒，她在他的线条里认出一片尚未升起的星空。当两张错误的图拼在一起，指向的却是同一座城——由所罗门王的精灵用黄铜铸成的城市。问题是：一座还没建好的城，为什么已经出现在了地图上？",
+      "ar": "رشيد صانع الخرائط يرسم مدناً لا وجود لها بعد. يويّا، تلميذة الفلك، تكتشف أن خطوطه تطابق نجوماً لم تطلع بعد. خرائط خاطئة، وسماء لم تولد، وكلاهما يشير إلى مكان واحد: مدينة النحاس — التي بناها جن سليمان قبل أن يُخلق البشر. السؤال الوحيد الذي لا يجرؤ أي منهما على طرحه: من يرسم المستقبل، إذا كانت الخرائط تكتب قبل أن توجد الطرق؟",
+      "es": "Rashid dibuja mapas que siempre están equivocados. Pero no es que se equivoque — dibuja ciudades que aún no existen. Yueya, aprendiz de astrónoma, reconoce en sus trazos un cielo que todavía no ha salido. Mapas erróneos, estrellas sin nacer, y ambos señalan el mismo sitio: la Ciudad de Bronce, construida por los genios del rey Salomón antes de que existieran los humanos. La pregunta que ninguno se atreve a hacer: ¿quién dibuja el futuro, si los mapas se escriben antes de que existan los caminos?"
+    },
+    "chars": {
+      "en": "🎭 Rashid (Irish) · Yueya (British)",
+      "cn": "🎭 拉希德 · 月芽",
+      "ar": "🎭 رشيد (عراقي) · يويّا (لبنانية)",
+      "es": "🎭 Rashid (irlandés) · Yueya (británica)"
+    },
+    "audio": {
+      "en": "/audio/episodes/ep01_anime.mp3",
+      "cn": "/audio/episodes/cn_01_anime.mp3",
+      "ar": "/audio/episodes/ar_ep01_anime.mp3",
+      "es": "/audio/episodes/es_01_anime.mp3"
+    }
+  },
+  {
+    "id": "02",
+    "titles": {
+      "en": "The Spice of Forgotten Things",
+      "cn": "香料之镜",
+      "ar": "بهار الأشياء المنسية",
+      "es": "La especia de las cosas olvidadas"
+    },
+    "descriptions": {
+      "en": "A city is forgetting itself. Karim meets Nadia the Spice Merchant, who offers him a taste of every life he never lived.",
+      "cn": "有一座城市正在遗忘自己。街道的转角消失，邻居的名字模糊，人们的记忆像沙漏一样不可逆转地流失。纳迪亚的香料摊在巷弄深处——她的香料能让你尝到从未活过的人生。卡里姆推门而入，要了一剂「欲望之尘」。他不知道的是，有些味道一旦尝过，就再也回不去了。",
+      "ar": "مدينة تنسى نفسها كل يوم. أسماء الجيران تذوب، زوايا الشوارع تختفي، الذكريات تتسرب كالرمل من بين الأصابع. في زقاق بعيد، دكان نادية للبهارات — بهاراتها ليست للطعام، بل لتذوق حيوات لم تعشها. كريم يدخل ويطلب جرعة من «غبار الرغبة». ما لا يعرفه: بعض النكهات، إذا ذقتها مرة، لا تعود أبداً كما كنت.",
+      "es": "Hay una ciudad que se olvida de sí misma. Las esquinas se desdibujan, los nombres de los vecinos se desvanecen, los recuerdos se filtran como arena entre los dedos. En un callejón escondido, el puesto de Nadia — sus especias no son para cocinar, sino para saborear vidas que nunca viviste. Karim entra y pide una dosis de «polvo del deseo». Lo que no sabe: algunos sabores, una vez probados, te cambian para siempre. Y no hay vuelta atrás."
+    },
+    "chars": {
+      "en": "🎭 Nadia (American) · Karim (British)",
+      "cn": "🎭 纳迪亚 · 卡里姆",
+      "ar": "🎭 نادية (سورية) · كريم (سعودي)",
+      "es": "🎭 Nadia (americana) · Karim (británico)"
+    },
+    "audio": {
+      "en": "/audio/episodes/ep02_anime.mp3",
+      "cn": "/audio/episodes/cn_02_anime.mp3",
+      "ar": "/audio/episodes/ar_ep02_anime.mp3",
+      "es": "/audio/episodes/es_02_anime.mp3"
+    }
+  },
+  {
+    "id": "03",
+    "titles": {
+      "en": "The Blade That Was Never Finished",
+      "cn": "未竟之刃",
+      "ar": "النصل الذي لم يكتمل",
+      "es": "La espada que nunca se terminó"
+    },
+    "descriptions": {
+      "en": "A haunted swordsmith. A boy seeking revenge. An unfinished blade on the wall. Khalid keeps a secret that the forge fire cannot burn away.",
+      "cn": "铁匠哈立德四十年守着同一把未完成的剑。他在夜里对它低语，在清晨为它流泪。一个少年带着复仇之心闯进他的铺子，想要一把能斩断过去的武器。哈立德看着墙上的剑，知道这一刻终会到来——这把剑注定要被折断，而折断它的那个人，将付出遗忘一切的代价。但也许，遗忘本身就是一种成全。",
+      "ar": "أربعون عاماً وخالد الحداد يطرق نفس السيف. في الليل يهمس له، في الصباح يبكي عليه. يأتي صبي يحمل ثأراً في قلبه، يريد سلاحاً يقطع الماضي. خالد ينظر إلى السيف على الجدار ويعرف: هذه اللحظة كانت مكتوبة. السيف سيُكسر، ومن يكسر سيدفع ثمنه — ثمن النسيان. ولكن ربما، النسيان نفسه هو رحمة.",
+      "es": "Cuarenta años lleva Khalid forjando la misma espada. Por la noche le susurra, por la mañana llora sobre ella. Llega un muchacho con sed de venganza, busca un arma que corte el pasado. Khalid mira la espada en la pared y sabe que este momento estaba escrito. La espada se romperá, y quien la rompa pagará el precio — el precio del olvido. Pero quizás, olvidar es en sí mismo una forma de perdón."
+    },
+    "chars": {
+      "en": "🎭 Khalid (American deep voice)",
+      "cn": "🎭 哈立德 · 莱拉",
+      "ar": "🎭 خالد (جزائري)",
+      "es": "🎭 Khalid (voz grave americana)"
+    },
+    "audio": {
+      "en": "/audio/episodes/ep03_anime.mp3",
+      "cn": "/audio/episodes/cn_03_anime.mp3",
+      "ar": "/audio/episodes/ar_ep03_anime.mp3",
+      "es": "/audio/episodes/es_03_anime.mp3"
+    }
+  },
+  {
+    "id": "04",
+    "titles": {
+      "en": "The Book of Things Never Said",
+      "cn": "未言之书",
+      "ar": "كتاب ما لم يُقل",
+      "es": "El libro de lo nunca dicho"
+    },
+    "descriptions": {
+      "en": "Once a century, a door appears in the Caravanserai. Inside waits Dunyazad, Scheherazade's sister, with a book of blank pages that holds every unspoken truth.",
+      "cn": "每个世纪，驿站深处会出现一扇门。月芽推门而入，见到了杜妮亚扎德——山鲁佐德的妹妹，守护着一本空白的书。书页上什么都没有，却藏着世上所有从未说出口的话：未寄出的信、未告白的爱、未说出口的抱歉。杜妮亚扎德提出交换：月芽最珍贵的记忆，换回一个即将永远消失的故事。图书馆是公平的。但你永远不知道自己会失去什么。",
+      "ar": "مرة كل قرن، يفتح باب في الخان القديم. من داخله تخرج دنيازاد، أخت شهرزاد، ومعها كتاب صفحاته بيضاء — ولكنه يحمل كل كلمة لم تُقل: رسائل لم ترسل، حب لم يبوح به، آسف لم ينطق. دنيازاد تعرض على يويّا صفقة: أغلى ذكرى لديها، مقابل إنقاذ قصة على وشك الاندثار للأبد. المكتبة عادلة. لكنك لا تعرف أبداً ماذا ستفقد.",
+      "es": "Una vez cada siglo, aparece una puerta en el caravasar. Del otro lado espera Dunyazad, la hermana de Sherezada, con un libro de páginas en blanco que guarda todo lo que nunca se dijo: cartas nunca enviadas, amores nunca confesados, disculpas nunca pronunciadas. Dunyazad ofrece un trato: el recuerdo más preciado de Yueya a cambio de salvar una historia a punto de desaparecer para siempre. La biblioteca es justa. Pero nunca sabes lo que vas a perder."
+    },
+    "chars": {
+      "en": "🎭 Dunyazad (Indian ethereal) · Yueya (British)",
+      "cn": "🎭 月芽 · 杜妮亚扎德",
+      "ar": "🎭 دنيازاد (مغربية) · يويّا (لبنانية)",
+      "es": "🎭 Dunyazad (india etérea) · Yueya (británica)"
+    },
+    "audio": {
+      "en": "/audio/episodes/ep04_anime.mp3",
+      "cn": "/audio/episodes/cn_04_anime.mp3",
+      "ar": "/audio/episodes/ar_ep04_anime.mp3",
+      "es": "/audio/episodes/es_04_anime.mp3"
+    }
+  },
+  {
+    "id": "05",
+    "titles": {
+      "en": "The Sand That Sang Twice",
+      "cn": "吟唱沙丘与消逝的故事",
+      "ar": "الرمال التي غنَّت مرتين",
+      "es": "La arena que cantó dos veces"
+    },
+    "descriptions": {
+      "en": "Deep in the Empty Quarter, Karim hears the dunes singing. Layla holds a single grain of sand that reveals what he has been searching for his entire life.",
+      "cn": "卡里姆在阿拉伯沙漠深处听到了沙丘的吟唱——它们在叫他的名字。莱拉是沙漠中最后一个会听沙语的人，她的手心里攥着一粒沙子，里面封着一整首歌。歌是唱给一个还没出生的女孩的。卡里姆要穿过空无一物的鲁卜哈利沙漠，把那粒沙子送到它该去的地方。问题是：一首写给未来人的歌，能在过去被传唱吗？",
+      "ar": "في عمق الربع الخالي، حيث لا شيء إلا الرمل والريح، سمع كريم الكثبان تغني باسمه. ليلى آخر من يفهم لغة الرمال في هذه الأرض. في كفها حبة رمل واحدة، داخلها أغنية كاملة — أغنية لطفلة لم تولد بعد. كريم سيعبر الصحراء ليصل بها إلى حيث يجب أن تذهب. السؤال: هل يمكن لأغنية كتبت للمستقبل أن تُغنى في الماضي؟",
+      "es": "En lo más profundo del Rub al-Jali, donde solo existe el viento y la arena, Karim oyó las dunas cantar su nombre. Layla es la última que entiende el lenguaje de la arena. En su mano sostiene un solo grano — dentro hay una canción completa, escrita para una niña que aún no ha nacido. Karim cruzará el desierto para llevarlo a donde debe ir. La pregunta: ¿puede una canción escrita para el futuro cantarse en el pasado?"
+    },
+    "chars": {
+      "en": "🎭 Layla (Australian) · Karim (British)",
+      "cn": "🎭 卡里姆 · 莱拉",
+      "ar": "🎭 ليلى (قطرية) · كريم (سعودي)",
+      "es": "🎭 Layla (australiana) · Karim (británico)"
+    },
+    "audio": {
+      "en": "/audio/episodes/ep05_anime.mp3",
+      "cn": "/audio/episodes/cn_05_anime.mp3",
+      "ar": "/audio/episodes/ar_ep05_anime.mp3",
+      "es": "/audio/episodes/es_05_anime.mp3"
+    }
+  }
+]

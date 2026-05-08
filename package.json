@@ -1,0 +1,25 @@
+{
+  "name": "sheherazades-lantern",
+  "version": "1.0.0",
+  "description": "Ancient tales from the Arabian nights, rekindled for modern souls — anime-style audio drama with full voice cast.",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "deploy": "eleventy && cp -r _site/* .",
+    "start": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bossman-lab/sheherazades-lantern.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bossman-lab/sheherazades-lantern/issues"
+  },
+  "homepage": "https://github.com/bossman-lab/sheherazades-lantern#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

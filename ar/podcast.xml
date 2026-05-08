@@ -1,75 +1,51 @@
-<?xml version="1.0" ?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
-  <channel>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>مصباح شهرزاد</title>
+  <description>حكايات قديمة من ألف ليلة وليلة، تُروى بأسلوب الأنمي — دراما صوتية بأصوات متعددة. رحلة على طريق الحرير: خرائط ترسم مدناً قبل وجودها، بهارات تمنحك مذاق حيوات لم تعشها، سيف لم يكتمل في أربعين عاماً. حارس المصباح ينتظرك.</description>
+  <link>https://bossman-lab.github.io/sheherazades-lantern/ar</link>
+  <language>ar</language>
+  <image>
+    <url>https://bossman-lab.github.io/sheherazades-lantern/audio/assets/podcast_cover.jpg</url>
     <title>مصباح شهرزاد</title>
-    <link>https://bossman-lab.github.io/sheherazades-lantern/ar/</link>
-    <description>حكايات قديمة من ألف ليلة وليلة، تُروى بأسلوب الأنمي — دراما صوتية بأصوات متعددة. ارتحل عبر طريق الحرير مع حارس المصباح كمرشدك.</description>
-    <language>ar</language>
-    <lastBuildDate>Thu, 07 May 2026 12:00:00 +0000</lastBuildDate>
-    <itunes:author>حارس المصباح</itunes:author>
-    <itunes:summary>حكايات قديمة من ألف ليلة وليلة، تُروى بأسلوب الأنمي — دراما صوتية بأصوات متعددة. كل شخصية لها صوتها الخاص، كل مشهد له إيقاعه الخاص.</itunes:summary>
-    <itunes:category text="Fiction"/>
-    <itunes:category text="Arts"/>
-    <itunes:explicit>false</itunes:explicit>
-    <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/podcast_cover.jpg"/>
-    <itunes:owner>
-      <itunes:name>حارس المصباح</itunes:name>
-      <itunes:email>keeper.lantern@proton.me</itunes:email>
-    </itunes:owner>
-
-    <item>
-      <title>خريطة الشوارع المتحركة</title>
-      <link>https://bossman-lab.github.io/sheherazades-lantern/ar/episodes/01</link>
-      <description>في خان الهمسات، ينادونه بصانع الخرائط الذي ضاع خرائطه. لكن رشيد سيقول لك إن الخرائط لم تضِع — بل ذهبت حيث أرادت. عندما تلاحظ يويّا، عالمة الفلك الشابة، أن رسوماته تطابق سماءً لم تطلع بعد، يكتشفان مدينة النحاس — المكان الذي بناه جن سليمان ويبتلع المسافرين.</description>
-      <pubDate>Thu, 07 May 2026 10:00:00 +0000</pubDate>
-      <guid isPermaLink="false">ar-ep01-map-moving</guid>
-      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep01_anime.mp3" length="12040137" type="audio/mpeg"/>
-      <itunes:duration>10:01</itunes:duration>
-      <itunes:episode>1</itunes:episode>
-    </item>
-
-    <item>
-      <title>بهار الأشياء المنسية</title>
-      <link>https://bossman-lab.github.io/sheherazades-lantern/ar/episodes/02</link>
-      <description>مدينة تنسى نفسها — الشوارع، الأسماء، حتى الأذان. يصل كريم السمرقندي إلى سوق بهارات صامت حيث تقدم له نادية تاجرة البهارات تذوق كل حياة لم يعشها. رفوف الذاكرة تحمل كل طريق لم يسلكه، كل حب لم يُنطق به.</description>
-      <pubDate>Thu, 07 May 2026 10:30:00 +0000</pubDate>
-      <guid isPermaLink="false">ar-ep02-spice-forgotten</guid>
-      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep02_anime.mp3" length="13719173" type="audio/mpeg"/>
-      <itunes:duration>11:25</itunes:duration>
-      <itunes:episode>2</itunes:episode>
-    </item>
-
-    <item>
-      <title>النصل الذي لم يكتمل</title>
-      <link>https://bossman-lab.github.io/sheherazades-lantern/ar/episodes/03</link>
-      <description>على حافة الربع الخالي، حدّاد مسكون يُدعى خالد يطرق المحاريث في مسبك لم يبرد منذ أربعين عامًا. النصل غير المكتمل على حائطه يجمع الغبار — حتى يصل صبي يبحث عن سيف ليثأر لأبيه.</description>
-      <pubDate>Thu, 07 May 2026 11:00:00 +0000</pubDate>
-      <guid isPermaLink="false">ar-ep03-blade-unfinished</guid>
-      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep03_anime.mp3" length="7150850" type="audio/mpeg"/>
-      <itunes:duration>5:57</itunes:duration>
-      <itunes:episode>3</itunes:episode>
-    </item>
-
-    <item>
-      <title>كتاب ما لم يُقل</title>
-      <link>https://bossman-lab.github.io/sheherazades-lantern/ar/episodes/04</link>
-      <description>مرة كل قرن، يصمت خان الهمسات. يظهر باب لا أحد يتذكره. تدخل يويّا وتكتشف الأرشيف — مكتبة لا نهائية حيث تنتظر كل قصة غير منطوقة في كتاب فارغ. تجلس داخله دنيازاد، صائدة القصص، أخت شهرزاد.</description>
-      <pubDate>Thu, 07 May 2026 11:30:00 +0000</pubDate>
-      <guid isPermaLink="false">ar-ep04-book-unsaid</guid>
-      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep04_anime.mp3" length="11966202" type="audio/mpeg"/>
-      <itunes:duration>9:58</itunes:duration>
-      <itunes:episode>4</itunes:episode>
-    </item>
-
-    <item>
-      <title>الرمال التي غنَّت مرتين</title>
-      <link>https://bossman-lab.github.io/sheherazades-lantern/ar/episodes/05</link>
-      <description>في عمق الربع الخالي، يسمع كريم السمرقندي أغنية تصعد من الكثبان — همهمة قديمة نسيت أنها موسيقى. يجد ليلى، عرّافة ملعونة تتكلم بالألغاز فقط، تحمل حبة رمل واحدة تتوهج. تكشف الأغنية عن شيء كان يبحث عنه طوال حياته.</description>
-      <pubDate>Thu, 07 May 2026 12:00:00 +0000</pubDate>
-      <guid isPermaLink="false">ar-ep05-sand-sang</guid>
-      <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep05_anime.mp3" length="6586858" type="audio/mpeg"/>
-      <itunes:duration>5:29</itunes:duration>
-      <itunes:episode>5</itunes:episode>
-    </item>
-  </channel>
+    <link>https://bossman-lab.github.io/sheherazades-lantern/ar</link>
+  </image>
+  <itunes:author>حارس المصباح</itunes:author>
+  <itunes:summary>حكايات قديمة من ألف ليلة وليلة، تُروى بأسلوب الأنمي — دراما صوتية بأصوات متعددة</itunes:summary>
+  <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/podcast_cover.jpg"/>
+  <atom:link href="https://bossman-lab.github.io/sheherazades-lantern/arpodcast.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>خريطة الشوارع المتحركة</title>
+    <description>رشيد صانع الخرائط يرسم مدناً لا وجود لها بعد. يويّا، تلميذة الفلك، تكتشف أن خطوطه تطابق نجوماً لم تطلع بعد. خرائط خاطئة، وسماء لم تولد، وكلاهما يشير إلى مكان واحد: مدينة النحاس — التي بناها جن سليمان قبل أن يُخلق البشر. السؤال الوحيد الذي لا يجرؤ أي منهما على طرحه: من يرسم المستقبل، إذا كانت الخرائط تكتب قبل أن توجد الطرق؟</description>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep01_anime.mp3" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep01</guid>
+  </item>
+  <item>
+    <title>بهار الأشياء المنسية</title>
+    <description>مدينة تنسى نفسها كل يوم. أسماء الجيران تذوب، زوايا الشوارع تختفي، الذكريات تتسرب كالرمل من بين الأصابع. في زقاق بعيد، دكان نادية للبهارات — بهاراتها ليست للطعام، بل لتذوق حيوات لم تعشها. كريم يدخل ويطلب جرعة من «غبار الرغبة». ما لا يعرفه: بعض النكهات، إذا ذقتها مرة، لا تعود أبداً كما كنت.</description>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep02_anime.mp3" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep02</guid>
+  </item>
+  <item>
+    <title>النصل الذي لم يكتمل</title>
+    <description>أربعون عاماً وخالد الحداد يطرق نفس السيف. في الليل يهمس له، في الصباح يبكي عليه. يأتي صبي يحمل ثأراً في قلبه، يريد سلاحاً يقطع الماضي. خالد ينظر إلى السيف على الجدار ويعرف: هذه اللحظة كانت مكتوبة. السيف سيُكسر، ومن يكسر سيدفع ثمنه — ثمن النسيان. ولكن ربما، النسيان نفسه هو رحمة.</description>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep03_anime.mp3" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep03</guid>
+  </item>
+  <item>
+    <title>كتاب ما لم يُقل</title>
+    <description>مرة كل قرن، يفتح باب في الخان القديم. من داخله تخرج دنيازاد، أخت شهرزاد، ومعها كتاب صفحاته بيضاء — ولكنه يحمل كل كلمة لم تُقل: رسائل لم ترسل، حب لم يبوح به، آسف لم ينطق. دنيازاد تعرض على يويّا صفقة: أغلى ذكرى لديها، مقابل إنقاذ قصة على وشك الاندثار للأبد. المكتبة عادلة. لكنك لا تعرف أبداً ماذا ستفقد.</description>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep04_anime.mp3" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep04</guid>
+  </item>
+  <item>
+    <title>الرمال التي غنَّت مرتين</title>
+    <description>في عمق الربع الخالي، حيث لا شيء إلا الرمل والريح، سمع كريم الكثبان تغني باسمه. ليلى آخر من يفهم لغة الرمال في هذه الأرض. في كفها حبة رمل واحدة، داخلها أغنية كاملة — أغنية لطفلة لم تولد بعد. كريم سيعبر الصحراء ليصل بها إلى حيث يجب أن تذهب. السؤال: هل يمكن لأغنية كتبت للمستقبل أن تُغنى في الماضي؟</description>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep05_anime.mp3" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep05</guid>
+  </item>
+</channel>
 </rss>
