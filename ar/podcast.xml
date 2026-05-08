@@ -16,36 +16,81 @@
   <itunes:author>حارس المصباح</itunes:author>
   <itunes:summary>حكايات قديمة من ألف ليلة وليلة، تُروى بأسلوب الأنمي — دراما صوتية بأصوات متعددة</itunes:summary>
   <itunes:image href="https://bossman-lab.github.io/sheherazades-lantern/audio/assets/podcast_cover.jpg"/>
+  <itunes:explicit>false</itunes:explicit>
+  <itunes:type>serial</itunes:type>
+  <itunes:category text="Arts">
+    <itunes:category text="Fiction"/>
+  </itunes:category>
   <atom:link href="https://bossman-lab.github.io/sheherazades-lantern/arpodcast.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>خريطة الشوارع المتحركة</title>
     <description>رشيد صانع الخرائط يرسم مدناً لا وجود لها بعد. يويّا، تلميذة الفلك، تكتشف أن خطوطه تطابق نجوماً لم تطلع بعد. خرائط خاطئة، وسماء لم تولد، وكلاهما يشير إلى مكان واحد: مدينة النحاس — التي بناها جن سليمان قبل أن يُخلق البشر. السؤال الوحيد الذي لا يجرؤ أي منهما على طرحه: من يرسم المستقبل، إذا كانت الخرائط تكتب قبل أن توجد الطرق؟</description>
     <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep01_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep01</guid>
+    <itunes:episode>1</itunes:episode>
   </item>
   <item>
     <title>بهار الأشياء المنسية</title>
     <description>مدينة تنسى نفسها كل يوم. أسماء الجيران تذوب، زوايا الشوارع تختفي، الذكريات تتسرب كالرمل من بين الأصابع. في زقاق بعيد، دكان نادية للبهارات — بهاراتها ليست للطعام، بل لتذوق حيوات لم تعشها. كريم يدخل ويطلب جرعة من «غبار الرغبة». ما لا يعرفه: بعض النكهات، إذا ذقتها مرة، لا تعود أبداً كما كنت.</description>
     <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep02_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep02</guid>
+    <itunes:episode>2</itunes:episode>
   </item>
   <item>
     <title>النصل الذي لم يكتمل</title>
     <description>أربعون عاماً وخالد الحداد يطرق نفس السيف. في الليل يهمس له، في الصباح يبكي عليه. يأتي صبي يحمل ثأراً في قلبه، يريد سلاحاً يقطع الماضي. خالد ينظر إلى السيف على الجدار ويعرف: هذه اللحظة كانت مكتوبة. السيف سيُكسر، ومن يكسر سيدفع ثمنه — ثمن النسيان. ولكن ربما، النسيان نفسه هو رحمة.</description>
     <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep03_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep03</guid>
+    <itunes:episode>3</itunes:episode>
   </item>
   <item>
     <title>كتاب ما لم يُقل</title>
     <description>مرة كل قرن، يفتح باب في الخان القديم. من داخله تخرج دنيازاد، أخت شهرزاد، ومعها كتاب صفحاته بيضاء — ولكنه يحمل كل كلمة لم تُقل: رسائل لم ترسل، حب لم يبوح به، آسف لم ينطق. دنيازاد تعرض على يويّا صفقة: أغلى ذكرى لديها، مقابل إنقاذ قصة على وشك الاندثار للأبد. المكتبة عادلة. لكنك لا تعرف أبداً ماذا ستفقد.</description>
     <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep04_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep04</guid>
+    <itunes:episode>4</itunes:episode>
   </item>
   <item>
     <title>الرمال التي غنَّت مرتين</title>
     <description>في عمق الربع الخالي، حيث لا شيء إلا الرمل والريح، سمع كريم الكثبان تغني باسمه. ليلى آخر من يفهم لغة الرمال في هذه الأرض. في كفها حبة رمل واحدة، داخلها أغنية كاملة — أغنية لطفلة لم تولد بعد. كريم سيعبر الصحراء ليصل بها إلى حيث يجب أن تذهب. السؤال: هل يمكن لأغنية كتبت للمستقبل أن تُغنى في الماضي؟</description>
     <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep05_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep05</guid>
+    <itunes:episode>5</itunes:episode>
+  </item>
+  <item>
+    <title>سوق الظل</title>
+    <description>تجد نادية حبة فلفل أسود في قاع جرّة قديمة — تفتح باباً إلى سوق الظل، سوق بين العوالم. تدخله مع رشيد، وتكتشف أن أغلى شيء في سوق الظل ليس للبيع: إنه ذكرى شيء فقدته قبل أن تولد.</description>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep06_anime.mp3" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep06</guid>
+    <itunes:episode>6</itunes:episode>
+  </item>
+  <item>
+    <title>الأغنية التي فكت السيف</title>
+    <description>تأتي ليلى من الكثبان الغنّاء إلى مسبك خالد ومَعها حبة رمل تحمل لحناً من قبل أن يُخلق العالم. للأغنية القدرة على إكمال ما بدأه قبل أربعين عاماً — لكن بشرط أن يسمح بكسر نصله غير المكتمل أولاً.</description>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep07_anime.mp3" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep07</guid>
+    <itunes:episode>7</itunes:episode>
+  </item>
+  <item>
+    <title>القصة التي قرأتها</title>
+    <description>نسيت يويّا شيئاً لا تستطيع تسميته — نجمة، قصة، صوتاً علّمها أسماء الكوكبات. تعود دنيازاد ومَعها صفحة فضّية لا تُقرأ بل تقرأ قارئها. لتجد ما فقدته، على يويّا أن تترك القصة تراها أولاً.</description>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep08_anime.mp3" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep08</guid>
+    <itunes:episode>8</itunes:episode>
+  </item>
+  <item>
+    <title>الدين الذي يسافر على الريح</title>
+    <description>يتلقّى كريم شيئاً قديماً من الممر الشمالي — ديناً قديماً لدرجة أن الحبر تلاشى من ذاكرته. علبة الفلفل الفضية لنادية تحمل رائحة وعد قُطع في عاصفة ثلجية، على جبل حيث امرأة شابة أبقَت مأوى دافئاً للغرباء. الممر العالي يتذكر. الدين مستحق.</description>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep09_anime.mp3" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep09</guid>
+    <itunes:episode>9</itunes:episode>
+  </item>
+  <item>
+    <title>الشيخ والكاهنة</title>
+    <description>بوصلة كريم تدور منذ ثلاثة أيام — لا تشير إلى أي مكان. تركت له ليلى وردة صحراوية منذ سنوات، مع رسالة: «أعطِ هذا للمسافر الذي توقفت بوصلته عن الدوران». يعود إلى الكثبان الغنّاء لآخر مرة، ليسأل السؤال الذي كان يتهرب منه سبعة وثلاثين عاماً: متى يحين وقت التوقف؟</description>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep10_anime.mp3" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep10</guid>
+    <itunes:episode>10</itunes:episode>
   </item>
 </channel>
 </rss>

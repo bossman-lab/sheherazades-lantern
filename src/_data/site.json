@@ -3,6 +3,10 @@
   "donate": "TNxQquGae5nCEdAwdUzbRYsMUuNtW9t8NT",
   "cover": "/audio/assets/podcast_cover.jpg",
   "author": "The Lantern Keeper",
+  "category": "Arts",
+  "subcategory": "Fiction",
+  "explicit": "false",
+  "itunes_type": "serial",
   "languages": [
     { "code": "en", "label": "English", "dir": "ltr", "active": true },
     { "code": "cn", "label": "中文", "dir": "ltr", "active": true },

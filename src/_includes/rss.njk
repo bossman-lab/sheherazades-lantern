@@ -16,7 +16,12 @@
   <itunes:author>{{ site.authors[lang] }}</itunes:author>
   <itunes:summary>{{ site.taglines[lang] }}</itunes:summary>
   <itunes:image href="{{ site.url }}{{ site.cover }}"/>
-  <atom:link href="{{ site.url }}/{{ lang_prefix }}podcast.xml" rel="self" type="application/rss+xml"/>
+  <itunes:explicit>{{ site.explicit }}</itunes:explicit>
+  <itunes:type>{{ site.itunes_type }}</itunes:type>
+  <itunes:category text="{{ site.category }}">
+    <itunes:category text="{{ site.subcategory }}"/>
+  </itunes:category>
+  <atom:link href="{% if lang_prefix %}{{ site.url }}/{{ lang_prefix }}podcast.xml{% else %}{{ site.url }}/podcast/podcast.xml{% endif %}" rel="self" type="application/rss+xml"/>
 
   {%- for ep in episodes %}
   <item>
@@ -24,6 +29,7 @@
     <description>{{ ep.descriptions[lang] }}</description>
     <enclosure url="{{ site.url }}{{ ep.audio[lang] }}" type="audio/mpeg"/>
     <guid isPermaLink="false">{{ site.url }}-{{ lang }}-ep{{ ep.id }}</guid>
+    <itunes:episode>{{ ep.id | int }}</itunes:episode>
   </item>
   {%- endfor %}
 </channel>
