@@ -138,7 +138,7 @@ footer p{font-size:12px;color:#424245;line-height:1.8}
 </nav>
 
 <div class="hero">
-  <img src="{% if lang_prefix %}{{ '../' + site.cover }}{% else %}{{ site.cover }}{% endif %}" alt="{{ site.names[lang] }}">
+  <img src="{{ site.url }}{{ site.cover }}" alt="{{ site.names[lang] }}">
   <h1>{{ site.names[lang] }}</h1>
   <p class="tagline">{{ site.taglines[lang] }}</p>
 </div>
