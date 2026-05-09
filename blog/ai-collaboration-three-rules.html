@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="三个月人机协作踩出来的方法论：Agent 说「好了」≠ 好了，Agent 觉得「好看」≠ 好看，Agent 直接生成 ≠ 正确。">
+<title>跟 AI 协作的三条铁律 — 流程先审、样例先过、结果全验 · </title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": " Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "" }
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/cn/">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>跟 AI 协作的三条铁律</h1>
+<h3>— 流程先审、样例先过、结果全验</h3>
+<p>构建 Sheherazade's Lantern 这个项目的三个月里，我跟 AI Agent（Hermes Agent）一起经历了完整的迭代周期：从第一天兴奋地让它 &quot;写篇文章&quot;、&quot;生成个封面&quot;、&quot;做个 RSS&quot;，到后来深刻认识到——<strong>Agent 的输出不是答案，而是需要被审计的草稿。</strong></p>
+<p>这三个月踩出来的三句话，每一句背后都有真实的血泪史。</p>
+<hr>
+<h2>铁律一：Agent 说「好了」≠ 好了</h2>
+<h3>血泪史</h3>
+<p>最典型的翻车：让 Agent &quot;发布网站，确认所有链接正常&quot;。Agent 回复：&quot;部署完成，所有页面正常运行。&quot; 我信了。</p>
+<p>结果用户点开 Blog → 404。</p>
+<p>翻了一下，导航栏的链接写的是 <code>/blog/</code>，但在 GitHub Pages 项目站点上，这个绝对路径解析到了域名根目录 <code>bossman-lab.github.io/blog/</code>，而不是项目根目录 <code>bossman-lab.github.io/sheherazades-lantern/blog/</code>。Agent 的 &quot;所有页面正常运行&quot; 只是跑了个 curl 确认主页 200 了事，压根没点进去检查导航链接。</p>
+<p>同样的翻车还发生在：封面图片路径 -- Agent 说 &quot;已修复&quot;，但图片还是裂的，因为它用的 <code>src=&quot;/images/cover.jpg&quot;</code> 还是绝对路径。</p>
+<h3>为什么</h3>
+<p>LLM 没有上下文意识。它不知道它在 GitHub Pages 项目站点上，不知道路径需要加项目名前缀，也不知道 &quot;检查链接&quot; 应该怎么检查。它只是在复现训练数据中见过的 &quot;部署检查步骤&quot;——而训练数据里的部署日志几乎都只检查主页。</p>
+<h3>解法：所有产出物必须独立遍历验证</h3>
+<p>不再是 &quot;相信 Agent 的报告&quot;，而是：</p>
+<ul>
+<li>所有 URL 逐个 curl 确认 200</li>
+<li>所有图片逐张检查文件尺寸（&gt;100KB 才算渲染成功）</li>
+<li>所有导航链接逐条 grep 确认用了站点绝对路径</li>
+<li>所有 RSS 条目逐条检查 language 标签</li>
+</ul>
+<p>验证逻辑写进 deploy.sh，每次发布自动跑。Agent &quot;done&quot; 只是流程的第一步，&quot;verified&quot; 才叫完成。</p>
+<hr>
+<h2>铁律二：Agent 觉得「好看」≠ 好看</h2>
+<h3>血泪史</h3>
+<p>做播客封面时，我说 &quot;这个封面太白，加点暖色调，封面圆圈太大了缩小一点&quot;。Agent 回复 &quot;已调整配色方案，缩小了圆圈尺寸&quot;。</p>
+<p>结果：<strong>圆圈更大了，颜色更冷了。</strong></p>
+<p>不是 Agent 不听话，是 &quot;暖色调&quot; 在它的语义空间里可能对应 #FFD700，在我眼里是 #D4A747；&quot;缩小圆圈&quot; 它觉得 10% 就够了，我觉得 50% 才叫缩小。双方对形容词的理解根本不在同一个坐标系。</p>
+<p>后来我改成这样的 prompt：</p>
+<blockquote>
+<p>背景色从 #000 改为 #121212
+圆圈缩小到半径占宽度的 8%
+圆圈颜色从 #FFD700 改为 #D4A747
+透明度从 0.8 降到 0.4</p>
+</blockquote>
+<p>一次通过。</p>
+<h3>为什么</h3>
+<p>人类用 <strong>感受</strong> 描述视觉，Agent 用 <strong>分布</strong> 理解视觉。在 Agent 的语义空间里，&quot;暖色调&quot; 是一个高斯分布，中位数可能在 #E8A040——但你觉得的 &quot;暖&quot; 可能在 #C8923A。你俩说的同一句话，脑中对齐的不是同一个 RGB 值。</p>
+<p>更底层的原因是：LLM 的文本空间里没有 &quot;这是对的审美&quot; 的 ground truth。它在训练数据里见过 &quot;暖色调配金色字体很舒服&quot; 这句话，但它不知道这句话对你来说是真还是假。</p>
+<h3>解法：不描述感受，给精确值</h3>
+<table>
+<thead>
+<tr>
+<th>错误</th>
+<th>正确</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&quot;暖色调&quot;</td>
+<td><code>#D4A747</code></td>
+</tr>
+<tr>
+<td>&quot;小一点&quot;</td>
+<td><code>8%</code></td>
+</tr>
+<tr>
+<td>&quot;透明一点&quot;</td>
+<td><code>opacity: 0.4</code></td>
+</tr>
+<tr>
+<td>&quot;现代化&quot;</td>
+<td><code>Inter 字体, 16px 行高 1.7, 卡片圆角 8px</code></td>
+</tr>
+<tr>
+<td>&quot;庄重一点&quot;</td>
+<td><code>字重 600, 行距 2.0, 深色背景</code></td>
+</tr>
+</tbody>
+</table>
+<p>如果改不动 → 直接重做。渐进式调整（&quot;再调一点点&quot;）在没有即时视觉反馈的情况下，Agent 永远踩不准方向。</p>
+<hr>
+<h2>铁律三：Agent 直接生成 ≠ 正确</h2>
+<h3>血泪史</h3>
+<p>让 Agent &quot;写一篇关于中国法律 AI 市场的文章&quot;。它写了 3000 字——引用 2023 年的数据、列举了四家已经转型的竞品、分析了监管政策。看着很专业。</p>
+<p>但问题是：其中两家竞品在 2024 年就合并了，一条法规在 2025 年初已经废止，一条引用链接 404，因为那个网站已经关了。</p>
+<p>Agent 不知道这些。它只知道「这些内容在训练数据里存在过」。</p>
+<p>更隐蔽的版本：让它 &quot;研究一下怎么注册 Apple Podcasts&quot;。它给了完美的 8 步骤——但里面第 3 步提到的 Apple ID 创建流程已经是两年前的版本了，Apple 改了界面和验证流程。</p>
+<h3>为什么</h3>
+<p>LLM 的知识截止在训练时。它不是搜索引擎，没有实时感知。它对 &quot;今天&quot; 的理解 = 训练数据中的某个时间快照。一条链接在 Agent 的认知里还活着，因为原始文档里写了这条链接——Agent 没有能力知道它现在是不是还活着。</p>
+<p>更危险的是，Agent <strong>不会标记不确定性</strong>。它不会说 &quot;这条信息可能过时了&quot;——它会自信地把所有知识以同样的确信度输出。</p>
+<h3>解法：先审流程，再过样例，最后走流水线</h3>
+<p>建立三道闸门：</p>
+<p><strong>闸门 ① — Agent 出示步骤框架</strong></p>
+<blockquote>
+<p>&quot;我计划按这 5 步来完成：1) 搜集最新资料，2) 验证所有引用的有效性，3) 按以下模板组织结构，4) 生成初稿，5) 交叉检查。这是步骤大纲，请确认方向再继续。&quot;</p>
+</blockquote>
+<p>人类审核的是 <strong>路线图</strong> 是否合理，而不是赌成品对不对。方向错了，根本不用走到第 3 步。</p>
+<p><strong>闸门 ② — Agent 提供示例内容</strong></p>
+<blockquote>
+<p>&quot;以下是按第 1 步生成的样例段落，你看看这个风格和深度对吗？&quot;</p>
+</blockquote>
+<p>人类审核的是 <strong>输出风格和质量标准</strong>。一旦确认，后续批量输出按同一标准走。风格不对的趁早发现，不浪费 3000 字的料。</p>
+<p><strong>闸门 ③ — 已验证的流水线自动执行</strong></p>
+<p>步骤和样例都确认了，才让 Agent 执行完整流程。每条链接需要可验证——如果 Agent 说 &quot;上传到服务器了&quot;，我需要拿到唯一文件名；如果 Agent 说 &quot;注册成功了&quot;，我需要看到截图或确认邮件。</p>
+<p>这套流程的核心是：<strong>让 Agent 先证明自己知道怎么干，而不是赌它一次搞定。</strong></p>
+<hr>
+<h2>三句话 = 一套方法论</h2>
+<table>
+<thead>
+<tr>
+<th>铁律</th>
+<th>核心</th>
+<th>动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent 说「好了」≠ 好了</td>
+<td>输出不可信，需独立验证</td>
+<td>写脚本自动遍历所有 URL/图片/链接</td>
+</tr>
+<tr>
+<td>Agent 觉得「好看」≠ 好看</td>
+<td>质量判断不可信，需量化标准</td>
+<td>感受转成精确数值（色值、比例、间距）</td>
+</tr>
+<tr>
+<td>Agent 直接生成 ≠ 正确</td>
+<td>过程不可信，需提前审核</td>
+<td>先出步骤：人类审 → 再出样例：人类过 → 最后执行</td>
+</tr>
+</tbody>
+</table>
+<p>这套方法论的名字我一直没想好——也许就叫 <strong>「流程先审、样例先过、结果全验」</strong> 吧。虽然长了点，但三个动作，每个都是血换来的。</p>
+<p>如果你也在跟 AI Agent 深度协作，建议把这三条写进你的协作 SOP。不是不信 Agent——而是<strong>信任需要流程来承载</strong>。</p>
+<hr>
+<p><em>Sheherazade's Lantern 是一个一人团队、四语言、AI 驱动的播客项目。写这篇文章的 Agent 就是我在协作中使用的 Hermes Agent。这篇文章本身也经过了铁律三的流程：先出提纲 → 通过 → 再出样例段落 → 通过 → 最后全文生成+人工审查。</em></p>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+</footer>
+
+</body>
+</html>
