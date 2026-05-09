@@ -53,8 +53,8 @@ h2{font-size:24px;font-weight:500;margin:0 0 6px}
 <body>
 
 <nav>
-  <a href="/">Podcast</a>
-  <a href="/blog/" style="color:#f5f5f7">Blog</a>
+  <a href="{% if lang_prefix %}../{% else %}../{% endif %}">Podcast</a>
+  <a href="{% if lang_prefix %}.{% else %}.{% endif %}" style="color:#f5f5f7">Blog</a>
   <span>/</span>
   {%- for l in site.languages %}
   {% if l.code != lang %}<a href="{% if lang_prefix %}{% if l.code == 'en' %}../{% else %}../{{ l.code }}/{% endif %}{% else %}{% if l.code == 'en' %}/{% else %}{{ l.code }}/{% endif %}{% endif %}">{{ l.label }}</a>{% else %}<a href="#">{{ l.label }}</a>{% endif %}

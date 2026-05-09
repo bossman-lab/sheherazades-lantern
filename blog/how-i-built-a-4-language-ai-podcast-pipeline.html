@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Behind the scenes of Sheherazade&#39;s Lantern: a one-person, 4-language podcast powered by AI storytelling, edge-tts, and a static site generator. Full architecture walkthrough.">
+<title>How I Built a 4-Language AI Podcast Pipeline — and Why Distribution Is the Only Real Problem · Sheherazade&#39;s Lantern</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="Sheherazade&#39;s Lantern" href="https://bossman-lab.github.io/sheherazades-lantern/podcast/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Sheherazade&#39;s Lantern Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "The Lantern Keeper" }
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#f5f5f7;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+nav{display:flex;justify-content:flex-end;align-items:center;padding:20px 24px;gap:12px}
+nav a{color:#424245;text-decoration:none;font-size:13px;transition:color .2s}
+nav a:hover{color:#f5f5f7}
+nav span{color:#424245;font-size:11px}
+.container{max-width:720px;margin:0 auto;padding:80px 24px 60px}
+h1{font-size:36px;font-weight:600;margin-bottom:8px}
+h2{font-size:24px;font-weight:500;margin:0 0 6px}
+.subtitle{color:#86868b;font-size:18px;margin-bottom:48px}
+.post{border-top:1px solid rgba(255,255,255,.06);padding:24px 0}
+.post:last-child{border-bottom:1px solid rgba(255,255,255,.06)}
+.post-date{font-size:13px;color:#424245;margin-bottom:6px}
+.post-title{font-size:20px;font-weight:500;color:#f5f5f7;text-decoration:none;display:block;margin-bottom:8px}
+.post-title:hover{color:#ffd700}
+.post-desc{color:#86868b;font-size:14px;line-height:1.5;margin:0}
+.back-link{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.06)}
+.back-link a{color:#86868b;text-decoration:none;font-size:14px}
+.back-link a:hover{color:#f5f5f7}
+.footer{text-align:center;padding:40px 24px 60px;color:#86868b;font-size:13px;line-height:1.6}
+@media(max-width:640px){.container{padding:60px 20px 40px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../">Podcast</a>
+  <a href="." style="color:#f5f5f7">Blog</a>
+  <span>/</span>
+  <a href="#">English</a>
+  <span>/</span>
+  <a href="cn/">中文</a>
+  <span>/</span>
+  <a href="ar/">العربية</a>
+  <span>/</span>
+  <a href="es/">Español</a>
+  
+</nav>
+
+<h1>How I Built a 4-Language AI Podcast Pipeline — and Why Distribution Is the Only Real Problem</h1>
+<p><em>Arabian bedtime stories, rekindled for modern souls. In four languages. By one person.</em></p>
+<p>I run <strong>Sheherazade's Lantern</strong> — a podcast that produces original Arabian-inspired fiction in <strong>English, Arabic, Chinese, and Spanish</strong>. Each episode runs 15–18 minutes with a full voice cast (8 distinct characters per language, each with a different accent/voice).</p>
+<p>Ten episodes done. Four languages. One person.</p>
+<p>Here's exactly how the pipeline works, where the complexity really lives, and the one thing that matters more than all the engineering put together.</p>
+<hr>
+<h2>The Architecture at 10,000 Feet</h2>
+<pre><code>[Character Universe] → [LLM Story Gen] → [Parse &amp; Save] → [Audio Production]
+                                                                    ↓
+[SEO + RSS + Sitemap] ← [Static Site Gen] ← [Deploy via API] ← [Cover Art]
+</code></pre>
+<p>Every component is <strong>CLI-driven</strong>, no web UI, no database, no server. The entire project lives in a <code>~/.hermes/projects/</code> directory on a Linux server.</p>
+<hr>
+<h2>1. The Character Universe — Making AI Stories Coherent</h2>
+<p>The #1 problem with AI-generated fiction: <strong>every story starts from zero</strong>. Characters don't carry over, the world resets, nothing compounds.</p>
+<p>The fix: a shared character universe stored as JSON files.</p>
+<pre><code class="language-json">// universe/characters.json (simplified)
+{
+  &quot;yueya&quot;: {
+    &quot;name&quot;: &quot;Yueya (Moon-Child)&quot;,
+    &quot;archetype&quot;: &quot;The Star-Seeker&quot;,
+    &quot;traits&quot;: [&quot;curious&quot;, &quot;dreamy&quot;, &quot;innocent&quot;],
+    &quot;signature_objects&quot;: [&quot;brass astrolabe&quot;],
+    &quot;voice&quot;: &quot;en-GB-MaisieNeural&quot;,
+    &quot;appearances&quot;: 3,
+    &quot;status&quot;: &quot;active&quot;
+  },
+  &quot;rashid&quot;: {
+    &quot;name&quot;: &quot;Rashid the Mapmaker&quot;,
+    &quot;archetype&quot;: &quot;The Unreliable Chronicler&quot;,
+    &quot;traits&quot;: [&quot;scatterbrained&quot;, &quot;charming&quot;, &quot;obsessive&quot;],
+    &quot;voice&quot;: &quot;en-IE-ConnorNeural&quot;,  // Irish accent
+    &quot;appearances&quot;: 2,
+    &quot;status&quot;: &quot;active&quot;
+  }
+  // ... 5 more characters
+}
+</code></pre>
+<p><strong>The character selection algorithm:</strong></p>
+<ol>
+<li>Filter active characters</li>
+<li>Sort by <code>appearance_count</code> (ascending — promote underused characters)</li>
+<li>60% chance pick the least-used, 40% random</li>
+<li>Inject the character's full profile into the LLM prompt</li>
+<li>After generation, increment appearance count</li>
+</ol>
+<p>This single trick turns a collection of stories into a <strong>canon</strong>. Characters form relationships. Artifacts reappear. Listeners who skip an episode miss context. The half-life of each story goes from &quot;read-once&quot; to &quot;re-listen to catch the callback.&quot;</p>
+<p><strong>Proven effect</strong>: After 10 episodes with the same 7 characters, new stories write themselves faster because the LLM has consistent character voices to draw on.</p>
+<hr>
+<h2>2. Multi-Language Audio Production — The SSML Trap</h2>
+<p>This is where I lost the most time to a <strong>deceptive bug</strong>.</p>
+<h3>The Setup</h3>
+<p>Each language has a full voice palette — 8 distinct voices mapped to the same 8 characters:</p>
+<pre><code class="language-python"># English — different accents so listeners identify characters instantly
+VOICE_MAP_EN = {
+    &quot;THE LANTERN KEEPER&quot;: &quot;en-GB-SoniaNeural&quot;,         # BBC English
+    &quot;YUEYA&quot;:              &quot;en-GB-MaisieNeural&quot;,         # Young British
+    &quot;RASHID&quot;:             &quot;en-IE-ConnorNeural&quot;,          # Irish
+    &quot;NADIA&quot;:              &quot;en-US-JennyNeural&quot;,           # American
+    &quot;DUNYAZAD&quot;:           &quot;en-IN-NeerjaExpressiveNeural&quot;, # Indian
+    &quot;LAYLA&quot;:              &quot;en-AU-NatashaNeural&quot;,         # Australian
+    # ...
+}
+</code></pre>
+<p>For Chinese, I use voices from mainland China, Taiwan, and Hong Kong to create the same effect — each character sounds from a different region.</p>
+<h3>The Bug That Cost Me 3 Hours</h3>
+<p><code>edge-tts</code> (the Python library for Microsoft Edge's TTS) <strong>reads XML tags as speech</strong>. I tried to use SSML for emotional control:</p>
+<pre><code class="language-python"># ❌ WRONG — edge-tts escapes the XML internally
+comm = edge_tts.Communicate(
+    '&lt;mstts:express-as type=&quot;cheerful&quot;&gt;Hello there!&lt;/mstts:express-as&gt;',
+    voice
+)
+# Output: &quot;speak version 1.0 m s s t s express as type cheerful Hello there&quot;
+</code></pre>
+<p>The library calls <code>xml.sax.saxutils.escape()</code> on your text before wrapping it in a <code>&lt;speak&gt;</code> envelope. Custom SSML is architecturally impossible.</p>
+<p><strong>The fix</strong>: Segment-by-segment plain-text concatenation.</p>
+<pre><code class="language-python"># ✅ CORRECT — plain text only, voice and rate as parameters
+for segment in parsed_segments:
+    comm = edge_tts.Communicate(
+        segment[&quot;text&quot;],           # plain text
+        segment[&quot;voice&quot;],          # voice name
+        rate=segment[&quot;rate&quot;]       # e.g. &quot;+5%&quot; for excited
+    )
+    await comm.save(temp_path)
+    # Concatenate with pydub
+</code></pre>
+<p>Each 1,500-word story becomes 70–120 segments. A 5-episode batch takes ~25 minutes (each segment is a network call).</p>
+<p><strong>Emotional range comes from rate modulation only:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Emotion</th>
+<th style="text-align:center">Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td style="text-align:center">+0%</td>
+</tr>
+<tr>
+<td>Excited</td>
+<td style="text-align:center">+5% to +10%</td>
+</tr>
+<tr>
+<td>Calm</td>
+<td style="text-align:center">-3% to -5%</td>
+</tr>
+<tr>
+<td>Sad/Grief</td>
+<td style="text-align:center">-8% to -10%</td>
+</tr>
+</tbody>
+</table>
+<p>No SSML. No XML. Plain text. This is the universal approach that works for <strong>all languages</strong>.</p>
+<hr>
+<h2>3. Cover Art — Photographic Anime, Zero Circles</h2>
+<p>Cover art for a podcast is more important than most people think. It's the first thing people see in Apple Podcasts or Spotify.</p>
+<p><strong>The approach</strong>: Royalty-free photography from Unsplash + PIL overlays.</p>
+<pre><code class="language-python">from PIL import Image, ImageDraw, ImageFont
+import requests
+
+# Download high-res photo
+resp = requests.get(&quot;https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1920&quot;)
+img = Image.open(BytesIO(resp.content))
+
+# Crop to square
+img = img.crop(...)  # center crop
+
+# Apply Gaussian blur for dreamy anime feel
+img = img.filter(ImageFilter.GaussianBlur(radius=1.5))
+
+# Add edge vignette — progressive darkening
+for r in range(1500, 200, -30):
+    alpha = ...  # increasing toward edges
+    draw.ellipse([cx-r, cy-r, cx+r, cy+r], fill=(0,0,0,alpha))
+
+# Typography only — episode number, title, brand
+draw.text((x, y), &quot;#01&quot;, fill=(255,255,255,200))
+draw.text((x, y+80), &quot;The Map of the Moving Streets&quot;, ...)
+</code></pre>
+<p><strong>Critical rule learned the hard way</strong>: <strong>No PIL-drawn circles.</strong> No glow rings. No badge backgrounds behind episode numbers. My first version had a white glow circle behind the episode number, and the user's response was... emphatically negative. The photo provides all the visual depth. Typography is all you need.</p>
+<hr>
+<h2>4. Static Site — Multilingual Without a CMS</h2>
+<p>The website is <strong>11ty (Eleventy)</strong> — a zero-JS static site generator.</p>
+<pre><code>src/
+├── _data/
+│   ├── site.json       # Multilingual config (names, taglines, footer per lang)
+│   └── episodes.json   # ALL episode data in one file
+├── _includes/
+│   ├── layout.njk      # Apple aesthetic template
+│   └── rss.njk         # RSS template (generates per-language feeds)
+├── en/ / cn/ / ar/ / es/  # One Nunjucks page per language
+└── sitemap.njk         # Auto-generates sitemap.xml
+</code></pre>
+<p>Each language gets:</p>
+<ul>
+<li>Its own homepage (e.g., <code>/en/</code>, <code>/ar/</code>)</li>
+<li>Its own RSS feed (<code>/en/podcast.xml</code>, <code>/ar/podcast.xml</code>)</li>
+<li>JSON-LD structured data with PodcastSeries schema</li>
+<li><code>&lt;link rel=&quot;alternate&quot; hreflang=&quot;...&quot;&gt;</code> pointing to all language variants</li>
+</ul>
+<p><strong>Adding a new episode</strong>: Edit one JSON file → <code>npm run build</code> → deploy. No database, no CMS, no hosting bill (GitHub Pages is free).</p>
+<pre><code class="language-json">{
+  &quot;en&quot;: {
+    &quot;episodes&quot;: [
+      {
+        &quot;number&quot;: &quot;06&quot;,
+        &quot;title&quot;: &quot;The Spice That Remembered&quot;,
+        &quot;audio&quot;: &quot;audio/episodes/ep06_anime.mp3&quot;,
+        &quot;duration&quot;: &quot;16:24&quot;,
+        &quot;description&quot;: &quot;Nadia the spice merchant has a shelf...&quot;,
+        &quot;characters&quot;: [&quot;Nadia&quot;, &quot;Rashid&quot;]
+      }
+    ]
+  },
+  &quot;cn&quot;: { /* same episode, Chinese */ }
+}
+</code></pre>
+<h3>The Nunjucks Gotcha</h3>
+<p>Inside <code>&lt;script type=&quot;application/ld+json&quot;&gt;</code>, Nunjucks auto-escapes <code>'</code> to <code>&amp;#39;</code>, which <strong>breaks JSON-LD parsing</strong>. Fix: a custom filter.</p>
+<pre><code class="language-javascript">// .eleventy.js
+eleventyConfig.addFilter(&quot;json_str&quot;, (str) =&gt; {
+  return JSON.stringify(str).slice(1, -1);
+});
+
+// Template: use | json_str | safe
+&quot;name&quot;: &quot;{{ site.names[lang] | json_str | safe }}&quot;
+</code></pre>
+<hr>
+<h2>5. Deploy — Github API, Not Git</h2>
+<p>The server doesn't have <code>git-remote-https</code>. No <code>git push</code>. The solution: <strong>Git Data API</strong> for atomic multi-file commits.</p>
+<pre><code class="language-python">import requests, base64
+
+def api(method, path, data=None):
+    url = f&quot;https://api.github.com/repos/{OWNER}/{REPO}/{path}&quot;
+    return requests.request(method, url, headers=HEADERS, json=data).json()
+
+# 1. Get current HEAD
+ref = api(&quot;GET&quot;, &quot;git/refs/heads/main&quot;)
+base_sha = ref[&quot;object&quot;][&quot;sha&quot;]
+
+# 2. Get base tree
+commit = api(&quot;GET&quot;, f&quot;git/commits/{base_sha}&quot;)
+base_tree = commit[&quot;tree&quot;][&quot;sha&quot;]
+
+# 3. Create blobs for each file
+blobs = []
+for git_path, local_path in files.items():
+    with open(local_path, &quot;rb&quot;) as f:
+        content = f.read()
+    is_binary = git_path.endswith(&quot;.mp3&quot;)
+    blob_data = {&quot;content&quot;: base64.b64encode(content).decode(),
+                 &quot;encoding&quot;: &quot;base64&quot; if is_binary else &quot;utf-8&quot;}
+    blob = api(&quot;POST&quot;, &quot;git/blobs&quot;, blob_data)
+    blobs.append({&quot;path&quot;: git_path, &quot;mode&quot;: &quot;100644&quot;,
+                  &quot;type&quot;: &quot;blob&quot;, &quot;sha&quot;: blob[&quot;sha&quot;]})
+
+# 4. Create tree → commit → update ref
+tree = api(&quot;POST&quot;, &quot;git/trees&quot;, {&quot;base_tree&quot;: base_tree, &quot;tree&quot;: blobs})
+new_commit = api(&quot;POST&quot;, &quot;git/commits&quot;, {
+    &quot;message&quot;: &quot;Add Ep06: The Spice That Remembered (all 4 languages)&quot;,
+    &quot;tree&quot;: tree[&quot;sha&quot;],
+    &quot;parents&quot;: [base_sha]
+})
+api(&quot;PATCH&quot;, &quot;git/refs/heads/main&quot;, {&quot;sha&quot;: new_commit[&quot;sha&quot;]})
+</code></pre>
+<p>One deploy script. Zero infrastructure. Atomic commits with 4-language audio, RSS, and homepage in a single push.</p>
+<hr>
+<h2>6. The Hard Truth — HLT Analysis</h2>
+<p>After building all this, I ran the pipeline through an <strong>HLT (Half-life × Leverage × Transferability)</strong> framework to evaluate where to invest next.</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align:center">Score</th>
+<th>Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>H — Half-life</strong></td>
+<td style="text-align:center">8/10</td>
+<td>Classic tales + shared universe → content ages well</td>
+</tr>
+<tr>
+<td><strong>L — Leverage</strong></td>
+<td style="text-align:center">3/10</td>
+<td><strong>Bottleneck.</strong> Great content, zero audience</td>
+</tr>
+<tr>
+<td><strong>T — Transferability</strong></td>
+<td style="text-align:center">7/10</td>
+<td>Platform-independent, portable across hosting</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Score</strong>: 8×3×7 = <strong>168</strong> (decent, but far below potential).</p>
+<p>The diagnostic is clear: <strong>藏书阁 (Library Trap)</strong> — beautiful content locked in a room with no visitors. Distribution is the only bottleneck.</p>
+<p>After distribution (L→7): 9×7×8 = <strong>504 🏆</strong> — higher than my top-ranked activity (writing tech blogs, 448).</p>
+<hr>
+<h2>The One Thing That Matters More Than Engineering</h2>
+<p>I can generate a 4-language episode in ~20 minutes. I can build a 10-episode backlog in a weekend. The entire pipeline — character universe, multi-voice TTS, cover art, multilingual RSS, SEO — took about two weeks to build.</p>
+<p><strong>But none of that matters if nobody listens.</strong></p>
+<p>The real work isn't the pipeline. It's:</p>
+<ul>
+<li>Submitting RSS feeds to Apple Podcasts, Spotify, Deezer (none have APIs — all manual)</li>
+<li>Posting consistently on Substack</li>
+<li>Engaging on Reddit, Twitter, and podcast communities</li>
+<li>Getting the first 100 listeners</li>
+</ul>
+<p><strong>If you're building an AI content pipeline</strong>: spend 20% of your time on the pipeline and 80% on distribution. The production side is solved. The distribution side is not — and that's where the real leverage lives.</p>
+<hr>
+<h2>What's Next</h2>
+<ul>
+<li><strong>Apple Podcasts submission</strong> (pending — need to work around @tutamail.com rejection)</li>
+<li><strong>Substack</strong> for primary distribution + monetization</li>
+<li><strong>KDP collections</strong> (ebook bundle every 10 episodes)</li>
+<li><strong>Complete Spanish (ES) distribution</strong> — LatAm market untapped</li>
+</ul>
+<hr>
+<p><em>The full source code and project structure are at <a href="https://github.com/bossman-lab/sheherazades-lantern">github.com/bossman-lab/sheherazades-lantern</a>. Questions? Comments? Reach out below.</em></p>
+<p><em>One more thing: the podcast itself is live at <a href="https://bossman-lab.github.io/sheherazades-lantern/">bossman-lab.github.io/sheherazades-lantern</a> — pick a language and give it a listen.</em></p>
+
+
+<div class="footer">
+  
+  The Lantern Keeper · Sheherazade&#39;s Lantern<br>
+  
+  Ancient tales from the Arabian nights, rekindled for modern souls.<br>
+  
+</div>
+
+</body>
+</html>

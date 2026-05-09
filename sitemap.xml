@@ -51,6 +51,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://bossman-lab.github.io/sheherazades-lantern/blog/how-i-built-a-4-language-ai-podcast-pipeline.html</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://bossman-lab.github.io/sheherazades-lantern/episodes/01</loc>
     <lastmod>2026-05-09</lastmod>
     <priority>0.8</priority>
