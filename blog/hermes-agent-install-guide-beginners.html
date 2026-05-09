@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hermes Agent 是一个开源 AI 代理框架。这篇指南覆盖安装、配置代理、网关部署、Telegram 接入，以及在中国大陆环境下的所有坑点。">
+<title>Hermes Agent 安装入门指南 — 从零到有（含中国大陆避坑） · Sheherazade&#39;s Lantern</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="Sheherazade&#39;s Lantern" href="https://bossman-lab.github.io/sheherazades-lantern/podcast/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Sheherazade&#39;s Lantern Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "The Lantern Keeper" }
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">English</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/cn/">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>Hermes Agent 安装入门指南 — 从零到有</h1>
+<p><em>字数：约 3,000 字 | 阅读时间：10 分钟 | 适用系统：Linux / macOS / WSL</em></p>
+<hr>
+<h2>什么是 Hermes Agent？</h2>
+<p><a href="https://github.com/NousResearch/hermes-agent">Hermes Agent</a> 是 Nous Research 开发的开源 AI 代理框架。它跟 Claude Code、OpenAI Codex 属于同一类产品——能自主调用工具、操作终端、读写文件、访问网络、管理记忆的 AI 助手。</p>
+<p>但 Hermes 有几个独特之处：</p>
+<ul>
+<li><strong>技能系统</strong> — 代理自己会写技能文档，从经验中学习，越用越懂你</li>
+<li><strong>跨会话记忆</strong> — 记得你是谁、你的偏好、你的项目</li>
+<li><strong>多平台网关</strong> — 同一个代理跑在 Telegram、Discord、Slack 等 10+ 平台上</li>
+<li><strong>模型无关</strong> — OpenRouter、Anthropic、OpenAI、DeepSeek、本地模型随便换</li>
+<li><strong>开源免费</strong> — MIT 协议，随便用</li>
+</ul>
+<hr>
+<h2>第一步：安装</h2>
+<h3>标准安装（海外用户）</h3>
+<pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+</code></pre>
+<p>这行命令会：</p>
+<ol>
+<li>克隆仓库到 <code>~/.hermes/hermes-agent/</code></li>
+<li>创建 Python 虚拟环境并安装依赖</li>
+<li>安装 Node.js 依赖</li>
+<li>创建 CLI 命令 <code>hermes</code></li>
+</ol>
+<h3>中国大陆安装</h3>
+<p>海外用户一条命令搞定，但如果你在<strong>中国大陆</strong>，上面的命令会卡在网络问题上：</p>
+<p><strong>问题 1：raw.githubusercontent.com 被 DNS 污染</strong></p>
+<pre><code class="language-bash"># 方案 A：加 hosts
+echo &quot;185.199.108.133 raw.githubusercontent.com&quot; &gt;&gt; /etc/hosts
+
+# 方案 B：用镜像拉取
+# 手动下载 install.sh
+wget https://ghproxy.net/https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh
+bash install.sh
+</code></pre>
+<p><strong>问题 2：GitHub 克隆慢</strong></p>
+<pre><code class="language-bash"># 方案：用镜像克隆
+# 等 install.sh 卡住后 Ctrl+C，手动 clone
+git clone https://ghproxy.net/https://github.com/NousResearch/hermes-agent.git ~/.hermes/hermes-agent
+# 然后重新运行 install.sh（它会跳过已存在的目录）
+bash install.sh
+</code></pre>
+<p><strong>问题 3：pip 安装依赖慢</strong></p>
+<pre><code class="language-bash"># install.sh 运行前先配置 pip 镜像
+pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+# 或 install.sh 里卡 pip install 的时候 Ctrl+C，配置好镜像再重跑
+</code></pre>
+<h3>安装后验证</h3>
+<pre><code class="language-bash">hermes --version        # 检查版本
+hermes doctor           # 检查依赖完整性
+hermes config path      # 看看配置文件在哪
+</code></pre>
+<hr>
+<h2>第二步：配置模型和 API Key</h2>
+<h3>环境变量配置文件</h3>
+<p>Hermes 的 API 密钥存在 <code>~/.hermes/.env</code> 文件：</p>
+<pre><code class="language-bash">hermes config env-path   # 查看 .env 路径
+# 或直接编辑
+nano ~/.hermes/.env
+</code></pre>
+<h3>推荐模型配置</h3>
+<pre><code class="language-bash"># OpenRouter（推荐入门，支持最多模型，一个 API Key 访问多个模型）
+OPENROUTER_API_KEY=sk-or-v1-xxx...
+
+# Anthropic（效果最好但贵）
+ANTHROPIC_API_KEY=sk-ant-xxx...
+
+# DeepSeek（性价比高，国内可直连）
+DEEPSEEK_API_KEY=sk-xxx...
+
+# 国内用户推荐方案
+# 1. DeepSeek（国内直连，速度快）
+# 2. OpenRouter（走代理的话）
+# 3. 通义千问 DashScope
+DASHSCOPE_API_KEY=sk-xxx...
+</code></pre>
+<h3>选择模型</h3>
+<pre><code class="language-bash">hermes model    # 交互式选择模型和供应商
+</code></pre>
+<p>这会打开一个列表，选择供应商后选择模型。常用组合：</p>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>供应商/模型</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>日常使用</td>
+<td><code>deepseek/deepseek-chat</code></td>
+<td>便宜，国内直连</td>
+</tr>
+<tr>
+<td>代码</td>
+<td><code>anthropic/claude-sonnet-4</code></td>
+<td>代码能力最强，贵</td>
+</tr>
+<tr>
+<td>推理</td>
+<td><code>openrouter/qwen/qwq-32b</code></td>
+<td>强推理，中等价格</td>
+</tr>
+<tr>
+<td>免费</td>
+<td>OpenRouter 上的免费模型</td>
+<td>适合测试，不稳定</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>第三步：启动聊天</h2>
+<h3>终端模式</h3>
+<pre><code class="language-bash">hermes                     # 交互式聊天
+hermes chat -q &quot;你好&quot;      # 单次查询
+hermes --resume last       # 恢复上次会话
+</code></pre>
+<p>首次启动时 Hermes 会加载工具、创建会话，可能需要 5-15 秒。看到提示符后就可以输入了。</p>
+<h3>常用终端命令</h3>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/new</code></td>
+<td>新会话（重要：切换模型后必须执行）</td>
+</tr>
+<tr>
+<td><code>/model</code></td>
+<td>查看当前模型</td>
+</tr>
+<tr>
+<td><code>/model &lt;name&gt;</code></td>
+<td>切换模型（如 <code>/model claude-sonnet-4</code>）</td>
+</tr>
+<tr>
+<td><code>/quit</code></td>
+<td>退出</td>
+</tr>
+<tr>
+<td><code>/retry</code></td>
+<td>重发上一条消息</td>
+</tr>
+<tr>
+<td><code>/title 会话名</code></td>
+<td>命名会话</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>第四步：接入 Telegram（最常用场景）</h2>
+<p>Telegram 网关让 Hermes 在手机上也能用。这是新手最容易踩坑的地方。</p>
+<h3>获取 Bot Token</h3>
+<ol>
+<li>在 Telegram 中搜索 <code>@BotFather</code></li>
+<li>发送 <code>/newbot</code></li>
+<li>输入 bot 名称（如 <code>My Hermes Agent</code>）</li>
+<li>输入 username（必须以 <code>bot</code> 结尾，如 <code>MyHermesAgentBot</code>）</li>
+<li>复制返回的 token（格式：<code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>）</li>
+</ol>
+<h3>配置网关</h3>
+<pre><code class="language-bash">hermes gateway setup
+</code></pre>
+<p>按提示输入 bot token。或者编辑 <code>.env</code>：</p>
+<pre><code class="language-bash"># 在 ~/.hermes/.env 中添加
+TELEGRAM_BOT_TOKEN=123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
+</code></pre>
+<h3>启动网关</h3>
+<pre><code class="language-bash"># 前台测试（先确保能跑通）
+hermes gateway run
+
+# 后台服务
+hermes gateway install
+hermes gateway start
+hermes gateway status
+</code></pre>
+<h3>Telegram 网关天坑</h3>
+<p><strong>坑一：匿名管理员</strong></p>
+<p>如果你是 Telegram 群的匿名管理员，代理会收到你的消息但拒绝回复。因为匿名管理员的 sender ID 是 <code>1087968824</code>，不是你的真实 ID。</p>
+<pre><code class="language-bash"># 修复：在 .env 中加入群组 chat ID
+TELEGRAM_GROUP_ALLOWED_CHATS=-1001234567890
+# chat ID 可以通过 @getidsbot 获取
+</code></pre>
+<p><strong>坑二：中国大陆无法直连 Telegram</strong></p>
+<pre><code class="language-bash"># 如果你有代理（如 Clash/Mihomo）
+# 在启动网关前设置环境变量
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=http://127.0.0.1:7890
+hermes gateway run        # 在代理环境下启动
+</code></pre>
+<p><strong>坑三：网关自动重启后代理失效</strong></p>
+<p><code>hermes gateway install</code> 创建的 user-level systemd 服务在 root 用户下无效。需要用 system-level 服务。</p>
+<pre><code class="language-bash"># 创建 /etc/systemd/system/hermes-gateway.service
+# 内容包含：
+# - Environment=&quot;http_proxy=http://127.0.0.1:7890&quot;
+# - Restart=always
+# - WantedBy=multi-user.target
+
+systemctl daemon-reload
+systemctl enable hermes-gateway.service
+systemctl start hermes-gateway.service
+</code></pre>
+<hr>
+<h2>常见问题排查</h2>
+<h3><code>hermes doctor</code> 检查清单</h3>
+<pre><code class="language-bash">hermes doctor    # 自动检查配置和依赖
+</code></pre>
+<p>常见输出及应对：</p>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>解决</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pip: externally-managed-environment</code></td>
+<td>不用系统 pip，用 venv 里的 pip：<code>~/.hermes/hermes-agent/venv/bin/pip install ...</code></td>
+</tr>
+<tr>
+<td><code>No API key configured</code></td>
+<td>检查 <code>~/.hermes/.env</code> 是否有正确的 API key</td>
+</tr>
+<tr>
+<td><code>Tool X not available</code></td>
+<td>运行 <code>hermes tools</code> 检查是否启用了该工具集</td>
+</tr>
+<tr>
+<td><code>Gateway: disconnected</code></td>
+<td>检查 bot token 是否正确，网络是否能连 Telegram</td>
+</tr>
+</tbody>
+</table>
+<h3>网关日志</h3>
+<pre><code class="language-bash"># 查看网关日志
+journalctl -u hermes-gateway.service -n 50 -f    # systemd 服务
+tail -f ~/.hermes/logs/gateway.log                # 原始日志
+</code></pre>
+<h3>代理没有回复</h3>
+<ol>
+<li>先 <code>/restart</code> 网关</li>
+<li>检查日志 <code>grep -i error ~/.hermes/logs/gateway.log</code></li>
+<li>确认 bot 是群组管理员（如果在群组中使用）</li>
+<li>确认 BotFather 中关闭了 Privacy Mode：<code>/setprivacy</code> → 选择你的 bot → <code>Disable</code></li>
+<li>在终端里直接 <code>hermes</code> 测试模型是否正常响应</li>
+</ol>
+<hr>
+<h2>新手常见误区</h2>
+<h3>误区 1：装完就跑</h3>
+<p>装完 <code>hermes</code> 后第一件事应该是 <code>hermes setup</code> 配置模型和 tool。很多人直接 <code>hermes</code> 结果没配置 API Key，报错退出。</p>
+<p><strong>正确顺序：</strong></p>
+<pre><code class="language-bash">curl -fsSL ... | bash    # 安装
+hermes doctor            # 检查
+# 编辑 ~/.hermes/.env 添加 API Key
+hermes model             # 选择模型
+hermes                   # 开始用
+</code></pre>
+<h3>误区 2：切换模型后不重启</h3>
+<p><code>/model claude-sonnet-4</code> 切换模型后，必须执行 <code>/new</code> 或 <code>/reset</code>，否则工具列表和系统提示词还是旧模型的——<strong>不会自动刷新</strong>。</p>
+<h3>误区 3：内存上限满了不知道</h3>
+<p>默认 <code>memory_char_limit</code> 是 2200 字符。代理写满后旧记忆会被自动删除。调大上限：</p>
+<pre><code class="language-bash">hermes config set memory.memory_char_limit 5000
+hermes config set memory.user_char_limit 3000
+</code></pre>
+<h3>误区 4：Windows 上直接用</h3>
+<p>Hermes 依赖大量 Linux 工具（git、systemd、bash）。Windows 用户必须用 WSL2。WSL2 上 systemd 需要额外配置：</p>
+<pre><code class="language-bash"># /etc/wsl.conf
+[boot]
+systemd=true
+</code></pre>
+<h3>误区 5：没开代理就跑 Telegram 网关</h3>
+<p>在中国大陆，<strong>Telegram Bot API 是被阻断的</strong>。不配好代理就直接 <code>hermes gateway run</code>，网关能启动但收不到任何消息，看日志全是超时。</p>
+<p><strong>正确做法：</strong> 启动前设置 <code>http_proxy</code>，或在 systemd 服务文件中写入代理环境变量。</p>
+<hr>
+<h2>总结：5 分钟快速上手</h2>
+<pre><code class="language-bash"># 1. 安装
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+
+# 2. 配置 API Key
+echo 'OPENROUTER_API_KEY=sk-or-v1-xxxx' &gt;&gt; ~/.hermes/.env
+
+# 3. 选择模型
+hermes model        # 选 deepseek/deepseek-chat 或任意
+
+# 4. 启动
+hermes
+
+# 5. 配置 Telegram（可选）
+hermes gateway setup    # 输入 Bot Token
+hermes gateway run      # 前台测试
+</code></pre>
+<p><strong>中国大陆用户额外步骤：</strong></p>
+<pre><code class="language-bash"># 先配 pip 镜像
+pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+
+# 安装时遇到 GitHub 慢用代理
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=http://127.0.0.1:7890
+
+# Telegram 网关需配代理
+hermes gateway run    # 在代理环境下启动
+</code></pre>
+<hr>
+<p><em>这篇文章是基于实际部署经验整理的。项目地址：<a href="https://github.com/NousResearch/hermes-agent">github.com/NousResearch/hermes-agent</a></em></p>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>The Lantern Keeper · Sheherazade&#39;s Lantern</p>
+  
+  <p>Ancient tales from the Arabian nights, rekindled for modern souls.</p>
+  
+</footer>
+
+</body>
+</html>
