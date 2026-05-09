@@ -176,13 +176,13 @@
     "archetype": "The seer who is never believed until too late",
     "signature_phrase": "沙丘会告诉你答案。但不是你期待的那个。",
     "voices": {
-      "en": { "voice": "en-AU-NatashaNeural", "gender": "female", "base_rate": "-5%", "pitch": "+2Hz" },
-      "zh": { "voice": "zh-HK-HiuGaaiNeural", "gender": "female", "base_rate": "-5%", "pitch": "+2Hz" },
-      "ar": { "voice": "ar-QA-AmalNeural", "gender": "female", "base_rate": "-5%", "pitch": "+2Hz" },
-      "id": { "voice": "id-ID-GadisNeural", "gender": "female", "base_rate": "-5%", "pitch": "+2Hz" }
+      "en": { "voice": "en-AU-NatashaNeural", "gender": "female", "base_rate": "+3%", "pitch": "+2Hz" },
+      "zh": { "voice": "zh-HK-HiuGaaiNeural", "gender": "female", "base_rate": "+3%", "pitch": "+2Hz" },
+      "ar": { "voice": "ar-QA-AmalNeural", "gender": "female", "base_rate": "+3%", "pitch": "+2Hz" },
+      "id": { "voice": "id-ID-GadisNeural", "gender": "female", "base_rate": "+3%", "pitch": "+2Hz" }
     },
     "emotions": {
-      "default":    { "description": "日常 — 飘忽、微弱，像风穿过沙丘", "rate": "-5%", "style": "whisper" },
+      "default":    { "description": "日常 — 飘忽、微弱，像风穿过沙丘", "rate": "+3%", "style": "whisper" },
       "prophetic":  { "description": "说预言 — 突然有穿透力，像一根针", "rate": "+0%", "style": "newscast" },
       "personal":   { "description": "涉及自身情感 — 改用第三人称", "rate": "-8%", "style": "whisper" },
       "grief":      { "description": "悲伤 — 沙粒的摩擦感", "rate": "-10%", "style": "sad" },

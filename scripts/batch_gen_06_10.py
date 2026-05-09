@@ -115,15 +115,16 @@ def parse_anime_script(story_text):
             current_char_id = None
             continue
 
-        # Sound/mood cue
+        # Sound/mood cue — SKIP entirely (not read aloud). Handles both () and （）
         if stripped.startswith("(") and stripped.endswith(")") and len(stripped) < 200:
             flush_dialogue()
-            if stripped:
-                segments.append((stripped, "", "scene"))
+            continue
+        if stripped.startswith("（") and stripped.endswith("）") and len(stripped) < 200:
+            flush_dialogue()
             continue
 
-        # Character dialogue line
-        char_match = re.match(r'^([A-Za-z\u0600-\u06FF\u4e00-\u9fffÀ-ÿÑñÁáÉéÍíÓóÚúÜü\s]+):\s*(.*)', stripped)
+        # Character dialogue line — accept both : and ：
+        char_match = re.match(r'^([A-Za-z\u0600-\u06FF\u4e00-\u9fffÀ-ÿÑñÁáÉéÍíÓóÚúÜü\s]+)[:：]\s*(.*)', stripped)
         if char_match:
             flush_dialogue()
             raw_name = char_match.group(1).strip().upper()
