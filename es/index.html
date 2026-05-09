@@ -3,8 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Linterna de Sherezada</title>
 <meta name="description" content="Cuentos antiguos de Las mil y una noches, reavivados para almas modernas — audiodrama al estilo anime con voces completas. Viaje por la Ruta de la Seda: mapas que dibujan ciudades antes de existir, especias que saben a vidas no vividas, una espada forjada durante cuarenta años. El Guardián de la Linterna te espera.">
+<title>La Linterna de Sherezada</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -29,122 +42,85 @@
   ]
 }
 </script>
-<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
-<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
-<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
-
-<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-  background:#000;
-  color:#f5f5f7;
-  font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',sans-serif;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.5
-}
-.container{max-width:680px;margin:0 auto;padding:0 24px}
-nav{display:flex;justify-content:flex-end;align-items:center;padding:20px 24px;gap:12px}
-nav a{color:#424245;text-decoration:none;font-size:13px;transition:color .2s}
-nav a:hover{color:#f5f5f7}
-nav span{color:#424245;font-size:11px}
-.lang-active{color:#f5f5f7!important}
-.hero{text-align:center;padding:80px 0 0}
-.hero img{width:280px;height:280px;border-radius:16px;box-shadow:0 24px 80px rgba(255,215,0,.08)}
-h1{
-  font-size:44px;
-  font-weight:600;
-  letter-spacing:-.5px;
-  margin:40px 0 12px;
-  color:#f5f5f7;
-  line-height:1.3
-}
-.tagline{
-  font-size:18px;
-  font-weight:400;
-  color:#86868b;
-  max-width:520px;
-  margin:0 auto;
-  line-height:1.7
-}
-.episodes{padding:80px 0 60px}
-.ep-label{
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-  color:#424245;
-  margin-bottom:36px
-}
-.episode{padding:32px 0;border-top:1px solid rgba(255,255,255,.06)}
-.episode:last-child{border-bottom:1px solid rgba(255,255,255,.06)}
-.ep-number{
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
-  color:#ffd700;
-  margin-bottom:6px
-}
-.ep-title{
-  font-size:22px;
-  font-weight:600;
-  letter-spacing:-.2px;
-  color:#f5f5f7;
-  margin-bottom:8px
-}
-.ep-desc{
-  font-size:15px;
-  color:#86868b;
-  line-height:1.75;
-  margin-bottom:6px
-}
-.ep-chars{font-size:13px;color:#424245;margin-bottom:14px}
-audio{width:100%;height:36px;border-radius:6px;filter:invert(1);opacity:.7}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === HERO === */
+.hero{text-align:center;padding:120px 24px 60px;position:relative}
+.hero img{width:320px;height:320px;border-radius:16px;box-shadow:0 24px 80px rgba(212,167,71,.06);margin-bottom:36px;transition:transform .4s ease}
+.hero img:hover{transform:scale(1.02)}
+.hero h1{font-size:42px;font-weight:600;letter-spacing:-.5px;margin-bottom:10px;color:#f5f5f7;line-height:1.2}
+.hero .tagline{font-size:17px;color:#68686b;max-width:500px;margin:0 auto;line-height:1.7}
+.hero .tagline em{color:#d4a747;font-style:normal}
+
+/* === EPISODES === */
+.episodes{max-width:640px;margin:0 auto;padding:40px 24px 60px}
+.ep-label{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#2a2a2a;margin-bottom:28px}
+.episode{padding:28px 20px;border:1px solid rgba(212,167,71,.06);border-radius:10px;margin-bottom:16px;transition:border-color .3s,background .3s}
+.episode:hover{border-color:rgba(212,167,71,.15);background:rgba(212,167,71,.02)}
+.ep-number{font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:#d4a747;margin-bottom:6px}
+.ep-title{font-size:20px;font-weight:600;color:#f5f5f7;margin-bottom:6px;line-height:1.3}
+.ep-desc{font-size:14px;color:#68686b;line-height:1.7;margin-bottom:4px}
+.ep-chars{font-size:12px;color:#424245;margin-bottom:12px}
+audio{width:100%;height:36px;border-radius:6px;filter:invert(1);opacity:.65}
 audio::-webkit-media-controls-panel{background:#1a1a1a}
-.donate{text-align:center;padding:40px 0 20px;border-top:1px solid rgba(255,255,255,.06)}
+
+/* === DONATE === */
+.donate{text-align:center;padding:48px 24px 0}
+.donate-inner{max-width:400px;margin:0 auto;border:1px solid rgba(212,167,71,.06);border-radius:10px;padding:24px}
 .donate p{font-size:13px;color:#424245;line-height:1.8}
-.donate code{font-size:12px;color:#86868b;word-break:break-all}
-.donate strong{color:#86868b}
-.rss{text-align:center;padding:24px 0 60px}
-.rss a{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:13px;font-weight:500;
-  color:#ffd700;text-decoration:none;
-  padding:8px 20px;
-  border:1px solid rgba(255,215,0,.2);
-  border-radius:20px;
-  transition:border-color .2s,background .2s
-}
-.rss a:hover{border-color:rgba(255,215,0,.4);background:rgba(255,215,0,.04)}
-footer{text-align:center;padding:24px 0 48px}
-footer p{font-size:12px;color:#424245;line-height:1.8}
-@media(max-width:480px){
-  .hero{padding:60px 0 0}
-  .hero img{width:200px;height:200px}
-  h1{font-size:30px;margin:32px 0 10px}
-  .tagline{font-size:16px}
-  .episodes{padding:60px 0 40px}
-  .ep-title{font-size:19px}
+.donate code{font-size:11px;color:#68686b;word-break:break-all;background:rgba(255,255,255,.03);padding:4px 8px;border-radius:4px}
+.donate strong{color:#68686b}
+
+/* === RSS === */
+.rss{text-align:center;padding:32px 24px 80px}
+.rss a{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:#d4a747;text-decoration:none;padding:8px 20px;border:1px solid rgba(212,167,71,.2);border-radius:20px;transition:border-color .3s,background .3s}
+.rss a:hover{border-color:rgba(212,167,71,.4);background:rgba(212,167,71,.04)}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px}
+footer p{font-size:12px;color:#2a2a2a;line-height:1.8}
+
+/* === RESPONSIVE === */
+@media(max-width:640px){
+  nav{padding:12px 16px;gap:14px}
+  .hero{padding:100px 20px 40px}
+  .hero img{width:220px;height:220px}
+  .hero h1{font-size:30px}
+  .hero .tagline{font-size:15px}
+  .episodes{padding:24px 16px 40px}
+  .episode{padding:20px 16px}
+  .ep-title{font-size:18px}
+  .donate-inner{padding:16px}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="https://bossman-lab.github.io/sheherazades-lantern/" style="margin-right:8px;">Podcast</a>
-  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="margin-right:8px;">Blog</a>
-  <span style="color:#424245;font-size:11px;margin-right:8px;">/</span>
-  <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
-  <span>/</span>
-  <a href="https://bossman-lab.github.io/sheherazades-lantern/cn/">中文</a>
-  <span>/</span>
-  <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
-  <span>/</span>
-  <a href="#" class="lang-active">Español</a>
-  
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/" class="">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/cn/">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">Español</a>
+    
+  </div>
 </nav>
 
 <div class="hero">
@@ -153,96 +129,99 @@ footer p{font-size:12px;color:#424245;line-height:1.8}
   <p class="tagline">Cuentos antiguos de Las mil y una noches, reavivados para almas modernas — audiodrama al estilo anime con voces completas.</p>
 </div>
 
-<div class="container">
 <div class="episodes">
   <div class="ep-label">10 Episodios</div>
   <div class="episode">
-    <div class="ep-number">Episode 01</div>
+    <div class="ep-number">Episode 1</div>
     <div class="ep-title">El mapa de las calles movedizas</div>
     <div class="ep-desc">Rashid dibuja mapas que siempre están equivocados. Pero no es que se equivoque — dibuja ciudades que aún no existen. Yueya, aprendiz de astrónoma, reconoce en sus trazos un cielo que todavía no ha salido. Mapas erróneos, estrellas sin nacer, y ambos señalan el mismo sitio: la Ciudad de Bronce, construida por los genios del rey Salomón antes de que existieran los humanos. La pregunta que ninguno se atreve a hacer: ¿quién dibuja el futuro, si los mapas se escriben antes de que existan los caminos?</div>
     <div class="ep-chars">🎭 Rashid (irlandés) · Yueya (británica)</div>
-    <audio controls preload="none"><source src="../audio/episodes/es_01_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_01_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">Episode 02</div>
+    <div class="ep-number">Episode 2</div>
     <div class="ep-title">La especia de las cosas olvidadas</div>
     <div class="ep-desc">Hay una ciudad que se olvida de sí misma. Las esquinas se desdibujan, los nombres de los vecinos se desvanecen, los recuerdos se filtran como arena entre los dedos. En un callejón escondido, el puesto de Nadia — sus especias no son para cocinar, sino para saborear vidas que nunca viviste. Karim entra y pide una dosis de «polvo del deseo». Lo que no sabe: algunos sabores, una vez probados, te cambian para siempre. Y no hay vuelta atrás.</div>
     <div class="ep-chars">🎭 Nadia (americana) · Karim (británico)</div>
-    <audio controls preload="none"><source src="../audio/episodes/es_02_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_02_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">Episode 03</div>
+    <div class="ep-number">Episode 3</div>
     <div class="ep-title">La espada que nunca se terminó</div>
     <div class="ep-desc">Cuarenta años lleva Khalid forjando la misma espada. Por la noche le susurra, por la mañana llora sobre ella. Llega un muchacho con sed de venganza, busca un arma que corte el pasado. Khalid mira la espada en la pared y sabe que este momento estaba escrito. La espada se romperá, y quien la rompa pagará el precio — el precio del olvido. Pero quizás, olvidar es en sí mismo una forma de perdón.</div>
     <div class="ep-chars">🎭 Khalid (voz grave americana)</div>
-    <audio controls preload="none"><source src="../audio/episodes/es_03_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_03_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">Episode 04</div>
+    <div class="ep-number">Episode 4</div>
     <div class="ep-title">El libro de lo nunca dicho</div>
     <div class="ep-desc">Una vez cada siglo, aparece una puerta en el caravasar. Del otro lado espera Dunyazad, la hermana de Sherezada, con un libro de páginas en blanco que guarda todo lo que nunca se dijo: cartas nunca enviadas, amores nunca confesados, disculpas nunca pronunciadas. Dunyazad ofrece un trato: el recuerdo más preciado de Yueya a cambio de salvar una historia a punto de desaparecer para siempre. La biblioteca es justa. Pero nunca sabes lo que vas a perder.</div>
     <div class="ep-chars">🎭 Dunyazad (india etérea) · Yueya (británica)</div>
-    <audio controls preload="none"><source src="../audio/episodes/es_04_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_04_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">Episode 05</div>
+    <div class="ep-number">Episode 5</div>
     <div class="ep-title">La arena que cantó dos veces</div>
     <div class="ep-desc">En lo más profundo del Rub al-Jali, donde solo existe el viento y la arena, Karim oyó las dunas cantar su nombre. Layla es la última que entiende el lenguaje de la arena. En su mano sostiene un solo grano — dentro hay una canción completa, escrita para una niña que aún no ha nacido. Karim cruzará el desierto para llevarlo a donde debe ir. La pregunta: ¿puede una canción escrita para el futuro cantarse en el pasado?</div>
     <div class="ep-chars">🎭 Layla (australiana) · Karim (británico)</div>
-    <audio controls preload="none"><source src="../audio/episodes/es_05_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_05_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">Episode 06</div>
+    <div class="ep-number">Episode 6</div>
     <div class="ep-title">La especia que recordaba</div>
     <div class="ep-desc">Nadia encuentra un grano de pimienta negra en el fondo de un viejo frasco — abre una puerta al Bazar de las Sombras, un mercado entre mundos. Ella y Rashid entran juntos, y descubren que lo más valioso en el mercado de las sombras no está en venta: es el recuerdo de algo que perdiste antes de nacer.</div>
     <div class="ep-chars">🎭 Nadia (americana) · Rashid (irlandés)</div>
-    <audio controls preload="none"><source src="../audio/episodes/es_06_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_06_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">Episode 07</div>
+    <div class="ep-number">Episode 7</div>
     <div class="ep-title">La canción que deshizo una espada</div>
     <div class="ep-desc">Layla de las Dunas Cantarinas llega a la forja de Khalid con un solo grano de arena que lleva una melodía anterior a la creación del mundo. La canción tiene el poder de terminar lo que empezó hace cuarenta años — pero solo si está dispuesto a dejar que su espada inacabada sea rota primero.</div>
     <div class="ep-chars">🎭 Khalid (voz grave americana) · Layla (australiana)</div>
-    <audio controls preload="none"><source src="../audio/episodes/es_07_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_07_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">Episode 08</div>
+    <div class="ep-number">Episode 8</div>
     <div class="ep-title">La historia que la leyó a ella</div>
     <div class="ep-desc">Yueya ha olvidado algo que no puede nombrar — una estrella, una historia, una voz que le enseñó las constelaciones. Dunyazad regresa con una página de plata que lee al lector en lugar de ser leída. Para encontrar lo que perdió, Yueya debe dejar que la historia la vea primero.</div>
     <div class="ep-chars">🎭 Yueya (británica) · Dunyazad (india etérea)</div>
-    <audio controls preload="none"><source src="../audio/episodes/es_08_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_08_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">Episode 09</div>
+    <div class="ep-number">Episode 9</div>
     <div class="ep-title">La deuda que viaja en el viento</div>
     <div class="ep-desc">Karim recibe un objeto del paso norteño — una deuda tan antigua que la tinta se ha desvanecido de su memoria. La caja de pimienta de Nadia guarda el aroma de una promesa hecha en una tormenta de nieve, en una montaña donde una joven mantenía un refugio caliente para extraños. El alto paso recuerda. La deuda es debida.</div>
     <div class="ep-chars">🎭 Karim (británico) · Nadia (americana)</div>
-    <audio controls preload="none"><source src="../audio/episodes/es_09_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_09_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
     <div class="ep-number">Episode 10</div>
     <div class="ep-title">El anciano y el oráculo</div>
     <div class="ep-desc">La brújula de Karim lleva tres días girando sin apuntar a ningún lado. Layla le dejó una rosa del desierto hace años, con un mensaje: «Dale esto al viajero cuya brújula deje de girar». Vuelve a las Dunas Cantarinas por última vez, para hacer la pregunta que ha estado evitando durante treinta y siete años: ¿cuándo es momento de detenerse?</div>
     <div class="ep-chars">🎭 Karim (británico) · Layla (australiana)</div>
-    <audio controls preload="none"><source src="../audio/episodes/es_10_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_10_anime.mp3" type="audio/mpeg"></audio>
   </div>
 </div>
 
 <div class="donate">
-  <p>☕ <strong>Mantén la Linterna Encendida</strong> — <code>TNxQquGae5nCEdAwdUzbRYsMUuNtW9t8NT</code><br>USDT (TRC-20)</p>
+  <div class="donate-inner">
+    <p>🏮 <strong>Keep the Lantern Burning</strong><br>
+    <code>TNxQquGae5nCEdAwdUzbRYsMUuNtW9t8NT</code><br>
+    USDT (TRC-20)</p>
+  </div>
 </div>
-
 
 <div class="rss">
-  <a href="../es/podcast.xml">📡 RSS Feed</a>
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/es/podcast.xml">📡 RSS Feed</a>
 </div>
-
 
 <footer>
+  
   <p>El Guardián de la Linterna · La Linterna de Sherezada</p>
+  
   <p>Cuentos antiguos de Las mil y una noches, reavivados para almas modernas.</p>
+  
 </footer>
-</div>
 
 </body>
 </html>

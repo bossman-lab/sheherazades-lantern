@@ -3,8 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>舍赫拉查德之灯</title>
 <meta name="description" content="一千零一夜的古老传说，为现代灵魂重新点燃。动画风格音频剧，多角色中文配音。丝绸之路上的奇幻旅程——地图师画出尚未建成的城市，香料商兜售从未活过的人生，铁匠锻造注定被折断的剑。提灯人为你引路。">
+<title>舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -29,122 +42,85 @@
   ]
 }
 </script>
-<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
-
-<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
-<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
-<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-  background:#000;
-  color:#f5f5f7;
-  font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC',sans-serif;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.5
-}
-.container{max-width:680px;margin:0 auto;padding:0 24px}
-nav{display:flex;justify-content:flex-end;align-items:center;padding:20px 24px;gap:12px}
-nav a{color:#424245;text-decoration:none;font-size:13px;transition:color .2s}
-nav a:hover{color:#f5f5f7}
-nav span{color:#424245;font-size:11px}
-.lang-active{color:#f5f5f7!important}
-.hero{text-align:center;padding:80px 0 0}
-.hero img{width:280px;height:280px;border-radius:16px;box-shadow:0 24px 80px rgba(255,215,0,.08)}
-h1{
-  font-size:40px;
-  font-weight:600;
-  letter-spacing:-.3px;
-  margin:40px 0 12px;
-  color:#f5f5f7;
-  line-height:1.3
-}
-.tagline{
-  font-size:17px;
-  font-weight:400;
-  color:#86868b;
-  max-width:520px;
-  margin:0 auto;
-  line-height:1.7
-}
-.episodes{padding:80px 0 60px}
-.ep-label{
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-  color:#424245;
-  margin-bottom:36px
-}
-.episode{padding:32px 0;border-top:1px solid rgba(255,255,255,.06)}
-.episode:last-child{border-bottom:1px solid rgba(255,255,255,.06)}
-.ep-number{
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
-  color:#ffd700;
-  margin-bottom:6px
-}
-.ep-title{
-  font-size:22px;
-  font-weight:600;
-  letter-spacing:-.2px;
-  color:#f5f5f7;
-  margin-bottom:8px
-}
-.ep-desc{
-  font-size:15px;
-  color:#86868b;
-  line-height:1.75;
-  margin-bottom:6px
-}
-.ep-chars{font-size:13px;color:#424245;margin-bottom:14px}
-audio{width:100%;height:36px;border-radius:6px;filter:invert(1);opacity:.7}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === HERO === */
+.hero{text-align:center;padding:120px 24px 60px;position:relative}
+.hero img{width:320px;height:320px;border-radius:16px;box-shadow:0 24px 80px rgba(212,167,71,.06);margin-bottom:36px;transition:transform .4s ease}
+.hero img:hover{transform:scale(1.02)}
+.hero h1{font-size:42px;font-weight:600;letter-spacing:-.5px;margin-bottom:10px;color:#f5f5f7;line-height:1.2}
+.hero .tagline{font-size:17px;color:#68686b;max-width:500px;margin:0 auto;line-height:1.7}
+.hero .tagline em{color:#d4a747;font-style:normal}
+
+/* === EPISODES === */
+.episodes{max-width:640px;margin:0 auto;padding:40px 24px 60px}
+.ep-label{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#2a2a2a;margin-bottom:28px}
+.episode{padding:28px 20px;border:1px solid rgba(212,167,71,.06);border-radius:10px;margin-bottom:16px;transition:border-color .3s,background .3s}
+.episode:hover{border-color:rgba(212,167,71,.15);background:rgba(212,167,71,.02)}
+.ep-number{font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:#d4a747;margin-bottom:6px}
+.ep-title{font-size:20px;font-weight:600;color:#f5f5f7;margin-bottom:6px;line-height:1.3}
+.ep-desc{font-size:14px;color:#68686b;line-height:1.7;margin-bottom:4px}
+.ep-chars{font-size:12px;color:#424245;margin-bottom:12px}
+audio{width:100%;height:36px;border-radius:6px;filter:invert(1);opacity:.65}
 audio::-webkit-media-controls-panel{background:#1a1a1a}
-.donate{text-align:center;padding:40px 0 20px;border-top:1px solid rgba(255,255,255,.06)}
+
+/* === DONATE === */
+.donate{text-align:center;padding:48px 24px 0}
+.donate-inner{max-width:400px;margin:0 auto;border:1px solid rgba(212,167,71,.06);border-radius:10px;padding:24px}
 .donate p{font-size:13px;color:#424245;line-height:1.8}
-.donate code{font-size:12px;color:#86868b;word-break:break-all}
-.donate strong{color:#86868b}
-.rss{text-align:center;padding:24px 0 60px}
-.rss a{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:13px;font-weight:500;
-  color:#ffd700;text-decoration:none;
-  padding:8px 20px;
-  border:1px solid rgba(255,215,0,.2);
-  border-radius:20px;
-  transition:border-color .2s,background .2s
-}
-.rss a:hover{border-color:rgba(255,215,0,.4);background:rgba(255,215,0,.04)}
-footer{text-align:center;padding:24px 0 48px}
-footer p{font-size:12px;color:#424245;line-height:1.8}
-@media(max-width:480px){
-  .hero{padding:60px 0 0}
-  .hero img{width:200px;height:200px}
-  h1{font-size:30px;margin:32px 0 10px}
-  .tagline{font-size:15px}
-  .episodes{padding:60px 0 40px}
-  .ep-title{font-size:19px}
+.donate code{font-size:11px;color:#68686b;word-break:break-all;background:rgba(255,255,255,.03);padding:4px 8px;border-radius:4px}
+.donate strong{color:#68686b}
+
+/* === RSS === */
+.rss{text-align:center;padding:32px 24px 80px}
+.rss a{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:#d4a747;text-decoration:none;padding:8px 20px;border:1px solid rgba(212,167,71,.2);border-radius:20px;transition:border-color .3s,background .3s}
+.rss a:hover{border-color:rgba(212,167,71,.4);background:rgba(212,167,71,.04)}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px}
+footer p{font-size:12px;color:#2a2a2a;line-height:1.8}
+
+/* === RESPONSIVE === */
+@media(max-width:640px){
+  nav{padding:12px 16px;gap:14px}
+  .hero{padding:100px 20px 40px}
+  .hero img{width:220px;height:220px}
+  .hero h1{font-size:30px}
+  .hero .tagline{font-size:15px}
+  .episodes{padding:24px 16px 40px}
+  .episode{padding:20px 16px}
+  .ep-title{font-size:18px}
+  .donate-inner{padding:16px}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="https://bossman-lab.github.io/sheherazades-lantern/" style="margin-right:8px;">Podcast</a>
-  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="margin-right:8px;">Blog</a>
-  <span style="color:#424245;font-size:11px;margin-right:8px;">/</span>
-  <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
-  <span>/</span>
-  <a href="#" class="lang-active">中文</a>
-  <span>/</span>
-  <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
-  <span>/</span>
-  <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
-  
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/" class="">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
 </nav>
 
 <div class="hero">
@@ -153,96 +129,99 @@ footer p{font-size:12px;color:#424245;line-height:1.8}
   <p class="tagline">一千零一夜的古老传说，为现代灵魂重新点燃。动画风格音频剧，多角色中文配音。</p>
 </div>
 
-<div class="container">
 <div class="episodes">
   <div class="ep-label">已上线 10 集</div>
   <div class="episode">
-    <div class="ep-number">第 01 集</div>
+    <div class="ep-number">Episode 1</div>
     <div class="ep-title">会移动的街道地图</div>
     <div class="ep-desc">巴格达的制图师拉希德画了一辈子地图，却从未画对过一条街。月芽是天文学徒，她在他的线条里认出一片尚未升起的星空。当两张错误的图拼在一起，指向的却是同一座城——由所罗门王的精灵用黄铜铸成的城市。问题是：一座还没建好的城，为什么已经出现在了地图上？</div>
     <div class="ep-chars">🎭 拉希德 · 月芽</div>
-    <audio controls preload="none"><source src="../audio/episodes/cn_01_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_01_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">第 02 集</div>
+    <div class="ep-number">Episode 2</div>
     <div class="ep-title">香料之镜</div>
     <div class="ep-desc">有一座城市正在遗忘自己。街道的转角消失，邻居的名字模糊，人们的记忆像沙漏一样不可逆转地流失。纳迪亚的香料摊在巷弄深处——她的香料能让你尝到从未活过的人生。卡里姆推门而入，要了一剂「欲望之尘」。他不知道的是，有些味道一旦尝过，就再也回不去了。</div>
     <div class="ep-chars">🎭 纳迪亚 · 卡里姆</div>
-    <audio controls preload="none"><source src="../audio/episodes/cn_02_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_02_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">第 03 集</div>
+    <div class="ep-number">Episode 3</div>
     <div class="ep-title">未竟之刃</div>
     <div class="ep-desc">铁匠哈立德四十年守着同一把未完成的剑。他在夜里对它低语，在清晨为它流泪。一个少年带着复仇之心闯进他的铺子，想要一把能斩断过去的武器。哈立德看着墙上的剑，知道这一刻终会到来——这把剑注定要被折断，而折断它的那个人，将付出遗忘一切的代价。但也许，遗忘本身就是一种成全。</div>
     <div class="ep-chars">🎭 哈立德 · 莱拉</div>
-    <audio controls preload="none"><source src="../audio/episodes/cn_03_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_03_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">第 04 集</div>
+    <div class="ep-number">Episode 4</div>
     <div class="ep-title">未言之书</div>
     <div class="ep-desc">每个世纪，驿站深处会出现一扇门。月芽推门而入，见到了杜妮亚扎德——山鲁佐德的妹妹，守护着一本空白的书。书页上什么都没有，却藏着世上所有从未说出口的话：未寄出的信、未告白的爱、未说出口的抱歉。杜妮亚扎德提出交换：月芽最珍贵的记忆，换回一个即将永远消失的故事。图书馆是公平的。但你永远不知道自己会失去什么。</div>
     <div class="ep-chars">🎭 月芽 · 杜妮亚扎德</div>
-    <audio controls preload="none"><source src="../audio/episodes/cn_04_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_04_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">第 05 集</div>
+    <div class="ep-number">Episode 5</div>
     <div class="ep-title">吟唱沙丘与消逝的故事</div>
     <div class="ep-desc">卡里姆在阿拉伯沙漠深处听到了沙丘的吟唱——它们在叫他的名字。莱拉是沙漠中最后一个会听沙语的人，她的手心里攥着一粒沙子，里面封着一整首歌。歌是唱给一个还没出生的女孩的。卡里姆要穿过空无一物的鲁卜哈利沙漠，把那粒沙子送到它该去的地方。问题是：一首写给未来人的歌，能在过去被传唱吗？</div>
     <div class="ep-chars">🎭 卡里姆 · 莱拉</div>
-    <audio controls preload="none"><source src="../audio/episodes/cn_05_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_05_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">第 06 集</div>
+    <div class="ep-number">Episode 6</div>
     <div class="ep-title">香料之忆</div>
     <div class="ep-desc">纳迪亚在香料罐深处发现了一粒黑色胡椒——它打开了一扇通往阴影市场的大门。拉希德和她一起走进去，发现这个夹缝中的市场里最珍贵的东西不卖钱：它卖的是你出生之前就失去的东西的记忆。</div>
     <div class="ep-chars">🎭 纳迪亚 · 拉希德</div>
-    <audio controls preload="none"><source src="../audio/episodes/cn_06_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_06_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">第 07 集</div>
+    <div class="ep-number">Episode 7</div>
     <div class="ep-title">以歌碎剑</div>
     <div class="ep-desc">吟唱沙丘的莱拉带着一粒沙子来到哈立德的铁匠铺——沙子里封着创世之前的旋律。这首歌能完成四十年前未竟之事，但前提是：他必须先折断自己锻造了一生的剑。</div>
     <div class="ep-chars">🎭 哈立德 · 莱拉</div>
-    <audio controls preload="none"><source src="../audio/episodes/cn_07_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_07_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">第 08 集</div>
+    <div class="ep-number">Episode 8</div>
     <div class="ep-title">读取她的故事</div>
     <div class="ep-desc">月芽忘记了一件事——一颗星、一个故事、一个教她认识星座的声音。杜妮亚扎德带着一页银色书页回来，这页书不被人读，而是读人。月芽必须让故事先看见她，才能找回她失去的一切。</div>
     <div class="ep-chars">🎭 月芽 · 杜妮亚扎德</div>
-    <audio controls preload="none"><source src="../audio/episodes/cn_08_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_08_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">第 09 集</div>
+    <div class="ep-number">Episode 9</div>
     <div class="ep-title">随风而行的债务</div>
     <div class="ep-desc">卡里姆收到一封来自北方山口的旧物——一笔债，老到墨水已从记忆中褪尽。纳迪亚的胡椒盒里锁着一场暴风雪中许下的诺言的香气。一个年轻女人在高山上为陌生人守着一间庇护所。高山记得。债该还了。</div>
     <div class="ep-chars">🎭 卡里姆 · 纳迪亚</div>
-    <audio controls preload="none"><source src="../audio/episodes/cn_09_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_09_anime.mp3" type="audio/mpeg"></audio>
   </div>
   <div class="episode">
-    <div class="ep-number">第 10 集</div>
+    <div class="ep-number">Episode 10</div>
     <div class="ep-title">长者和神谕</div>
     <div class="ep-desc">卡里姆的指南针已经转了三天——哪里都不指。莱拉多年前留给他一朵沙漠玫瑰，附着一句话：「给那个指南针不再转动的旅人。」他最后一次回到吟唱沙丘，去问那个他逃避了三十七年的问题：什么时候该停下了？</div>
     <div class="ep-chars">🎭 卡里姆 · 莱拉</div>
-    <audio controls preload="none"><source src="../audio/episodes/cn_10_anime.mp3" type="audio/mpeg"></audio>
+    <audio controls preload="none"><source src="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_10_anime.mp3" type="audio/mpeg"></audio>
   </div>
 </div>
 
 <div class="donate">
-  <p>☕ <strong>让灯一直亮着</strong> — <code>TNxQquGae5nCEdAwdUzbRYsMUuNtW9t8NT</code><br>USDT (TRC-20)</p>
+  <div class="donate-inner">
+    <p>🏮 <strong>Keep the Lantern Burning</strong><br>
+    <code>TNxQquGae5nCEdAwdUzbRYsMUuNtW9t8NT</code><br>
+    USDT (TRC-20)</p>
+  </div>
 </div>
-
 
 <div class="rss">
-  <a href="../cn/podcast.xml">📡 RSS Feed</a>
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">📡 RSS Feed</a>
 </div>
-
 
 <footer>
+  
   <p>提灯人 · 舍赫拉查德之灯</p>
+  
   <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
 </footer>
-</div>
 
 </body>
 </html>
