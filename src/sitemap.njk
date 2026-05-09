@@ -11,7 +11,9 @@ permalink: "/sitemap.xml"
   { "loc": "/ar/", "priority": "1.0" },
   { "loc": "/ar/podcast.xml", "priority": "0.9" },
   { "loc": "/es/", "priority": "1.0" },
-  { "loc": "/es/podcast.xml", "priority": "0.9" }
+  { "loc": "/es/podcast.xml", "priority": "0.9" },
+  { "loc": "/blog/", "priority": "0.7" },
+  { "loc": "/blog/multi-platform-rss-registration-nightmare.html", "priority": "0.7" }
 ] %}
 {%- for ep in episodes %}
   {%- set all_urls = all_urls.concat([{ "loc": "/episodes/" + ep.id, "priority": "0.8" }]) %}
