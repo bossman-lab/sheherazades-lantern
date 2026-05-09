@@ -3,141 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How I Spent 3 Days Trying to Register My RSS Feed on 7 Podcast Platforms</title>
-<meta name="description" content="Ancient tales from the Arabian nights, rekindled for modern souls — anime-style audio drama with full voice cast. Journey across the Silk Road with the Lantern Keeper as your guide.">
+<meta name="description" content="The full, unfiltered story of submitting a 4-language AI podcast RSS to Spotify, Apple, Deezer, Anghami, iHeartRadio, and Chinese platforms — Playwright automation, Cloudflare walls, email verification loops, and what actually worked.">
+<title>How I Spent 3 Days Trying to Register My RSS Feed on 7 Podcast Platforms · Sheherazade&#39;s Lantern</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="Sheherazade&#39;s Lantern" href="https://bossman-lab.github.io/sheherazades-lantern/podcast/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "PodcastSeries",
-  "name": "Sheherazade's Lantern",
-  "description": "Ancient tales from the Arabian nights, rekindled for modern souls — anime-style audio drama with full voice cast. Journey across the Silk Road with the Lantern Keeper as your guide.",
-  "url": "https://bossman-lab.github.io/sheherazades-lantern/",
-  "image": "https://bossman-lab.github.io/sheherazades-lantern/audio/assets/podcast_cover.jpg",
-  "inLanguage": "en",
-  "author": { "@type": "Person", "name": "The Lantern Keeper" },
-  "episode": [
-    {"@type":"PodcastEpisode","position":1,"name":"The Map of the Moving Streets","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/01"},
-    {"@type":"PodcastEpisode","position":2,"name":"The Spice of Forgotten Things","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/02"},
-    {"@type":"PodcastEpisode","position":3,"name":"The Blade That Was Never Finished","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/03"},
-    {"@type":"PodcastEpisode","position":4,"name":"The Book of Things Never Said","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/04"},
-    {"@type":"PodcastEpisode","position":5,"name":"The Sand That Sang Twice","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/05"},
-    {"@type":"PodcastEpisode","position":6,"name":"The Spice That Remembered","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/06"},
-    {"@type":"PodcastEpisode","position":7,"name":"The Song That Unmade a Sword","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/07"},
-    {"@type":"PodcastEpisode","position":8,"name":"The Story That Read Her Back","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/08"},
-    {"@type":"PodcastEpisode","position":9,"name":"The Debt That Travels on the Wind","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/09"},
-    {"@type":"PodcastEpisode","position":10,"name":"The Elder and the Oracle","url":"https://bossman-lab.github.io/sheherazades-lantern/episodes/10"}
-  ]
+  "@type": "Blog",
+  "name": "Sheherazade&#39;s Lantern Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "The Lantern Keeper" }
 }
 </script>
 
-<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
-<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
-<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
-<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-  background:#000;
-  color:#f5f5f7;
-  font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',sans-serif;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.5
-}
-.container{max-width:680px;margin:0 auto;padding:0 24px}
+body{background:#000;color:#f5f5f7;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
 nav{display:flex;justify-content:flex-end;align-items:center;padding:20px 24px;gap:12px}
 nav a{color:#424245;text-decoration:none;font-size:13px;transition:color .2s}
 nav a:hover{color:#f5f5f7}
 nav span{color:#424245;font-size:11px}
-.lang-active{color:#f5f5f7!important}
-.hero{text-align:center;padding:80px 0 0}
-.hero img{width:280px;height:280px;border-radius:16px;box-shadow:0 24px 80px rgba(255,215,0,.08)}
-h1{
-  font-size:44px;
-  font-weight:600;
-  letter-spacing:-.5px;
-  margin:40px 0 12px;
-  color:#f5f5f7;
-  line-height:1.3
-}
-.tagline{
-  font-size:18px;
-  font-weight:400;
-  color:#86868b;
-  max-width:520px;
-  margin:0 auto;
-  line-height:1.7
-}
-.episodes{padding:80px 0 60px}
-.ep-label{
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-  color:#424245;
-  margin-bottom:36px
-}
-.episode{padding:32px 0;border-top:1px solid rgba(255,255,255,.06)}
-.episode:last-child{border-bottom:1px solid rgba(255,255,255,.06)}
-.ep-number{
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
-  color:#ffd700;
-  margin-bottom:6px
-}
-.ep-title{
-  font-size:22px;
-  font-weight:600;
-  letter-spacing:-.2px;
-  color:#f5f5f7;
-  margin-bottom:8px
-}
-.ep-desc{
-  font-size:15px;
-  color:#86868b;
-  line-height:1.75;
-  margin-bottom:6px
-}
-.ep-chars{font-size:13px;color:#424245;margin-bottom:14px}
-audio{width:100%;height:36px;border-radius:6px;filter:invert(1);opacity:.7}
-audio::-webkit-media-controls-panel{background:#1a1a1a}
-.donate{text-align:center;padding:40px 0 20px;border-top:1px solid rgba(255,255,255,.06)}
-.donate p{font-size:13px;color:#424245;line-height:1.8}
-.donate code{font-size:12px;color:#86868b;word-break:break-all}
-.donate strong{color:#86868b}
-.rss{text-align:center;padding:24px 0 60px}
-.rss a{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:13px;font-weight:500;
-  color:#ffd700;text-decoration:none;
-  padding:8px 20px;
-  border:1px solid rgba(255,215,0,.2);
-  border-radius:20px;
-  transition:border-color .2s,background .2s
-}
-.rss a:hover{border-color:rgba(255,215,0,.4);background:rgba(255,215,0,.04)}
-footer{text-align:center;padding:24px 0 48px}
-footer p{font-size:12px;color:#424245;line-height:1.8}
-@media(max-width:480px){
-  .hero{padding:60px 0 0}
-  .hero img{width:200px;height:200px}
-  h1{font-size:30px;margin:32px 0 10px}
-  .tagline{font-size:16px}
-  .episodes{padding:60px 0 40px}
-  .ep-title{font-size:19px}
-}
+.container{max-width:720px;margin:0 auto;padding:80px 24px 60px}
+h1{font-size:36px;font-weight:600;margin-bottom:8px}
+h2{font-size:24px;font-weight:500;margin:0 0 6px}
+.subtitle{color:#86868b;font-size:18px;margin-bottom:48px}
+.post{border-top:1px solid rgba(255,255,255,.06);padding:24px 0}
+.post:last-child{border-bottom:1px solid rgba(255,255,255,.06)}
+.post-date{font-size:13px;color:#424245;margin-bottom:6px}
+.post-title{font-size:20px;font-weight:500;color:#f5f5f7;text-decoration:none;display:block;margin-bottom:8px}
+.post-title:hover{color:#ffd700}
+.post-desc{color:#86868b;font-size:14px;line-height:1.5;margin:0}
+.back-link{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.06)}
+.back-link a{color:#86868b;text-decoration:none;font-size:14px}
+.back-link a:hover{color:#f5f5f7}
+.footer{text-align:center;padding:40px 24px 60px;color:#86868b;font-size:13px;line-height:1.6}
+@media(max-width:640px){.container{padding:60px 20px 40px}}
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="/" style="margin-right:8px;">Podcast</a>
-  <a href="/blog/" style="margin-right:8px;">Blog</a>
-  <span style="color:#424245;font-size:11px;margin-right:8px;">/</span>
-  <a href="#" class="lang-active">English</a>
+  <a href="/">Podcast</a>
+  <a href="/blog/" style="color:#f5f5f7">Blog</a>
+  <span>/</span>
+  <a href="#">English</a>
   <span>/</span>
   <a href="cn/">中文</a>
   <span>/</span>
@@ -147,101 +72,153 @@ footer p{font-size:12px;color:#424245;line-height:1.8}
   
 </nav>
 
-<div class="hero">
-  <img src="/audio/assets/podcast_cover.jpg" alt="Sheherazade&#39;s Lantern">
-  <h1>Sheherazade&#39;s Lantern</h1>
-  <p class="tagline">Ancient tales from the Arabian nights, rekindled for modern souls — anime-style audio drama with full voice cast.</p>
-</div>
+<h1>How I Spent 3 Days Trying to Register My RSS Feed on 7 Podcast Platforms</h1>
+<p>I built a 4-language AI podcast pipeline. Eleven hours of audio across English, Chinese, Arabic, and Spanish. A fully automated 11ty SSG website with multi-language RSS feeds, sitemaps, and JSON-LD structured data.</p>
+<p>Then I tried to submit it to podcast directories.</p>
+<p>Three days later, I had a folder full of screenshots and zero podcasts approved. Here's the real story.</p>
+<hr>
+<h2>The Setup</h2>
+<p>The project: <a href="https://bossman-lab.github.io/sheherazades-lantern/">Sheherazade's Lantern</a> — Arabian nights stories as an anime-style audio drama in 4 languages.</p>
+<p>The RSS feeds (one per language):</p>
+<ul>
+<li>🇬🇧 <code>https://project.com/podcast/podcast.xml</code></li>
+<li>🇨🇳 <code>https://project.com/cn/podcast.xml</code></li>
+<li>🇸🇦 <code>https://project.com/ar/podcast.xml</code></li>
+<li>🇪🇸 <code>https://project.com/es/podcast.xml</code></li>
+</ul>
+<p>All hosted on GitHub Pages behind a custom domain. iTunes tags validated. Cover art 3000x3000. Audio files accessible. Should be plug-and-play, right?</p>
+<p>Wrong.</p>
+<hr>
+<h2>Round 1: Spotify for Podcasters</h2>
+<p><strong>URL:</strong> <code>https://creators.spotify.com/switch</code></p>
+<p>The <code>submit</code> page was a 404. The actual page, <code>/switch</code>, lets you paste an RSS URL. I logged in with Google, pasted the feed — and got a loading spinner that never resolved.</p>
+<p>Turned out: the server I'm running this from (Asia) triggers Spotify's client-side anti-bot checks. The Playwright browser was detected as headless despite setting <code>--no-sandbox</code>, <code>--disable-blink-features=AutomationControlled</code>, and every stealth trick in the book.</p>
+<p><strong>What worked:</strong> Nothing automated. The user had to open Spotify for Podcasters in their own browser and submit the RSS URL manually. Approval took 48 hours.</p>
+<p><strong>Lesson:</strong> Spotify doesn't block submission — but you can't automate it. The client-side JS checks are too aggressive.</p>
+<hr>
+<h2>Round 2: Apple Podcasts Connect</h2>
+<p><strong>URL:</strong> <code>https://podcasters.apple.com/</code></p>
+<p>Apple was a different kind of nightmare. The page just... kept loading. Not an error, not a timeout, just a spinning wheel that never resolved. No matter which browser, which VPN, which time of day.</p>
+<p>Turns out Apple's CDN is slow from certain regions. And their sign-in had issues with my @tutamail.com email — Apple apparently doesn't accept Tutanota addresses.</p>
+<p><strong>The workaround:</strong> A Chinese phone number Apple ID worked. Logging in with a +86 number, no credit card needed (select &quot;None&quot;), let me access the dashboard. Then it was a simple RSS paste.</p>
+<p><strong>What got me:</strong> When you first log in, the dashboard shows &quot;No shows&quot; — which is correct! But the UI gives no hint. You have to click the <strong>+</strong> button (barely visible) → &quot;Add Show&quot; → &quot;Add a show with an RSS feed.&quot; It's not intuitive.</p>
+<p><strong>Lesson:</strong> Apple Podcasts submission works for most people. If it doesn't load, try: ① turn off VPN, ② use a different email provider, ③ try a +86 Apple ID as fallback.</p>
+<hr>
+<h2>Round 3: Deezer (The Most Automatable)</h2>
+<p><strong>URL:</strong> <code>https://podcasters.deezer.com/</code></p>
+<p>Deezer was the only platform that was actually fun to automate. Clean form, clear steps:</p>
+<ol>
+<li>Paste RSS URL → click NEXT</li>
+<li>Deezer sends email code to your podcast's <code>&lt;itunes:email&gt;</code> address</li>
+<li>Enter code → fill metadata (genre, language, explicit flag)</li>
+</ol>
+<p><strong>The catch:</strong> The email code step requires human interaction. And even then, &quot;Invalid code&quot; errors appear with headless Chromium — anti-bot detection on the code validation endpoint. Switching to Firefox fixed it.</p>
+<p><strong>Lesson:</strong> Deezer &gt; Spotify for automation. Firefox &gt; Chromium for form automation. But you still need someone to check email.</p>
+<hr>
+<h2>Round 4: Anghami (Arabic Market)</h2>
+<p><strong>URL:</strong> <code>https://anghami.com/addpodcast</code></p>
+<p>This was the only platform where the Arabic RSS feed got approved. The key insight: their validation checks the RSS language tag (<code>&lt;language&gt;ar&lt;/language&gt;</code>). Submit the English feed to a platform targeting Saudi users, and it fails metadata validation.</p>
+<p>Used Firefox (Chromium completely failed — empty white page). Three steps: RSS → email code → genre/country/language.</p>
+<p><strong>Result:</strong> ✅ Arabic version submitted successfully in one session.</p>
+<p><strong>Lesson:</strong> For non-English content, submit the language-specific RSS feed — not the default English one. Platforms validate language tags.</p>
+<hr>
+<h2>Round 5: iHeartRadio (Geo-blocked)</h2>
+<p><strong>URL:</strong> <code>https://podcasters.iheart.com/</code></p>
+<p>&quot;Only individuals located in our supported regions can access this site.&quot;</p>
+<p>Supported regions: US, Canada, Mexico, Australia, New Zealand. My server is in Asia.</p>
+<p>Zero workaround available from the agent's side. The user would need to access this from a US VPN in their own browser.</p>
+<p><strong>Status:</strong> ❌ Blocked indefinitely.</p>
+<hr>
+<h2>Round 6: Chinese Platforms</h2>
+<h3>小宇宙 (Xiaoyuzhou FM)</h3>
+<p>The only Chinese platform that works without real-name ID verification. Phone number login → RSS import → done. Review takes 1-2 days. The RSS import auto-populates all episodes.</p>
+<h3>喜马拉雅 (Ximalaya)</h3>
+<p>No RSS import at all. Must upload audio files manually AND submit real-name ID verification (Chinese national ID or passport). Skip.</p>
+<h3>网易云音乐 / QQ Music</h3>
+<p>Both require real-name identity verification to publish podcasts. Skip.</p>
+<p><strong>Result:</strong> 小宇宙 is the only viable Chinese platform without KYC. Submitted and waiting.</p>
+<hr>
+<h2>What I Learned</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th style="text-align:center">Automatable?</th>
+<th style="text-align:center">Actually Works?</th>
+<th style="text-align:center">Time Spent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dev.to</td>
+<td style="text-align:center">✅ API</td>
+<td style="text-align:center">✅ Published</td>
+<td style="text-align:center">1 hour</td>
+</tr>
+<tr>
+<td>Spotify</td>
+<td style="text-align:center">❌ Client-side checks</td>
+<td style="text-align:center">✅ Manual = 48h</td>
+<td style="text-align:center">3 hours</td>
+</tr>
+<tr>
+<td>Apple Podcasts</td>
+<td style="text-align:center">❌ CDN issues</td>
+<td style="text-align:center">✅ Manual = 72h</td>
+<td style="text-align:center">4 hours</td>
+</tr>
+<tr>
+<td>Deezer</td>
+<td style="text-align:center">⚠️ Partial</td>
+<td style="text-align:center">❌ Invalid code bug</td>
+<td style="text-align:center">2 hours</td>
+</tr>
+<tr>
+<td>Anghami</td>
+<td style="text-align:center">⚠️ FF only</td>
+<td style="text-align:center">✅ Submitted</td>
+<td style="text-align:center">1 hour</td>
+</tr>
+<tr>
+<td>iHeartRadio</td>
+<td style="text-align:center">❌ Geo-blocked</td>
+<td style="text-align:center">❌ Can't</td>
+<td style="text-align:center">30 min</td>
+</tr>
+<tr>
+<td>小宇宙</td>
+<td style="text-align:center">✅ Manual</td>
+<td style="text-align:center">✅ Submitted</td>
+<td style="text-align:center">30 min</td>
+</tr>
+<tr>
+<td>喜马拉雅</td>
+<td style="text-align:center">❌ No RSS import</td>
+<td style="text-align:center">❌ Skip</td>
+<td style="text-align:center">20 min</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The real bottleneck isn't technology — it's distribution.</strong> The audio pipeline took 2 days to build. The multi-language website took 1 day. Getting on platforms dominated my entire week and I'm still not fully onboard.</p>
+<p><strong>If I had to do it again:</strong></p>
+<ol>
+<li>Build the content buffer first (10 episodes minimum)</li>
+<li>Validate the RSS feed with <a href="https://castfeedvalidator.com">Cast Feed Validator</a> before submitting anywhere</li>
+<li>Submit to Spotify and Apple Podcasts on day 1 — they take 2-3 days to approve anyway</li>
+<li>Submit to smaller platforms in parallel during the waiting period</li>
+<li>Accept that some platforms (iHeartRadio, most Chinese platforms) will require either geo-presence or ID verification</li>
+<li>Use Firefox over Chrome/Chromium for every form automation attempt</li>
+</ol>
+<hr>
+<p><em>This is a post about the process, not the destination. Sheherazade's Lantern is live at <a href="https://bossman-lab.github.io/sheherazades-lantern/">bossman-lab.github.io/sheherazades-lantern</a> — 10 episodes in 4 languages, slowly making its way onto directories one RSS feed at a time.</em></p>
 
-<div class="container">
-<div class="episodes">
-  <div class="ep-label">10 Episodes</div>
-  <div class="episode">
-    <div class="ep-number">Episode 01</div>
-    <div class="ep-title">The Map of the Moving Streets</div>
-    <div class="ep-desc">Rashid the Mapmaker draws cities that change overnight. Yueya the astronomer discovers his maps match a sky that hasn&#39;t risen yet. Together they find the Brass City — built by King Solomon&#39;s djinn.</div>
-    <div class="ep-chars">🎭 Rashid (Irish) · Yueya (British)</div>
-    <audio controls preload="none"><source src="/audio/episodes/ep01_anime.mp3" type="audio/mpeg"></audio>
-  </div>
-  <div class="episode">
-    <div class="ep-number">Episode 02</div>
-    <div class="ep-title">The Spice of Forgotten Things</div>
-    <div class="ep-desc">A city is forgetting itself. Karim meets Nadia the Spice Merchant, who offers him a taste of every life he never lived.</div>
-    <div class="ep-chars">🎭 Nadia (American) · Karim (British)</div>
-    <audio controls preload="none"><source src="/audio/episodes/ep02_anime.mp3" type="audio/mpeg"></audio>
-  </div>
-  <div class="episode">
-    <div class="ep-number">Episode 03</div>
-    <div class="ep-title">The Blade That Was Never Finished</div>
-    <div class="ep-desc">A haunted swordsmith. A boy seeking revenge. An unfinished blade on the wall. Khalid keeps a secret that the forge fire cannot burn away.</div>
-    <div class="ep-chars">🎭 Khalid (American deep voice)</div>
-    <audio controls preload="none"><source src="/audio/episodes/ep03_anime.mp3" type="audio/mpeg"></audio>
-  </div>
-  <div class="episode">
-    <div class="ep-number">Episode 04</div>
-    <div class="ep-title">The Book of Things Never Said</div>
-    <div class="ep-desc">Once a century, a door appears in the Caravanserai. Inside waits Dunyazad, Scheherazade&#39;s sister, with a book of blank pages that holds every unspoken truth.</div>
-    <div class="ep-chars">🎭 Dunyazad (Indian ethereal) · Yueya (British)</div>
-    <audio controls preload="none"><source src="/audio/episodes/ep04_anime.mp3" type="audio/mpeg"></audio>
-  </div>
-  <div class="episode">
-    <div class="ep-number">Episode 05</div>
-    <div class="ep-title">The Sand That Sang Twice</div>
-    <div class="ep-desc">Deep in the Empty Quarter, Karim hears the dunes singing. Layla holds a single grain of sand that reveals what he has been searching for his entire life.</div>
-    <div class="ep-chars">🎭 Layla (Australian) · Karim (British)</div>
-    <audio controls preload="none"><source src="/audio/episodes/ep05_anime.mp3" type="audio/mpeg"></audio>
-  </div>
-  <div class="episode">
-    <div class="ep-number">Episode 06</div>
-    <div class="ep-title">The Spice That Remembered</div>
-    <div class="ep-desc">Nadia finds a black peppercorn that opens a door to the Black Bazaar — a market that exists between worlds. She and Rashid enter together, and discover that the most precious thing in the shadow market isn&#39;t for sale: it&#39;s the memory of something you lost before you were born.</div>
-    <div class="ep-chars">🎭 Nadia (American) · Rashid (Irish)</div>
-    <audio controls preload="none"><source src="/audio/episodes/ep06_anime.mp3" type="audio/mpeg"></audio>
-  </div>
-  <div class="episode">
-    <div class="ep-number">Episode 07</div>
-    <div class="ep-title">The Song That Unmade a Sword</div>
-    <div class="ep-desc">Layla of the Singing Dunes arrives at Khalid&#39;s forge with a single grain of sand that carries a melody from before the world was made. The song has the power to finish what he started forty years ago — but only if he is willing to let his unfinished blade be broken first.</div>
-    <div class="ep-chars">🎭 Khalid (American deep voice) · Layla (Australian)</div>
-    <audio controls preload="none"><source src="/audio/episodes/ep07_anime.mp3" type="audio/mpeg"></audio>
-  </div>
-  <div class="episode">
-    <div class="ep-number">Episode 08</div>
-    <div class="ep-title">The Story That Read Her Back</div>
-    <div class="ep-desc">Yueya has forgotten something she can&#39;t name — a star, a story, a voice that taught her the constellations. Dunyazad returns with a silver page that reads the reader instead of being read. To find what she lost, Yueya must let the story see her first.</div>
-    <div class="ep-chars">🎭 Yueya (British) · Dunyazad (Indian ethereal)</div>
-    <audio controls preload="none"><source src="/audio/episodes/ep08_anime.mp3" type="audio/mpeg"></audio>
-  </div>
-  <div class="episode">
-    <div class="ep-number">Episode 09</div>
-    <div class="ep-title">The Debt That Travels on the Wind</div>
-    <div class="ep-desc">Karim receives an object from the northern pass — a debt so old the ink has faded from his memory. Nadia&#39;s pepper box holds the scent of a promise made in a snowstorm, on a mountain where a young woman kept a shelter warm for strangers. The high pass remembers. The debt is due.</div>
-    <div class="ep-chars">🎭 Karim (British) · Nadia (American)</div>
-    <audio controls preload="none"><source src="/audio/episodes/ep09_anime.mp3" type="audio/mpeg"></audio>
-  </div>
-  <div class="episode">
-    <div class="ep-number">Episode 10</div>
-    <div class="ep-title">The Elder and the Oracle</div>
-    <div class="ep-desc">Karim&#39;s compass has been spinning for three days — pointing nowhere at all. Layla left him a desert rose years ago, with a message: &#39;Give this to the traveller whose compass stops spinning.&#39; He returns to the Singing Dunes one last time, to ask the question he has been avoiding for thirty-seven years: when is it time to stop?</div>
-    <div class="ep-chars">🎭 Karim (British) · Layla (Australian)</div>
-    <audio controls preload="none"><source src="/audio/episodes/ep10_anime.mp3" type="audio/mpeg"></audio>
-  </div>
-</div>
 
-<div class="donate">
-  <p>☕ <strong>Keep the Lantern Burning</strong> — <code>TNxQquGae5nCEdAwdUzbRYsMUuNtW9t8NT</code><br>USDT (TRC-20)</p>
-</div>
-
-
-<div class="rss">
-  <a href="/podcast/podcast.xml">📡 RSS Feed</a>
-</div>
-
-
-<footer>
-  <p>The Lantern Keeper · Sheherazade&#39;s Lantern</p>
-  <p>Ancient tales from the Arabian nights, rekindled for modern souls.</p>
-</footer>
+<div class="footer">
+  
+  The Lantern Keeper · Sheherazade&#39;s Lantern<br>
+  
+  Ancient tales from the Arabian nights, rekindled for modern souls.<br>
+  
 </div>
 
 </body>

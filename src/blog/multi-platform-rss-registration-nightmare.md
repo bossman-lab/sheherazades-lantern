@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: blog-layout.njk
 lang: en
 dir: ltr
 permalink: "/blog/multi-platform-rss-registration-nightmare.html"

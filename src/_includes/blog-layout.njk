@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ dir }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{% if description %}{{ description }}{% else %}Blog — Sheherazade's Lantern{% endif %}">
+<title>{% if title %}{{ title }} · {{ site.names[lang] }}{% else %}Blog · {{ site.names[lang] }}{% endif %}</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+{% if site.rss_feeds[lang] %}
+<link rel="alternate" type="application/rss+xml" title="{{ site.names[lang] }}" href="{{ site.url }}{{ site.rss_feeds[lang] }}">
+{% endif %}
+
+{% for l in site.languages %}
+<link rel="alternate" hreflang="{{ l.code }}" href="{{ site.url }}/{% if l.code != 'en' %}{{ l.code }}/{% endif %}">
+{% endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "{{ site.names[lang] }} Blog",
+  "url": "{{ site.url }}/blog/",
+  "author": { "@type": "Person", "name": "{{ site.authors[lang] }}" }
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#f5f5f7;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+nav{display:flex;justify-content:{{ "flex-start" if dir == "rtl" else "flex-end" }};align-items:center;padding:20px 24px;gap:12px}
+nav a{color:#424245;text-decoration:none;font-size:13px;transition:color .2s}
+nav a:hover{color:#f5f5f7}
+nav span{color:#424245;font-size:11px}
+.container{max-width:720px;margin:0 auto;padding:80px 24px 60px}
+h1{font-size:36px;font-weight:600;margin-bottom:8px}
+h2{font-size:24px;font-weight:500;margin:0 0 6px}
+.subtitle{color:#86868b;font-size:18px;margin-bottom:48px}
+.post{border-top:1px solid rgba(255,255,255,.06);padding:24px 0}
+.post:last-child{border-bottom:1px solid rgba(255,255,255,.06)}
+.post-date{font-size:13px;color:#424245;margin-bottom:6px}
+.post-title{font-size:20px;font-weight:500;color:#f5f5f7;text-decoration:none;display:block;margin-bottom:8px}
+.post-title:hover{color:#ffd700}
+.post-desc{color:#86868b;font-size:14px;line-height:1.5;margin:0}
+.back-link{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.06)}
+.back-link a{color:#86868b;text-decoration:none;font-size:14px}
+.back-link a:hover{color:#f5f5f7}
+.footer{text-align:center;padding:40px 24px 60px;color:#86868b;font-size:13px;line-height:1.6}
+@media(max-width:640px){.container{padding:60px 20px 40px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/">Podcast</a>
+  <a href="/blog/" style="color:#f5f5f7">Blog</a>
+  <span>/</span>
+  {%- for l in site.languages %}
+  {% if l.code != lang %}<a href="{% if lang_prefix %}{% if l.code == 'en' %}../{% else %}../{{ l.code }}/{% endif %}{% else %}{% if l.code == 'en' %}/{% else %}{{ l.code }}/{% endif %}{% endif %}">{{ l.label }}</a>{% else %}<a href="#">{{ l.label }}</a>{% endif %}
+  {% if not loop.last %}<span>/</span>{% endif %}
+  {%- endfor %}
+</nav>
+
+{{ content | safe }}
+
+<div class="footer">
+  {% for line in site.footer[lang] %}
+  {{ line }}<br>
+  {% endfor %}
+</div>
+
+</body>
+</html>
