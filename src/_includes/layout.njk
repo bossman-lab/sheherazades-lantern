@@ -128,11 +128,11 @@ footer p{font-size:12px;color:#424245;line-height:1.8}
 <body>
 
 <nav>
-  <a href="/" style="margin-right:8px;">Podcast</a>
-  <a href="/blog/" style="margin-right:8px;">Blog</a>
+  <a href="{{ site.url }}/" style="margin-right:8px;">Podcast</a>
+  <a href="{{ site.url }}/blog/" style="margin-right:8px;">Blog</a>
   <span style="color:#424245;font-size:11px;margin-right:8px;">/</span>
   {%- for l in site.languages %}
-  {% if l.code != lang %}<a href="{% if lang_prefix %}{% if l.code == 'en' %}../{% else %}../{{ l.code }}/{% endif %}{% else %}{% if l.code == 'en' %}/{% else %}{{ l.code }}/{% endif %}{% endif %}">{{ l.label }}</a>{% else %}<a href="#" class="lang-active">{{ l.label }}</a>{% endif %}
+  {% if l.code != lang %}<a href="{{ site.url }}/{% if l.code != 'en' %}{{ l.code }}/{% endif %}">{{ l.label }}</a>{% else %}<a href="#" class="lang-active">{{ l.label }}</a>{% endif %}
   {% if not loop.last %}<span>/</span>{% endif %}
   {%- endfor %}
 </nav>
