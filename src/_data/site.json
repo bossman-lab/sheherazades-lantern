@@ -44,10 +44,10 @@
     "es": ["El Guardián de la Linterna · La Linterna de Sherezada", "Cuentos antiguos de Las mil y una noches, reavivados para almas modernas."]
   },
   "episode_labels": {
-    "en": "5 Episodes",
-    "cn": "已上线 5 集",
-    "ar": "5 حلقات",
-    "es": "5 Episodios"
+    "en": "10 Episodes",
+    "cn": "已上线 10 集",
+    "ar": "10 حلقات",
+    "es": "10 Episodios"
   },
   "donate_labels": {
     "en": "Keep the Lantern Burning",
@@ -61,5 +61,5 @@
     "ar": "/ar/podcast.xml",
     "es": "/es/podcast.xml"
   },
-  "lastmod": "2026-05-08"
+  "lastmod": "2026-05-09"
 }
