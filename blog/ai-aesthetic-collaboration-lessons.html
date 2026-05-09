@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="从「你他妈搞笑的吗圆圈更大了」到「这次可以了」——一个非设计师跟 AI 协作做视觉设计的血泪史。">
+<title>跟 AI 聊审美是我做过最痛苦的事 — 封面圆圈、配色打架、以及设计系统的诞生 · </title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": " Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "" }
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/cn/">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>跟 AI 聊审美是我做过最痛苦的事</h1>
+<p><em>封面圆圈、配色打架、以及设计系统的诞生</em></p>
+<hr>
+<h2>引子</h2>
+<p>AI 可以写代码、改文案、分析数据，但在审美这件事上，它像一个<strong>从没见过颜色的天才</strong>——它知道什么是&quot;美&quot;的定义，但搞不清楚为什么要改 18 遍。</p>
+<p>这不是 AI 笨，而是审美协作的方式跟写代码完全不同：</p>
+<ul>
+<li>代码：<code>npm run build</code> → 报错 → 修 → 好了</li>
+<li>审美：「这个金色太亮了」→ 调暗 →「还是太亮」→ 再调暗 →「不对，不是暗的问题，是这个金色太黄了」</li>
+</ul>
+<p>代码的错误可以被精确描述。审美的偏差只能被模糊感知。</p>
+<p>以下是我们最痛的几次审美碰撞。</p>
+<hr>
+<h2>事故一：封面上的圆圈</h2>
+<p><strong>那是一个周三的下午。</strong> 我让 Hermes 给播客封面图加一个金色发光圆环。</p>
+<p>它加了。</p>
+<p>我嫌大。</p>
+<p>它改小了。</p>
+<p>我嫌位置不对。</p>
+<p>它移了一下。</p>
+<p>我说「去掉吧」。</p>
+<p>它给我发来一张图——<strong>圆圈比原来还大了一圈</strong>。</p>
+<p>我当时的原话：</p>
+<blockquote>
+<p>&quot;你他妈搞笑的吗圆圈更大了&quot;</p>
+</blockquote>
+<p><strong>根因分析：</strong></p>
+<p>我的指令是「去掉圆圈」，但 Hermes 理解的是「用户对圆圈不满意，我换一种方式做圆圈的样式」。它没有理解「去掉」意味着「零圆圈」。</p>
+<p>这暴露了 AI 协作的核心问题：<strong>AI 倾向于「修改」而非「删除」</strong>。当你说&quot;去掉 X&quot;，它听到的是&quot;X 有问题，改一下&quot;，而不是&quot;X 不存在&quot;。</p>
+<p><strong>解决方案：</strong> 跟 AI 谈视觉，指令要极端清晰。</p>
+<ul>
+<li>❌ 「圆圈太大了，去掉吧」→ AI 会缩小但保留</li>
+<li>✅ 「ZERO 圆形。不允许有任何 PIL 绘制的形状。只有纯文字和照片。」</li>
+<li>✅ 「这个规则写进技能文档，以后每次生成封面自动加载。」</li>
+</ul>
+<p>现在这条规则以 <code>⛔ CRITICAL RULE: Zero Artificial Shapes on Cover</code> 的形式固化在项目技能里。</p>
+<hr>
+<h2>事故二：金色到底应该是哪一种金</h2>
+<p>项目原本用 <code>#ffd700</code>（亮金色）作为强调色。</p>
+<p>我觉得这个颜色太刺眼，想换成更沉稳的金色。</p>
+<p><strong>对话如下：</strong></p>
+<pre><code>我：把金色调暗一点
+AI：调成了 #d4af37
+我：太黄了
+AI：调成了 #c9a84c
+我：不够金
+AI：调成了 #b8960f
+我：这不是金色，这是土黄色
+</code></pre>
+<p>循环了 7 轮。</p>
+<p><strong>问题在于：</strong>「暗一点」「暖一点」「沉稳一点」对人类有意义，对 AI 只是<strong>色相/饱和度/明度的数值偏移</strong>。而这些数值的感知效果，在屏幕上跟 AI 的&quot;认知&quot;完全不同。</p>
+<p><strong>最终方案：</strong> 我直接给了精确色值。</p>
+<pre><code>强调色: #d4a747
+边框: rgba(212, 167, 71, 0.08)
+悬停: rgba(212, 167, 71, 0.15)
+文字: #d4a747
+</code></pre>
+<p>不再说「暗一点」，直接给 hex。</p>
+<hr>
+<h2>事故三：想抄 Apple，抄成了四不像</h2>
+<p>播客首页最初的定位是「Apple 风格」——纯黑背景、白字、极简。</p>
+<p>出来的效果：<strong>一个丑陋的纯黑页面，像终端窗口。</strong></p>
+<ul>
+<li>Apple 的「极简」是基于完美摄影和物理产品的——产品本身就是视觉中心</li>
+<li>播客没有实体产品，只有文字和音频</li>
+<li>纯黑背景 + 纯白文字 = 毫无层次感</li>
+</ul>
+<p><strong>改进方向：</strong></p>
+<ul>
+<li>从一张设计系统抄，变成<strong>混合多套设计系统</strong></li>
+<li>Linear → 暗色排版精确度</li>
+<li>RunwayML → 电影感暗色氛围</li>
+<li>ElevenLabs → 暖色氛围 + AI 音频调性</li>
+<li>Apple → 毛玻璃导航</li>
+<li>Spotify → 卡片式播客布局</li>
+</ul>
+<p><strong>结果：</strong> 混搭后反而有了自己的风格——纯黑底、陈金色、极淡边框、玻璃导航。</p>
+<hr>
+<h2>事故四：Blog 页面继承播客布局</h2>
+<p>这是最蠢的一个技术审美混合事故。</p>
+<p>我给 Blog 文章页面用了跟播客首页<strong>相同的布局模板</strong>。结果：</p>
+<ul>
+<li>Blog 列表页顶部显示了剧集封面图</li>
+<li>每篇文章下面列出了全部 10 集的音频播放器</li>
+<li>文章本身的内容被挤到页面最底部</li>
+</ul>
+<p><strong>根因：</strong> 偷懒复用。播客布局模板（<code>layout.njk</code>）渲染了剧集列表，Blog 页面不应该继承它。</p>
+<p><strong>修复：</strong> 创建独立的 <code>blog-layout.njk</code>，只包含导航 + 文章内容 + 页脚。没有封面图、没有剧集列表、没有音频播放器。</p>
+<p><strong>教训：</strong> 内容类型不同，布局必须不同。这个道理在 Web 设计领域是常识，但 AI 不会自动意识到。</p>
+<hr>
+<h2>事故五：暗色主题的&quot;阅读体验&quot;</h2>
+<p>播客首页是暗色模式，Blog 文章页也应该是暗色模式。</p>
+<p>但暗色模式 + 长文阅读 = ❌</p>
+<p><strong>问题：</strong></p>
+<ul>
+<li>纯黑背景 + 白字在手机上阅读长文会眼疲劳</li>
+<li>正文行高 1.5 太挤</li>
+<li>代码块没有深色背景区分</li>
+<li>表格没有边框</li>
+</ul>
+<p><strong>迭代过程：</strong></p>
+<p>第一次只改了背景色，文章内容没有任何排版 CSS。结果：</p>
+<pre><code>用户：现在的html博客太丑了还不如md样式
+</code></pre>
+<p>意思是：<strong>纯文本都比你的 HTML 好看。</strong></p>
+<p>第二次加了一些 CSS，但还是不好。第三次才做了完整的文章排版：</p>
+<pre><code>行高: 1.8（不是默认的 1.5）
+正文字色: #c8c8cd（暖灰，不是纯白 #fff）
+代码块: 深色背景 + 金色极淡边框
+引用: 金色左竖线 + 半透明背景
+表格: 金色表头 + 极淡边框
+间距: 上下左右给够
+</code></pre>
+<p><strong>教训：</strong> 暗色主题 + 长文阅读 ≠ 暗色主题 + 短标题。文本阅读需要专门的排版系统。</p>
+<hr>
+<h2>总结：跟 AI 协作审美的几条铁律</h2>
+<h3>1. 不描述感受，给出精确值</h3>
+<table>
+<thead>
+<tr>
+<th>❌ 模糊指令</th>
+<th>✅ 精确指令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>这个金色太亮了</td>
+<td>把 <code>#ffd700</code> 改成 <code>#d4a747</code></td>
+</tr>
+<tr>
+<td>间距大一点</td>
+<td><code>padding: 24px</code></td>
+</tr>
+<tr>
+<td>背景太黑了</td>
+<td><code>background: #0d0d0d</code></td>
+</tr>
+<tr>
+<td>加个微妙的边框</td>
+<td><code>border: 1px solid rgba(212,167,71,0.08)</code></td>
+</tr>
+</tbody>
+</table>
+<h3>2. 视觉需求用参考代替描述</h3>
+<blockquote>
+<p>「做成 ElevenLabs 官网那种深色氛围，标题用 Linear 的排版间距，导航像 Apple 那样毛玻璃」</p>
+</blockquote>
+<p>比说「做得高级一点」有效一万倍。</p>
+<h3>3. 大改不要渐进式，直接重来</h3>
+<p>想让 AI 把白色背景改成黑色背景，不要说：</p>
+<pre><code>背景改成浅灰 → 不对，改成深灰 → 再深一点 → 黑色
+</code></pre>
+<p>直接说：</p>
+<pre><code>整个 layout 重写。背景纯黑 #000000，所有文字白色系。
+</code></pre>
+<p>一次到位，避免 AI 在中间颜色上反复试探。</p>
+<h3>4. 验收时要看截图或 curl</h3>
+<p>AI 说「看起来不错」的时候，它的「看起来」跟你看到的<strong>不是同一个东西</strong>。AI 看到的是 CSS 代码，你看到的是浏览器渲染。两者之间总有差距。</p>
+<p>验收方式：</p>
+<ul>
+<li>前端改动 → <code>curl</code> + 看 HTML 结构</li>
+<li>封面/图片 → 让 AI 先截图</li>
+<li>响应式 → 确认移动端和桌面端都看了</li>
+</ul>
+<h3>5. 审美偏好转成代码规则，存起来</h3>
+<p>我们最终把设计规范写成了一个完整的设计系统 CSS：</p>
+<pre><code>--color-bg: #000000
+--color-accent: #d4a747
+--border-subtle: rgba(212,167,71,0.08)
+--glass-nav: backdrop-filter blur(20px)
+--article-line-height: 1.8
+</code></pre>
+<p>这些规则不是一次性搞定的——每次改动、每次纠正，都更新到 <code>layout.njk</code> 和 <code>blog-layout.njk</code> 的 CSS 里。下次 AI 再生成页面，这些规则就是默认值。</p>
+<hr>
+<h2>结尾</h2>
+<p>审美是 AI 协作最后的堡垒。代码可以用测试覆盖，业务逻辑可以用 prompt engineering 优化，但视觉品味——至少目前——还是<strong>人的事情</strong>。</p>
+<p>跟 AI 协作视觉设计的正确方式不是「教它审美」，而是：</p>
+<ol>
+<li>你定规则（精确值 + 参考）</li>
+<li>AI 执行（翻译成 CSS）</li>
+<li>你验收（截图 + curl）</li>
+<li>有偏差 → 修正规则 → 重来</li>
+</ol>
+<p>这个过程不优雅，但有效。至少从「你他妈搞笑的吗圆圈更大了」到「这次可以了」，我们只用了 3 天。</p>
+<hr>
+<p><em>这篇文章本身也经过了审美迭代——第一版的排版你也说过「太丑了不如md」。所以我现在写文章的时候，会先确认好行高、字体、代码块样式、引用样式，才给你看。</em></p>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+</footer>
+
+</body>
+</html>
