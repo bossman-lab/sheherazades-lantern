@@ -24,7 +24,7 @@
   <lastBuildDate>{{ site.lastmod }}
   <atom:link href="{% if lang_prefix %}{{ site.url }}/{{ lang_prefix }}podcast.xml{% else %}{{ site.url }}/podcast/podcast.xml{% endif %}" rel="self" type="application/rss+xml"/>
 
-  {%- for ep in episodes %}
+  {%- for ep in episodes %}{% if ep.published %}
   <item>
     <title>{{ ep.titles[lang] }}</title>
     <description>{{ ep.descriptions[lang] }}</description>
@@ -32,6 +32,6 @@
     <guid isPermaLink="false">{{ site.url }}-{{ lang }}-ep{{ ep.id }}</guid>
     <itunes:episode>{{ ep.id | int }}</itunes:episode>
   </item>
-  {%- endfor %}
+  {% endif %}{%- endfor %}
 </channel>
 </rss>

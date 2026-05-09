@@ -30,6 +30,7 @@
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep01</guid>
     <itunes:episode>1</itunes:episode>
   </item>
+  
   <item>
     <title>香料之镜</title>
     <description>有一座城市正在遗忘自己。街道的转角消失，邻居的名字模糊，人们的记忆像沙漏一样不可逆转地流失。纳迪亚的香料摊在巷弄深处——她的香料能让你尝到从未活过的人生。卡里姆推门而入，要了一剂「欲望之尘」。他不知道的是，有些味道一旦尝过，就再也回不去了。</description>
@@ -37,6 +38,7 @@
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep02</guid>
     <itunes:episode>2</itunes:episode>
   </item>
+  
   <item>
     <title>未竟之刃</title>
     <description>铁匠哈立德四十年守着同一把未完成的剑。他在夜里对它低语，在清晨为它流泪。一个少年带着复仇之心闯进他的铺子，想要一把能斩断过去的武器。哈立德看着墙上的剑，知道这一刻终会到来——这把剑注定要被折断，而折断它的那个人，将付出遗忘一切的代价。但也许，遗忘本身就是一种成全。</description>
@@ -44,6 +46,7 @@
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep03</guid>
     <itunes:episode>3</itunes:episode>
   </item>
+  
   <item>
     <title>未言之书</title>
     <description>每个世纪，驿站深处会出现一扇门。月芽推门而入，见到了杜妮亚扎德——山鲁佐德的妹妹，守护着一本空白的书。书页上什么都没有，却藏着世上所有从未说出口的话：未寄出的信、未告白的爱、未说出口的抱歉。杜妮亚扎德提出交换：月芽最珍贵的记忆，换回一个即将永远消失的故事。图书馆是公平的。但你永远不知道自己会失去什么。</description>
@@ -51,6 +54,7 @@
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep04</guid>
     <itunes:episode>4</itunes:episode>
   </item>
+  
   <item>
     <title>吟唱沙丘与消逝的故事</title>
     <description>卡里姆在阿拉伯沙漠深处听到了沙丘的吟唱——它们在叫他的名字。莱拉是沙漠中最后一个会听沙语的人，她的手心里攥着一粒沙子，里面封着一整首歌。歌是唱给一个还没出生的女孩的。卡里姆要穿过空无一物的鲁卜哈利沙漠，把那粒沙子送到它该去的地方。问题是：一首写给未来人的歌，能在过去被传唱吗？</description>
@@ -58,6 +62,7 @@
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep05</guid>
     <itunes:episode>5</itunes:episode>
   </item>
+  
   <item>
     <title>香料之忆</title>
     <description>纳迪亚在香料罐深处发现了一粒黑色胡椒——它打开了一扇通往阴影市场的大门。拉希德和她一起走进去，发现这个夹缝中的市场里最珍贵的东西不卖钱：它卖的是你出生之前就失去的东西的记忆。</description>
@@ -65,33 +70,6 @@
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep06</guid>
     <itunes:episode>6</itunes:episode>
   </item>
-  <item>
-    <title>以歌碎剑</title>
-    <description>吟唱沙丘的莱拉带着一粒沙子来到哈立德的铁匠铺——沙子里封着创世之前的旋律。这首歌能完成四十年前未竟之事，但前提是：他必须先折断自己锻造了一生的剑。</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_07_anime.mp3" type="audio/mpeg"/>
-    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep07</guid>
-    <itunes:episode>7</itunes:episode>
-  </item>
-  <item>
-    <title>读取她的故事</title>
-    <description>月芽忘记了一件事——一颗星、一个故事、一个教她认识星座的声音。杜妮亚扎德带着一页银色书页回来，这页书不被人读，而是读人。月芽必须让故事先看见她，才能找回她失去的一切。</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_08_anime.mp3" type="audio/mpeg"/>
-    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep08</guid>
-    <itunes:episode>8</itunes:episode>
-  </item>
-  <item>
-    <title>随风而行的债务</title>
-    <description>卡里姆收到一封来自北方山口的旧物——一笔债，老到墨水已从记忆中褪尽。纳迪亚的胡椒盒里锁着一场暴风雪中许下的诺言的香气。一个年轻女人在高山上为陌生人守着一间庇护所。高山记得。债该还了。</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_09_anime.mp3" type="audio/mpeg"/>
-    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep09</guid>
-    <itunes:episode>9</itunes:episode>
-  </item>
-  <item>
-    <title>长者和神谕</title>
-    <description>卡里姆的指南针已经转了三天——哪里都不指。莱拉多年前留给他一朵沙漠玫瑰，附着一句话：「给那个指南针不再转动的旅人。」他最后一次回到吟唱沙丘，去问那个他逃避了三十七年的问题：什么时候该停下了？</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_10_anime.mp3" type="audio/mpeg"/>
-    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep10</guid>
-    <itunes:episode>10</itunes:episode>
-  </item>
+  
 </channel>
 </rss>

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+
+
+
+
   <url>
     <loc>https://bossman-lab.github.io/sheherazades-lantern/</loc>
     <lastmod>2026-05-09</lastmod>
@@ -82,26 +88,6 @@
   </url>
   <url>
     <loc>https://bossman-lab.github.io/sheherazades-lantern/episodes/06</loc>
-    <lastmod>2026-05-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bossman-lab.github.io/sheherazades-lantern/episodes/07</loc>
-    <lastmod>2026-05-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bossman-lab.github.io/sheherazades-lantern/episodes/08</loc>
-    <lastmod>2026-05-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bossman-lab.github.io/sheherazades-lantern/episodes/09</loc>
-    <lastmod>2026-05-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bossman-lab.github.io/sheherazades-lantern/episodes/10</loc>
     <lastmod>2026-05-09</lastmod>
     <priority>0.8</priority>
   </url>

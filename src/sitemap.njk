@@ -16,9 +16,9 @@ permalink: "/sitemap.xml"
   { "loc": "/blog/multi-platform-rss-registration-nightmare.html", "priority": "0.7" },
   { "loc": "/blog/how-i-built-a-4-language-ai-podcast-pipeline.html", "priority": "0.7" }
 ] %}
-{%- for ep in episodes %}
+{%- for ep in episodes %}{% if ep.published %}
   {%- set all_urls = all_urls.concat([{ "loc": "/episodes/" + ep.id, "priority": "0.8" }]) %}
-{%- endfor %}
+{% endif %}{%- endfor %}
 {%- for url in all_urls %}
   <url>
     <loc>{{ site.url }}{{ url.loc }}</loc>

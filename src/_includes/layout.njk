@@ -23,9 +23,9 @@
   "inLanguage": "{{ lang }}",
   "author": { "@type": "Person", "name": "{{ site.authors[lang] }}" },
   "episode": [
-    {%- for ep in episodes %}
-    {"@type":"PodcastEpisode","position":{{ loop.index }},"name":"{{ ep.titles[lang] | json_str | safe }}","url":"{{ site.url }}/{{ lang_prefix }}episodes/{{ ep.id }}"}{% if not loop.last %},{% endif %}
-    {%- endfor %}
+    {%- for ep in episodes %}{% if ep.published %}
+    {"@type":"PodcastEpisode","position":{{ ep.id | int }},"name":"{{ ep.titles[lang] | json_str | safe }}","url":"{{ site.url }}/{{ lang_prefix }}episodes/{{ ep.id }}"}{% if not loop.last %},{% endif %}
+    {% endif %}{%- endfor %}
   ]
 }
 </script>
@@ -114,7 +114,7 @@ footer p{font-size:12px;color:#2a2a2a;line-height:1.8}
 
 <div class="episodes">
   <div class="ep-label">{{ site.episode_labels[lang] }}</div>
-  {%- for ep in episodes %}
+  {%- for ep in episodes %}{% if ep.published %}
   <div class="episode">
     <div class="ep-number">Episode {{ ep.id | int }}</div>
     <div class="ep-title">{{ ep.titles[lang] }}</div>
@@ -122,7 +122,7 @@ footer p{font-size:12px;color:#2a2a2a;line-height:1.8}
     <div class="ep-chars">{{ ep.chars[lang] }}</div>
     <audio controls preload="none"><source src="{{ site.url }}{{ ep.audio[lang] }}" type="audio/mpeg"></audio>
   </div>
-  {%- endfor %}
+  {% endif %}{%- endfor %}
 </div>
 
 <div class="donate">
