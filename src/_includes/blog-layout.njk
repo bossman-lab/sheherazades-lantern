@@ -69,11 +69,11 @@ nav span{color:#424245;font-size:11px}
 <body>
 
 <nav>
-  <a href="../">Podcast</a>
-  <a href="." style="color:#f5f5f7">Blog</a>
+  <a href="{{ site.url }}/">Podcast</a>
+  <a href="{{ site.url }}/blog/" style="color:#f5f5f7">Blog</a>
   <span>/</span>
   {%- for l in site.languages %}
-  {% if l.code != lang %}<a href="../{% if l.code != 'en' %}{{ l.code }}/{% endif %}">{{ l.label }}</a>{% else %}<a href="#">{{ l.label }}</a>{% endif %}
+  {% if l.code != lang %}<a href="{{ site.url }}/{% if l.code != 'en' %}{{ l.code }}/{% endif %}">{{ l.label }}</a>{% else %}<a href="#">{{ l.label }}</a>{% endif %}
   {% if not loop.last %}<span>/</span>{% endif %}
   {%- endfor %}
 </nav>
