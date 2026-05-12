@@ -21,7 +21,7 @@
   <itunes:category text="{{ site.category }}">
     <itunes:category text="{{ site.subcategory }}"/>
   </itunes:category>
-  <lastBuildDate>{{ site.lastmod }}
+  <lastBuildDate>{{ site.lastmod }}</lastBuildDate>
   <atom:link href="{% if lang_prefix %}{{ site.url }}/{{ lang_prefix }}podcast.xml{% else %}{{ site.url }}/podcast/podcast.xml{% endif %}" rel="self" type="application/rss+xml"/>
 
   {%- for ep in episodes %}{% if ep.published %}
