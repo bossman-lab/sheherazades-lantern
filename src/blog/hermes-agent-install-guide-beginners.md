@@ -5,6 +5,7 @@ dir: ltr
 permalink: "/blog/hermes-agent-install-guide-beginners.html"
 title: "Hermes Agent 安装入门指南 — 从零到有（含中国大陆避坑）"
 description: "Hermes Agent 是一个开源 AI 代理框架。这篇指南覆盖安装、配置代理、网关部署、Telegram 接入，以及在中国大陆环境下的所有坑点。"
+date: "2026-05-09"
 ---
 
 # Hermes Agent 安装入门指南 — 从零到有

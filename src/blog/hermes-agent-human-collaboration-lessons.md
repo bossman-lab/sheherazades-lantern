@@ -1,10 +1,11 @@
 ---
 layout: blog-layout.njk
-lang: zh
+lang: cn
 dir: ltr
 permalink: "/blog/hermes-agent-human-collaboration-lessons.html"
 title: "跟 Hermes Agent 协作两个月踩过的 12 个坑 — 写给新人的实战指南"
 description: "从语言习惯到文件路径、从封面设计到会话持久化，一份真实的人机协作经验总结。"
+date: "2026-05-09"
 ---
 
 # 跟 Hermes Agent 协作两个月踩过的 12 个坑

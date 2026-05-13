@@ -1,10 +1,11 @@
 ---
 layout: blog-layout.njk
-lang: zh-cn
+lang: cn
 dir: ltr
 permalink: "/blog/ai-collaboration-three-rules.html"
 title: "跟 AI 协作的三条铁律 — 流程先审、样例先过、结果全验"
 description: "三个月人机协作踩出来的方法论：Agent 说「好了」≠ 好了，Agent 觉得「好看」≠ 好看，Agent 直接生成 ≠ 正确。"
+date: "2026-05-09"
 ---
 
 # 跟 AI 协作的三条铁律

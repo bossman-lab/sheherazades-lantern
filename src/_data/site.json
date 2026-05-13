@@ -61,5 +61,11 @@
     "ar": "/ar/podcast.xml",
     "es": "/es/podcast.xml"
   },
-  "lastmod": "2026-05-11"
+  "locales": {
+    "en": "en_US",
+    "cn": "zh_CN",
+    "ar": "ar_SA",
+    "es": "es_ES"
+  },
+  "lastmod": "2026-05-13"
 }

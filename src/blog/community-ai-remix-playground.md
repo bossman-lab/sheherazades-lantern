@@ -1,10 +1,11 @@
 ---
 layout: blog-layout.njk
-lang: zh-cn
+lang: cn
 dir: ltr
 permalink: "/blog/community-ai-remix-playground.html"
 title: "人、内容、社区：AI 时代社群产品的底层框架"
 description: "读完「明夜集」王亦舟的长文拆解：社区五要素、从完成态到开放态、Editable 与 Remix、协作产出 IP 的开源逻辑、游乐场产品模型。"
+date: "2026-05-11"
 ---
 
 # 人、内容、社区：AI 时代社群产品的底层框架

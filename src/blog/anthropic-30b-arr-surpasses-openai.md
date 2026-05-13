@@ -1,10 +1,11 @@
 ---
 layout: blog-layout.njk
-lang: zh
+lang: cn
 dir: ltr
 permalink: "/blog/anthropic-30b-arr-surpasses-openai.html"
 title: "今日AI简报 — Anthropic登顶"
 description: "Anthropic $30B ARR正式超越OpenAI $25B；GPT-5.5、Claude Opus 4.7、DeepSeek V4旗舰对决；AI使用感悟从'帮我做'到'帮你想'。"
+date: "2026-05-10"
 ---
 
 # 今日AI简报 — Anthropic登顶

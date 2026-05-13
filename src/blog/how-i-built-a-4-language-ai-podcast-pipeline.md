@@ -5,6 +5,7 @@ dir: ltr
 permalink: "/blog/how-i-built-a-4-language-ai-podcast-pipeline.html"
 title: "How I Built a 4-Language AI Podcast Pipeline — and Why Distribution Is the Only Real Problem"
 description: "Behind the scenes of Sheherazade's Lantern: a one-person, 4-language podcast powered by AI storytelling, edge-tts, and a static site generator. Full architecture walkthrough."
+date: "2026-05-09"
 ---
 
 # How I Built a 4-Language AI Podcast Pipeline — and Why Distribution Is the Only Real Problem

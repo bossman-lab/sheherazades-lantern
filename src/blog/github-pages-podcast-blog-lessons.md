@@ -5,6 +5,7 @@ dir: ltr
 permalink: "/blog/github-pages-podcast-blog-lessons.html"
 title: "Everything That Can Go Wrong When Hosting a Podcast + Blog on GitHub Pages"
 description: "A field guide to the silent suffering of using GitHub Pages for anything beyond a simple README — .nojekyll, absolute path hell, 11ty SSG, multi-language RSS, and the 17th time you push the same commit."
+date: "2026-05-09"
 ---
 
 # Everything That Can Go Wrong When Hosting a Podcast + Blog on GitHub Pages

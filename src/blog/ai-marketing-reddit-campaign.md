@@ -5,6 +5,7 @@ dir: ltr
 permalink: "/blog/ai-marketing-reddit-campaign.html"
 title: "今日AI简报 — AI营销实战"
 description: "AI Reddit营销获得110万曝光；GPT-5.5 Instant发布；Subquadratic推出1200万Token上下文模型。"
+date: "2026-05-09"
 ---
 
 # 今日AI简报 — AI营销实战

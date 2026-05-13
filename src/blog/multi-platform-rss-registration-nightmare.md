@@ -5,6 +5,7 @@ dir: ltr
 permalink: "/blog/multi-platform-rss-registration-nightmare.html"
 title: "How I Spent 3 Days Trying to Register My RSS Feed on 7 Podcast Platforms"
 description: "The full, unfiltered story of submitting a 4-language AI podcast RSS to Spotify, Apple, Deezer, Anghami, iHeartRadio, and Chinese platforms — Playwright automation, Cloudflare walls, email verification loops, and what actually worked."
+date: "2026-05-09"
 ---
 
 # How I Spent 3 Days Trying to Register My RSS Feed on 7 Podcast Platforms

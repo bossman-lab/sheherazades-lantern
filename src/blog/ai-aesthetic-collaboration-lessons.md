@@ -1,10 +1,11 @@
 ---
 layout: blog-layout.njk
-lang: zh
+lang: cn
 dir: ltr
 permalink: "/blog/ai-aesthetic-collaboration-lessons.html"
 title: "跟 AI 聊审美是我做过最痛苦的事 — 封面圆圈、配色打架、以及设计系统的诞生"
 description: "从「你他妈搞笑的吗圆圈更大了」到「这次可以了」——一个非设计师跟 AI 协作做视觉设计的血泪史。"
+date: "2026-05-09"
 ---
 
 # 跟 AI 聊审美是我做过最痛苦的事
