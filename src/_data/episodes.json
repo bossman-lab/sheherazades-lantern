@@ -193,7 +193,7 @@
       "ar": "/audio/episodes/ar_ep07_anime.mp3",
       "es": "/audio/episodes/es_07_anime.mp3"
     },
-    "published": false
+    "published": true
   },
   {
     "id": "08",

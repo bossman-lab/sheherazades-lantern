@@ -21,7 +21,7 @@
   <itunes:category text="Arts">
     <itunes:category text="Fiction"/>
   </itunes:category>
-  <lastBuildDate>2026-05-13</lastBuildDate>
+  <lastBuildDate>2026-05-14</lastBuildDate>
   <atom:link href="https://bossman-lab.github.io/sheherazades-lantern/arpodcast.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>خريطة الشوارع المتحركة</title>
@@ -69,6 +69,14 @@
     <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep06_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep06</guid>
     <itunes:episode>6</itunes:episode>
+  </item>
+  
+  <item>
+    <title>الأغنية التي فكت السيف</title>
+    <description>تأتي ليلى من الكثبان الغنّاء إلى مسبك خالد ومَعها حبة رمل تحمل لحناً من قبل أن يُخلق العالم. للأغنية القدرة على إكمال ما بدأه قبل أربعين عاماً — لكن بشرط أن يسمح بكسر نصله غير المكتمل أولاً.</description>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep07_anime.mp3" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep07</guid>
+    <itunes:episode>7</itunes:episode>
   </item>
   
 </channel>

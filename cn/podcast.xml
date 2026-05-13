@@ -21,7 +21,7 @@
   <itunes:category text="Arts">
     <itunes:category text="Fiction"/>
   </itunes:category>
-  <lastBuildDate>2026-05-13</lastBuildDate>
+  <lastBuildDate>2026-05-14</lastBuildDate>
   <atom:link href="https://bossman-lab.github.io/sheherazades-lantern/cnpodcast.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>会移动的街道地图</title>
@@ -69,6 +69,14 @@
     <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_06_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep06</guid>
     <itunes:episode>6</itunes:episode>
+  </item>
+  
+  <item>
+    <title>以歌碎剑</title>
+    <description>吟唱沙丘的莱拉带着一粒沙子来到哈立德的铁匠铺——沙子里封着创世之前的旋律。这首歌能完成四十年前未竟之事，但前提是：他必须先折断自己锻造了一生的剑。</description>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_07_anime.mp3" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep07</guid>
+    <itunes:episode>7</itunes:episode>
   </item>
   
 </channel>
