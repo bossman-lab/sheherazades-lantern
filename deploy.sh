@@ -39,8 +39,8 @@ base = gh('GET', f'/git/commits/{parent}')['tree']['sha']
 
 # Files that get deployed (built output + src data + blog)
 import glob
-files = ['index.html','cn/index.html','ar/index.html','es/index.html',
-         'podcast/podcast.xml','cn/podcast.xml','ar/podcast.xml','es/podcast.xml',
+files = ['index.html','en/index.html','cn/index.html','ar/index.html','es/index.html',
+         'podcast/podcast.xml','en/podcast.xml','cn/podcast.xml','ar/podcast.xml','es/podcast.xml',
          'sitemap.xml','robots.txt','.nojekyll']
 
 # Also push audio files
