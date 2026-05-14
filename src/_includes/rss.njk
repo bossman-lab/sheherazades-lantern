@@ -7,7 +7,7 @@
   <title>{{ site.names[lang] }}</title>
   <description>{{ site.descriptions[lang] }}</description>
   <link>{{ site.url }}/{{ lang_prefix }}</link>
-  <language>{{ lang }}</language>
+  <language>{{ site.locales[lang] }}</language>
   <image>
     <url>{{ site.url }}{{ site.cover }}</url>
     <title>{{ site.names[lang] }}</title>
@@ -21,15 +21,21 @@
   <itunes:category text="{{ site.category }}">
     <itunes:category text="{{ site.subcategory }}"/>
   </itunes:category>
+  <itunes:owner>
+    <itunes:name>{{ site.owner_name }}</itunes:name>
+    <itunes:email>{{ site.owner_email }}</itunes:email>
+  </itunes:owner>
   <lastBuildDate>{{ site.lastmod }}</lastBuildDate>
-  <atom:link href="{% if lang_prefix %}{{ site.url }}/{{ lang_prefix }}podcast.xml{% else %}{{ site.url }}/podcast/podcast.xml{% endif %}" rel="self" type="application/rss+xml"/>
+  <atom:link href="{% if lang_prefix %}{{ site.url }}/{{ lang_prefix }}/podcast.xml{% else %}{{ site.url }}/podcast/podcast.xml{% endif %}" rel="self" type="application/rss+xml"/>
 
   {%- for ep in episodes %}{% if ep.published %}
   <item>
     <title>{{ ep.titles[lang] }}</title>
     <description>{{ ep.descriptions[lang] }}</description>
-    <enclosure url="{{ site.url }}{{ ep.audio[lang] }}" type="audio/mpeg"/>
+    <enclosure url="{{ site.url }}{{ ep.audio[lang] }}" type="audio/mpeg" length="{{ ep.filesize[lang] }}"/>
     <guid isPermaLink="false">{{ site.url }}-{{ lang }}-ep{{ ep.id }}</guid>
+    <pubDate>{{ ep.pubDate | dateRfc822 }}</pubDate>
+    <itunes:duration>{{ ep.duration }}</itunes:duration>
     <itunes:episode>{{ ep.id | int }}</itunes:episode>
   </item>
   {% endif %}{%- endfor %}

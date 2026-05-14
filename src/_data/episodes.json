@@ -25,7 +25,15 @@
       "ar": "/audio/episodes/ar_ep01_anime.mp3",
       "es": "/audio/episodes/es_01_anime.mp3"
     },
-    "published": true
+    "published": true,
+    "duration": 490,
+    "filesize": {
+      "en": 10026984,
+      "cn": 9804728,
+      "ar": 12040137,
+      "es": 2260605
+    },
+    "pubDate": "2026-05-06"
   },
   {
     "id": "02",
@@ -53,7 +61,15 @@
       "ar": "/audio/episodes/ar_ep02_anime.mp3",
       "es": "/audio/episodes/es_02_anime.mp3"
     },
-    "published": true
+    "published": true,
+    "duration": 322,
+    "filesize": {
+      "en": 11527445,
+      "cn": 6449036,
+      "ar": 13719173,
+      "es": 2360685
+    },
+    "pubDate": "2026-05-07"
   },
   {
     "id": "03",
@@ -81,7 +97,15 @@
       "ar": "/audio/episodes/ar_ep03_anime.mp3",
       "es": "/audio/episodes/es_03_anime.mp3"
     },
-    "published": true
+    "published": true,
+    "duration": 408,
+    "filesize": {
+      "en": 5919609,
+      "cn": 8176553,
+      "ar": 7150850,
+      "es": 1467597
+    },
+    "pubDate": "2026-05-09"
   },
   {
     "id": "04",
@@ -109,7 +133,15 @@
       "ar": "/audio/episodes/ar_ep04_anime.mp3",
       "es": "/audio/episodes/es_04_anime.mp3"
     },
-    "published": true
+    "published": true,
+    "duration": 384,
+    "filesize": {
+      "en": 10302005,
+      "cn": 7685516,
+      "ar": 11966202,
+      "es": 1742637
+    },
+    "pubDate": "2026-05-10"
   },
   {
     "id": "05",
@@ -137,7 +169,15 @@
       "ar": "/audio/episodes/ar_ep05_anime.mp3",
       "es": "/audio/episodes/es_05_anime.mp3"
     },
-    "published": true
+    "published": true,
+    "duration": 249,
+    "filesize": {
+      "en": 5820240,
+      "cn": 4991294,
+      "ar": 6586858,
+      "es": 1243245
+    },
+    "pubDate": "2026-05-12"
   },
   {
     "id": "06",
@@ -165,7 +205,15 @@
       "ar": "/audio/episodes/ar_ep06_anime.mp3",
       "es": "/audio/episodes/es_06_anime.mp3"
     },
-    "published": true
+    "published": true,
+    "duration": 496,
+    "filesize": {
+      "en": 9218445,
+      "cn": 9934605,
+      "ar": 10065165,
+      "es": 13696845
+    },
+    "pubDate": "2026-05-13"
   },
   {
     "id": "07",
@@ -193,7 +241,15 @@
       "ar": "/audio/episodes/ar_ep07_anime.mp3",
       "es": "/audio/episodes/es_07_anime.mp3"
     },
-    "published": true
+    "published": true,
+    "duration": 817,
+    "filesize": {
+      "en": 16987245,
+      "cn": 16352205,
+      "ar": 18500205,
+      "es": 20981805
+    },
+    "pubDate": "2026-05-14"
   },
   {
     "id": "08",

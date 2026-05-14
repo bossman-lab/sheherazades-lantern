@@ -7,7 +7,7 @@
   <title>مصباح شهرزاد</title>
   <description>حكايات قديمة من ألف ليلة وليلة، تُروى بأسلوب الأنمي — دراما صوتية بأصوات متعددة. رحلة على طريق الحرير: خرائط ترسم مدناً قبل وجودها، بهارات تمنحك مذاق حيوات لم تعشها، سيف لم يكتمل في أربعين عاماً. حارس المصباح ينتظرك.</description>
   <link>https://bossman-lab.github.io/sheherazades-lantern/ar</link>
-  <language>ar</language>
+  <language>ar_SA</language>
   <image>
     <url>https://bossman-lab.github.io/sheherazades-lantern/audio/assets/podcast_cover.jpg</url>
     <title>مصباح شهرزاد</title>
@@ -21,61 +21,79 @@
   <itunes:category text="Arts">
     <itunes:category text="Fiction"/>
   </itunes:category>
+  <itunes:owner>
+    <itunes:name>The Lantern Keeper</itunes:name>
+    <itunes:email>keeper.lantern@proton.me</itunes:email>
+  </itunes:owner>
   <lastBuildDate>2026-05-14</lastBuildDate>
-  <atom:link href="https://bossman-lab.github.io/sheherazades-lantern/arpodcast.xml" rel="self" type="application/rss+xml"/>
+  <atom:link href="https://bossman-lab.github.io/sheherazades-lantern/ar/podcast.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>خريطة الشوارع المتحركة</title>
     <description>رشيد صانع الخرائط يرسم مدناً لا وجود لها بعد. يويّا، تلميذة الفلك، تكتشف أن خطوطه تطابق نجوماً لم تطلع بعد. خرائط خاطئة، وسماء لم تولد، وكلاهما يشير إلى مكان واحد: مدينة النحاس — التي بناها جن سليمان قبل أن يُخلق البشر. السؤال الوحيد الذي لا يجرؤ أي منهما على طرحه: من يرسم المستقبل، إذا كانت الخرائط تكتب قبل أن توجد الطرق؟</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep01_anime.mp3" type="audio/mpeg"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep01_anime.mp3" type="audio/mpeg" length="12040137"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep01</guid>
+    <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+    <itunes:duration>490</itunes:duration>
     <itunes:episode>1</itunes:episode>
   </item>
   
   <item>
     <title>بهار الأشياء المنسية</title>
     <description>مدينة تنسى نفسها كل يوم. أسماء الجيران تذوب، زوايا الشوارع تختفي، الذكريات تتسرب كالرمل من بين الأصابع. في زقاق بعيد، دكان نادية للبهارات — بهاراتها ليست للطعام، بل لتذوق حيوات لم تعشها. كريم يدخل ويطلب جرعة من «غبار الرغبة». ما لا يعرفه: بعض النكهات، إذا ذقتها مرة، لا تعود أبداً كما كنت.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep02_anime.mp3" type="audio/mpeg"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep02_anime.mp3" type="audio/mpeg" length="13719173"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep02</guid>
+    <pubDate>Thu, 07 May 2026 00:00:00 +0000</pubDate>
+    <itunes:duration>322</itunes:duration>
     <itunes:episode>2</itunes:episode>
   </item>
   
   <item>
     <title>النصل الذي لم يكتمل</title>
     <description>أربعون عاماً وخالد الحداد يطرق نفس السيف. في الليل يهمس له، في الصباح يبكي عليه. يأتي صبي يحمل ثأراً في قلبه، يريد سلاحاً يقطع الماضي. خالد ينظر إلى السيف على الجدار ويعرف: هذه اللحظة كانت مكتوبة. السيف سيُكسر، ومن يكسر سيدفع ثمنه — ثمن النسيان. ولكن ربما، النسيان نفسه هو رحمة.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep03_anime.mp3" type="audio/mpeg"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep03_anime.mp3" type="audio/mpeg" length="7150850"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep03</guid>
+    <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+    <itunes:duration>408</itunes:duration>
     <itunes:episode>3</itunes:episode>
   </item>
   
   <item>
     <title>كتاب ما لم يُقل</title>
     <description>مرة كل قرن، يفتح باب في الخان القديم. من داخله تخرج دنيازاد، أخت شهرزاد، ومعها كتاب صفحاته بيضاء — ولكنه يحمل كل كلمة لم تُقل: رسائل لم ترسل، حب لم يبوح به، آسف لم ينطق. دنيازاد تعرض على يويّا صفقة: أغلى ذكرى لديها، مقابل إنقاذ قصة على وشك الاندثار للأبد. المكتبة عادلة. لكنك لا تعرف أبداً ماذا ستفقد.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep04_anime.mp3" type="audio/mpeg"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep04_anime.mp3" type="audio/mpeg" length="11966202"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep04</guid>
+    <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
+    <itunes:duration>384</itunes:duration>
     <itunes:episode>4</itunes:episode>
   </item>
   
   <item>
     <title>الرمال التي غنَّت مرتين</title>
     <description>في عمق الربع الخالي، حيث لا شيء إلا الرمل والريح، سمع كريم الكثبان تغني باسمه. ليلى آخر من يفهم لغة الرمال في هذه الأرض. في كفها حبة رمل واحدة، داخلها أغنية كاملة — أغنية لطفلة لم تولد بعد. كريم سيعبر الصحراء ليصل بها إلى حيث يجب أن تذهب. السؤال: هل يمكن لأغنية كتبت للمستقبل أن تُغنى في الماضي؟</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep05_anime.mp3" type="audio/mpeg"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep05_anime.mp3" type="audio/mpeg" length="6586858"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep05</guid>
+    <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
+    <itunes:duration>249</itunes:duration>
     <itunes:episode>5</itunes:episode>
   </item>
   
   <item>
     <title>سوق الظل</title>
     <description>تجد نادية حبة فلفل أسود في قاع جرّة قديمة — تفتح باباً إلى سوق الظل، سوق بين العوالم. تدخله مع رشيد، وتكتشف أن أغلى شيء في سوق الظل ليس للبيع: إنه ذكرى شيء فقدته قبل أن تولد.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep06_anime.mp3" type="audio/mpeg"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep06_anime.mp3" type="audio/mpeg" length="10065165"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep06</guid>
+    <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
+    <itunes:duration>496</itunes:duration>
     <itunes:episode>6</itunes:episode>
   </item>
   
   <item>
     <title>الأغنية التي فكت السيف</title>
     <description>تأتي ليلى من الكثبان الغنّاء إلى مسبك خالد ومَعها حبة رمل تحمل لحناً من قبل أن يُخلق العالم. للأغنية القدرة على إكمال ما بدأه قبل أربعين عاماً — لكن بشرط أن يسمح بكسر نصله غير المكتمل أولاً.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep07_anime.mp3" type="audio/mpeg"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ar_ep07_anime.mp3" type="audio/mpeg" length="18500205"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-ar-ep07</guid>
+    <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
+    <itunes:duration>817</itunes:duration>
     <itunes:episode>7</itunes:episode>
   </item>
   
