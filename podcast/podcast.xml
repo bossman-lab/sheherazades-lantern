@@ -7,7 +7,7 @@
   <title>Sheherazade&#39;s Lantern</title>
   <description>Ancient tales from the Arabian nights, rekindled for modern souls — anime-style audio drama with full voice cast. Journey across the Silk Road with the Lantern Keeper as your guide.</description>
   <link>https://bossman-lab.github.io/sheherazades-lantern/</link>
-  <language>en_US</language>
+  <language>en</language>
   <image>
     <url>https://bossman-lab.github.io/sheherazades-lantern/audio/assets/podcast_cover.jpg</url>
     <title>Sheherazade&#39;s Lantern</title>
@@ -21,80 +21,70 @@
   <itunes:category text="Arts">
     <itunes:category text="Fiction"/>
   </itunes:category>
-  <itunes:owner>
-    <itunes:name>The Lantern Keeper</itunes:name>
-    <itunes:email>keeper.lantern@proton.me</itunes:email>
-  </itunes:owner>
-  <lastBuildDate>2026-05-14</lastBuildDate>
+  <lastBuildDate>2026-05-16</lastBuildDate>
   <atom:link href="https://bossman-lab.github.io/sheherazades-lantern/podcast/podcast.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>The Map of the Moving Streets</title>
     <description>Rashid the Mapmaker draws cities that change overnight. Yueya the astronomer discovers his maps match a sky that hasn&#39;t risen yet. Together they find the Brass City — built by King Solomon&#39;s djinn.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep01_anime.mp3" type="audio/mpeg" length="10026984"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep01_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-en-ep01</guid>
-    <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration>490</itunes:duration>
     <itunes:episode>1</itunes:episode>
   </item>
   
   <item>
     <title>The Spice of Forgotten Things</title>
     <description>A city is forgetting itself. Karim meets Nadia the Spice Merchant, who offers him a taste of every life he never lived.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep02_anime.mp3" type="audio/mpeg" length="11527445"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep02_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-en-ep02</guid>
-    <pubDate>Thu, 07 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration>322</itunes:duration>
     <itunes:episode>2</itunes:episode>
   </item>
   
   <item>
     <title>The Blade That Was Never Finished</title>
     <description>A haunted swordsmith. A boy seeking revenge. An unfinished blade on the wall. Khalid keeps a secret that the forge fire cannot burn away.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep03_anime.mp3" type="audio/mpeg" length="5919609"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep03_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-en-ep03</guid>
-    <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration>408</itunes:duration>
     <itunes:episode>3</itunes:episode>
   </item>
   
   <item>
     <title>The Book of Things Never Said</title>
     <description>Once a century, a door appears in the Caravanserai. Inside waits Dunyazad, Scheherazade&#39;s sister, with a book of blank pages that holds every unspoken truth.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep04_anime.mp3" type="audio/mpeg" length="10302005"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep04_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-en-ep04</guid>
-    <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration>384</itunes:duration>
     <itunes:episode>4</itunes:episode>
   </item>
   
   <item>
     <title>The Sand That Sang Twice</title>
     <description>Deep in the Empty Quarter, Karim hears the dunes singing. Layla holds a single grain of sand that reveals what he has been searching for his entire life.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep05_anime.mp3" type="audio/mpeg" length="5820240"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep05_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-en-ep05</guid>
-    <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration>249</itunes:duration>
     <itunes:episode>5</itunes:episode>
   </item>
   
   <item>
     <title>The Spice That Remembered</title>
     <description>Nadia finds a black peppercorn that opens a door to the Black Bazaar — a market that exists between worlds. She and Rashid enter together, and discover that the most precious thing in the shadow market isn&#39;t for sale: it&#39;s the memory of something you lost before you were born.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep06_anime.mp3" type="audio/mpeg" length="9218445"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep06_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-en-ep06</guid>
-    <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration>496</itunes:duration>
     <itunes:episode>6</itunes:episode>
   </item>
   
   <item>
     <title>The Song That Unmade a Sword</title>
     <description>Layla of the Singing Dunes arrives at Khalid&#39;s forge with a single grain of sand that carries a melody from before the world was made. The song has the power to finish what he started forty years ago — but only if he is willing to let his unfinished blade be broken first.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep07_anime.mp3" type="audio/mpeg" length="16987245"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep07_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-en-ep07</guid>
-    <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration>817</itunes:duration>
     <itunes:episode>7</itunes:episode>
+  </item>
+  
+  <item>
+    <title>The Story That Read Her Back</title>
+    <description>Yueya has forgotten something she can&#39;t name — a star, a story, a voice that taught her the constellations. Dunyazad returns with a silver page that reads the reader instead of being read. To find what she lost, Yueya must let the story see her first.</description>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep08_anime.mp3" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-en-ep08</guid>
+    <itunes:episode>8</itunes:episode>
   </item>
   
 </channel>
