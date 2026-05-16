@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="两个 Telegram bot 同时断联，网关进程还在、LM Studio 正常、ping 通——但端口不在了。从怀疑网络到定位到一根断掉的代理桥接线程，再到写成 systemd 服务的完整过程。">
+<title>Telegram Bot 突然不响应了？一个 socat 进程引发的故障排查 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="Telegram Bot 突然不响应了？一个 socat 进程引发的故障排查">
+<meta property="og:description" content="两个 Telegram bot 同时断联，网关进程还在、LM Studio 正常、ping 通——但端口不在了。从怀疑网络到定位到一根断掉的代理桥接线程，再到写成 systemd 服务的完整过程。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/t2-bot-gateway-fix-ops.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Telegram Bot 突然不响应了？一个 socat 进程引发的故障排查">
+<meta name="twitter:description" content="两个 Telegram bot 同时断联，网关进程还在、LM Studio 正常、ping 通——但端口不在了。从怀疑网络到定位到一根断掉的代理桥接线程，再到写成 systemd 服务的完整过程。">
+
+
+<meta property="article:published_time" content="2026-05-17">
+<meta property="article:author" content="提灯人">
+<meta property="article:tag" content="运维"><meta property="article:tag" content="Telegram"><meta property="article:tag" content="Hermes Agent"><meta property="article:tag" content="socat">
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Telegram Bot 突然不响应了？一个 socat 进程引发的故障排查",
+  "description": "两个 Telegram bot 同时断联，网关进程还在、LM Studio 正常、ping 通——但端口不在了。从怀疑网络到定位到一根断掉的代理桥接线程，再到写成 systemd 服务的完整过程。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-05-17",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/t2-bot-gateway-fix-ops.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "Telegram Bot 突然不响应了？一个 socat 进程引发的故障排查", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/t2-bot-gateway-fix-ops.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>Telegram Bot 突然不响应了？</h1>
+<h3>— 一个 socat 进程引发的故障排查</h3>
+<p><em>5 月 17 日凌晨，发现 @winkBBot 和 @kndAgentbot 都没有回应。查了一轮发现：网关进程在跑，LM Studio 正常，ping 通，SSH 能连——但 bot 就是没反应。</em></p>
+<hr>
+<h2>症状</h2>
+<p>两个 Telegram bot 同时失去响应：</p>
+<ul>
+<li><strong>@winkBBot</strong> — 发消息不回复，没有超时提示，直接沉默</li>
+<li><strong>@kndAgentbot (迪仔)</strong> — 同上，完全无响应</li>
+</ul>
+<p>T2 主机（极夜 T2，AMD HX370 / 96GB）本身是正常的：</p>
+<ul>
+<li><code>ping</code> 延迟 3ms</li>
+<li>SSH 正常登录</li>
+<li>LM Studio 运行正常，两个模型都在 IDLE 状态</li>
+<li>任务管理器显示 CPU 和内存使用正常</li>
+</ul>
+<h2>初步排查</h2>
+<p>先看 Hermes gateway 状态：</p>
+<pre><code>hermes gateway status
+✓ Gateway is running (PID: 17276)
+</code></pre>
+<p>看起来正常。但继续查发现端口不在监听：</p>
+<pre><code>netstat -ano | findstr :18789
+（空）
+</code></pre>
+<p>进程在，端口不在——说明 gateway 卡在某个状态没能正常启动 HTTP 服务。</p>
+<p>查日志：</p>
+<pre><code>23:40:20  ERROR [Telegram] Telegram polling could not reconnect
+          after 10 network error retries. Restarting gateway.
+23:40:20  ERROR Fatal telegram adapter error: telegram_network_error
+
+23:56:08  INFO  Proxy detected; passing explicitly to HTTPXRequest:
+                http://192.168.3.135:7891
+23:56:10  WARN  Connect attempt 1/8 failed:
+                httpx.ConnectError: All connection attempts failed
+...
+00:07:38  WARN  Connect attempt 5/8 failed
+00:18:42  WARN  telegram paused after 10 consecutive failures
+</code></pre>
+<p><strong>核心发现：</strong> 网关连不上 Telegram API 服务器。它通过代理 <code>http://192.168.3.135:7891</code> 转发，但这个代理连接持续失败。</p>
+<h2>根因定位</h2>
+<p>T2 的代理架构：</p>
+<pre><code>T2 (Windows 11)
+  └→ Hermes Gateway (port 18789)
+       └→ HTTP Proxy: http://192.168.3.135:7891
+                    ↓
+               Linux server
+                 socat :7891 → :7890
+                    ↓
+               Mihomo proxy (port 7890)
+                    ↓
+               Telegram API
+</code></pre>
+<p>T2 安装在 Windows 上，其 Hermes 网关为了访问 Telegram API 需要走 HTTP 代理。代理入口 <code>192.168.3.135:7891</code> 是一个 <strong>socat 桥接</strong>：它把来自 T2 的请求转发到本机的 Mihomo 代理（<code>:7890</code>）。</p>
+<p>检查 socat 状态：</p>
+<pre><code>ss -tlnp | grep 7891
+（空——socat 不在监听！）
+</code></pre>
+<p><strong>socat 进程不知道什么时候挂了。</strong> 整个代理链断在最前端，T2 的请求到了 <code>192.168.3.135</code> 就被拒绝——没有端口在 7891 上监听。</p>
+<h2>修复过程</h2>
+<p>第一步是重建代理桥接：</p>
+<pre><code>socat TCP-LISTEN:7891,fork,reuseaddr TCP:127.0.0.1:7890 &amp;
+</code></pre>
+<p>验证端口已监听：</p>
+<pre><code>ss -tlnp | grep 7891
+LISTEN  0  5  0.0.0.0:7891  0.0.0.0:*  users:((&quot;socat&quot;,pid=3415591,fd=5))
+</code></pre>
+<p>然后重启 T2 的两个网关：</p>
+<pre><code># Default profile (winkBBot)
+hermes gateway restart
+
+# RP profile (kndAgentbot)
+hermes gateway restart --profile rp
+</code></pre>
+<p>日志确认连接已恢复：</p>
+<pre><code>Connected to Telegram (polling mode)
+telegram connected
+Gateway running with 1 platform(s)
+</code></pre>
+<h2>持久化：写成 systemd 服务</h2>
+<p>重启解决了眼前问题，但 socat 是手动启动的——系统重启、进程崩溃时不会自动恢复。写成一个 systemd 服务：</p>
+<pre><code>[Unit]
+Description=Proxy bridge for T2 — socat :7891 → :7890
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/socat TCP-LISTEN:7891,fork,reuseaddr TCP:127.0.0.1:7890
+Restart=always
+RestartSec=10
+User=nobody
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<pre><code>systemctl enable socat-proxy-t2.service
+systemctl start socat-proxy-t2.service
+</code></pre>
+<p>现在 socat 会随系统启动，崩溃后 10s 自动恢复。</p>
+<h2>几条教训</h2>
+<blockquote>
+<p><strong>1. 「进程在跑」不等于「服务在工作」</strong></p>
+<p><code>hermes gateway status</code> 显示 running，端口却不在监听。原因是网关启动后尝试连 Telegram，但因为代理不可用，在重试循环里一直卡着——进程跑着，但核心功能（HTTP 监听）还没初始化。</p>
+<p><strong>2. 中间件是单点脆弱环节</strong></p>
+<p>socat 这种小工具太不起眼了，以至于没人会想到去监控它。但它一旦挂了，整个代理链就断了。任何中间层（代理桥接、端口转发、DNS 解析）都应被当作关键基础设施来管理。</p>
+<p><strong>3. 问题定位的顺序：应用层 → 网络层 → 中间件</strong></p>
+<p>这次排查的顺序是对的：先看应用层（gateway 状态、日志），再看网络层（ping、curl 测试），最后才发现中间件（socat 进程不在）。如果一开始就 <code>ss</code> 看端口监听状态，能更快定位。</p>
+<p><strong>4. 持久化没有例外</strong></p>
+<p>手动启动的进程总有挂的一天。无论是 socat、sidecar、还是调试用的小工具——如果它必须一直在，就写成 systemd 服务或 Docker 容器。例外不存在。</p>
+</blockquote>
+<hr>
+<p><strong>更新：</strong> 现在 <code>socat-proxy-t2.service</code> 已在服务器上启用并自动启动。T2 的上游 bot (@winkBBot, @kndAgentbot) 均已恢复正常。</p>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
