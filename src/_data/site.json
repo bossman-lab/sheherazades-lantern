@@ -8,10 +8,30 @@
   "explicit": "false",
   "itunes_type": "serial",
   "languages": [
-    { "code": "en", "label": "English", "dir": "ltr", "active": true },
-    { "code": "cn", "label": "中文", "dir": "ltr", "active": true },
-    { "code": "ar", "label": "العربية", "dir": "rtl", "active": true },
-    { "code": "es", "label": "Español", "dir": "ltr", "active": true }
+    {
+      "code": "en",
+      "label": "English",
+      "dir": "ltr",
+      "active": true
+    },
+    {
+      "code": "cn",
+      "label": "中文",
+      "dir": "ltr",
+      "active": true
+    },
+    {
+      "code": "ar",
+      "label": "العربية",
+      "dir": "rtl",
+      "active": true
+    },
+    {
+      "code": "es",
+      "label": "Español",
+      "dir": "ltr",
+      "active": true
+    }
   ],
   "names": {
     "en": "Sheherazade's Lantern",
@@ -38,10 +58,22 @@
     "es": "El Guardián de la Linterna"
   },
   "footer": {
-    "en": ["The Lantern Keeper · Sheherazade's Lantern", "Ancient tales from the Arabian nights, rekindled for modern souls."],
-    "cn": ["提灯人 · 舍赫拉查德之灯", "一千零一夜的古老传说，为现代灵魂重新点燃。"],
-    "ar": ["حارس المصباح · مصباح شهرزاد", "حكايات قديمة من ألف ليلة وليلة، تُروى لأرواح حديثة."],
-    "es": ["El Guardián de la Linterna · La Linterna de Sherezada", "Cuentos antiguos de Las mil y una noches, reavivados para almas modernas."]
+    "en": [
+      "The Lantern Keeper · Sheherazade's Lantern",
+      "Ancient tales from the Arabian nights, rekindled for modern souls."
+    ],
+    "cn": [
+      "提灯人 · 舍赫拉查德之灯",
+      "一千零一夜的古老传说，为现代灵魂重新点燃。"
+    ],
+    "ar": [
+      "حارس المصباح · مصباح شهرزاد",
+      "حكايات قديمة من ألف ليلة وليلة، تُروى لأرواح حديثة."
+    ],
+    "es": [
+      "El Guardián de la Linterna · La Linterna de Sherezada",
+      "Cuentos antiguos de Las mil y una noches, reavivados para almas modernas."
+    ]
   },
   "episode_labels": {
     "en": "10 Episodes",
@@ -69,5 +101,5 @@
   },
   "owner_name": "The Lantern Keeper",
   "owner_email": "keeper.lantern@proton.me",
-  "lastmod": "2026-05-14"
+  "lastmod": "2026-05-16"
 }

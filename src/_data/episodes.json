@@ -277,7 +277,8 @@
       "ar": "/audio/episodes/ar_ep08_anime.mp3",
       "es": "/audio/episodes/es_08_anime.mp3"
     },
-    "published": false
+    "published": true,
+    "pubDate": "2026-05-16"
   },
   {
     "id": "09",
