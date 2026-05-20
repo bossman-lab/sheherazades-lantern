@@ -7,7 +7,7 @@
   <title>舍赫拉查德之灯</title>
   <description>一千零一夜的古老传说，为现代灵魂重新点燃。动画风格音频剧，多角色中文配音。丝绸之路上的奇幻旅程——地图师画出尚未建成的城市，香料商兜售从未活过的人生，铁匠锻造注定被折断的剑。提灯人为你引路。</description>
   <link>https://bossman-lab.github.io/sheherazades-lantern/cn</link>
-  <language>zh_CN</language>
+  <language>cn</language>
   <image>
     <url>https://bossman-lab.github.io/sheherazades-lantern/audio/assets/podcast_cover.jpg</url>
     <title>舍赫拉查德之灯</title>
@@ -21,90 +21,78 @@
   <itunes:category text="Arts">
     <itunes:category text="Fiction"/>
   </itunes:category>
-  <itunes:owner>
-    <itunes:name>The Lantern Keeper</itunes:name>
-    <itunes:email>keeper.lantern@proton.me</itunes:email>
-  </itunes:owner>
-  <lastBuildDate>2026-05-16</lastBuildDate>
-  <atom:link href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml" rel="self" type="application/rss+xml"/>
+  <lastBuildDate>2026-05-20</lastBuildDate>
+  <atom:link href="https://bossman-lab.github.io/sheherazades-lantern/cnpodcast.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>会移动的街道地图</title>
     <description>巴格达的制图师拉希德画了一辈子地图，却从未画对过一条街。月芽是天文学徒，她在他的线条里认出一片尚未升起的星空。当两张错误的图拼在一起，指向的却是同一座城——由所罗门王的精灵用黄铜铸成的城市。问题是：一座还没建好的城，为什么已经出现在了地图上？</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_01_anime.mp3" type="audio/mpeg" length="9804728"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_01_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep01</guid>
-    <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration>490</itunes:duration>
     <itunes:episode>1</itunes:episode>
   </item>
   
   <item>
     <title>香料之镜</title>
     <description>有一座城市正在遗忘自己。街道的转角消失，邻居的名字模糊，人们的记忆像沙漏一样不可逆转地流失。纳迪亚的香料摊在巷弄深处——她的香料能让你尝到从未活过的人生。卡里姆推门而入，要了一剂「欲望之尘」。他不知道的是，有些味道一旦尝过，就再也回不去了。</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_02_anime.mp3" type="audio/mpeg" length="6449036"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_02_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep02</guid>
-    <pubDate>Thu, 07 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration>322</itunes:duration>
     <itunes:episode>2</itunes:episode>
   </item>
   
   <item>
     <title>未竟之刃</title>
     <description>铁匠哈立德四十年守着同一把未完成的剑。他在夜里对它低语，在清晨为它流泪。一个少年带着复仇之心闯进他的铺子，想要一把能斩断过去的武器。哈立德看着墙上的剑，知道这一刻终会到来——这把剑注定要被折断，而折断它的那个人，将付出遗忘一切的代价。但也许，遗忘本身就是一种成全。</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_03_anime.mp3" type="audio/mpeg" length="8176553"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_03_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep03</guid>
-    <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration>408</itunes:duration>
     <itunes:episode>3</itunes:episode>
   </item>
   
   <item>
     <title>未言之书</title>
     <description>每个世纪，驿站深处会出现一扇门。月芽推门而入，见到了杜妮亚扎德——山鲁佐德的妹妹，守护着一本空白的书。书页上什么都没有，却藏着世上所有从未说出口的话：未寄出的信、未告白的爱、未说出口的抱歉。杜妮亚扎德提出交换：月芽最珍贵的记忆，换回一个即将永远消失的故事。图书馆是公平的。但你永远不知道自己会失去什么。</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_04_anime.mp3" type="audio/mpeg" length="7685516"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_04_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep04</guid>
-    <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration>384</itunes:duration>
     <itunes:episode>4</itunes:episode>
   </item>
   
   <item>
     <title>吟唱沙丘与消逝的故事</title>
     <description>卡里姆在阿拉伯沙漠深处听到了沙丘的吟唱——它们在叫他的名字。莱拉是沙漠中最后一个会听沙语的人，她的手心里攥着一粒沙子，里面封着一整首歌。歌是唱给一个还没出生的女孩的。卡里姆要穿过空无一物的鲁卜哈利沙漠，把那粒沙子送到它该去的地方。问题是：一首写给未来人的歌，能在过去被传唱吗？</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_05_anime.mp3" type="audio/mpeg" length="4991294"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_05_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep05</guid>
-    <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration>249</itunes:duration>
     <itunes:episode>5</itunes:episode>
   </item>
   
   <item>
     <title>香料之忆</title>
     <description>纳迪亚在香料罐深处发现了一粒黑色胡椒——它打开了一扇通往阴影市场的大门。拉希德和她一起走进去，发现这个夹缝中的市场里最珍贵的东西不卖钱：它卖的是你出生之前就失去的东西的记忆。</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_06_anime.mp3" type="audio/mpeg" length="9934605"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_06_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep06</guid>
-    <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration>496</itunes:duration>
     <itunes:episode>6</itunes:episode>
   </item>
   
   <item>
     <title>以歌碎剑</title>
     <description>吟唱沙丘的莱拉带着一粒沙子来到哈立德的铁匠铺——沙子里封着创世之前的旋律。这首歌能完成四十年前未竟之事，但前提是：他必须先折断自己锻造了一生的剑。</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_07_anime.mp3" type="audio/mpeg" length="16352205"/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_07_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep07</guid>
-    <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration>817</itunes:duration>
     <itunes:episode>7</itunes:episode>
   </item>
   
   <item>
     <title>读取她的故事</title>
     <description>月芽忘记了一件事——一颗星、一个故事、一个教她认识星座的声音。杜妮亚扎德带着一页银色书页回来，这页书不被人读，而是读人。月芽必须让故事先看见她，才能找回她失去的一切。</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_08_anime.mp3" type="audio/mpeg" length=""/>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_08_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep08</guid>
-    <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-    <itunes:duration></itunes:duration>
     <itunes:episode>8</itunes:episode>
+  </item>
+  
+  <item>
+    <title>随风而行的债务</title>
+    <description>卡里姆收到一封来自北方山口的旧物——一笔债，老到墨水已从记忆中褪尽。纳迪亚的胡椒盒里锁着一场暴风雪中许下的诺言的香气。一个年轻女人在高山上为陌生人守着一间庇护所。高山记得。债该还了。</description>
+    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_09_anime.mp3" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep09</guid>
+    <itunes:episode>9</itunes:episode>
   </item>
   
 </channel>
