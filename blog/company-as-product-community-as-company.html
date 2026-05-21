@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="同一周读完两篇文章——晚点×安克阳萌的长谈 + 王亦舟的人/内容/社区框架——发现它们指向了同五条底层原则。">
+<title>公司是最难的产品，社区是最难的公司：当阳萌遇上REMIX框架 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="公司是最难的产品，社区是最难的公司：当阳萌遇上REMIX框架">
+<meta property="og:description" content="同一周读完两篇文章——晚点×安克阳萌的长谈 + 王亦舟的人/内容/社区框架——发现它们指向了同五条底层原则。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/company-as-product-community-as-company.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="公司是最难的产品，社区是最难的公司：当阳萌遇上REMIX框架">
+<meta name="twitter:description" content="同一周读完两篇文章——晚点×安克阳萌的长谈 + 王亦舟的人/内容/社区框架——发现它们指向了同五条底层原则。">
+
+
+<meta property="article:published_time" content="2026-05-22">
+<meta property="article:author" content="提灯人">
+
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "公司是最难的产品，社区是最难的公司：当阳萌遇上REMIX框架",
+  "description": "同一周读完两篇文章——晚点×安克阳萌的长谈 + 王亦舟的人/内容/社区框架——发现它们指向了同五条底层原则。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-05-22",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/company-as-product-community-as-company.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "公司是最难的产品，社区是最难的公司：当阳萌遇上REMIX框架", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/company-as-product-community-as-company.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>公司是最难的产品，社区是最难的公司</h1>
+<blockquote>
+<p>同一周读完两篇文章，发现它们在说同一件事。</p>
+<p>一篇是<a href="https://mp.weixin.qq.com/s/5QKj6WJzY7L_U43pQ6j54g">晚点对话安克阳萌</a>——一个在2022年重度抑郁、体重从77kg掉到62kg的创始人，砍掉10个品类、从第一性原理重建公司。</p>
+<p>另一篇是王亦舟的《人、内容、社区（三）》——一套拆解&quot;为什么大多数想做社区的产品最后做成了内容平台&quot;的五要素框架。</p>
+<p>一个讲怎么建一家年营收247亿的消费电子公司。一个讲怎么建一个不会死的社区。看起来是不同宇宙的事——但底层逻辑完全一样。</p>
+</blockquote>
+<hr>
+<h2>原则一：地形决定战略，意志改不了</h2>
+<p><strong>安克：浅海战略</strong></p>
+<p>阳萌最常被引用的一句话：&quot;即使手里有五十亿、一百亿筹码，也不要上小盲五亿、大盲十亿的桌。&quot;</p>
+<p>他把所有市场分成两类：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>年规模</th>
+<th>安克的态度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>浅海</strong></td>
+<td>≤ 500亿美金</td>
+<td>在此作战</td>
+</tr>
+<tr>
+<td><strong>深海</strong></td>
+<td>千亿美金以上（手机、电脑、电视）</td>
+<td>不碰</td>
+</tr>
+</tbody>
+</table>
+<p>这不是野心问题——是地形问题。500亿以下的品类有大量子品类，适合&quot;广度+系统&quot;的打法。千亿以上的品类被少数玩家统治，需要&quot;深度+单一突破&quot;。安克选择了适合自己的地形。</p>
+<p><strong>REMIX框架：文化圈层</strong></p>
+<p>社区五要素的最后一个是<strong>文化圈层+排他性</strong>。一个能无限扩张的&quot;社区&quot;不是社区——是内容平台。文化边界就是社区领域的&quot;浅海&quot;。不接受这一点，你就做不出社区。</p>
+<blockquote>
+<p><strong>一句话</strong>：不是你想怎么打决定你的战略，是你选的战场是什么形状决定的。否认地形，地形不会消失。</p>
+</blockquote>
+<hr>
+<h2>原则二：别做单层，要设计阶梯</h2>
+<p><strong>安克：1357系</strong></p>
+<p>安克的产品不是扁平列表，是分层的：</p>
+<table>
+<thead>
+<tr>
+<th>系列</th>
+<th>特征</th>
+<th>比竞品贵</th>
+<th>战略角色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1系</strong></td>
+<td>最便宜</td>
+<td>极低</td>
+<td>漏斗入口</td>
+</tr>
+<tr>
+<td><strong>3系</strong></td>
+<td>性价比</td>
+<td>中低</td>
+<td>销量基础</td>
+</tr>
+<tr>
+<td><strong>5系</strong></td>
+<td>稳、好品质</td>
+<td>+50%~100%</td>
+<td><strong>前十年核心</strong></td>
+</tr>
+<tr>
+<td><strong>7系</strong></td>
+<td>最好最贵</td>
+<td>高端</td>
+<td>未来方向</td>
+</tr>
+</tbody>
+</table>
+<p>目标：7系营收占比从3%（2020）→ 15%（2025）→ <strong>30%（2030前）</strong>。</p>
+<p>&quot;怎么样算一流公司？看数字就是你的7系产品销售额占比至少到30%。&quot;</p>
+<p>这个阶梯让用户在同一生态内自然升级：Solarbank初代（1k欧入门）→ 2 Pro（主流）→ 3 Pro（AI调度、动态电价套利），同一个用户，同一套系统。</p>
+<p><strong>REMIX框架：阶级+序列</strong></p>
+<p>社区五要素中的&quot;阶级&quot;不是不平等——它是让成长可见。没有阶级的社区是聊天室。阶级创造：</p>
+<ul>
+<li><strong>路径</strong>：&quot;我从这里开始，可以去到那里&quot;</li>
+<li><strong>认可</strong>：你的投入对应可见的身份</li>
+<li><strong>留存</strong>：离开意味着失去已经积累的地位</li>
+</ul>
+<blockquote>
+<p><strong>一句话</strong>：别只卖一个东西。设计一架梯子。让用户在你的系统里成长，不用换平台。</p>
+</blockquote>
+<hr>
+<h2>原则三：游乐场 &gt; 工厂</h2>
+<p><strong>安克：创造者乐园</strong></p>
+<p>阳萌给安克改的使命：&quot;搭建一个互相激发的创造者乐园，创造一个全球消费者热爱的品牌。&quot;</p>
+<p>他把公司组织分成两种：</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>适用场景</th>
+<th>案例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>国王+骑士团</strong></td>
+<td>超级品类</td>
+<td>苹果、特斯拉</td>
+</tr>
+<tr>
+<td><strong>总统+联邦</strong></td>
+<td>多品类平台</td>
+<td><strong>安克</strong></td>
+</tr>
+</tbody>
+</table>
+<p>安克是第二种。CEO不设计产品——他设计<strong>生产产品设计师的系统</strong>。6000人的公司，800多人年薪超百万，组织逻辑是&quot;军种主建、战区主战、军委管总&quot;。</p>
+<p>2022年危机后的诊断：&quot;五口锅在炒，只有两个盖&quot;——产品线太多，好管理者不够。解决方案不是招更多人，而是从100个产品砍到30个再到~10个，然后重建系统。</p>
+<p><strong>REMIX框架：游乐场</strong></p>
+<p>游乐场 vs 工厂：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>工厂（传统平台）</th>
+<th>游乐场（AI时代社区）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>节奏</td>
+<td>发布即结束</td>
+<td>每天开门，持续运营</td>
+</tr>
+<tr>
+<td>结构</td>
+<td>平台决定内容流</td>
+<td>平台搭设施，用户决定怎么玩</td>
+</tr>
+<tr>
+<td>目标</td>
+<td>用户消费内容</td>
+<td>用户在群体里存在</td>
+</tr>
+<tr>
+<td>门槛</td>
+<td>进入低，深度没有</td>
+<td>进入低，深度自定</td>
+</tr>
+<tr>
+<td>反复性</td>
+<td>反复来=刷更多内容</td>
+<td>反复来=玩法越来越深</td>
+</tr>
+</tbody>
+</table>
+<p>核心洞察：<strong>AI真正的能力不是创造——是可编辑性/Remix。</strong> 旧产品模型假设&quot;种子单元&quot;是完成态（推文、图片、视频）。新产品模型假设种子单元是开放可编辑的——一个角色、一个世界、一段对话——产品的任务是让remix发生，而不是工厂化输出。</p>
+<p>安克的&quot;创造者乐园&quot;是给员工的游乐场。REMIX的&quot;游乐场&quot;是给用户的产品模型。都不走流水线。</p>
+<blockquote>
+<p><strong>一句话</strong>：停止建工厂（输出标准化单元）。开始建游乐场（让参与者在互动中创造价值）。</p>
+</blockquote>
+<hr>
+<h2>原则四：阵法 &gt; 单挑</h2>
+<p><strong>安克：天罡北斗阵</strong></p>
+<p>阳萌的问题：安克的部门负责人是&quot;中等马&quot;——不错，但不是天才。他们怎么在单挑中打赢竞争对手的CEO（上等马）？</p>
+<p>答案：不打单挑。用阵法。</p>
+<p>&quot;金庸武侠里的天罡北斗阵……王重阳自己武功绝顶，但他不想一天到晚自己去……搞了7个人的阵。&quot;</p>
+<p>安克的阵法有四层<strong>复利能力</strong>：</p>
+<ol>
+<li><strong>渠道复用</strong>：亚马逊→线下→全球，一个产品为另一个铺路</li>
+<li><strong>用户群联动</strong>：买安防的用户也会买清洁、买储能</li>
+<li><strong>技术共享</strong>：芯片、系统、大模型——建一次，到处用</li>
+<li><strong>品牌归一化</strong>：Anker→eufy→soundcore，一个名字=一个信任信号</li>
+</ol>
+<p>结果是：部门负责人不是一个人在战斗。他带着整个阵法上场。</p>
+<p><strong>REMIX框架：开源式协作IP</strong></p>
+<p>精确对应：</p>
+<table>
+<thead>
+<tr>
+<th>开源机制</th>
+<th>映射到协作IP创作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>明确的main branch</td>
+<td>角色/IP有被维护的&quot;主版本&quot;（canon）</td>
+</tr>
+<tr>
+<td>可分叉可合并（fork+PR）</td>
+<td>用户fork出AU版本，好的合并回主线</td>
+</tr>
+<tr>
+<td>标准化协作协议</td>
+<td>fork/领养/共创/共识机制</td>
+</tr>
+<tr>
+<td>Maintainer角色</td>
+<td>角色的&quot;管理人&quot;</td>
+</tr>
+<tr>
+<td>声望系统</td>
+<td>贡献者获得命名权、收益分配</td>
+</tr>
+</tbody>
+</table>
+<p>理论根基：哈耶克的《知识在社会中的运用》——现代社会靠分散的局部知识通过交换聚合。创作也一样——IP可以是分散用户协作共同生长出来的。同人圈已经在这么做，AI让这件事可以大规模操作。</p>
+<blockquote>
+<p><strong>一句话</strong>：别指望天才单打独斗。建一个系统，让7个平均水平的士兵列阵打赢1个武林高手。系统本身才是护城河。</p>
+</blockquote>
+<hr>
+<h2>原则五：节奏 &gt; 速度</h2>
+<p><strong>安克：激进保守主义</strong></p>
+<p>&quot;我们是一个激进的保守主义者——保守是10块钱里最多投5块6块，激进是每次总会把那5块6块钱投出去。&quot;</p>
+<p>数学：</p>
+<ul>
+<li>初始10 → 投5 → 赚20 → 总资产25 → 投12 → 循环</li>
+<li>盘子持续扩大，但比例永远控制在50%左右</li>
+</ul>
+<p>这不是风险厌恶——这是<strong>节奏纪律</strong>。2022年的教训就是一年拓了四五个大品类，超越了系统的承载能力。</p>
+<p>节奏也决定了<strong>谁先拿钱</strong>：</p>
+<p>&quot;消费电子行业的超额价值是劳动者创造的……劳动者应该拿大头。&quot;</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>过去</th>
+<th>现在</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>员工薪酬占营收</td>
+<td>~8%</td>
+<td>13%</td>
+</tr>
+<tr>
+<td>年薪百万以上员工</td>
+<td>500人(2024)</td>
+<td>800+人(2025)</td>
+</tr>
+</tbody>
+</table>
+<p>分配原则：<strong>先分配机会</strong>（价值观好的给更好的机会），<strong>后分配回报</strong>（打出粮食的多拿钱）。</p>
+<p><strong>REMIX框架：分步构建</strong></p>
+<p>游乐场模型有自然的分步逻辑：</p>
+<pre><code>抓住人群（想remix的同好）
+  → 构建社群（角色+同好圈层）
+  → 用机制驱动协作（fork/领养/共创）
+  → 让协作沉淀为资产（角色IP+集体记忆）
+  → 产品长成持续运营的游乐场
+</code></pre>
+<p>每步依赖上一步。不能跳。</p>
+<blockquote>
+<p><strong>一句话</strong>：增长不是能跑多快，是每一步的节奏能不能持续。永远只用上一轮赢的钱翻倍扩张。先分机会，再分回报。</p>
+</blockquote>
+<hr>
+<h2>统一对照表</h2>
+<table>
+<thead>
+<tr>
+<th>原则</th>
+<th>安克版</th>
+<th>REMIX版</th>
+<th>自检问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>地形&gt;意志</strong></td>
+<td>浅海≤500亿 vs 深海</td>
+<td>文化圈层 vs 大众平台</td>
+<td>&quot;我的战场形状允许我这样赢吗？&quot;</td>
+</tr>
+<tr>
+<td><strong>阶梯&gt;平面</strong></td>
+<td>1357系产品层级</td>
+<td>角色+阶级+序列</td>
+<td>&quot;用户在我的系统里有可视的成长路径吗？&quot;</td>
+</tr>
+<tr>
+<td><strong>游乐场&gt;工厂</strong></td>
+<td>创造者乐园组织</td>
+<td>开放种子单元产品模型</td>
+<td>&quot;我在建让参与者创造价值的空间，还是在建标准化输出的流水线？&quot;</td>
+</tr>
+<tr>
+<td><strong>阵法&gt;单挑</strong></td>
+<td>四层复利优势</td>
+<td>可fork IP+维护者+声望</td>
+<td>&quot;7个平均水平的人列阵能打赢1个天才吗？&quot;</td>
+</tr>
+<tr>
+<td><strong>节奏&gt;速度</strong></td>
+<td>激进保守(投50%)</td>
+<td>分步构建社区</td>
+<td>&quot;这次的扩张是靠上一轮赢的钱吗？&quot;</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>对创业者的实操清单</h2>
+<p><strong>第1个月：画地形图</strong></p>
+<ul>
+<li>你的品类是浅海还是深海？</li>
+<li>如果是深海：能找到巨头3年内不在意的切口吗？</li>
+<li>你的潜在社区有足够的身份认同来承受增长吗？</li>
+</ul>
+<p><strong>第2个月：设计阶梯</strong></p>
+<ul>
+<li>你的1系是什么（容易试、低成本）？</li>
+<li>你的5系是什么（稳定、核心价值的交付）？</li>
+<li>你的7系是什么（定义行业标准的标杆）？</li>
+</ul>
+<p><strong>第3-6个月：建游乐场，不建工厂</strong></p>
+<ul>
+<li>你是在为用户生产东西，还是在建一个让用户互相生产价值的空间？</li>
+<li>&quot;种子单元&quot;是什么——是完成态（工厂）还是可编辑态（游乐场）？</li>
+</ul>
+<p><strong>第6-12个月：安装阵法</strong></p>
+<ul>
+<li>你能建哪3-4层复利壁垒，每个竞品都必须从头建？</li>
+<li>你的中等马能调用和CEO一样的资源吗？</li>
+</ul>
+<p><strong>第12-24个月：控制节奏</strong></p>
+<ul>
+<li>你手里的10块是多少？只投5块，别投8块。</li>
+<li>上一轮赢的钱够不够付下一轮的扩张？</li>
+<li>你最有价值的人在获得更多机会，还是更多钱？</li>
+</ul>
+<hr>
+<h2>最后</h2>
+<p>阳萌引用老子《太上篇》：&quot;太上，不知有之……&quot;他自认在第三等（畏之），但想去第一等（不知有之——系统自己运转）。</p>
+<p>REMIX框架说同一件事：最好的产品不是目的地，是游乐场。创造者隐去，创造物自己生长。</p>
+<p>公司是最难的产品。社区是最难的公司。但背后的原则——地形、阶梯、游乐场、阵法、节奏——是一样的。</p>
+<p>问题不是你做什么。是<strong>你启动的那个系统，在你离开之后，还会不会自己运转下去</strong>。</p>
+<hr>
+<p><em>参考文章：</em></p>
+<ol>
+<li><a href="https://mp.weixin.qq.com/s/5QKj6WJzY7L_U43pQ6j54g">晚点对话安克阳萌：公司是最难的产品</a></li>
+<li>王亦舟.《人、内容、社区（三）》. 明夜集.</li>
+</ol>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
