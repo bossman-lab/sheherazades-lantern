@@ -21,7 +21,7 @@
   <itunes:category text="Arts">
     <itunes:category text="Fiction"/>
   </itunes:category>
-  <lastBuildDate>2026-05-20</lastBuildDate>
+  <lastBuildDate>2026-05-23</lastBuildDate>
   <atom:link href="https://bossman-lab.github.io/sheherazades-lantern/cnpodcast.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>会移动的街道地图</title>
@@ -77,22 +77,6 @@
     <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_07_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep07</guid>
     <itunes:episode>7</itunes:episode>
-  </item>
-  
-  <item>
-    <title>读取她的故事</title>
-    <description>月芽忘记了一件事——一颗星、一个故事、一个教她认识星座的声音。杜妮亚扎德带着一页银色书页回来，这页书不被人读，而是读人。月芽必须让故事先看见她，才能找回她失去的一切。</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_08_anime.mp3" type="audio/mpeg"/>
-    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep08</guid>
-    <itunes:episode>8</itunes:episode>
-  </item>
-  
-  <item>
-    <title>随风而行的债务</title>
-    <description>卡里姆收到一封来自北方山口的旧物——一笔债，老到墨水已从记忆中褪尽。纳迪亚的胡椒盒里锁着一场暴风雪中许下的诺言的香气。一个年轻女人在高山上为陌生人守着一间庇护所。高山记得。债该还了。</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/cn_09_anime.mp3" type="audio/mpeg"/>
-    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-cn-ep09</guid>
-    <itunes:episode>9</itunes:episode>
   </item>
   
 </channel>

@@ -21,7 +21,7 @@
   <itunes:category text="Arts">
     <itunes:category text="Fiction"/>
   </itunes:category>
-  <lastBuildDate>2026-05-20</lastBuildDate>
+  <lastBuildDate>2026-05-23</lastBuildDate>
   <atom:link href="https://bossman-lab.github.io/sheherazades-lantern/podcast/podcast.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>The Map of the Moving Streets</title>
@@ -77,22 +77,6 @@
     <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep07_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-en-ep07</guid>
     <itunes:episode>7</itunes:episode>
-  </item>
-  
-  <item>
-    <title>The Story That Read Her Back</title>
-    <description>Yueya has forgotten something she can&#39;t name — a star, a story, a voice that taught her the constellations. Dunyazad returns with a silver page that reads the reader instead of being read. To find what she lost, Yueya must let the story see her first.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep08_anime.mp3" type="audio/mpeg"/>
-    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-en-ep08</guid>
-    <itunes:episode>8</itunes:episode>
-  </item>
-  
-  <item>
-    <title>The Debt That Travels on the Wind</title>
-    <description>Karim receives an object from the northern pass — a debt so old the ink has faded from his memory. Nadia&#39;s pepper box holds the scent of a promise made in a snowstorm, on a mountain where a young woman kept a shelter warm for strangers. The high pass remembers. The debt is due.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/ep09_anime.mp3" type="audio/mpeg"/>
-    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-en-ep09</guid>
-    <itunes:episode>9</itunes:episode>
   </item>
   
 </channel>

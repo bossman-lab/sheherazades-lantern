@@ -21,7 +21,7 @@
   <itunes:category text="Arts">
     <itunes:category text="Fiction"/>
   </itunes:category>
-  <lastBuildDate>2026-05-20</lastBuildDate>
+  <lastBuildDate>2026-05-23</lastBuildDate>
   <atom:link href="https://bossman-lab.github.io/sheherazades-lantern/espodcast.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>El mapa de las calles movedizas</title>
@@ -77,22 +77,6 @@
     <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_07_anime.mp3" type="audio/mpeg"/>
     <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-es-ep07</guid>
     <itunes:episode>7</itunes:episode>
-  </item>
-  
-  <item>
-    <title>La historia que la leyó a ella</title>
-    <description>Yueya ha olvidado algo que no puede nombrar — una estrella, una historia, una voz que le enseñó las constelaciones. Dunyazad regresa con una página de plata que lee al lector en lugar de ser leída. Para encontrar lo que perdió, Yueya debe dejar que la historia la vea primero.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_08_anime.mp3" type="audio/mpeg"/>
-    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-es-ep08</guid>
-    <itunes:episode>8</itunes:episode>
-  </item>
-  
-  <item>
-    <title>La deuda que viaja en el viento</title>
-    <description>Karim recibe un objeto del paso norteño — una deuda tan antigua que la tinta se ha desvanecido de su memoria. La caja de pimienta de Nadia guarda el aroma de una promesa hecha en una tormenta de nieve, en una montaña donde una joven mantenía un refugio caliente para extraños. El alto paso recuerda. La deuda es debida.</description>
-    <enclosure url="https://bossman-lab.github.io/sheherazades-lantern/audio/episodes/es_09_anime.mp3" type="audio/mpeg"/>
-    <guid isPermaLink="false">https://bossman-lab.github.io/sheherazades-lantern-es-ep09</guid>
-    <itunes:episode>9</itunes:episode>
   </item>
   
 </channel>
