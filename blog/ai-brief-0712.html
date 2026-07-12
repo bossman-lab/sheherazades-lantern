@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="OpenAI连发GPT-Live全双工语音与GPT-5.6三代模型（Sol/Terra/Luna）；Meta推出Muse Spark 1.1付费Agent API；Mistral开源Lean 4形式化验证模型；Cloudflare推出AI代理付费网关。">
+<title>今日AI简报 — OpenAI双响炮：GPT-Live语音+GPT-5.6三剑客发布 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="今日AI简报 — OpenAI双响炮：GPT-Live语音+GPT-5.6三剑客发布">
+<meta property="og:description" content="OpenAI连发GPT-Live全双工语音与GPT-5.6三代模型（Sol/Terra/Luna）；Meta推出Muse Spark 1.1付费Agent API；Mistral开源Lean 4形式化验证模型；Cloudflare推出AI代理付费网关。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0712.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="今日AI简报 — OpenAI双响炮：GPT-Live语音+GPT-5.6三剑客发布">
+<meta name="twitter:description" content="OpenAI连发GPT-Live全双工语音与GPT-5.6三代模型（Sol/Terra/Luna）；Meta推出Muse Spark 1.1付费Agent API；Mistral开源Lean 4形式化验证模型；Cloudflare推出AI代理付费网关。">
+
+
+<meta property="article:published_time" content="2026-07-12">
+<meta property="article:author" content="提灯人">
+
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "今日AI简报 — OpenAI双响炮：GPT-Live语音+GPT-5.6三剑客发布",
+  "description": "OpenAI连发GPT-Live全双工语音与GPT-5.6三代模型（Sol/Terra/Luna）；Meta推出Muse Spark 1.1付费Agent API；Mistral开源Lean 4形式化验证模型；Cloudflare推出AI代理付费网关。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-07-12",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0712.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "今日AI简报 — OpenAI双响炮：GPT-Live语音+GPT-5.6三剑客发布", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0712.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>今日AI简报 — OpenAI双响炮：GPT-Live语音+GPT-5.6三剑客发布</h1>
+<p><strong>2026年7月12日</strong></p>
+<p>本周AI行业迎来前所未有的密集发布。OpenAI在48小时内连发两大重磅产品，Meta和Mistral紧随其后，Cloudflare则从基础设施层面重新定义AI与网络的商业模式。</p>
+<hr>
+<h2>📡 数据源A：中文社区动态</h2>
+<p><strong>ChatGPT Work引发中文社区讨论</strong> — 互联网从业者频道@https1024发起调查&quot;ChatGPT Work用的顺手吗&quot;，这款OpenAI上周推出的Agent式长任务工具已在国内技术圈引发试用水花。Work可以在后台独立完成复杂项目（如编写代码、撰写报告），用户无需实时盯着输出。</p>
+<hr>
+<h2>🔬 数据源B：全球AI要闻</h2>
+<h3>1. OpenAI GPT-Live：全双工语音AI正式上线（7月8日）</h3>
+<p>OpenAI发布GPT-Live，新一代语音模型，采用<strong>全双工架构</strong>——AI可以一边听一边说，不再等待&quot;你讲完我再说&quot;。它会在对话中自然地发出&quot;嗯哼&quot;&quot;对&quot;等反馈，用户思考时也会安静等待。</p>
+<p>两个版本：GPT-Live-1（Go/Plus/Pro用户默认）和GPT-Live-1 mini（Free用户默认，替代Advanced Voice Mode）。遇到复杂问题时，GPT-Live会在后台委托给GPT-5.5进行推理、搜索或Agent任务，同时保持对话流畅。在GPQA科学推理测试中得分84.2%，远超Advanced Voice Mode的45.3%。用户偏好测试中，75.7%的人选择GPT-Live-1胜过旧版。</p>
+<p>OpenAI同时强调，GPT-Live<strong>并非AI伴侣</strong>，其目标是更好的助手体验，但已启动对用户情感依赖的主动监控。</p>
+<h3>2. OpenAI GPT-5.6家族：Sol、Terra、Luna三剑客（7月9日）</h3>
+<p>OpenAI发布GPT-5.6系列，采取<strong>分层专业化</strong>策略替代单一通用模型：</p>
+<ul>
+<li><strong>Sol（太阳）</strong> — 旗舰级，专攻最困难任务。在&quot;Agent最后考试&quot;（涵盖55个领域的专业工作流评估）中以53.6分超越Claude Fable 5（自适应推理）13.1分。在网络安全漏洞利用方面（ExploitBench）比Fable 5节省约80%的输出Token。</li>
+<li><strong>Terra（地球）</strong> — 性价比平衡之选，性能对标GPT-5.5，但成本降低50%</li>
+<li><strong>Luna（月亮）</strong> — 最快最便宜，适合高频低延迟场景</li>
+</ul>
+<p>Terra和Luna在大多数场景下以<strong>1/16的成本</strong>超越Fable 5的性能。API定价已公布，已在ChatGPT、Codex和API全线开放。</p>
+<h3>3. Meta Muse Spark 1.1：首个收费Agent模型API（7月9日）</h3>
+<p>Meta推出Muse Spark 1.1，来自Meta超级智能实验室，定位为<strong>Agent推理模型</strong>。支持100万Token上下文窗口，在工具使用、计算机操控、编码和多模态理解方面大幅提升。</p>
+<p><strong>重大变化</strong>：这是Meta首次为自家模型提供付费API。定价为每百万输入Token $1.25、输出Token $4.25，送$20免费额度。已在Meta AI App和meta.ai上以&quot;思考模式&quot;可用。在专业工具使用基准测试中排名第一，超过Opus 4.8和GPT-5.5。</p>
+<h3>4. Mistral Leanstral 1.5：开源形式化验证模型（7月2日发布，本周持续发酵）</h3>
+<p>Mistral开源<strong>Leanstral 1.5</strong>，119B参数的Lean 4代码Agent，采用Apache 2.0许可。它不仅能生成代码，还能<strong>数学证明代码行为符合预期</strong>。在miniF2F基准上达到100%，在PutnamBench上完成587/672道竞赛题。</p>
+<p>更实际的价值：已在57个开源仓库中发现5个此前未被报告的真正Bug。支持最长20万Token上下文，适合长时间的Agent会话。模型权重已上传Hugging Face，可通过Mistral API或自托管vLLM使用。</p>
+<h3>5. EU强制新车安装AI分心检测（7月7日起生效）</h3>
+<p>自7月7日起，欧盟所有新注册车辆必须配备<strong>驾驶员分心检测系统</strong>。系统通过分析驾驶员眼神和头部运动来判断是否走神，但<strong>不记录也不传输影像</strong>给执法机构。这是AI在日常道路安全中的又一个里程碑应用。</p>
+<h3>6. Cloudflare Monetization Gateway：AI代理付费网关</h3>
+<p>Cloudflare推出Monetization Gateway，基于x402协议（HTTP 402支付状态码）构建。核心逻辑：任何通过Cloudflare保护的网页、API、数据集或MCP工具，都可以<strong>按次向AI代理收费</strong>。x402协议已在Linux基金会下成为开放标准，拥有22个创始成员组织。这可能是互联网商业模式从&quot;广告+注意力&quot;转向&quot;机器流量付费&quot;的关键转折点。</p>
+<hr>
+<h2>🤖 数据源C：Figure AI / Helix</h2>
+<p>本周Figure AI / Helix方面没有实质性新进展。Helix-02的&quot;铺床&quot;&quot;整理客厅&quot;等内容已在之前多次报道，跳过。</p>
+<hr>
+<p><em>本期简报覆盖时间：2026年7月8日–12日</em></p>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
