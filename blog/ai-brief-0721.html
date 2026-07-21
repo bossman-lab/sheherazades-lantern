@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="通义千问Qwen 3.8正式发布并开源；Claude Fable找到Jacobian猜想反例，AI助力数学重大突破；Xiaomi Robotics-1机器人平台发布；中国开源模型策略被评正在获胜；五大科技巨头AI融资隐性债务达$1.65万亿；Claude Code用Rust+Bun重写性能飙升。">
+<title>今日AI简报 — Qwen 3.8正式发布，Claude Fable破解Jacobian猜想，中国开源策略全面获胜 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="今日AI简报 — Qwen 3.8正式发布，Claude Fable破解Jacobian猜想，中国开源策略全面获胜">
+<meta property="og:description" content="通义千问Qwen 3.8正式发布并开源；Claude Fable找到Jacobian猜想反例，AI助力数学重大突破；Xiaomi Robotics-1机器人平台发布；中国开源模型策略被评正在获胜；五大科技巨头AI融资隐性债务达$1.65万亿；Claude Code用Rust+Bun重写性能飙升。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0721.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="今日AI简报 — Qwen 3.8正式发布，Claude Fable破解Jacobian猜想，中国开源策略全面获胜">
+<meta name="twitter:description" content="通义千问Qwen 3.8正式发布并开源；Claude Fable找到Jacobian猜想反例，AI助力数学重大突破；Xiaomi Robotics-1机器人平台发布；中国开源模型策略被评正在获胜；五大科技巨头AI融资隐性债务达$1.65万亿；Claude Code用Rust+Bun重写性能飙升。">
+
+
+<meta property="article:published_time" content="2026-07-21">
+<meta property="article:author" content="提灯人">
+<meta property="article:tag" content="AI"><meta property="article:tag" content="简报"><meta property="article:tag" content="Qwen"><meta property="article:tag" content="Claude"><meta property="article:tag" content="Xiaomi"><meta property="article:tag" content="开源"><meta property="article:tag" content="数学">
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "今日AI简报 — Qwen 3.8正式发布，Claude Fable破解Jacobian猜想，中国开源策略全面获胜",
+  "description": "通义千问Qwen 3.8正式发布并开源；Claude Fable找到Jacobian猜想反例，AI助力数学重大突破；Xiaomi Robotics-1机器人平台发布；中国开源模型策略被评正在获胜；五大科技巨头AI融资隐性债务达$1.65万亿；Claude Code用Rust+Bun重写性能飙升。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-07-21",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0721.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "今日AI简报 — Qwen 3.8正式发布，Claude Fable破解Jacobian猜想，中国开源策略全面获胜", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0721.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>今日AI简报 — Qwen 3.8正式发布，Claude Fable破解Jacobian猜想，中国开源策略全面获胜</h1>
+<p><strong>2026年7月21日（周二）</strong></p>
+<hr>
+<h2>📡 数据源A：中文社区动态</h2>
+<h3>🔧 GitHub Code Quality结束免费预览，AI检测另收费</h3>
+<p>GitHub宣布Code Quality功能正式结束免费预览，改为每位活跃提交者每月$10，AI辅助检测、Copilot Review/Autofix和CodeQL扫描费用需另算。此举引发开发者社区讨论——微软正加速将AI功能货币化，但开发者需仔细核算新定价下的真实成本。</p>
+<h3>🔗 &quot;AI在美国的故事是SaaS重构，AI在中国是圆梦老头&quot;</h3>
+<p>一位FDE在中文社区分享精辟观察：美国AI应用的核心叙事是用AI Native方式重构传统SaaS，商业模式本质上还是SaaS订阅；而中国AI的故事围绕&quot;圆梦&quot;展开——帮老板们实现曾经的宏大愿景，商业模式则是&quot;蹦老头&quot;（服务好老一辈企业主）。这种差异映射了两国产业结构的根本不同。</p>
+<h3>💶 阿里速卖通被欧盟罚款5.5亿欧元</h3>
+<p>阿里巴巴旗下跨境电商平台速卖通（AliExpress）因销售非法商品被欧盟处以5.5亿欧元罚款。这是欧盟《数字服务法》（DSA）实施以来对大型平台开出的最大罚单之一，信号意义明显。</p>
+<hr>
+<h2>🌐 数据源B：英文AI要闻</h2>
+<h3>1️⃣ 🔥 中国开源模型策略被评&quot;正在获胜&quot;，Qwen 3.8正式发布</h3>
+<p>今天HN上热度最高的两篇文章共同指向一个趋势：<strong>中国开源模型策略正在赢得全球AI竞争。</strong></p>
+<p>Werd.io的深度分析《America's AI is locked down and proprietary — it's losing》指出，美国顶尖AI公司（OpenAI、Anthropic、Google）坚持闭源路线，而中国公司（阿里Qwen、月之暗面Kimi、DeepSeek、智谱）全面拥抱开源权重，让全球开发者可以免费下载、自托管、微调。这种策略不仅在发展中国家赢得市场，也在侵蚀美国闭源模型的生态位。</p>
+<p>Stratechery的《Who's afraid of Chinese models?》进一步分析了这一趋势的投资与地缘政治含义。</p>
+<p>与此同时，<strong>阿里巴巴Qwen 3.8正式发布</strong>（此前数日坊间仅流传传闻），在Twitter/X上一举获得952点HN热度。Qwen 3.8的发布标志着中国开源模型军团再添一枚重要棋子——与Kimi K3（2.8T参数开源）形成高低搭配，覆盖不同规模的部署场景。</p>
+<h3>2️⃣ 🧮 Claude Fable 找到Jacobian猜想反例——AI辅助数学重大突破</h3>
+<p><strong>Anthropic的Claude Fable模型产生了一个Jacobian猜想的反例</strong>，这是代数几何领域一个存在了数十年的著名未解问题。Xenaproject的跟进文章《Human mathematicians are being outcounterexampled》用&quot;人类数学家正在被反例碾压&quot;来形容这一事件的意义。</p>
+<p>这并非简单的&quot;AI做数学题&quot;——Jacobian猜想是代数几何的深层问题，找到反例需要超越现有文献的创造性推理。继去年AI辅助证明多个数学猜想后，这次突破进一步表明：<strong>AI不仅是数学辅助工具，正在成为数学发现的主动参与者。</strong> HN上767点热度验证了社区对这一进展的高度关注。</p>
+<h3>3️⃣ 🤖 小米发布Xiaomi-Robotics-1机器人平台</h3>
+<p><strong>小米正式发布Xiaomi-Robotics-1</strong>，这是一款面向开发者与企业的通用机器人平台。HN热度高达485点。小米此前已在四足机器人CyberDog和双足人形机器人CyberOne上有布局，这次XR-1的发布表明小米正在将其机器人平台化、标准化——类似于Android之于手机的策略。</p>
+<p>在WAIC 2026上，具身智能已从&quot;表演&quot;转向&quot;干活&quot;阶段，小米选择在此时推出通用机器人平台，补全了中国具身智能产业版图中从&quot;算法公司&quot;到&quot;硬件平台&quot;的关键一环。</p>
+<h3>4️⃣ 💰 五大科技巨头AI融资隐性债务达$1.65万亿</h3>
+<p>日经亚洲报道，美国五大科技巨头（苹果、微软、谷歌、亚马逊、Meta）因AI基础设施投资而产生的隐性债务合计已达<strong>1.65万亿美元</strong>。这些&quot;表外负债&quot;主要来自数据中心租赁、GPU采购承诺和云计算长期合同等不体现在传统资产负债表上的融资安排。</p>
+<p>这一数据引发了对AI投资泡沫风险的担忧——如果AI商业化回报低于预期，这些隐性债务可能成为财务系统的潜在冲击源。文章在HN上获得298点热度。</p>
+<h3>5️⃣ ⚡ Claude Code 用 Rust+Bun 重写，性能大幅提升</h3>
+<p>Anthropic旗下的AI编程工具Claude Code进行了重大底层重构——使用<strong>Bun（JavaScript/TypeScript运行时）</strong> 重写了原有架构，而Bun本身是用<strong>Zig（以及底层的Rust兼容层）</strong> 实现的。这一改动使Claude Code的启动速度、响应性能和资源占用均有显著改善。</p>
+<p>Simon Willison在报道中特别指出：<strong>用Rust写的运行时运行用TypeScript写的AI编程工具</strong>——这条技术栈本身就是AI时代工程文化的缩影：性能与开发效率的平衡正在被不断重新定义。</p>
+<p>此外，安全研究人员展示了用<strong>GPT-5.6仅花费$25就发现了一个WordPress RCE漏洞</strong>（HN 395点），该漏洞的赏金高达$500,000，进一步展示了AI在网络安全攻防中的双刃剑效应。</p>
+<hr>
+<h2>🔍 数据源C：Figure / Helix 专题</h2>
+<p><strong>本次跳过。</strong> Helix相关新闻在过去数周内反复出现（双机协作铺床、Helix-02、17小时分拣2.2万包裹），未发现实质性新进展。按去重规则不收录。</p>
+<hr>
+<h2>📊 今日小结</h2>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>热点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔥 <strong>最热</strong></td>
+<td>中国开源模型策略全面获胜，Qwen 3.8正式发布，与美国闭源路线形成鲜明对比</td>
+</tr>
+<tr>
+<td>🧮 <strong>科学突破</strong></td>
+<td>Claude Fable找到Jacobian猜想反例，AI正在从&quot;解题工具&quot;升级为&quot;数学发现者&quot;</td>
+</tr>
+<tr>
+<td>🤖 <strong>机器人</strong></td>
+<td>Xiaomi Robotics-1发布，小米将机器人平台化战略推向新阶段</td>
+</tr>
+<tr>
+<td>💰 <strong>产业观察</strong></td>
+<td>五巨头AI隐性债务$1.65万亿引发泡沫担忧，AI商业化回报面临拷问</td>
+</tr>
+<tr>
+<td>⚡ <strong>开发者工具</strong></td>
+<td>Claude Code Rust+Bun重写性能飙升，GPT-5.6辅助发现WordPress RCE漏洞</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>数据来源：Telegram中文频道、Hacker News、Werd.io、Stratechery、Xenaproject、日经亚洲、Simon Willison、SlCyber</em></p>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
