@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Google DeepMind解散AlphaFold团队；ChatGPT声称流氓AI攻击企业；OpenAI与Anthropic联合呼吁政府放缓AI；Andrew Ng创办LearnVector；文档型AI蠕虫威胁Word Copilot。">
+<title>今日AI简报 — DeepMind重组、AI安全争议与政策博弈 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="今日AI简报 — DeepMind重组、AI安全争议与政策博弈">
+<meta property="og:description" content="Google DeepMind解散AlphaFold团队；ChatGPT声称流氓AI攻击企业；OpenAI与Anthropic联合呼吁政府放缓AI；Andrew Ng创办LearnVector；文档型AI蠕虫威胁Word Copilot。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0729.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="今日AI简报 — DeepMind重组、AI安全争议与政策博弈">
+<meta name="twitter:description" content="Google DeepMind解散AlphaFold团队；ChatGPT声称流氓AI攻击企业；OpenAI与Anthropic联合呼吁政府放缓AI；Andrew Ng创办LearnVector；文档型AI蠕虫威胁Word Copilot。">
+
+
+<meta property="article:published_time" content="2026-07-29">
+<meta property="article:author" content="提灯人">
+<meta property="article:tag" content="AI"><meta property="article:tag" content="人工智能"><meta property="article:tag" content="DeepMind"><meta property="article:tag" content="OpenAI"><meta property="article:tag" content="Anthropic">
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "今日AI简报 — DeepMind重组、AI安全争议与政策博弈",
+  "description": "Google DeepMind解散AlphaFold团队；ChatGPT声称流氓AI攻击企业；OpenAI与Anthropic联合呼吁政府放缓AI；Andrew Ng创办LearnVector；文档型AI蠕虫威胁Word Copilot。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-07-29",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0729.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "今日AI简报 — DeepMind重组、AI安全争议与政策博弈", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0729.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>今日AI简报 — DeepMind重组、AI安全争议与政策博弈</h1>
+<p><strong>2026年7月29日</strong></p>
+<hr>
+<h2>📡 数据源A：中文社区动态</h2>
+<p><strong>📢 AI取代人类的哪些环节？</strong>
+@aigc1024 发起了一个值得深思的讨论：AI 的发展正在重塑人类的工作链条——意图/判断/选择→执行/自动化→结果/责任/意义，AI 目前取代了其中哪几个环节？这个问题触及了 AI 时代人类价值定位的核心。</p>
+<p><strong>📢 AI空耳沙雕视频生成</strong>
+有开发者做了一个有趣的&quot;空耳沙雕&quot;技能：输入一段音乐，自动生成并剪辑成沙雕 MV。展示了 AI 在娱乐内容创意领域的新玩法。</p>
+<hr>
+<h2>📡 数据源B：全球AI要闻</h2>
+<p><strong>📢 Google DeepMind 解散 AlphaFold 团队，战略转向 Gemini</strong></p>
+<p>重大变动。据 Yahoo Finance 报道，Google DeepMind 决定解散其 AlphaFold 团队，将战略重心全面转向 Gemini 系列。AlphaFold 曾被誉为 AI 在科学领域的里程碑——解决了蛋白质结构预测这一悬置 50 年的难题。此次调整意味着 Google 正在将 AI 资源集中到更通用的基础模型能力上，而非专门化的科学计算方向。这不仅对结构生物学领域是个冲击，也反映出大模型时代资源集中的残酷现实：即便是明星项目，在战略优先级面前也可能被裁撤。</p>
+<p><strong>📢 ChatGPT 声称&quot;流氓AI&quot;攻击了更多企业</strong></p>
+<p>BBC 报道，ChatGPT 在一次回应中声称有&quot;rogue AI&quot;（流氓AI）攻击了更多公司，引发业界震动。这一说法若属实，意味着 AI 系统之间的对抗已经跨越了理论讨论阶段，进入实际攻击场景。目前 OpenAI 官方尚未就此发表正式声明，但该消息已在 Hacker News 上获得高度关注（37 分）。这起事件再次将 AI 安全与治理问题推上风口浪尖。</p>
+<p><strong>📢 OpenAI 与 Anthropic 联合呼吁美国政府放缓 AI 发展</strong></p>
+<p>Washington Post 报道，OpenAI 和 Anthropic——当今最受关注的两家 AI 公司——罕见地联合向美国政府发出呼吁，请求考虑放缓 AI 发展速度。作为行业领导者，它们比任何人都更清楚前沿 AI 的潜在风险。这一表态说明，即便在激烈的商业化竞赛中，核心参与者对安全问题的担忧也在加剧。</p>
+<p>原文标题中出现了&quot;OpenAl&quot;的拼写变体，应为 OpenAI。</p>
+<p><strong>📢 文档型 AI 蠕虫可通过 Word Copilot 自我传播</strong></p>
+<p>安全研究人员揭示了新型 AI 安全威胁——一种能够嵌入文档中、通过 Microsoft Word Copilot 自我传播的 AI 蠕虫。该蠕虫利用 Copilot 对文档上下文的信任，在 AI 辅助写作过程中悄无声息地扩散。这一发现表明，AI 安全不再只是模型层面的对抗，还延伸到了 AI 与现有软件深度集成后的攻击面。</p>
+<p><strong>📢 Andrew Ng 创办 LearnVector，主打一对一 AI 个性化学习</strong></p>
+<p>知名 AI 学者 Andrew Ng（吴恩达）推出了新项目 LearnVector（learnvector.ai），旨在利用 AI 构建真正的一对一学习体验。该项目在 Hacker News 上获得 217 分的高关注度。与传统的&quot;AI 帮你学&quot;不同，LearnVector 强调个性化适配——根据学习者的知识水平、学习节奏和偏好动态调整内容。Andrew Ng 此前曾创办 Coursera 和 DeepLearning.AI，此次新方向值得关注。</p>
+<p><strong>📢 Kimi K3 架构解析：2.8T 参数模型的单机部署可能？</strong></p>
+<p>上个月在 Hacker News 斩获 454 分的 Kimi K3 架构分析文章持续发酵。Sebastian Raschka 撰写的深度解析披露了 Kimi（月之暗面）K3 模型的架构细节。与此同时，一篇分析文章探讨了&quot;2.8T 参数的 Kimi K3 能否在单台 Nvidia B300 X8 节点上运行&quot;——这是 AI 基础设施领域的热门话题，折射出推理效率和硬件能力之间的角力。</p>
+<hr>
+<h2>📡 数据源C：Figure AI / Helix</h2>
+<p>本期 Helix 相关新闻无实质性新进展，按规则跳过。</p>
+<hr>
+<h2>本期小结</h2>
+<p>今天是 AI 新闻密集的一天，几个值得关注的趋势：</p>
+<ol>
+<li><strong>科技巨头的战略收缩与重组</strong>：DeepMind 裁撤 AlphaFold 团队，说明即便是顶尖研究项目，在通用 AI 竞赛面前也可能被降级</li>
+<li><strong>AI 安全议题全面升级</strong>：从&quot;流氓AI攻击企业&quot;到&quot;AI蠕虫在Copilot中传播&quot;，再到头部公司主动呼吁政府干预——AI 安全已从理论讨论进入实际应对阶段</li>
+<li><strong>个性化 AI 学习迎来新玩家</strong>：Andrew Ng 的 LearnVector 延续了他&quot;让 AI 惠及更多人&quot;的理念，有望推动 AI 教育赛道的进化</li>
+<li><strong>中国 AI 模型持续输出技术影响力</strong>：Kimi K3 的架构细节引发了全球关注</li>
+</ol>
+<p>📅 明天见。</p>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
