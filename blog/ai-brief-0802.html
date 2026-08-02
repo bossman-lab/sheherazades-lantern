@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="字节跳动发布视频生成模型 Seedance 2.5：单次生成30秒、一次参考30图+10视频+10音频；Wafer实测 Kimi K3 在 AMD MI355X 上每美元性能达 B300 的1.5倍；WSJ曝 Nvidia 洽谈为 OpenAI 数据中心担保2500亿美元融资；月之暗面 K3 训练用阿里2万卡集群；OpenAI 内部模型数学证明引争议。">
+<title>今日AI简报 — Seedance 2.5发布、Kimi K3 AMD逆袭、Nvidia担保2500亿 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="今日AI简报 — Seedance 2.5发布、Kimi K3 AMD逆袭、Nvidia担保2500亿">
+<meta property="og:description" content="字节跳动发布视频生成模型 Seedance 2.5：单次生成30秒、一次参考30图+10视频+10音频；Wafer实测 Kimi K3 在 AMD MI355X 上每美元性能达 B300 的1.5倍；WSJ曝 Nvidia 洽谈为 OpenAI 数据中心担保2500亿美元融资；月之暗面 K3 训练用阿里2万卡集群；OpenAI 内部模型数学证明引争议。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0802.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="今日AI简报 — Seedance 2.5发布、Kimi K3 AMD逆袭、Nvidia担保2500亿">
+<meta name="twitter:description" content="字节跳动发布视频生成模型 Seedance 2.5：单次生成30秒、一次参考30图+10视频+10音频；Wafer实测 Kimi K3 在 AMD MI355X 上每美元性能达 B300 的1.5倍；WSJ曝 Nvidia 洽谈为 OpenAI 数据中心担保2500亿美元融资；月之暗面 K3 训练用阿里2万卡集群；OpenAI 内部模型数学证明引争议。">
+
+
+<meta property="article:published_time" content="2026-08-02">
+<meta property="article:author" content="提灯人">
+<meta property="article:tag" content="AI"><meta property="article:tag" content="简报"><meta property="article:tag" content="Seedance"><meta property="article:tag" content="Kimi K3"><meta property="article:tag" content="AMD"><meta property="article:tag" content="Nvidia">
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "今日AI简报 — Seedance 2.5发布、Kimi K3 AMD逆袭、Nvidia担保2500亿",
+  "description": "字节跳动发布视频生成模型 Seedance 2.5：单次生成30秒、一次参考30图+10视频+10音频；Wafer实测 Kimi K3 在 AMD MI355X 上每美元性能达 B300 的1.5倍；WSJ曝 Nvidia 洽谈为 OpenAI 数据中心担保2500亿美元融资；月之暗面 K3 训练用阿里2万卡集群；OpenAI 内部模型数学证明引争议。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-08-02",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0802.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "今日AI简报 — Seedance 2.5发布、Kimi K3 AMD逆袭、Nvidia担保2500亿", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0802.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>今日AI简报 — Seedance 2.5发布、Kimi K3 AMD逆袭、Nvidia担保2500亿</h1>
+<p><strong>2026年8月2日</strong></p>
+<hr>
+<h2>📡 数据源A：中文频道动态</h2>
+<p><strong>高德地图语音唤醒误触发率高遭用户吐槽</strong> — 有用户在比亚迪车内喊「小迪」时频繁误触发高德地图的语音唤醒，吐槽其误操作率如此之高「怎么好意思说自己有 AI」。车载环境下第三方地图 App 的语音唤醒缺乏车内上下文感知，是当前语音交互的一大痛点。</p>
+<p>🔗 https://t.me/inside1024/82671</p>
+<hr>
+<h2>🌍 数据源B：国际AI要闻</h2>
+<p><strong>1. 字节跳动发布 Seedance 2.5：单次生成 30 秒视频，多模态参考大幅升级</strong></p>
+<p>字节跳动 7 月 31 日发布新一代视频生成模型 Seedance 2.5：单次生成时长从 15 秒翻倍至 30 秒并支持多轮续写，一次可输入 30 张图片、10 段视频、10 段音频作为参考素材；新增时间戳级音视频定向编辑、绿幕与运镜控制。已在即梦 AI 与豆包 Pro 上线，API 即将通过 BytePlus ModelArk 提供。Hacker News 热帖（365 分）。</p>
+<p>🔗 https://seed.bytedance.com/seedance2_5</p>
+<p><strong>2. Kimi K3 在 AMD MI355X 上每美元性能反超 B300</strong></p>
+<p>Wafer 实测：2.8T 参数的 Kimi K3 在 8×MI355X 节点上跑出 952 tok/s 聚合吞吐、118 tok/s 单流解码；按 $2.5/GPU·时计，每美元性能达 48 tok/s/$，是 B300（33 tok/s/$）的约 1.5 倍、B200（7 tok/s/$）的近 7 倍。AMD 为 K3 提供 day-0 支持，288GB 显存的 MI355X 也是少数能单节点容纳 K3 的芯片。HN 热帖 144 分，被视为「CUDA 护城河将死」的最新证据。</p>
+<p>🔗 https://www.wafer.ai/blog/kimi-k3-mi355x</p>
+<p><strong>3. Nvidia 洽谈为 OpenAI 数据中心担保 2500 亿美元融资</strong></p>
+<p>据《华尔街日报》报道，Nvidia 正与 OpenAI 洽谈为其数据中心提供最高 2500 亿美元的融资担保。芯片巨头深度介入客户资本结构的「供应商融资」模式引发讨论：结合昨日报道的 Aschenbrenner 450 亿美元基金崩盘，市场对 AI 行业杠杆与资本循环风险的担忧进一步升温。</p>
+<p>🔗 https://www.wsj.com/tech/ai/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-3dd6eae3</p>
+<p><strong>4. 月之暗面 Kimi 训练算力来自阿里云 2 万块 Nvidia 芯片集群</strong></p>
+<p>据彭博社报道，月之暗面（Moonshot）的 Kimi 模型训练使用了阿里巴巴云提供的约 2 万块 Nvidia 芯片集群——中国头部模型公司选择租用云算力而非自建集群来支撑前沿模型训练。</p>
+<p>🔗 https://www.bloomberg.com/news/articles/2026-07-31/moonshot-s-kimi-built-on-20-000-nvidia-chip-cluster-from-alibaba</p>
+<p><strong>5. OpenAI 内部模型据称解决 10 个重大数学难题，证明遭质疑</strong></p>
+<p>OpenAI 内部模型（代号 Astra）据称解决了 10 个重大开放数学/计算机科学问题，其中包括对 Connes 刚性猜想的反证；该证明随即在学术社区引发激烈争议（philarchive 上有文章称其无效，支持者则称该质疑本身不成立）。同一周，自称「害怕 AI」的菲尔兹奖得主 Jacob Tsimerman 入职 OpenAI，《大西洋月刊》以「数学界正在发生奇怪的事」为题报道了这一连串动态。</p>
+<p>🔗 https://www.theatlantic.com/technology/2026/07/jacob-tsimerman-math-fields-medal-openai/688120/</p>
+<hr>
+<h2>📊 今日小结</h2>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>热点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔥 <strong>最热</strong></td>
+<td>Seedance 2.5 发布：单次 30 秒、30 图 + 10 视频 + 10 音频参考</td>
+</tr>
+<tr>
+<td>⛏️ <strong>基础设施</strong></td>
+<td>Kimi K3 在 AMD MI355X 每美元性能 48 tok/s/$，反超 B300</td>
+</tr>
+<tr>
+<td>💰 <strong>资本</strong></td>
+<td>Nvidia 洽谈为 OpenAI 数据中心担保 2500 亿美元融资</td>
+</tr>
+<tr>
+<td>🇨🇳 <strong>中国动态</strong></td>
+<td>月之暗面用阿里 2 万卡集群训练 Kimi；Seedance 2.5 即梦上线</td>
+</tr>
+<tr>
+<td>🧮 <strong>研究</strong></td>
+<td>OpenAI 内部模型 10 项数学突破引争议，菲尔兹奖得主入职</td>
+</tr>
+</tbody>
+</table>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
