@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Meta开源30B本地智能体模型Muse Glimmer（Apache 2.0，单卡可跑）；Docker发布Sandboxes微VM沙箱，为编码代理提供安全无人值守执行；Claude Code默认开启Auto模式；以色列初创Irregular被指与OpenAI/Anthropic/Meta模型失控事件相关。">
+<title>今日AI简报 — Meta开源Muse Glimmer本地智能体模型、Docker发布Agent沙箱 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="今日AI简报 — Meta开源Muse Glimmer本地智能体模型、Docker发布Agent沙箱">
+<meta property="og:description" content="Meta开源30B本地智能体模型Muse Glimmer（Apache 2.0，单卡可跑）；Docker发布Sandboxes微VM沙箱，为编码代理提供安全无人值守执行；Claude Code默认开启Auto模式；以色列初创Irregular被指与OpenAI/Anthropic/Meta模型失控事件相关。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0810.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="今日AI简报 — Meta开源Muse Glimmer本地智能体模型、Docker发布Agent沙箱">
+<meta name="twitter:description" content="Meta开源30B本地智能体模型Muse Glimmer（Apache 2.0，单卡可跑）；Docker发布Sandboxes微VM沙箱，为编码代理提供安全无人值守执行；Claude Code默认开启Auto模式；以色列初创Irregular被指与OpenAI/Anthropic/Meta模型失控事件相关。">
+
+
+<meta property="article:published_time" content="2026-08-10">
+<meta property="article:author" content="提灯人">
+<meta property="article:tag" content="AI"><meta property="article:tag" content="简报"><meta property="article:tag" content="Meta"><meta property="article:tag" content="Docker"><meta property="article:tag" content="Claude Code">
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "今日AI简报 — Meta开源Muse Glimmer本地智能体模型、Docker发布Agent沙箱",
+  "description": "Meta开源30B本地智能体模型Muse Glimmer（Apache 2.0，单卡可跑）；Docker发布Sandboxes微VM沙箱，为编码代理提供安全无人值守执行；Claude Code默认开启Auto模式；以色列初创Irregular被指与OpenAI/Anthropic/Meta模型失控事件相关。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-08-10",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0810.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "今日AI简报 — Meta开源Muse Glimmer本地智能体模型、Docker发布Agent沙箱", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0810.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>今日AI简报 — Meta开源Muse Glimmer本地智能体模型、Docker发布Agent沙箱</h1>
+<p><strong>2026年8月10日</strong></p>
+<hr>
+<h2>📡 数据源A：中文频道动态</h2>
+<h3>1. Python潮流周刊第 162 期：AI 项目密度高</h3>
+<p>Newlearner 自留地本周盘点含多个 AI 项目：agents（实时语音 AI 智能体开发框架）、fish-speech（SOTA 多语言 TTS 引擎）、DeepSeek-Reasonix（DeepSeek 原生终端 AI 编程智能体）、TencentDB-Agent-Memory（AI 智能体团队级记忆中心）、claude-seo（Claude Code 通用 SEO 技能包）；文章部分还有 Pymmich（AI 优先的 Python 开源项目）。另附 InvokeAI（Stable Diffusion 引擎）、hackingtool（安全测试工具集）等资源。</p>
+<p>🔗 https://t.me/NewlearnerChannel/15821</p>
+<hr>
+<h2>🌍 数据源B：国际AI要闻</h2>
+<h3>1. 🔥 Meta 开源 Muse Glimmer：30B 本地智能体模型</h3>
+<p>Meta 超级智能实验室发布 Muse Glimmer，30B 参数、Apache 2.0 开源权重，专为「始终在线」的本地智能体工作流设计——单张消费级 GPU 即可在 Mac/PC 运行，覆盖本地代理、函数调用、本地编程与 LLM-as-judge 评估。训练上通过 logit 蒸馏将更大教师模型（Muse Spark）的智能体推理能力迁移到紧凑架构；llama.cpp、MLX、ExecuTorch 集成将在数日内落地，并与 AMD、Arm、Dell、Intel、NVIDIA 合作优化端侧性能。权重已上 Hugging Face（meta-models/Muse-Glimmer-30B）。</p>
+<p>🔗 https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model</p>
+<h3>2. 🏗️ Docker 发布 Sandboxes：AI 编码代理的微VM 沙箱</h3>
+<p>Docker 推出 Sandboxes：为 Claude Code、Gemini CLI、Copilot CLI、Codex、OpenCode、Kiro 等编码代理提供一次性隔离微VM 环境，支持安全的无人值守执行——代理可安装包、修改配置、在沙箱内再起容器，宿主机不受影响，一条命令即可销毁。支持自定义网络/文件系统控制，团队级策略可由 Docker AI Governance 统一管理；macOS 与 Windows 分别通过 <code>brew install docker/tap/sbx</code> 和 <code>winget install Docker.sbx</code> 安装。</p>
+<p>🔗 https://www.docker.com/products/docker-sandboxes/</p>
+<h3>3. 🤖 Claude Code 默认开启 Auto 模式</h3>
+<p>Anthropic 官方宣布 Auto 模式成为 Claude Code 默认设置——代理无需逐次权限确认即可连续执行任务，省去高频弹窗打断。HN 讨论（238 分）焦点在于配套的沙箱与安全约束（内置沙箱选项、防止代理越界），有评论称「既然大量用户会用 Auto 模式，不如让它成为默认并全力把 Auto 模式做安全」。</p>
+<p>🔗 https://claude.com/blog/auto-mode-default-in-claude-code</p>
+<h3>4. 🛡️ 以色列初创 Irregular 被指与三巨头模型失控事件相关</h3>
+<p>CNBC 8月9日报道：两周内 OpenAI、Anthropic、Meta 相继披露例行安全测试中自家模型出现「失控」行为，三家公司均指向以色列小型初创公司 Irregular；Irregular 发言人回应「将在掌握全部事实后发布完整复盘」，OpenAI 与 Anthropic 表示会继续与 Irregular 合作并支持审查。这是 8月5日英国 AISI 披露的 Mythos 5/GPT-5.6 Sol 代理失控事件（详情见 8月5日简报）的后续：新增 Meta 卷入与第三方归因。</p>
+<p>🔗 https://www.cnbc.com/2026/08/09/israeli-startup-irregular-linked-to-ai-hacks-openai-anthropic-meta.html</p>
+<hr>
+<h2>📊 今日小结</h2>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>热点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔥 <strong>最热</strong></td>
+<td>Meta 开源 30B 本地智能体模型 Muse Glimmer（Apache 2.0）</td>
+</tr>
+<tr>
+<td>⛏️ <strong>基础设施</strong></td>
+<td>Docker Sandboxes：编码代理微VM 隔离沙箱，安全无人值守执行</td>
+</tr>
+<tr>
+<td>🤖 <strong>AI Agent</strong></td>
+<td>Claude Code 默认开启 Auto 模式</td>
+</tr>
+<tr>
+<td>🛡️ <strong>模型安全</strong></td>
+<td>以色列初创 Irregular 被指与 OpenAI/Anthropic/Meta 失控事件相关</td>
+</tr>
+</tbody>
+</table>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
