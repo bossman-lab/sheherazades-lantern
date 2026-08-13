@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="阿里兑现承诺开源Qwen3.8-Max权重（2.4T参数/95B激活，PaperBench 93.0超越GPT-5.6 Sol）；DeepSeek V4 Pro正式版0813上线（1M上下文/384K输出，价格未调）；xAI发布Grok 4.6追平GPT-5.6 Sol；OpenAI上线ChatGPT/Codex Linux桌面客户端；宇树IPO获8000倍超额认购。">
+<title>今日AI简报 — Qwen3.8-Max权重开源、DeepSeek V4 Pro转正、Grok 4.6发布 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="今日AI简报 — Qwen3.8-Max权重开源、DeepSeek V4 Pro转正、Grok 4.6发布">
+<meta property="og:description" content="阿里兑现承诺开源Qwen3.8-Max权重（2.4T参数/95B激活，PaperBench 93.0超越GPT-5.6 Sol）；DeepSeek V4 Pro正式版0813上线（1M上下文/384K输出，价格未调）；xAI发布Grok 4.6追平GPT-5.6 Sol；OpenAI上线ChatGPT/Codex Linux桌面客户端；宇树IPO获8000倍超额认购。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0813.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="今日AI简报 — Qwen3.8-Max权重开源、DeepSeek V4 Pro转正、Grok 4.6发布">
+<meta name="twitter:description" content="阿里兑现承诺开源Qwen3.8-Max权重（2.4T参数/95B激活，PaperBench 93.0超越GPT-5.6 Sol）；DeepSeek V4 Pro正式版0813上线（1M上下文/384K输出，价格未调）；xAI发布Grok 4.6追平GPT-5.6 Sol；OpenAI上线ChatGPT/Codex Linux桌面客户端；宇树IPO获8000倍超额认购。">
+
+
+<meta property="article:published_time" content="2026-08-13">
+<meta property="article:author" content="提灯人">
+<meta property="article:tag" content="AI"><meta property="article:tag" content="简报"><meta property="article:tag" content="Qwen"><meta property="article:tag" content="DeepSeek"><meta property="article:tag" content="xAI"><meta property="article:tag" content="OpenAI"><meta property="article:tag" content="宇树">
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "今日AI简报 — Qwen3.8-Max权重开源、DeepSeek V4 Pro转正、Grok 4.6发布",
+  "description": "阿里兑现承诺开源Qwen3.8-Max权重（2.4T参数/95B激活，PaperBench 93.0超越GPT-5.6 Sol）；DeepSeek V4 Pro正式版0813上线（1M上下文/384K输出，价格未调）；xAI发布Grok 4.6追平GPT-5.6 Sol；OpenAI上线ChatGPT/Codex Linux桌面客户端；宇树IPO获8000倍超额认购。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-08-13",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0813.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "今日AI简报 — Qwen3.8-Max权重开源、DeepSeek V4 Pro转正、Grok 4.6发布", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0813.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>今日AI简报 — Qwen3.8-Max权重开源、DeepSeek V4 Pro转正、Grok 4.6发布</h1>
+<p><strong>2026年8月13日</strong></p>
+<hr>
+<h2>📡 数据源A：中文频道动态</h2>
+<h3>1. @aigc1024 整理第一期「审美在线」照片类 Skill 合集</h3>
+<p>频道发布第一期 Skill 推荐，聚焦视觉/照片类共 6 个：photo-abstract-editorial（保留照片真实内容，提炼空间关系、构图节奏与色彩关系）、heytea-style（喜茶风格海报生成）、gc-minimal-zine-poster（把主题/句子/构想转化为 zine 纸张质感极简编辑海报）、ip_illustration_for_yourself（个人 IP 萌粒风插画）、photo-revival（把随手拍/废片重绘成诗性手绘插画）、tait-crt-interface-skill（早期计算机界面质感复古插画）。</p>
+<p>🔗 https://t.me/aigc1024/23144</p>
+<hr>
+<h2>🌍 数据源B：国际AI要闻</h2>
+<h3>1. 🔥 阿里兑现承诺：Qwen3.8-Max 权重正式开源，2.4T 参数上线 Hugging Face</h3>
+<p>Qwen3.8-2.4T-A95B 权重仓库正式上线 HF——8月3日简报曾报道 Qwen3.8-Max 发布并预告「下周开源 Max 级权重」，今日兑现：2.4T 总参数 / 95B 激活 MoE，纯文本模型、强制思考模式，支持 reasoning_effort（xhigh/medium/low）与 preserve_thinking；官方基准中 PaperBench 得分 93.0，超过 GPT-5.6 Sol 的 90.5，Terminal Bench 2.1 达 86.6，多项目 agent 编程/办公基准对齐或超越 Claude Opus 4.8。</p>
+<p>🔗 https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B</p>
+<h3>2. 🔥 DeepSeek V4 Pro 转正：0813 正式版上线，1M 上下文 / 384K 输出</h3>
+<p>DeepSeek 官方 API 8月13日凌晨将 deepseek-v4-pro 对应版本更新为 DeepSeek-V4-Pro-0813，旗舰模型从预览进入正式发布（HN 963 分）：支持 1M Token 上下文、最大 384K Token 输出及 Tool Calls 等能力；价格未随转正上调（缓存命中输入 ¥0.025/百万 Token，未命中输入 ¥3/百万，输出 ¥6/百万），尽管官方此前公告计划整体调价。七牛云等 MaaS 平台已同步上线。</p>
+<p>🔗 https://openrouter.ai/deepseek/deepseek-v4-pro-0813</p>
+<h3>3. 🤖 xAI 发布 Grok 4.6：强化长时运行 Agent 与视觉交互</h3>
+<p>Grok 4.6（8月12日）在 Grok 4.5 基础上重点强化长时 Agent 任务与视觉/交互工作：官方称 Artificial Analysis 智能指数追平 GPT-5.6 Sol，擅长把宽泛产品想法一步搭成可运行初版；即日起上线 Cursor、Grok Build 与 API（OpenRouter、Vercel、Cloudflare 同步），定价 $2/百万输入、$6/百万输出 Token，快档翻倍，首周 Grok Build 与 Cursor 内用量 2 倍。</p>
+<p>🔗 https://x.ai/news/grok-4-6</p>
+<h3>4. 💻 OpenAI 上线 ChatGPT Desktop（Codex）Linux 客户端</h3>
+<p>OpenAI 发布 ChatGPT/Codex 桌面客户端 Linux 版（HN 230 分）：与编辑器、终端、网页端共享同一 ChatGPT 账户与工作流；社区讨论两极——有用户已在 Debian/KVM 下正常使用，也有人提醒将其视为高风险程序隔离运行（近期 Agent 安全事件频发背景下，对桌面端 Agent 的信任存疑）。</p>
+<p>🔗 https://openai.com/codex/</p>
+<h3>5. 🛡️ 昨日已报道 Claude 内置水印，今日用户反弹</h3>
+<p>昨日简报报道 Anthropic 为 Claude 输出内置隐形水印；今日 TechCrunch 报道用户不满情绪发酵：水印让「用 Claude 写作业/写周报」更难掩饰，被部分用户视为抓作弊工具，而非防 AI 垃圾文本的手段。</p>
+<p>🔗 https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/</p>
+<hr>
+<h2>🤖 数据源C：人形机器人动态</h2>
+<h3>1. 宇树科技科创板 IPO 获 8000 倍超额认购</h3>
+<p>Reuters 8月10日：宇树（688836.SS）9 亿美元上海 IPO 获散户超 8000 倍超额认购，中签率约 0.018%（机构份额回拨后）；发行价 150.80 元（约 $22.36），估值超 600 亿元人民币，将成为中国首家境内上市的人形机器人公司；券商认为高估值发行或带动机器人板块整体重估。</p>
+<p>🔗 https://www.reuters.com/world/asia-pacific/unitrees-shanghai-ipo-more-than-8000-times-oversubscribed-by-retail-investors-2026-08-10/</p>
+<hr>
+<h2>📊 今日小结</h2>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>热点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔥 <strong>最热</strong></td>
+<td>Qwen3.8-Max 权重正式开源（2.4T-A95B，PaperBench 93.0 超 GPT-5.6 Sol）</td>
+</tr>
+<tr>
+<td>🇨🇳 <strong>中国动态</strong></td>
+<td>DeepSeek V4 Pro 转正（1M 上下文/384K 输出）；宇树 IPO 超购 8000 倍</td>
+</tr>
+<tr>
+<td>🤖 <strong>AI Agent</strong></td>
+<td>Grok 4.6 发布，AA 智能指数追平 GPT-5.6 Sol</td>
+</tr>
+<tr>
+<td>💻 <strong>开发者工具</strong></td>
+<td>OpenAI 发布 ChatGPT/Codex Linux 桌面客户端</td>
+</tr>
+<tr>
+<td>🛡️ <strong>安全/合规</strong></td>
+<td>Claude 水印上线次日遭用户反弹</td>
+</tr>
+</tbody>
+</table>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
