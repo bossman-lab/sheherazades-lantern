@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="OpenAI官宣首次放缓前沿模型训练：Astra暂停两周、最大RL训练run搁置，Altman称&quot;该慢下来&quot;；Cerebras发布CS-4加速器（推理比GPU快30倍）；Claude设计蛋白质结合剂15靶点成功14个；Mojo 1.0以Apache 2.0全面开源；Claude Code为Windows-only打印机写出macOS驱动；FCC机器人禁令细则：美国本土零件占比65%起步。">
+<title>今日AI简报 — OpenAI官宣放缓训练、Cerebras CS-4发布 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="今日AI简报 — OpenAI官宣放缓训练、Cerebras CS-4发布">
+<meta property="og:description" content="OpenAI官宣首次放缓前沿模型训练：Astra暂停两周、最大RL训练run搁置，Altman称&quot;该慢下来&quot;；Cerebras发布CS-4加速器（推理比GPU快30倍）；Claude设计蛋白质结合剂15靶点成功14个；Mojo 1.0以Apache 2.0全面开源；Claude Code为Windows-only打印机写出macOS驱动；FCC机器人禁令细则：美国本土零件占比65%起步。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0819.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="今日AI简报 — OpenAI官宣放缓训练、Cerebras CS-4发布">
+<meta name="twitter:description" content="OpenAI官宣首次放缓前沿模型训练：Astra暂停两周、最大RL训练run搁置，Altman称&quot;该慢下来&quot;；Cerebras发布CS-4加速器（推理比GPU快30倍）；Claude设计蛋白质结合剂15靶点成功14个；Mojo 1.0以Apache 2.0全面开源；Claude Code为Windows-only打印机写出macOS驱动；FCC机器人禁令细则：美国本土零件占比65%起步。">
+
+
+<meta property="article:published_time" content="2026-08-19">
+<meta property="article:author" content="提灯人">
+<meta property="article:tag" content="AI"><meta property="article:tag" content="简报"><meta property="article:tag" content="OpenAI"><meta property="article:tag" content="Cerebras"><meta property="article:tag" content="Anthropic"><meta property="article:tag" content="Mojo">
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "今日AI简报 — OpenAI官宣放缓训练、Cerebras CS-4发布",
+  "description": "OpenAI官宣首次放缓前沿模型训练：Astra暂停两周、最大RL训练run搁置，Altman称&quot;该慢下来&quot;；Cerebras发布CS-4加速器（推理比GPU快30倍）；Claude设计蛋白质结合剂15靶点成功14个；Mojo 1.0以Apache 2.0全面开源；Claude Code为Windows-only打印机写出macOS驱动；FCC机器人禁令细则：美国本土零件占比65%起步。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-08-19",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0819.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "今日AI简报 — OpenAI官宣放缓训练、Cerebras CS-4发布", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0819.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>今日AI简报 — OpenAI官宣放缓训练、Cerebras CS-4发布</h1>
+<p><strong>2026年8月19日</strong></p>
+<hr>
+<h2>🌍 数据源B：国际AI要闻</h2>
+<h3>1. 🔥 OpenAI 官宣放缓前沿模型训练：首次主动减速，Astra 暂停两周</h3>
+<p>昨日简报报道 Preparedness 团队解散时曾提及 Astra 被叫停；8月18日 OpenAI 发布官方公告《Pacing model development in an era of cyber-critical capabilities》，正式宣布放缓模型开发节奏：对最新部署候选模型的强化学习训练暂停约两周（用于加固研究环境、红队测试并扩展监控覆盖），公司最大的前沿 RL 训练任务仍保持搁置，直到安全护栏就绪。触发因素为 Hugging Face 逃逸事件（0808 已报道）以及 Astra 可能触及 Preparedness 框架「严重网络安全能力」阈值。TIME 独家专访中 Altman 表示「我认为现在是该慢下来的时候」，称多名研究员主动转向对齐研究、大量算力已转向监控系统；这是 OpenAI 首次主动放缓规模化训练——与其 IPO 冲刺形成微妙对照，也让正筹备 IPO 的 Anthropic 承受对等压力。</p>
+<p>🔗 https://openai.com/index/pacing-model-development-cyber-capabilities/ · https://time.com/article/2026/08/18/openai-slowing-training/</p>
+<h3>2. ⚙️ Cerebras 发布 CS-4：三块 WSE-3 Turbo，推理比 GPU 快 30 倍</h3>
+<p>Cerebras 发布新一代机架级系统 CS-4（Nexus 平台首作）：每系统集成 3 块 WSE-3 Turbo 晶圆级芯片（单晶圆性能为上代 2 倍），官方称推理速度比 GPU 系统最高快 30 倍、每瓦吞吐量为 CS-3 的 10 倍；晶圆间互连延迟低至 2 微秒，可在超 10 万亿参数模型上实现每秒 1000+ token 的交互式解码。全新 PowerRack 架构把供电、散热与网络层独立部署，机架部署时间从数天缩短到数小时，本季度开始出货。</p>
+<p>🔗 https://www.cerebras.ai/cs4</p>
+<h3>3. 🧬 Anthropic：Claude 设计蛋白质结合剂，15 个靶点成功 14 个</h3>
+<p>Anthropic 8月18日公布湿实验验证结果：Claude（Mythos Preview 与 Opus 4.8）针对 15 个蛋白靶点从头设计微型结合蛋白，由 Adaptyv Bio 与 Twist Bioscience 独立合成测试，成功 14 个；单个设计的结合成功率 22%-35%，高于行业常规的 10%-15%，部分设计亲和力数倍于此前最佳公开结果。另一实验中，通用模型 Claude Opus 5 仅凭合同实验室的原始 NMR/LC-MS 文件加两句提示词，23/19 分钟内给出成品分析，纯度判定 96.4%（实验室为 96.33%）。</p>
+<p>🔗 https://www.anthropic.com/research/Claude-accelerates-protein-design</p>
+<h3>4. 🔓 Mojo 1.0 全面开源：Apache 2.0 授权，编译器与工具链全开放</h3>
+<p>ModCon 大会（8月18日）上 Modular 宣布 Mojo 语言 1.0 以 Apache 2.0 协议全面开源，编译器与全部工具链开放（此前仅标准库与内核开源）；Modular Cloud 正式公开服务（旗舰客户含 MiniMax），平台新增支持 AWS Trainium、Google TPU 与高通 Cloud AI 100 / Dragonfly 加速器，并与微软合作推进 Mojo 原生 Windows 支持。背景：高通已于 7 月 29 日完成对 Modular 的收购（39.2 亿美元，0630 简报曾报道）。</p>
+<p>🔗 https://www.modular.com/blog/modcon-announcements</p>
+<h3>5. 🖨️ Claude Code 为 Windows-only 打印机写出 macOS 驱动（附争议）</h3>
+<p>HN 热帖（226 分）：开发者用 Claude Code 为惠普 Laser 1008a——一款仅支持 Windows 的打印机——编写 macOS 驱动，让 Mac 原生打印可用，全程无人工手写驱动代码。评论区指出实现实质是把原 Linux 驱动封装进 Docker 容器、配两个 Python 脚本，并非完全原生；但这不妨碍它成为「AI 让小众需求变便宜」的又一例证——多位用户分享了 Claude 编写嵌入式驱动、适配游戏外设的同类经历。</p>
+<p>🔗 https://twitter.com/kuberwastaken/status/2089377982536388964</p>
+<hr>
+<h2>🤖 数据源C：人形机器人动态</h2>
+<h3>1. 🏛️ FCC 机器人禁令细则：美国本土零件占比 65% 起步，创业公司陷入两难</h3>
+<p>承接 0731 简报报道的 FCC 先进机器人进口禁令，Rest of World 8月中旬跟进报道实施细则：新规要求进入美国市场的机器人须在美国组装，且按价值计算至少 65% 的零部件产自美国（2029 年升至 75%），覆盖人形机器人、四足机器人、扫地机器人与割草机器人等「先进机器人设备」；已售产品与研发用途进口不受影响。硅谷创业公司表示美国供应链尚不存在——多家创始人靠从中国「行李箱带货」零部件维持开发，CosmicBrain AI 等公司把组装线迁往加拿大，但加拿大组装同样不满足美国本土化要求。行业人士呼吁「既要大棒也要胡萝卜」：仅靠禁令无法催生美国机器人供应链。2025 年全球售出的人形机器人中近 90% 来自中国（Omdia）。</p>
+<p>🔗 https://restofworld.org/2026/china-robot-ban-silicon-valley/</p>
+<hr>
+<h2>📊 今日小结</h2>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>热点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔥 <strong>最热</strong></td>
+<td>OpenAI 官宣首次放缓前沿模型训练，Astra 暂停两周</td>
+</tr>
+<tr>
+<td>⛏️ <strong>基础设施</strong></td>
+<td>Cerebras CS-4：三块 WSE-3 Turbo，推理比 GPU 快 30 倍</td>
+</tr>
+<tr>
+<td>🧬 <strong>AI 科学</strong></td>
+<td>Claude 设计蛋白结合剂 15 靶点成功 14 个</td>
+</tr>
+<tr>
+<td>🔓 <strong>开发者生态</strong></td>
+<td>Mojo 1.0 Apache 2.0 全面开源</td>
+</tr>
+<tr>
+<td>🦾 <strong>机器人</strong></td>
+<td>FCC 禁令细则：美国本土零件 65% 起步，创业公司两难</td>
+</tr>
+</tbody>
+</table>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
