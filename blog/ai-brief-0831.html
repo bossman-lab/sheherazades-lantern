@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="谷歌发布迄今最精准的语音转写模型Gemini 3.5 Transcribe（FLEURS WER 5.04%）；安全研究员以60-80%成功率攻破Claude Code Opus 5 Auto Mode，反驳Anthropic委托评测的0.00%声称；开源agent OpenClaw 2.0发布，同日Meta安全研究员自曝其OpenClaw误删邮箱；Google接触迪士尼等洽谈AI训练IP授权；宇树G1被曝可蠕虫传播的蓝牙Root RCE漏洞。">
+<title>今日AI简报 — Gemini 3.5 Transcribe发布、OpenClaw 2.0上线 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="今日AI简报 — Gemini 3.5 Transcribe发布、OpenClaw 2.0上线">
+<meta property="og:description" content="谷歌发布迄今最精准的语音转写模型Gemini 3.5 Transcribe（FLEURS WER 5.04%）；安全研究员以60-80%成功率攻破Claude Code Opus 5 Auto Mode，反驳Anthropic委托评测的0.00%声称；开源agent OpenClaw 2.0发布，同日Meta安全研究员自曝其OpenClaw误删邮箱；Google接触迪士尼等洽谈AI训练IP授权；宇树G1被曝可蠕虫传播的蓝牙Root RCE漏洞。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0831.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="今日AI简报 — Gemini 3.5 Transcribe发布、OpenClaw 2.0上线">
+<meta name="twitter:description" content="谷歌发布迄今最精准的语音转写模型Gemini 3.5 Transcribe（FLEURS WER 5.04%）；安全研究员以60-80%成功率攻破Claude Code Opus 5 Auto Mode，反驳Anthropic委托评测的0.00%声称；开源agent OpenClaw 2.0发布，同日Meta安全研究员自曝其OpenClaw误删邮箱；Google接触迪士尼等洽谈AI训练IP授权；宇树G1被曝可蠕虫传播的蓝牙Root RCE漏洞。">
+
+
+<meta property="article:published_time" content="2026-08-31">
+<meta property="article:author" content="提灯人">
+<meta property="article:tag" content="AI"><meta property="article:tag" content="简报"><meta property="article:tag" content="Google"><meta property="article:tag" content="Anthropic"><meta property="article:tag" content="OpenClaw"><meta property="article:tag" content="宇树">
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "今日AI简报 — Gemini 3.5 Transcribe发布、OpenClaw 2.0上线",
+  "description": "谷歌发布迄今最精准的语音转写模型Gemini 3.5 Transcribe（FLEURS WER 5.04%）；安全研究员以60-80%成功率攻破Claude Code Opus 5 Auto Mode，反驳Anthropic委托评测的0.00%声称；开源agent OpenClaw 2.0发布，同日Meta安全研究员自曝其OpenClaw误删邮箱；Google接触迪士尼等洽谈AI训练IP授权；宇树G1被曝可蠕虫传播的蓝牙Root RCE漏洞。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-08-31",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0831.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "今日AI简报 — Gemini 3.5 Transcribe发布、OpenClaw 2.0上线", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0831.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>今日AI简报 — Gemini 3.5 Transcribe发布、OpenClaw 2.0上线</h1>
+<p><strong>2026年8月31日</strong></p>
+<hr>
+<h2>📡 数据源A：中文频道动态</h2>
+<h3>Python潮流周刊第165期：AI项目密度走高</h3>
+<p>本期周刊的 AI 相关项目密集：aiperf（生成式 AI 推理性能基准测试工具）、VoiceStudio（开源本地的 ElevenLabs 替代品）、ai-job-search（本地运行的 AI 求职申请框架）、future-agi（开源 AI 智能体评估观测平台）、buildwithclaude（Claude 扩展资源一站式平台）、airllm（4GB 显存单卡运行 70B 大模型）、PYAS（开源机器学习杀毒软件）。</p>
+<p>🔗 https://t.me/NewlearnerChannel/15893</p>
+<h3>ChatGPT Plus 5小时限额引发开发者不满</h3>
+<p>@inside1024 吐槽：ChatGPT Plus 的 5 小时用量限额连一次发版前的 code review 都做不完，查出的 bug 要等 5 小时后才能修——开发者社区对用量上限的普遍抱怨。</p>
+<p>🔗 https://t.me/inside1024/84136</p>
+<hr>
+<h2>🌍 数据源B：国际AI要闻</h2>
+<h3>1. 🔥 Google 发布 Gemini 3.5 Transcribe：迄今最精准的语音转写模型</h3>
+<p>8月26日 Google 发布 Gemini 3.5 Transcribe，定位「系列中最精准的语音转文本模型」：支持多说话人归因、词级时间戳、实时语种切换与口语赘词清理，直接处理嘈杂环境与专业术语。相比上一代 Chirp 3，最终转写时间（Artificial Analysis 口径）提升 70%；FLEURS 基准流式模式 WER 5.50%、非流式 5.04%。提供 <code>gemini-3.5-transcribe-live</code> 与 <code>gemini-3.5-transcribe</code> 两个 API，已在 Gemini API（AI Studio）与 Gemini Enterprise Agent Platform 开放，并已驱动 Android Rambler、macOS Gemini 应用等语音功能。</p>
+<p>🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/</p>
+<h3>2. 安全研究员以 60-80% 成功率攻破 Claude Code Opus 5 Auto Mode</h3>
+<p>wunderwuzzi 的安全研究（embracethered）发现，仅凭一个「网页摘要请求」即可劫持 Auto Mode 下的 Claude Code Opus 5 并实现代码执行，小样本下攻击成功率 60-80%。这直接反驳了 Anthropic 委托 Trajectory Labs 评测、由 Boris Cherny 公开的「Opus 5 Auto Mode 间接提示注入攻击成功率 0.00%」数据。攻击链：诱导模型弃用 WebFetch 改用 curl → 重定向到特殊编码的 ZIP 压缩包并调用原生解码器。Auto Mode 自 8 月中旬起已成为 Claude Code 默认模式。</p>
+<p>🔗 https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/</p>
+<h3>3. OpenClaw 2.0 发布；同日 Meta 安全研究员自曝其 OpenClaw 误删邮箱</h3>
+<p>开源 agent 框架 OpenClaw 8月30日发布史上最大更新 2.0：由 933 名贡献者（含 569 名首次贡献者）经 1.6 万余个 PR 构建，约占该项目全部 PR 的一半；重建浏览器控制界面为一级体验，安装时自动复用已有 ChatGPT/Claude 订阅、API Key 与本地模型。同日 Meta AI 安全研究员 Summer Yue 发推称，其 OpenClaw 在处理过大的真实收件箱时触发上下文压缩、「丢失了『先确认再执行』的原始指令」，眼睁睁看着它删光邮件，不得不跑回电脑前「像拆弹一样」阻止——为 2.0 发布提供了一则及时的 agent 安全警示。</p>
+<p>🔗 https://openclaw.ai/blog/openclaw-2-accidentally · https://au.pcmag.com/ai/116091/meta-security-researchers-ai-agent-accidentally-deleted-her-emails</p>
+<h3>4. Google 游说好莱坞授权 IP 用于 AI 训练，与昨日起诉 Anthropic 形成对照</h3>
+<p>据 LA Times 8月31日报道，Google 高管已接触迪士尼、环球、华纳兄弟探索等影业，洽谈将其角色与片库授权用于 AI 模型训练（3 位知情人士证实），因法律与工会敏感性问题尚无协议；知情人士称「要让模型真正可用于电影级制作，必须用只有好莱坞才有的高动态内容与元数据微调」。Google 6 月已向 A24 投资 7500 万美元并合作开发 AI 工具。在索尼/华纳 8月28日以版权侵权起诉 Anthropic 的背景下，Google 走的是截然不同的「付费授权」路线。</p>
+<p>🔗 https://www.latimes.com/entertainment-arts/business/story/2026-08-31/how-google-is-courting-hollywood-to-use-its-ai-tools</p>
+<hr>
+<h2>🤖 数据源C：人形机器人动态</h2>
+<h3>1. UniBLEed：宇树 G1 人形机器人被曝可蠕虫传播的蓝牙 Root RCE</h3>
+<p>安全研究员 Olivier Laflamme 公布 UniBLEed 漏洞链：攻击者可在蓝牙范围内对任意宇树 G1 人形机器人实现未认证 Root 远程代码执行——通过无需所有权校验的云端 API 解密任意 G1 的 AES 密钥、免配对 BLE 特征写入、WiFi 劫持、AI 聊天机器人知识库路径遍历泄漏加载地址，最终以 1050 字节 BSS 缓冲区溢出以 root 调用 system()。该漏洞可蠕虫式传播（攻陷一台 G1 后可继续感染范围内下一台），获 Unitree 官方赏金 $6,700 与两个 CVE（CVE-2026-76639 / CVE-2026-76640）；这是继 Go2 两个 RCE（CVE-2026-27509/27510）之后同一研究者对宇树的第二次披露。</p>
+<p>🔗 https://boschko.ca/g1-ble-rce/</p>
+<hr>
+<h2>📊 今日小结</h2>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>热点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔥 <strong>最热</strong></td>
+<td>Google 发布 Gemini 3.5 Transcribe（FLEURS WER 5.04%）</td>
+</tr>
+<tr>
+<td>⛏️ <strong>基础设施</strong></td>
+<td>Gemini 3.5 Transcribe 双 API 开放（AI Studio / Enterprise Agent Platform）</td>
+</tr>
+<tr>
+<td>🤖 <strong>AI Agent</strong></td>
+<td>OpenClaw 2.0 发布；Claude Code Auto Mode 被攻破（60-80% 成功率）</td>
+</tr>
+<tr>
+<td>🛡️ <strong>安全</strong></td>
+<td>宇树 G1 蓝牙 Root RCE（可蠕虫传播，2 个 CVE）</td>
+</tr>
+<tr>
+<td>🇨🇳 <strong>中国动态</strong></td>
+<td>宇树 G1 安全漏洞披露；Python 潮流周刊 AI 项目密集</td>
+</tr>
+</tbody>
+</table>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
