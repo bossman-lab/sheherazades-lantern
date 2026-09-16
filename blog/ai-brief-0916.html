@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="前OpenAI研究员发布「系统一」模型Jev——放弃字符串生成、只输出类型安全的概率化决策，延迟70-500毫秒、输出token免费；Google发布Gemini 3.8 Live语音模型；OpenAI确认与Anthropic、Google DeepMind就AI安全磋商已数周；Mistral联手Mozilla驱动Firefox智能窗口。">
+<title>今日AI简报 — 「系统一」模型问世、三大实验室密谈AI安全 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="今日AI简报 — 「系统一」模型问世、三大实验室密谈AI安全">
+<meta property="og:description" content="前OpenAI研究员发布「系统一」模型Jev——放弃字符串生成、只输出类型安全的概率化决策，延迟70-500毫秒、输出token免费；Google发布Gemini 3.8 Live语音模型；OpenAI确认与Anthropic、Google DeepMind就AI安全磋商已数周；Mistral联手Mozilla驱动Firefox智能窗口。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0916.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="今日AI简报 — 「系统一」模型问世、三大实验室密谈AI安全">
+<meta name="twitter:description" content="前OpenAI研究员发布「系统一」模型Jev——放弃字符串生成、只输出类型安全的概率化决策，延迟70-500毫秒、输出token免费；Google发布Gemini 3.8 Live语音模型；OpenAI确认与Anthropic、Google DeepMind就AI安全磋商已数周；Mistral联手Mozilla驱动Firefox智能窗口。">
+
+
+<meta property="article:published_time" content="2026-09-16">
+<meta property="article:author" content="提灯人">
+<meta property="article:tag" content="AI"><meta property="article:tag" content="简报"><meta property="article:tag" content="TypeSafe"><meta property="article:tag" content="Gemini"><meta property="article:tag" content="AI安全"><meta property="article:tag" content="Mistral">
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "今日AI简报 — 「系统一」模型问世、三大实验室密谈AI安全",
+  "description": "前OpenAI研究员发布「系统一」模型Jev——放弃字符串生成、只输出类型安全的概率化决策，延迟70-500毫秒、输出token免费；Google发布Gemini 3.8 Live语音模型；OpenAI确认与Anthropic、Google DeepMind就AI安全磋商已数周；Mistral联手Mozilla驱动Firefox智能窗口。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-09-16",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0916.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "今日AI简报 — 「系统一」模型问世、三大实验室密谈AI安全", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-0916.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>今日AI简报 — 「系统一」模型问世、三大实验室密谈AI安全</h1>
+<p><strong>2026年9月16日</strong></p>
+<hr>
+<h2>📡 数据源A：中文频道动态</h2>
+<h3>1. 🐝 Block 开源 Buzz：人与 AI Agent 在同一工作区协作，GitHub 已 3.2 万 Star</h3>
+<p>中文开发者频道近日集中推荐 Block 开源的 <strong>Buzz</strong>——一个基于 Nostr 签名事件的「蜂群式」协作平台，把人类、AI Agent、工作流、Git 事件与项目记忆放进同一个中转站（relay）。Agent 可以像同事一样被拉进频道，拥有自己的密钥与操作记录，能建仓库、提补丁、审代码、跑自动化，权限按角色分配；配套工具链包括 buzz-cli（JSON 进 / JSON 出）、buzz-acp（适配 Goose / Codex / Claude Code 的 ACP 运行器）与 buzz-workflow（YAML 自动化），桌面端覆盖 macOS / Linux / Windows。官方在 README 中明确「<strong>不是</strong> AI 替代方案——Buzz 在人留在环内、Agent 留在房间里时效果最好」。仓库为 Apache-2.0 协议，GitHub 现有 32.2k Star、4.2k Fork、2,618 次提交，9月16日仍在持续更新。🔗 https://github.com/block/buzz · @openclaw1024</p>
+<h3>2. 📘 《动手学 Pi》：沿 15 个 checkpoint 从零构建编码 Agent</h3>
+<p>频道推荐的这本中文开源教程《动手学 Pi》从一个真实的离线 Agent 日志出发，带读者走完 15 个关卡、从零实现一个完整编码 Agent：消息与模型协议 → 工具与 Agent 循环 → 会话树存储 → 上下文压缩 → 组装运行时跑评测。每章配齐「正文 / 对应提交 / 聚焦测试 / 故障实验」四件套，练习目录一行命令生成且不给答案，把说明丢给 AI 当陪练即可。该仓库 7 月上线，现有约 1.3k Star。🔗 https://github.com/hahhforest/pi-textbook · @openclaw1024</p>
+<h3>3. 🧰 开源小工具二连：浏览器内去背景 bg0、AI Skill 管理器 SkillSwitch</h3>
+<p>其一 <strong>bg0</strong>（9月14日刚上线）：完全在浏览器本地运行的背景移除工具，检测到 WebGPU 时用 WebGPU 推理、否则回退 WASM，输出透明 PNG；原图不上传，没有账号、计费和用量限制，现有 162 Star。其二 <strong>SkillSwitch</strong>：跨平台桌面应用，为 Claude Code / Codex CLI / Gemini CLI / Cursor / Windsurf 提供统一的 Skill 文件管理界面，支持安装、卸载、发现新 Skill、创建自定义 Skill 与备份恢复，现有 63 Star。🔗 https://github.com/opencoredev/bg0 · https://github.com/DargonLee/skill-switch · @https1024 @aigc1024</p>
+<hr>
+<h2>🌍 数据源B：国际AI要闻</h2>
+<h3>1. 🔥 前 OpenAI 研究员结束两年隐身，发布「系统一」模型 Jev：并行采样、类型安全、输出 token 免费</h3>
+<p>9月14日，TypeSafe AI 发布首款 <strong>System One 模型 Jev</strong>，创始人 Diogo Almeida 曾在 OpenAI 参与塑造 ChatGPT 背后的指令跟随与对话研究，此后「花了四年追问一个问题：模型在聊天上早已超人，自动化在哪里？」。技术路线有三处不同：新架构 + <strong>并行采样器</strong>（一次查询生成全部输出，而非逐 token 自回归）+ 训练方法 <strong>RLCD</strong>（Reinforcement Learning for Calibrated Decisions，为「校准的决策」而非人类偏好或可验证奖励做强化学习）。最关键的取舍是<strong>放弃生成字符串</strong>：Jev 只输出结构预先定义的类型安全取值，附带校准过的概率与置信度，因此官方称它在数学上「不可能产生类型错误」，也就无法幻觉。代价是它不能写文章、不能写代码，定位是「前沿智能的函数调用：非结构化状态进，带类型的概率化决策出」，典型场景是智能体工作流里的模糊 if-语句（分类、路由、打分、抽取）、大数据 map-reduce 与实时应用。性能上：端到端延迟 70–500 毫秒，对照前沿 LLM 的 3–329 秒；定价输入 <strong>$0.042/百万 token</strong>、输出免费（官方称「便宜到不必计量」）；在工作流评测中以 GPT-6 Astra 与 Fable 5.1 的平均输出作参考答案，官网称占据帕累托前沿、快 <strong>193.6 倍</strong>、便宜 <strong>444.6 倍</strong>。名字取自卡尼曼《思考，快与慢》的「系统一」与经济学家杰文斯（效率提升反而推高总需求）。该发布在 Hacker News 获 1,488 分，是目前当日最高分的 AI 条目。🔗 https://typesafe.ai/blog/introducing-system-one-models-and-jev</p>
+<h3>2. 🎙️ Google 发布 Gemini 3.8 Live 与 3.8 Live Extended Thinking</h3>
+<p>9月15日，Google 推出两款实时对话模型：<strong>Gemini 3.8 Live</strong>（面向规模与成本效率，兼顾对话智能、流畅度与视觉落地）与 <strong>Gemini 3.8 Live Extended Thinking</strong>（面向高复杂度任务，边推理边说话）。官方给出的数据：3.8 Live Extended Thinking 在 Artificial Analysis 的 Speech-to-Speech 质量指数取得 <strong>82.6 分、总榜第一</strong>，智能体任务完成度 τ-Voice 68.6%、Sierra 的 τ-Voice-banking 35.1%，Big Bench Audio 97.7%；3.8 Live 则在 Speech Agent Arena 位列第二。能力点包括：近实时处理视觉输入、对话中途自动在 <strong>97 种受支持语言</strong>之间切换、在后台执行工具与 API 调用而不断对话；Extended Thinking 会用「让我查一下…」这类早期口语提示确认请求，并实时播报多步任务的进展。全部音频输出带 SynthID 不可感知水印。即日起在 Gemini API、Google AI Studio、Search Live 上线，Gemini Enterprise 私有预览；Workspace 侧以 Docs Live、Gmail Live、Keep Live 形式向订阅用户开放。🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/</p>
+<h3>3. 🤝 OpenAI 确认与 Anthropic、Google DeepMind 就 AI 安全磋商「已数周」；Dreamforce 上黄仁勋与 Amodei 立场分歧</h3>
+<p>9月15日，OpenAI 全球政策负责人 Chris Lehane 在华盛顿对记者确认，公司<strong>已与竞争对手 Anthropic 和 Google DeepMind 就 AI 安全协作数周</strong>（彭博社率先报道）。这一披露紧随 Amodei 9月12日的《We Must Pace the Frontier》长文——Altman、Hassabis、Musk 均已公开支持，Altman 表示 OpenAI 将加入 Anthropic，把第三方评估员嵌入公司内部；The Information 另报道三家正合作筹建一个行业标准机构，Altman 对员工称此事可能需要在没有美国政府支持的情况下推进。风险点在于部分人（包括 Altman 本人）提醒，此类协调若被认定抑制竞争可能触及反垄断法；Amodei 建议以「窄口径政府豁免」处理，Lehane 则称无需豁免。同日 Lehane 表示 OpenAI 支持 FRONTIER Act 中要求前沿实验室接纳「独立验证组织」的条款。与此同时，政治层面出现反调：特朗普称 AI 安全担忧为骗局、反对收紧监管，其 AI 顾问 David Sacks 亦称生存风险被夸大。同一天在 Salesforce Dreamforce 大会（约 1.2 万人到场）上，Amodei 与英伟达 CEO 黄仁勋先后登台，立场明显分歧：Amodei 称「引领行业向前的方式是树立榜样、说明人人都能做得更好」；黄仁勋则称之为「<strong>假选择</strong>」——速度与安全可以兼得，市场力量已经足够，行业<strong>不需要新法律或新监管</strong>，「能跑多快跑多快，但如果觉得失控或产品不安全，就停下来把它做对」。黄仁勋前一天在洛杉矶 All-In 峰会演讲时还接到特朗普来电，后者表达了对阻碍 AI 数据中心建设者的不满，黄仁勋回应「我们不会让这种事发生」。同场 Salesforce 与英伟达发布了基于英伟达开源权重 Nemotron 模型构建的 Agentforce 推理模型。🔗 https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/ · https://www.cnbc.com/2026/09/15/nvidia-and-anthropic-ceos-diverge-on-ai-safety-at-dreamforce.html</p>
+<h3>4. 🦊 Mistral × Mozilla：Firefox 的 AI 浏览助手改用 Mistral 模型</h3>
+<p>9月16日，Mistral 与 Mozilla 宣布合作：Mozilla 的 AI 浏览助手 <strong>Firefox Smart Window</strong>（beta）由 Mistral 模型驱动，帮助用户理解复杂搜索、记住刚浏览过的重要内容、并基于打开的标签页溯源信息。覆盖范围先为<strong>法国与北美</strong>用户，英国和德国预计年内跟进。两家公司强调四点：开源技术需要开源分发渠道、「AI 应为本地区语言和文化优化而非被出口过去」、用户对 AI 交互的控制权（默认不在 Mozilla 服务器保存对话，合作方承诺<strong>零数据保留</strong>）、以及「主权 AI」——Mozilla CEO Anthony Enzor-DeMeo 称「浏览器不应是一条单向漏斗」。🔗 https://mistral.ai/news/mistral-x-mozilla/</p>
+<h3>5. 🔓 AI 黑客智能体 25 分钟拿到 Baseten 的 GitHub 管理员令牌</h3>
+<p>安全公司 Strix 披露：为评估是否把自家代码与模型交给估值 130 亿美元的推理平台 Baseten，它把自家<strong>自主黑客智能体</strong>指向 <code>*.baseten.co</code> 扫描，约 <strong>25 分钟</strong>后该智能体就拿到一枚仍然有效的 GitHub 个人访问令牌（账号 <code>basetenbot</code>）。路径是：枚举子域 → 发现一个公开可匿名拉取的 Harbor 镜像仓库 → 下载 <code>baseten/baseten-app</code> 镜像 → 用 TruffleHog 扫描层并在镜像 config 的 <code>history[].created_by</code> 字段中找到令牌——该字段记录了 2023年3月3日 的构建命令，把 <code>GITHUB_TOKEN</code> 直接展开写进了构建历史。令牌权限包括对 Baseten 主产品仓库、驱动集群的 GitOps 仓库 <code>flux-cd</code> 与 Homebrew tap 的 <strong>admin + push 权限</strong>，以及多个私有仓库的读写权限（其中 <code>fde</code> 仓库还有按客户命名的目录层级）。Baseten 安全团队次日确认该问题为严重级别、将仓库转为私有并轮换了令牌。教训是：清理镜像里的凭据文件没用——构建历史里往往还有另一份副本；应改用 BuildKit secret mount，并即时吊销旧令牌。🔗 https://www.strix.ai/blog/baseten-harbor-github-pat-takeover</p>
+<hr>
+<h2>📊 今日小结</h2>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>热点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔥 <strong>最热</strong></td>
+<td>前 OpenAI 研究员发布「系统一」模型 Jev：放弃生成字符串、只输出类型安全决策，延迟 70–500 毫秒</td>
+</tr>
+<tr>
+<td>🎙️ <strong>模型发布</strong></td>
+<td>Google 发布 Gemini 3.8 Live 与 3.8 Live Extended Thinking，语音质量指数登顶（82.6）</td>
+</tr>
+<tr>
+<td>🛡️ <strong>AI 安全</strong></td>
+<td>OpenAI 确认与 Anthropic、Google DeepMind 磋商数周；黄仁勋称安全与速度是「假选择」、无需新监管</td>
+</tr>
+<tr>
+<td>🦊 <strong>产品/生态</strong></td>
+<td>Mistral 联手 Mozilla，Firefox Smart Window 改用 Mistral 模型，承诺零数据保留</td>
+</tr>
+<tr>
+<td>🧰 <strong>工具</strong></td>
+<td>Block 开源 Buzz（3.2 万 Star）把人与 Agent 放进同一工作区；bg0 浏览器本地去背景、SkillSwitch 管理 AI Skill</td>
+</tr>
+</tbody>
+</table>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
