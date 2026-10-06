@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Reflection 发布首个开源权重模型 Beam（501B 总参/23B 激活，Apache 2.0 本月放出权重）；Claude Opus 5.5 智能体设计出室温磁性半导体候选；高通获华为 LogicFolding 芯片专利授权；无需反向传播的 Transformer 预训练方法 Dust 问世；佛州女子用 Claude 当日记后触发警方上报。">
+<title>今日AI简报 — Reflection 开源 501B 模型 Beam，Claude 智能体发现室温磁性半导体 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="今日AI简报 — Reflection 开源 501B 模型 Beam，Claude 智能体发现室温磁性半导体">
+<meta property="og:description" content="Reflection 发布首个开源权重模型 Beam（501B 总参/23B 激活，Apache 2.0 本月放出权重）；Claude Opus 5.5 智能体设计出室温磁性半导体候选；高通获华为 LogicFolding 芯片专利授权；无需反向传播的 Transformer 预训练方法 Dust 问世；佛州女子用 Claude 当日记后触发警方上报。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1006.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="今日AI简报 — Reflection 开源 501B 模型 Beam，Claude 智能体发现室温磁性半导体">
+<meta name="twitter:description" content="Reflection 发布首个开源权重模型 Beam（501B 总参/23B 激活，Apache 2.0 本月放出权重）；Claude Opus 5.5 智能体设计出室温磁性半导体候选；高通获华为 LogicFolding 芯片专利授权；无需反向传播的 Transformer 预训练方法 Dust 问世；佛州女子用 Claude 当日记后触发警方上报。">
+
+
+<meta property="article:published_time" content="2026-10-06">
+<meta property="article:author" content="提灯人">
+<meta property="article:tag" content="AI"><meta property="article:tag" content="简报"><meta property="article:tag" content="Reflection"><meta property="article:tag" content="Beam"><meta property="article:tag" content="Anthropic"><meta property="article:tag" content="高通"><meta property="article:tag" content="华为">
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "今日AI简报 — Reflection 开源 501B 模型 Beam，Claude 智能体发现室温磁性半导体",
+  "description": "Reflection 发布首个开源权重模型 Beam（501B 总参/23B 激活，Apache 2.0 本月放出权重）；Claude Opus 5.5 智能体设计出室温磁性半导体候选；高通获华为 LogicFolding 芯片专利授权；无需反向传播的 Transformer 预训练方法 Dust 问世；佛州女子用 Claude 当日记后触发警方上报。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-10-06",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1006.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "今日AI简报 — Reflection 开源 501B 模型 Beam，Claude 智能体发现室温磁性半导体", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1006.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>今日AI简报 — Reflection 开源 501B 模型 Beam，Claude 智能体发现室温磁性半导体</h1>
+<p><strong>2026年10月6日</strong></p>
+<hr>
+<h2>🌍 数据源B：国际AI要闻</h2>
+<h3>1. 🔥 Reflection 发布首个开源权重模型 Beam：5010 亿总参 / 230 亿激活</h3>
+<p><strong>Reflection AI</strong> 公布其首个开源权重模型 <strong>Beam</strong>——稀疏混合专家（MoE）架构，<strong>5010 亿总参数、230 亿激活参数</strong>，面向编码、推理与智能体任务。预训练语料为 <strong>23.8 万亿 token</strong>；高算力强化学习阶段动用 <strong>10,500 张 NVIDIA GB300 GPU、持续 4 周、生成逾 1 亿次 rollout</strong>，训练与评分约消耗 <strong>13 亿个沙盒</strong>、约 100 万个环境，最大上下文 <strong>256K token</strong>。</p>
+<p>按官方基准表，Beam 的 <strong>Terminal Bench v2.1 得 80.1、SWE Bench Verified 80.9、AIME 2026 97.8、GPQA Diamond 90.5、HLE（无工具）36.2</strong>。Reflection 称其编码/智能体能力「可与 GLM 5.2 竞争、逼近 Qwen 3.8-Max」，其中 Kimi K3 在原始能力上仍领先，而 Beam 的优势在于<strong>推理效率</strong>——在高级推理基准上比 GLM-5.2 少用 <strong>3–4 倍</strong>推理算力。目前模型仍在最终红队与评测，先向候补名单开放早期访问，<strong>权重将以 Apache 2.0 许可于本月内发布</strong>，并附技术报告、模型卡与开发者工具。🔗 https://reflection.ai/blog/introducing-beam</p>
+<h3>2. 🧪 Claude Opus 5.5 智能体设计出「室温磁性半导体」候选材料</h3>
+<p>AI 研究机构 <strong>Vals AI</strong> 分享成果：一支由 <strong>Claude Opus 5.5 智能体</strong>组成的团队设计出一种新化合物 <strong>YBaMnFeO₅</strong>，并从 1999 年的旧材料中识别出 <strong>KV[Cr(CN)₆]</strong>（普鲁士蓝同族）——两者都属于「Luttinger 补偿」磁体：净磁性为零、却能像铁磁体一样按自旋分选电子，被视为下一代自旋存储（spintronics）的关键材料。</p>
+<p>据预测，<strong>YBaMnFeO₅</strong> 带隙约 <strong>2.35 eV</strong>、自旋窗口达空穴 1.0 eV / 电子 1.4 eV，磁性可保持到约 420–490 K；但它要求 Mn/Fe 原子完美棋盘排列，而模拟显示这一有序在约 950 K 就会瓦解，实际合成困难。<strong>KV[Cr(CN)₆]</strong> 带隙约 <strong>2.1 eV</strong>、自旋窗口 2.6 / 1.6 eV，其 1999 年样品在 <strong>376 K</strong> 仍保持磁有序。团队用密度泛函理论（PBE+U 与 HSE06 两档）完成计算，并公开了全部计算、代码与已知局限（该成果为该机构发布，非 Anthropic 官方公告；延续了 9 月 Claude 自主发现 CRISPR 新酶的 AI-for-science 线索）。🔗 https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors</p>
+<h3>3. 🇨🇳 高通获华为 LogicFolding 芯片专利授权，协议覆盖 5G / AI</h3>
+<p>据彭博社报道，<strong>高通</strong>同意获得支撑<strong>华为新型 LogicFolding 芯片技术</strong>的专利授权，双方达成为期多年的广泛专利许可协议，覆盖 <strong>5G、计算、人工智能、网络以及近封装/共封装光学</strong> 等领域，高通还将向华为<strong>购买部分美国专利</strong>。这是华为与高通之间<strong>首份覆盖 5G 技术</strong>的专利协议（双方专利关系已逾二十年）。交易仍需通过美国监管审批，须按 FTC 2026 年 <strong>1.339 亿美元</strong>的 HSR 申报门槛接受审查。双方均未披露财务条款、专利数量与协议期限；在 2020 年的和解中，高通称华为已支付 <strong>12 亿美元</strong>临时款项，并在 2020 财年确认了另外 <strong>18 亿美元</strong>相关收入。华为称新协议遵循公平、合理、无歧视（FRAND）原则。🔗 https://techwireasia.com/2026/10/huawei-qualcomm-patent-licensing-deal/</p>
+<h3>4. 🔬 「Dust」：无需反向传播即可预训练 Transformer</h3>
+<p>研究团队（Samip Dahal 等）提出 <strong>Dust</strong>——首个在<strong>预训练</strong> Transformer 语言模型上可与反向传播（backprop）相媲美的<strong>零阶优化</strong>方法。它不扰动权重，而是<strong>在每个 token 上独立扰动激活值</strong>（node perturbation），使每个 token 成为一个「虚拟种群成员」，一次前向传播即可并行评估整个种群。</p>
+<p>据论文，从 100 万 token 起，Dust 比最先进的权重空间进化策略（EGGROLL）<strong>高效约 10³–10⁴ 倍</strong>；与传统认知相反，<strong>更大的模型反而更「种群高效」</strong>（2.43 亿参数模型在多数种群规模下优于小 120 倍的模型）；梯度估计随种群增大更贴近 backprop，且在测试到的 <strong>10 亿 token</strong> 规模上保持对齐。作者强调这只是路线基础，尚未做到足以「今天替代 backprop」的算力效率。🔗 https://qlabs.sh/research/dust</p>
+<h3>5. ⚖️ 女子用 Claude 当日记，Anthropic 上报警方致其面临重罪</h3>
+<p>佛罗里达州 Bonita Springs 的 <strong>Carli Michelle Heller</strong> 将 Anthropic 的 Claude 当「日记」使用，于 9 月 26 日写下她计划「枪击（shoot up）」李县治安官办公室。<strong>Claude 的安全系统标记了该条内容并升级至人工审核</strong>，审核员认定构成可信威胁后报警。Heller 随后被拘留，面临佛州法律下**「书面暴力威胁」二级重罪**指控。</p>
+<p>Anthropic 表示，在认为披露信息对<strong>防止死亡或严重人身伤害</strong>必要时，可能在限定紧急情况下分享用户信息。此事与近期两起诉讼形成对照：上月不列颠哥伦比亚省起诉 OpenAI 与 Sam Altman，指其本可阻止一起大规模枪击；佛州今年 6 月亦就 FSU 枪击案起诉 OpenAI。报道提醒：与聊天机器人的对话并非「只有自己可见的私人日记」。🔗 https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html</p>
+<hr>
+<h2>📊 今日小结</h2>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>热点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔥 <strong>最热</strong></td>
+<td>Reflection 发布首个开源权重模型 Beam：501B 总参 / 23B 激活，Apache 2.0 本月放出权重</td>
+</tr>
+<tr>
+<td>🧪 <strong>AI×科学</strong></td>
+<td>Claude Opus 5.5 智能体设计出室温磁性半导体候选（YBaMnFeO₅ / KV[Cr(CN)₆]）</td>
+</tr>
+<tr>
+<td>⛏️ <strong>芯片</strong></td>
+<td>高通获华为 LogicFolding 芯片专利授权，协议覆盖 5G / AI / 网络</td>
+</tr>
+<tr>
+<td>🔬 <strong>研究</strong></td>
+<td>「Dust」提出无需反向传播的 Transformer 预训练方法，比传统进化策略高效 10³–10⁴ 倍</td>
+</tr>
+<tr>
+<td>⚖️ <strong>AI 与社会</strong></td>
+<td>佛州女子用 Claude 当日记写威胁内容，Anthropic 上报警方，其面临二级重罪</td>
+</tr>
+</tbody>
+</table>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
