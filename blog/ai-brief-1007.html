@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mistral 发布万亿参数预览模型 Le Chonk（1T 总参/49B 激活），月底开放权重；OpenAI 公开内部模型新一批数学成果与 Lean 形式化证明；Google 发布多模态嵌入模型 EmbeddingGemma 2；OpenAI 推出 Decisions API 公测；五角大楼证实已停用 Anthropic 工具。">
+<title>今日AI简报 — Mistral 发布万亿参数模型「Le Chonk」，OpenAI 公开数学新成果 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="今日AI简报 — Mistral 发布万亿参数模型「Le Chonk」，OpenAI 公开数学新成果">
+<meta property="og:description" content="Mistral 发布万亿参数预览模型 Le Chonk（1T 总参/49B 激活），月底开放权重；OpenAI 公开内部模型新一批数学成果与 Lean 形式化证明；Google 发布多模态嵌入模型 EmbeddingGemma 2；OpenAI 推出 Decisions API 公测；五角大楼证实已停用 Anthropic 工具。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1007.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="今日AI简报 — Mistral 发布万亿参数模型「Le Chonk」，OpenAI 公开数学新成果">
+<meta name="twitter:description" content="Mistral 发布万亿参数预览模型 Le Chonk（1T 总参/49B 激活），月底开放权重；OpenAI 公开内部模型新一批数学成果与 Lean 形式化证明；Google 发布多模态嵌入模型 EmbeddingGemma 2；OpenAI 推出 Decisions API 公测；五角大楼证实已停用 Anthropic 工具。">
+
+
+<meta property="article:published_time" content="2026-10-07">
+<meta property="article:author" content="提灯人">
+<meta property="article:tag" content="AI"><meta property="article:tag" content="简报"><meta property="article:tag" content="Mistral"><meta property="article:tag" content="OpenAI"><meta property="article:tag" content="Google"><meta property="article:tag" content="Anthropic">
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "今日AI简报 — Mistral 发布万亿参数模型「Le Chonk」，OpenAI 公开数学新成果",
+  "description": "Mistral 发布万亿参数预览模型 Le Chonk（1T 总参/49B 激活），月底开放权重；OpenAI 公开内部模型新一批数学成果与 Lean 形式化证明；Google 发布多模态嵌入模型 EmbeddingGemma 2；OpenAI 推出 Decisions API 公测；五角大楼证实已停用 Anthropic 工具。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-10-07",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1007.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "今日AI简报 — Mistral 发布万亿参数模型「Le Chonk」，OpenAI 公开数学新成果", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1007.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>今日AI简报 — Mistral 发布万亿参数模型「Le Chonk」，OpenAI 公开数学新成果</h1>
+<p><strong>2026年10月7日</strong></p>
+<hr>
+<h2>🌍 数据源B：国际AI要闻</h2>
+<h3>1. 🔥 Mistral 发布万亿参数模型「Le Chonk」：月底开放权重</h3>
+<p>法国 <strong>Mistral AI</strong> 于 10 月 6 日推出 <strong>Mistral Large 4（ML4）公开预览版，代号「le Chonk」</strong>——原生多模态模型，<strong>1 万亿总参数、490 亿激活参数</strong>，在 Mistral 位于欧洲的自建数据中心用 <strong>3,800 块英伟达 Grace Blackwell GPU 从零训练</strong>，语料覆盖 <strong>160 多种自然语言</strong>（含全部欧盟官方语言）。Mistral 称其在网络安全、金融、法律等企业级负载上「在所有开源模型中达到 SOTA」，视觉定位等部分领域甚至超越前沿闭源模型，<strong>宣称是「欧美最强开源模型」</strong>。</p>
+<p>目前权重仍闭源，<strong>将于本月底正式开放下载</strong>；官方正联合网络安全机构、合作伙伴与政府监管方，在真实业务环境中对「适当放宽内容审查、强化攻防能力」的测试版做红队测试。定价为<strong>每百万输入 token 1.36 美元、输出 4.18 美元</strong>；Artificial Analysis 综合智能指数 <strong>38</strong>（同类中位数 26）、输出约 116 tok/s、上下文窗口 520K。🔗 https://www.ithome.com/1/010/108.htm</p>
+<h3>2. 🧮 OpenAI 公开新一批数学成果：附 Lean 形式化证明与算力账单</h3>
+<p>OpenAI 于 10 月 6 日发布《Sharing AI progress in mathematics》，<strong>公开一批由其内部前沿模型产出的新数学结果</strong>。此次以 <strong>GitHub 仓库</strong>形式发布，附论文修订与引用协议，并<strong>公开多份证明的 Lean 形式化版本</strong>（可被计算机逐行校验）。为提升透明度，OpenAI 还公布了 <strong>10 份模型推理摘要、按 ChatGPT Pro 用量折算的算力估计、以及尝试题目数量的统计</strong>——称平均每个结果约消耗相当于「3 小时 ChatGPT Pro 思考」的算力。</p>
+<p>OpenAI 表示，此次发布参考了普林斯顿高等研究院（IAS）「数学与人工智能咨询组」的公开建议，并承诺未来改进论文的引用与数学表述，同时将资助一系列研讨会与特别项目，帮助学界理解 AI 产出的重大数学成果。🔗 https://openai.com/index/sharing-ai-progress-in-mathematics/</p>
+<h3>3. 🔎 Google 发布 EmbeddingGemma 2：原生多模态端侧嵌入模型</h3>
+<p>Google DeepMind 推出 <strong>EmbeddingGemma 2</strong>——基于 Gemma 4 架构的<strong>开源（Apache 2.0）多模态嵌入模型，7.4 亿参数</strong>，可将<strong>文本、图像、音频、视频</strong>映射到统一嵌入空间，面向端侧、隐私优先场景。模块化设计下，纯文本工作负载仅需 <strong>2.7 亿参数</strong>，另可选配视觉（1.7 亿）与音频（3 亿）编码器；借助 Matryoshka 表示学习，输出向量可从 768 维动态截断至 128 维，<strong>本地向量库存储最多降 6 倍</strong>。</p>
+<p>上下文窗口扩展到 <strong>8K token</strong>（较一代大 4 倍），单次可处理约 5.5 分钟音频、29 张图像或 58 帧视频；在 MTEB 代码基准上<strong>提升 9.92 分（68.76→78.68）</strong>。量化后在 Google Pixel 11 Pro 上，纯文本权重仅占约 <strong>191MB</strong> 内存，完整多模态模型约 567MB。🔗 https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/</p>
+<h3>4. 🧰 OpenAI 上线 Decisions API 公测：每百万输入 token 仅 0.10 美元</h3>
+<p>OpenAI 推出 <strong>Decisions API（公开测试）</strong>，面向分类、路由、审核等「决策」场景：模型用 <strong>gpt-6-luna</strong> 返回三类答案——<code>predicates</code>（条件为真的概率）、<code>choice</code>（从选项中择一）与 <code>score</code>（按等级打分），并附 <code>confidence</code> 置信度字段，可在一个请求里并行评估多个独立问题。</p>
+<p>定价为<strong>每百万输入 token 0.10 美元，且只收输入费、没有输出与缓存读写费用</strong>；支持零数据保留（ZDR）与 HIPAA 合规场景，数据可驻留美国与欧洲（EEA + 瑞士）。OpenAI 给出的示例用法包括用一条请求同时判断商品图片是否有损坏并归类。🔗 https://developers.openai.com/api/docs/guides/decisions</p>
+<h3>5. 🏛️ 五角大楼证实已停用 Anthropic 工具</h3>
+<p>据 BBC 报道，美国国防部一名官员称五角大楼<strong>已「停止使用 Anthropic 产品」</strong>。报道指出，尽管国防部长赫格塞斯今年 2 月已将 Anthropic 列为国家安全「供应链风险」并设定六个月停用期限，<strong>直至上周 Claude 仍被用于研究、分析与情报收集</strong>——它嵌在 Palantir 运营的军方 Maven 智能系统中，也被用于对伊朗的军事行动。</p>
+<p>Anthropic 发言人拒绝就五角大楼的声明置评。有专家认为，正因 Claude 深度集成进 Maven，快速移除并不容易。报道同时提及，特朗普上周在白宫两度会见 Anthropic CEO 达里奥·阿莫代伊并称赞他，双方紧张关系似有缓和；五角大楼近期已先后与 Google、xAI、OpenAI 签约，OpenAI 工具在部分军事部门的采用率上升。🔗 https://www.bbc.co.uk/news/articles/c5j9x9pr0240o</p>
+<hr>
+<h2>📊 今日小结</h2>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>热点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔥 <strong>最热</strong></td>
+<td>Mistral 发布万亿参数模型 Le Chonk（1T 总参/49B 激活），月底开放权重</td>
+</tr>
+<tr>
+<td>🧮 <strong>AI for Math</strong></td>
+<td>OpenAI 公开内部模型新一批数学成果，附 Lean 形式化证明与算力账单</td>
+</tr>
+<tr>
+<td>🔎 <strong>端侧 AI</strong></td>
+<td>Google 发布多模态嵌入模型 EmbeddingGemma 2（7.4 亿参数，Apache 2.0）</td>
+</tr>
+<tr>
+<td>🧰 <strong>开发者</strong></td>
+<td>OpenAI 上线 Decisions API 公测，每百万输入 token 仅 0.10 美元</td>
+</tr>
+<tr>
+<td>🏛️ <strong>政策</strong></td>
+<td>五角大楼证实已停用 Anthropic 工具（此前仍嵌入 Maven 使用至上周）</td>
+</tr>
+</tbody>
+</table>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
