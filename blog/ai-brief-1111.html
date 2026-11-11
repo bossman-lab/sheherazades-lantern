@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gemini 4 Carbon 面向所有人开放，三项 Agent 基准登顶、每任务成本不到对手一半；DeepMind AlphaProof Code 用 600 万行 Lean 在四周内形式化验证 Signal 协议；Anthropic 把白板、表格、数据搬进 Claude；Gemini Robotics 2.5 在奔驰产线做到 96% 成功率。">
+<title>今日AI简报 — 模型开始给自己写证明：Gemini 4 Carbon 全面开放，AlphaProof 验完 Signal 协议 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="今日AI简报 — 模型开始给自己写证明：Gemini 4 Carbon 全面开放，AlphaProof 验完 Signal 协议">
+<meta property="og:description" content="Gemini 4 Carbon 面向所有人开放，三项 Agent 基准登顶、每任务成本不到对手一半；DeepMind AlphaProof Code 用 600 万行 Lean 在四周内形式化验证 Signal 协议；Anthropic 把白板、表格、数据搬进 Claude；Gemini Robotics 2.5 在奔驰产线做到 96% 成功率。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1111.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="今日AI简报 — 模型开始给自己写证明：Gemini 4 Carbon 全面开放，AlphaProof 验完 Signal 协议">
+<meta name="twitter:description" content="Gemini 4 Carbon 面向所有人开放，三项 Agent 基准登顶、每任务成本不到对手一半；DeepMind AlphaProof Code 用 600 万行 Lean 在四周内形式化验证 Signal 协议；Anthropic 把白板、表格、数据搬进 Claude；Gemini Robotics 2.5 在奔驰产线做到 96% 成功率。">
+
+
+<meta property="article:published_time" content="2026-11-11">
+<meta property="article:author" content="提灯人">
+<meta property="article:tag" content="AI"><meta property="article:tag" content="简报"><meta property="article:tag" content="Gemini"><meta property="article:tag" content="Anthropic"><meta property="article:tag" content="DeepMind"><meta property="article:tag" content="机器人">
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "今日AI简报 — 模型开始给自己写证明：Gemini 4 Carbon 全面开放，AlphaProof 验完 Signal 协议",
+  "description": "Gemini 4 Carbon 面向所有人开放，三项 Agent 基准登顶、每任务成本不到对手一半；DeepMind AlphaProof Code 用 600 万行 Lean 在四周内形式化验证 Signal 协议；Anthropic 把白板、表格、数据搬进 Claude；Gemini Robotics 2.5 在奔驰产线做到 96% 成功率。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-11-11",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1111.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "今日AI简报 — 模型开始给自己写证明：Gemini 4 Carbon 全面开放，AlphaProof 验完 Signal 协议", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1111.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>今日AI简报 — 模型开始给自己写证明：Gemini 4 Carbon 全面开放，AlphaProof 验完 Signal 协议</h1>
+<p><strong>2026年11月11日</strong></p>
+<hr>
+<h2>🌍 数据源B：国际AI要闻</h2>
+<h3>1. 🧠 Gemini 4 Carbon 全面开放：三项 Agent 基准第一，成本不到对手一半</h3>
+<p>11 月 10 日，Google 把 <strong>Gemini 4 Carbon</strong> 从「只给 Fairwind 计划的防御方试用」推到全面开放——开发者、企业、科学家和普通用户都能用，AI Studio、Gemini 企业版、Gemini 应用与搜索 AI Mode 同步上线，Google AI Ultra 订阅者可在 Antigravity 里直接用。定位上，Argon 仍是多数软件工程与知识工作的默认选择，Carbon 专门吃「要多花 token 才能啃下来」的活：复杂多步编码与调试、开放式科研，它会在推理与验证循环上跑得更久。官方数字是 <strong>CursorBench 4.0、Perplexity 的 WANDR、Zapier 的 AutomationBench 三项第一，且每任务成本比次优外部模型低 2 倍以上</strong>；与 Artificial Analysis 合建的多模态知识工作基准 MKA 上排第二，但平均每任务成本是榜首的六分之一。价格沿用 Argon 的引入价 <strong>$2/百万输入、$10/百万输出</strong>，11 月 30 日后回到 <strong>$4/$20</strong>。同时预览 Antigravity 的 <code>/swarm</code>：一句提示变一支可实时追踪的 agent 团队，把架构设计、协调、审计交给 Carbon，并行隔离工作区里跑更快的小模型配合对抗性验证器。🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/</p>
+<h3>2. ✅ AlphaProof Code：600 万行 Lean、四周，把 Signal 协议的实现本身证完了</h3>
+<p>同一天，Google DeepMind 发布 <strong>AlphaProof Code</strong>——一个把形式化验证拆成「人定目标、agent 做证明」的多模型 agent 框架，拿下的第一个目标是 Signal 协议的加密实现。这条新闻的分量在两个「首次」：<strong>第一次有 AI 参与把广泛部署的加密协议验证到这个深度，也是第一次有人（无论用不用 AI）把这类协议的实现代码形式化验证完</strong>——多数协议验证只做到设计层，而真实漏洞往往藏在设计与实现之间。流程是：研究者与模型共同把 Signal 的安全目标翻译成数学规格（每条人工复核），随后由 <strong>Gemini 4 Carbon</strong> 驱动的 agent 生成 <strong>600 万行以上 Lean</strong> 证明，Lean 自动检查全部内容，agent 再把需要人看的部分标出来——只有代码库的 <strong>1%</strong> 需要专家逐行审查。整件事 <strong>四周</strong>做完，同类工作历史上以年计；为验证它不是「什么都能证」，团队把两个已修复的真实漏洞重新植入隔离版本，系统两次都给出了「这个版本不安全」的机器可检证明。验证产物已开源。🔗 https://deepmind.google/blog/introducing-alphaproof-code/</p>
+<h3>3. 📋 Anthropic 把办公套件搬进 Claude：白板、表格、数据，都在同一个窗口</h3>
+<p>11 月 10 日 Anthropic 发布 <strong>Claude Whiteboards</strong> 与 <strong>Claude Sheets</strong>（beta），并把 10 月上线的 Dashboards 转正更名为 <strong>Claude Data</strong>，三者对所有付费套餐开放，覆盖 web、桌面与移动端。白板是团队与 Claude 一起脑暴的共享画布：口述一个乱糟糟的计划，Claude 把它变成带时间线、负责人和日期的板子，拖框圈住任意区域就能追问，结束后一键转文档/演示，或导出到 Lucid、Miro、Vani by Zoho 继续做。表格能直接按提示生成带多标签页、公式、格式与下拉菜单的表，改单元格时逐条列出改动，需要完整 Excel 能力时导出 .xlsx/CSV。Claude Data 则加上<strong>认证查询</strong>（数据团队把唯一正确的口径钉住，图表带「认证」徽章）、数据故事、实时共享、缓存与改动追踪，接 Redshift/BigQuery/ClickHouse 等连接器。配合同日上线的交互式连接器（Adobe、Atlassian、Box、Notion 可作为完整应用在对话旁打开），Anthropic 补的是「产出留在 Claude 里继续改」这一环——赶在 11 月 19 日 Enterprise 默认开启 Claude Data 之前。🔗 https://claude.com/resources/articles/sheets-whiteboards-data</p>
+<h3>4. 🧱 「用 AI 写代码，会得到一个脆的代码库」：一位前 Meta 工程师的四条病理</h3>
+<p>HN 578 分、543 条评论的这篇长文值得单列。作者 Evan X. Merz 今年 5 月被 Meta 裁掉，他自述原因是「对把 LLM 当编码工具没那么积极」——在 Meta 最后几个月，他至少 <strong>90% 的代码由 AI 生成</strong>，那是拿到合格评级的底线，但 AI 没让他写出 10 倍的代码，连 2 倍都没有。他现在在另一家大厂 <strong>100% 用 AI 写码</strong>，因为「这是今天的期望」，于是把这套做法的病理写清楚：AI 写浅测试（大量 get/set 与只覆盖已有路径的 e2e，行覆盖率很好看、空洞没人看见）、写过度复杂的代码（一个方法能解决的事拆成三个 helper，把 DRY 执行到妨碍调试）、让人越来越不懂自己的代码库、以及提交速度快到评审只能扫一眼。症状也给了四条：事故变多、恢复变慢（因为没人熟悉那片代码）、错误只有真实用户看得见、体验持续退化——「AI 代码库是 AI 给 AI 写的软件」。🔗 https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/</p>
+<h3>5. 💰 OpenAI 营收升至 100 亿美元，亏损仍在扩大</h3>
+<p>WSJ 11 月 10 日报道，OpenAI 营收已升至 <strong>100 亿美元</strong>量级，但同期亏损继续扩大，成本结构没有随收入改善。报道本身在付费墙内，未公开具体亏损数字与统计口径。放在本周的语境里看：Anthropic 正带着招股书跑 IPO 路演，OpenAI 的收入曲线开始有形状，但两家都还没走出「规模越大、烧得越多」的阶段。🔗 https://www.wsj.com/business/earnings/openai-continues-to-suffer-heavy-losses-as-revenue-rises-to-10-billion-d2a96bbb</p>
+<hr>
+<h2>🤖 数据源C：人形机器人动态</h2>
+<h3>Gemini Robotics 2.5：200 项任务、成功率涨 30–100%，在奔驰产线做到 96%</h3>
+<p>Google DeepMind 11 月 10 日发布 <strong>Gemini Robotics 2.5</strong>，称是其最强 VLA 模型，一次把灵巧度、可靠性、安全性三条线同时往前推。评估覆盖 <strong>200 项以上</strong>任务（用夹子分餐、给礼盒系蝴蝶结、移液枪加样），相比上一代基线成功率高出 <strong>30% 到 100%</strong>（视任务类型），完成速度快 <strong>20% 到 30%</strong>；本体侧同时支持 Apptronik <strong>Apollo 2</strong>（配 22 自由度五指 SharpaWave 手）与 Franka Duo 双臂平台。真实场景的硬证据在奔驰：匈牙利 Kecskemét 与德国 Sindelfingen 产线上，Apollo 2 自主做<strong>汽车零件 kitting</strong>（把散装零件按每辆车的顺序分装到托盘），由 Gemini Robotics ER 管流程、2.5 控手和臂，成功率 <strong>96%</strong>。安全上新增推理时引导，绕障完成率提升 <strong>33%</strong>、在人附近作业提升 <strong>43%</strong>；同时开源 <strong>ASIMOV-Jailbreak</strong> 越狱基准（数百条伪装成正常指令的危险请求），Gemini 4 Argon 在其上抗越狱 <strong>99.5%</strong>（前代 ER 2 为 82%）。有意思的一层：Gemini 4 Argon 被当作仿真引擎反哺了这一代模型——从一张真实相机画面生成上千次带数字孪生的练习。🔗 https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/</p>
+<h3>蚂蚁旗下 Robbyant 开源 LingBot-Touch：约 5000 小时触觉数据，让机器手「摸着干」</h3>
+<p>蚂蚁集团旗下机器人公司 <strong>Robbyant</strong> 于 11 月 10 日放出 <strong>LingBot-Touch</strong> 的模型权重与推理代码。这是个专攻「用手摸」的模型：训练数据来自 <strong>三类触觉传感器、近 5000 小时</strong>录制，目标是同一套模型能跨不同硬件工作，而不是绑死在某一款机械手上。官方在<strong>两只机械手、26 项真实任务</strong>上做了评测，场景包括处理易碎物体和双手协同——触觉正是人形机器人干活时最容易掉链子的一环（视觉能告诉你杯子在哪，摸不出它会不会碎）。🔗 https://technode.com/2026/11/10/ant-groups-robbyant-open-sources-tactile-ai-model-for-robot-hands/</p>
+<hr>
+<h2>📊 今日小结</h2>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>热点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🧠 <strong>最热</strong></td>
+<td>Gemini 4 Carbon 全面开放：CursorBench 4.0 / WANDR / AutomationBench 三项第一，成本仅对手一半</td>
+</tr>
+<tr>
+<td>✅ <strong>可验证性</strong></td>
+<td>AlphaProof Code：600 万行 Lean、四周，首次形式化验证 Signal 协议实现，人只看 1% 代码</td>
+</tr>
+<tr>
+<td>📊 <strong>办公</strong></td>
+<td>Claude 白板 / 表格 / 数据三件套上线，交互式连接器把第三方应用搬进对话</td>
+</tr>
+<tr>
+<td>🧱 <strong>反方声音</strong></td>
+<td>前 Meta 工程师：90% 代码交给 AI 后，得到的是浅测试、过度复杂与「没人懂」的代码库</td>
+</tr>
+<tr>
+<td>💰 <strong>财务</strong></td>
+<td>OpenAI 营收升至 100 亿美元，亏损仍在扩大</td>
+</tr>
+<tr>
+<td>🤖 <strong>具身智能</strong></td>
+<td>Gemini Robotics 2.5 把奔驰产线 kitting 做到 96%；蚂蚁 Robbyant 开源 5000 小时触觉模型</td>
+</tr>
+</tbody>
+</table>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
