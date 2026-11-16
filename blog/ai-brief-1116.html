@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="通义千问 Qwen4-Max 正式发布，2.4T 稀疏骨干、100 万上下文、Work360 52.69，单任务成本从 4.43 美元降到 1.67；FT 称黄仁勋已与盟友讨论回归，请愿破 16.5 万，财长贝森特却要「彻底改组」；OpenAI 用 GPT-6 Astra 把标准模型放上格点；苹果用 296 小时仿真数据让 G1 走进没见过的房间。">
+<title>今日AI简报 — Qwen4-Max 上线：2.4T 参数、单任务成本砍 62%，黄仁勋开始自己谈回归 · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="今日AI简报 — Qwen4-Max 上线：2.4T 参数、单任务成本砍 62%，黄仁勋开始自己谈回归">
+<meta property="og:description" content="通义千问 Qwen4-Max 正式发布，2.4T 稀疏骨干、100 万上下文、Work360 52.69，单任务成本从 4.43 美元降到 1.67；FT 称黄仁勋已与盟友讨论回归，请愿破 16.5 万，财长贝森特却要「彻底改组」；OpenAI 用 GPT-6 Astra 把标准模型放上格点；苹果用 296 小时仿真数据让 G1 走进没见过的房间。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1116.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="今日AI简报 — Qwen4-Max 上线：2.4T 参数、单任务成本砍 62%，黄仁勋开始自己谈回归">
+<meta name="twitter:description" content="通义千问 Qwen4-Max 正式发布，2.4T 稀疏骨干、100 万上下文、Work360 52.69，单任务成本从 4.43 美元降到 1.67；FT 称黄仁勋已与盟友讨论回归，请愿破 16.5 万，财长贝森特却要「彻底改组」；OpenAI 用 GPT-6 Astra 把标准模型放上格点；苹果用 296 小时仿真数据让 G1 走进没见过的房间。">
+
+
+<meta property="article:published_time" content="2026-11-16">
+<meta property="article:author" content="提灯人">
+<meta property="article:tag" content="AI"><meta property="article:tag" content="简报"><meta property="article:tag" content="Qwen"><meta property="article:tag" content="Nvidia"><meta property="article:tag" content="OpenAI"><meta property="article:tag" content="人形机器人"><meta property="article:tag" content="欧盟">
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "今日AI简报 — Qwen4-Max 上线：2.4T 参数、单任务成本砍 62%，黄仁勋开始自己谈回归",
+  "description": "通义千问 Qwen4-Max 正式发布，2.4T 稀疏骨干、100 万上下文、Work360 52.69，单任务成本从 4.43 美元降到 1.67；FT 称黄仁勋已与盟友讨论回归，请愿破 16.5 万，财长贝森特却要「彻底改组」；OpenAI 用 GPT-6 Astra 把标准模型放上格点；苹果用 296 小时仿真数据让 G1 走进没见过的房间。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-11-16",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1116.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "今日AI简报 — Qwen4-Max 上线：2.4T 参数、单任务成本砍 62%，黄仁勋开始自己谈回归", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1116.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>今日AI简报 — Qwen4-Max 上线：2.4T 参数、单任务成本砍 62%，黄仁勋开始自己谈回归</h1>
+<p><strong>2026年11月16日</strong></p>
+<hr>
+<h2>🌍 数据源B：国际AI要闻</h2>
+<h3>1. 🚀 Qwen4-Max 正式上线：2.4T 稀疏骨干、100 万上下文，单任务成本砍掉 62%</h3>
+<p>上周还只是预览的 Qwen4-Max 今天正式发布，这是 Qwen4 系列的新架构首作：<strong>2.4 万亿骨干参数、每 token 激活 71B，另加 328B 的 N-gram Embedding 参数</strong>，原生支持视觉，上下文 <strong>100 万 token</strong>。架构上三处改动都指向「长序列更便宜」——三层 <strong>Gated DeltaNet</strong> 把历史压成定长状态，交给 <strong>Qwen Sparse Attention（QSA）</strong>，QSA 用一个轻量索引器在 micro-block 粒度挑相关上下文；<strong>Gated Residual</strong> 用四条并行残差分支加动态读写门稳住深层信息流；<strong>N-gram Embedding</strong> 在第二层按上下文查局部 token 模式，用极小算力换容量。效果上，预训练全程没有 loss spike，Base 在 Knowledge/Code/QA/STEM 四类内部评测的 BPB 比 Qwen3.8-Max-Base 低 <strong>5–13%</strong>，激活参数反而少 <strong>25%</strong>。真正值得盯的是单位成本：在它自建的 <strong>Work360</strong> 基准（26 个一级领域、182 个二级、721 个三级专业方向）上得分从 <strong>47.74 升到 52.69</strong>，单任务平均成本从 <strong>4.43 美元降到 1.67 美元（-62%）</strong>，token 用量在 Work360 降 24%/35%、在 Terminal-Bench 4.0 降 48%/49%（Xhigh/High）。安全侧也有硬数字：Last Secure Code Bench 上「功能与安全同时通过」的函数级通过率从 <strong>22.0% 升到 31.8%</strong>，函数/文件/仓库三级同时安全的比例从 <strong>8% 升到 14.7%</strong>。最能说明「长时任务」的一件事在材料侧：Qwen4 在 Deep Principle 的 Mira 干湿实验平台上<strong>自主跑了 48 小时</strong>，从 270 万个候选分子里筛选、做第一性原理计算与逆合成分析，指挥自动化湿实验室合成与测试，四轮「设计→合成→测试→主动学习」闭环后，真造出了一种经实验验证的新型冷却液分子；药物方向上它针对 NLRP3 做了 <strong>454 次工具调用、3239 次计算指标评估、24 个候选分子</strong>，RBFE 估算亲和力约为参考分子的 <strong>3.6 倍</strong>。独立评测的口径要分清：Artificial Analysis 记录为<strong>闭源、权重不开放</strong>，定价 <strong>$1.50/$4.50 每百万 token</strong>（缓存 95% 折扣后混合约 $0.80），AA 智能指数 <strong>43</strong>（同价位中位 41），但非常啰嗦——它跑了 <strong>1.27 亿</strong>输出 token，中位是 7860 万。官方明确说 Qwen4 的小模型会开源，Max 只是「第一眼」。🔗 https://qwen.ai/blog?id=qwen4-max ｜独立评测 https://artificialanalysis.ai/models/qwen4-max</p>
+<h3>2. ⚖️ 黄仁勋从「别人提议」走到「自己在谈」，但华盛顿同时踩了刹车</h3>
+<p>昨天还是两大股东写信要董事会把「回归」列为选项，今天《金融时报》的口径变了：<strong>黄仁勋本人已与盟友讨论回归英伟达 CEO 一事</strong>——推动力从外部请愿变成了当事人自己的动作，Guardian 标题给出的请愿规模也从 10 万涨到 <strong>16.5 万签名</strong>。反向的压力同样在加码：财长 <strong>斯科特·贝森特</strong> 公开称英伟达需要一次「dramatic shakeup（彻底的改组）」，路透社报道他要求董事会<strong>选一位外部人选</strong>、并让董事会与律师在 <strong>10 天内</strong>就出口管制相关问题作答；国会也在动，The Verge 称议员正推动在间谍风波后<strong>收紧 AI 芯片出口规则</strong>。也就是说，硅谷 executives 的「请他回来」和财政部＋国会的「先把账说清」正面对撞，最终仍是董事会一票定生死——但董事会此前正是把他请出去的那一方。🔗 https://www.ft.com/content/45383d86-33c4-4d99-86e5-5e058d3567c1 ｜ https://www.theguardian.com/technology/2026/nov/16/elon-musk-tech-execs-open-letter-jensen-huang-return-nvidia-ceo</p>
+<h3>3. 🧮 OpenAI 把「标准模型」放上格点：GPT-6 Astra 补完了物理学家卡住的那步证明</h3>
+<p>OpenAI 科学博客 11 月 15 日的首篇客座文章，作者是 UCSB 粒子理论组负责人、OpenAI 访问科学家 <strong>Nathaniel Craig</strong>，合作对象是 <strong>GPT-6 Astra</strong>，成果是 10 月的预印本（arXiv 2610.09093）。问题本身很硬：标准模型运行了五十多年，实验与理论在十八个数量级上吻合，却<strong>始终没有一个非微扰定义</strong>——微扰论在强作用力上直接失效（把强力关掉，质子就散了），而格点场论虽然把强力算明白了，却卡在「手征」上：弱力区别对待左右手费米子，你往格子里只放一个左手费米子，最自然的规则会凭空还你一个右手伙伴（doubling），粒子内容当场就错了。Craig 的说法是：他有策略但证不完所有情形，<strong>Astra 把策略变成构造，并主导了详细证明的推进</strong>。如果这个候选定义站得住，意义是给标准模型一个不依赖「把相互作用当小修正」的数学基础。🔗 https://openai.com/index/step-toward-defining-the-standard-model</p>
+<h3>4. 🇪🇺 欧盟自己的开源前沿模型 EUROPA，在 JUPITER 上跑通 9519 亿参数训练试验</h3>
+<p>米兰公司 <strong>Domyn</strong>（原 iGenius）11 月 12 日的技术博客披露，欧盟选定的开源前沿模型 <strong>EUROPA</strong> 已在德国于利希的 <strong>JUPITER</strong> 超算上完成训练试验：试验配置 <strong>9519 亿参数</strong>，是欧委会 <strong>4000 亿</strong>下限的两倍多，训练速度比试验初期快 <strong>14 倍</strong>。这条线的制度设计值得注意——欧委会 2 月发起 Frontier AI Grand Challenge，6 月 19 日把项目给了 Domyn 牵头的联盟（伙伴是 Fraunhofer 的 IAIS 与 IIS），代价是拿到 EuroHPC 最多 <strong>2.5% 的算力、为期一年</strong>，条件是模型必须覆盖欧盟 <strong>24 种官方语言</strong>且可供公共部门、研究机构与企业使用。权重至今未发布，也没有时间表。放在同一天看很有意思：一边是 2.4T 参数、权重不开放的中国 Max 模型，一边是承诺开源、参数只有前者四成的欧洲方案。🔗 https://maccus.fr/en/eu-open-ai-model-europa/</p>
+<hr>
+<h2>🤖 数据源C：人形机器人动态</h2>
+<h3>1. 🍎 苹果的 HALO：不给遥操作数据，靠 296 小时仿真素材让 G1 走进没见过的房间</h3>
+<p>苹果研究团队把一台 <strong>Unitree G1</strong> 放进 <strong>6 个真实、未建图的环境</strong>，完成 <strong>360 次单任务试验的 91%</strong>——走过去、坐椅子、钻桌子底下、推箱子——<strong>全程没有一条遥操作数据</strong>。数据管线是纯生成的：扩散模型产出类人动作，放进 <strong>1000 个程序化生成的房间</strong>，再用 NVIDIA Isaac Sim 从机器人自己的相机视角渲染，得到约 <strong>296 小时</strong>素材；只有训练运动跟踪器时还用到公开动捕片段。机上跑三层：一个现成视觉语言模型把「去坐那把椅子」拆成步骤，运动生成器依据相机画面规划几秒的全身动作，强化学习跟踪器以 <strong>50Hz</strong> 跟随；硬件只加了一个广角相机和背上的一台 <strong>Mac mini</strong>，无线缆。短板也很清楚：每加一个新技能仍需人写 prompt 和关键帧，机器人没有触觉，六项技能里<strong>一项都不含抓取</strong>，技能串联平均 <strong>70%</strong>，其中「蹲下钻桌再坐下」在某个单一环境里只有 <strong>60%</strong>。论文本月早些时候上了 arXiv，代码在苹果研究 GitHub。🔗 https://humanoidbeat.com/news/apple-halo-unitree-g1-simulation-trained-humanoid.html</p>
+<h3>2. ⚡ Berkeley 的 SuperMimic 引爆开源接力：全身控制训练从「128 卡 7 天」变成「单卡几分钟」</h3>
+<p>UC Berkeley 团队（作者含 <strong>Pieter Abbeel、Koushil Sreenath</strong>）10 月 20 日的 arXiv 论文 <strong>SuperMimic</strong> 换掉了无模型强化学习：先训一个可微的「世界模型」预测身体如何响应动作，再从它反传优化跟踪策略，结果是<strong>单卡 3 小时</strong>超过「<strong>128 卡训 7 天</strong>」的基线，策略还迁移到了实体 G1。接下来四周发生的事比论文本身更有意思：论文没放代码，ETH Zürich 的研究者<strong>次日</strong>就发了非官方复现，随后 InstantTrack、BlinkMimic、XMimic 一个接一个把前人的代码往前推——<strong>BlinkMimic 在单张 RTX 4090 上 3.4 分钟</strong>达到目标，<strong>XMimic 在 4 张 H100 上 0.86 分钟</strong>（都是 40 段动作的仿真基准），官方代码 11 月 10 日前后才上 GitHub，社区清单 awesome-supermimic 已收录 <strong>40 多个</strong>实现与扩展。要打折扣的地方同样明确：这些社区项目<strong>没有一个在真机上验证过</strong>，速度数字也来自那个只有 40 段动作的窄基准——原论文的 3 小时才是过了硬件那一关的。🔗 https://humanoidbeat.com/news/supermimic-humanoid-motion-tracker-training-minutes-one-gpu.html</p>
+<h3>3. 💸 军用人形创业公司 Foundation 发不出工资：CEO 借走 460 万美元买房，2400 万「五角大楼合同」是买来的</h3>
+<p>CNBC 11 月 14 日报道，旧金山 <strong>Foundation Future Industries</strong>（做军用人形机器人，<strong>Eric Trump</strong> 是投资人兼首席战略顾问）<strong>10 月 30 日错过发薪</strong>，员工至今没拿到钱。让内部人愤怒的是：CEO 兼联创 <strong>Sankaet Pathak</strong> 去年以「短期借款」名义从公司拿走 <strong>460 万美元</strong>，公开记录显示一个以他为唯一负责人的 LLC 在 2025 年 10 月买下了加州 Sausalito 一栋同价豪宅。对外宣称的 <strong>2400 万美元</strong>五角大楼合同也不成立——钱其实来自公司 2024 年底收购的 <strong>Boardwalk Robotics</strong> 拿到的政府研究合同，而那笔收购附带的机器人性能里程碑并未达成。公司正在按 <strong>30 亿美元</strong>估值融数亿美金；Pathak 是<strong>唯一的董事会成员</strong>、持有多数股份，这正是他能顺利借走那 460 万的制度原因。背景更刺眼：他上一家金融科技公司 <strong>Synapse</strong> 2024 年崩盘，10 万多名美国人的 <strong>2.65 亿美元</strong>存款被锁，至今仍有数千人拿不回钱。🔗 https://www.cnbc.com/2026/11/14/foundation-payroll-ceo-loan.html</p>
+<hr>
+<h2>📊 今日小结</h2>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>热点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🚀 <strong>最热</strong></td>
+<td>Qwen4-Max 正式上线：2.4T 骨干 / 71B 激活 / +328B N-gram，100 万上下文，Work360 52.69，单任务成本 $4.43→$1.67（-62%），HN 594 分居首</td>
+</tr>
+<tr>
+<td>🧪 <strong>长时任务</strong></td>
+<td>Qwen4 自主跑 48 小时，从 270 万候选分子到真造出一种新冷却液；NLRP3 方向 454 次工具调用、RBFE 亲和力约 3.6 倍</td>
+</tr>
+<tr>
+<td>⚖️ <strong>英伟达</strong></td>
+<td>FT：黄仁勋本人已与盟友讨论回归，请愿涨到 16.5 万；财长贝森特称需要「彻底改组」并要求董事会选外部人选、10 天内答出口管制问题</td>
+</tr>
+<tr>
+<td>🧮 <strong>物理</strong></td>
+<td>OpenAI 与 UCSB 的 Nathaniel Craig 用 GPT-6 Astra 提出标准模型的格点非微扰定义（arXiv 2610.09093）</td>
+</tr>
+<tr>
+<td>🇪🇺 <strong>主权 AI</strong></td>
+<td>欧盟 EUROPA 在 JUPITER 上跑通 9519 亿参数训练试验，训练提速 14 倍，权重仍未发布</td>
+</tr>
+<tr>
+<td>🦾 <strong>机器人</strong></td>
+<td>苹果 HALO 用 296 小时仿真素材让 G1 在未见房间完成 91% 单任务；Berkeley SuperMimic 把全身控制训练压到单卡几分钟</td>
+</tr>
+<tr>
+<td>💸 <strong>泡沫面</strong></td>
+<td>Foundation 错过发薪，CEO 借走 460 万买房；宣称的 2400 万五角大楼合同实为收购标的旧合同</td>
+</tr>
+</tbody>
+</table>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
