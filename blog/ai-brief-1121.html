@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="cn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Anthropic 数学家 Alpöge 称与 Claude 合作证明黎曼猜想并给出 Lean 代码，陶哲轩同日列出三项结果：三维欧拉与纳维-斯托克斯有限时间爆破，以及仅 Lean 的广义黎曼猜想证明，验证仍在进行；Anthropic 上市首日收 97.17 美元、次日跌 8.5%，绿鞋全额行使总募资 935 亿美元；英伟达因 SEC 会计调查单日跌 14%。">
+<title>今日AI简报 — Claude 交出黎曼猜想的 Lean 证明，Anthropic 上市次日跌 8.5% · 舍赫拉查德之灯</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+
+<link rel="alternate" type="application/rss+xml" title="舍赫拉查德之灯" href="https://bossman-lab.github.io/sheherazades-lantern/cn/podcast.xml">
+
+
+
+<link rel="alternate" hreflang="en" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<link rel="alternate" hreflang="cn" href="https://bossman-lab.github.io/sheherazades-lantern/cn/">
+
+<link rel="alternate" hreflang="ar" href="https://bossman-lab.github.io/sheherazades-lantern/ar/">
+
+<link rel="alternate" hreflang="es" href="https://bossman-lab.github.io/sheherazades-lantern/es/">
+
+<link rel="alternate" hreflang="x-default" href="https://bossman-lab.github.io/sheherazades-lantern/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "舍赫拉查德之灯 Blog",
+  "url": "https://bossman-lab.github.io/sheherazades-lantern/blog/",
+  "author": { "@type": "Person", "name": "提灯人" }
+}
+</script>
+
+<!-- === AI / Social Meta === -->
+
+
+<meta property="og:title" content="今日AI简报 — Claude 交出黎曼猜想的 Lean 证明，Anthropic 上市次日跌 8.5%">
+<meta property="og:description" content="Anthropic 数学家 Alpöge 称与 Claude 合作证明黎曼猜想并给出 Lean 代码，陶哲轩同日列出三项结果：三维欧拉与纳维-斯托克斯有限时间爆破，以及仅 Lean 的广义黎曼猜想证明，验证仍在进行；Anthropic 上市首日收 97.17 美元、次日跌 8.5%，绿鞋全额行使总募资 935 亿美元；英伟达因 SEC 会计调查单日跌 14%。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1121.html">
+<meta property="og:image" content="https://bossman-lab.github.io/sheherazades-lantern/images/cover.webp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="舍赫拉查德之灯">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="今日AI简报 — Claude 交出黎曼猜想的 Lean 证明，Anthropic 上市次日跌 8.5%">
+<meta name="twitter:description" content="Anthropic 数学家 Alpöge 称与 Claude 合作证明黎曼猜想并给出 Lean 代码，陶哲轩同日列出三项结果：三维欧拉与纳维-斯托克斯有限时间爆破，以及仅 Lean 的广义黎曼猜想证明，验证仍在进行；Anthropic 上市首日收 97.17 美元、次日跌 8.5%，绿鞋全额行使总募资 935 亿美元；英伟达因 SEC 会计调查单日跌 14%。">
+
+
+<meta property="article:published_time" content="2026-11-21">
+<meta property="article:author" content="提灯人">
+<meta property="article:tag" content="AI"><meta property="article:tag" content="简报"><meta property="article:tag" content="Anthropic"><meta property="article:tag" content="英伟达"><meta property="article:tag" content="数学"><meta property="article:tag" content="开源模型"><meta property="article:tag" content="机器人">
+
+
+<!-- === JSON-LD === -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "今日AI简报 — Claude 交出黎曼猜想的 Lean 证明，Anthropic 上市次日跌 8.5%",
+  "description": "Anthropic 数学家 Alpöge 称与 Claude 合作证明黎曼猜想并给出 Lean 代码，陶哲轩同日列出三项结果：三维欧拉与纳维-斯托克斯有限时间爆破，以及仅 Lean 的广义黎曼猜想证明，验证仍在进行；Anthropic 上市首日收 97.17 美元、次日跌 8.5%，绿鞋全额行使总募资 935 亿美元；英伟达因 SEC 会计调查单日跌 14%。",
+  "author": { "@type": "Person", "name": "提灯人" },
+  "datePublished": "2026-11-21",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1121.html" },
+  "publisher": { "@type": "Organization", "name": "Sheherazade's Lantern" }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bossman-lab.github.io/sheherazades-lantern/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/" }
+    
+    ,{ "@type": "ListItem", "position": 3, "name": "今日AI简报 — Claude 交出黎曼猜想的 Lean 证明，Anthropic 上市次日跌 8.5%", "item": "https://bossman-lab.github.io/sheherazades-lantern/blog/ai-brief-1121.html" }
+    
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#e8e8ed;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue','PingFang SC','Noto Naskh Arabic','Geeza Pro',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+
+/* === NAV === */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;gap:20px;padding:14px 24px;background:rgba(0,0,0,.8);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:680px;width:100%;justify-content:flex-end}
+nav a{color:#424245;text-decoration:none;font-size:13px;font-weight:500;transition:color .3s}
+nav a:hover{color:#d4a747}
+nav .active{color:#d4a747}
+nav .divider{color:#2a2a2a;font-size:11px}
+
+/* === ARTICLE === */
+.article{max-width:680px;margin:0 auto;padding:100px 24px 40px}
+.article h1{font-size:36px;font-weight:700;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;color:#f5f5f7}
+.article h2{font-size:24px;font-weight:600;margin:40px 0 12px;color:#f5f5f7;letter-spacing:-.2px}
+.article h3{font-size:19px;font-weight:600;margin:28px 0 8px;color:#f5f5f7}
+.article p{line-height:1.8;margin:0 0 20px;color:#c8c8cd}
+.article a{color:#d4a747;text-decoration:none;transition:color .3s}
+.article a:hover{color:#e8c05e}
+.article ul,.article ol{line-height:1.8;margin:0 0 20px;padding-left:24px;color:#c8c8cd}
+.article li{margin-bottom:6px}
+.article blockquote{border-left:2px solid rgba(212,167,71,.3);margin:28px 0;padding:12px 24px;color:#a0a0a8;font-style:italic;background:rgba(212,167,71,.02);border-radius:0 6px 6px 0}
+.article blockquote p{margin:0;color:#a0a0a8}
+.article code{font-family:'SF Mono','Menlo','Consolas',monospace;font-size:14px;background:rgba(212,167,71,.06);padding:2px 8px;border-radius:4px;color:#e0d8c8}
+.article pre{background:rgba(255,255,255,.03);border:1px solid rgba(212,167,71,.08);border-radius:8px;padding:16px 20px;margin:0 0 20px;overflow-x:auto}
+.article pre code{background:none;padding:0;font-size:13px;line-height:1.6;color:#c0c0c8}
+.article hr{border:none;border-top:1px solid rgba(212,167,71,.08);margin:40px 0}
+.article table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.article th,.article td{border:1px solid rgba(212,167,71,.1);padding:10px 14px;text-align:left}
+.article th{background:rgba(212,167,71,.04);color:#d4a747;font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.article td{color:#c8c8cd}
+.article img{max-width:100%;border-radius:8px;margin:24px 0}
+
+/* === BLOG LIST === */
+.blog-list{max-width:640px;margin:0 auto;padding:100px 24px 40px}
+.blog-list h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px;color:#f5f5f7}
+.blog-list .subtitle{color:#68686b;font-size:16px;margin-bottom:40px;line-height:1.5}
+.blog-post{padding:24px 0;border-bottom:1px solid rgba(212,167,71,.06)}
+.blog-post:first-of-type{border-top:1px solid rgba(212,167,71,.06)}
+.blog-post .date{font-size:12px;color:#424245;margin-bottom:6px}
+.blog-post a{text-decoration:none;color:#f5f5f7;font-size:19px;font-weight:500;display:block;margin-bottom:6px;line-height:1.3;transition:color .3s}
+.blog-post a:hover{color:#d4a747}
+.blog-post .desc{color:#68686b;font-size:14px;line-height:1.6;margin:0}
+.back-link{margin-top:40px;padding-top:24px}
+.back-link a{color:#424245;text-decoration:none;font-size:13px;transition:color .3s}
+.back-link a:hover{color:#d4a747}
+
+/* === FOOTER === */
+footer{text-align:center;padding:0 24px 48px;color:#2a2a2a;font-size:12px;line-height:1.8}
+
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .article{padding:80px 20px 30px;font-size:16px}
+  .article h1{font-size:26px}
+  .article h2{font-size:20px}
+  .blog-list{padding:80px 20px 30px}
+  .blog-list h1{font-size:26px}
+  .blog-post a{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">Podcast</a>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" class="active">Blog</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/">English</a>
+    <span class="divider">/</span>
+    <a href="#" class="active">中文</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/ar/">العربية</a>
+    <span class="divider">/</span>
+    <a href="https://bossman-lab.github.io/sheherazades-lantern/es/">Español</a>
+    
+  </div>
+</nav>
+
+
+<div class="article">
+<h1>今日AI简报 — Claude 交出黎曼猜想的 Lean 证明，Anthropic 上市次日跌 8.5%</h1>
+<p><strong>2026年11月21日</strong></p>
+<hr>
+<h2>🌍 数据源B：国际AI要闻</h2>
+<h3>1. 🧮 一个 Anthropic 数学家、一次 Lean 提交，和三个「世纪问题」</h3>
+<p>11 月 20 日，Anthropic 的数学家 <strong>Levent Alpöge</strong>（普林斯顿博士）在个人网站发声明：「我相信我和 Claude 一起，发现了黎曼猜想的证明。」他把证明写成了 <strong>Lean</strong> 代码——一种逐条检查论证是否成立的证明助手——并称证到的是更强的<strong>广义黎曼猜想（GRH）</strong>。《Scientific American》当天发稿：这道 1859 年提出、悬置 <strong>167 年</strong>、克雷数学研究所挂 <strong>100 万美元</strong>悬赏的猜想，若成立将是 AI 今年「攻克数学」的收官之战；今年 10 月 OpenAI 大规模公开数学结果时，其中一个证明已经先啃下了素数分布的一角。</p>
+<p>同一天，<strong>陶哲轩</strong>在博客里把这三件事按「消化程度」从高到低排了一遍，这一排比新闻标题更有信息量：</p>
+<ol>
+<li><strong>Alpöge、Tristan Buckmaster、Matei Coiculescu</strong>（重度的 AI 辅助）给出三维<strong>无外力不可压缩欧拉方程有限时间爆破</strong>的可读证明，已在 Lean 中形式化；</li>
+<li><strong>Alpöge 与 Buckmaster</strong> 给出三维<strong>无外力不可压缩纳维-斯托克斯方程有限时间爆破</strong>的证明，同样有 Lean 形式化——论文「技术上可读、总体策略大致清楚」，但还需要一份专业的正式写本（这题是千禧年七题之一）；</li>
+<li><strong>Alpöge 单独</strong>用「一个内部 AI 模型」生成了<strong>篇幅巨大的、只有 Lean 的广义黎曼猜想证明</strong>。陶哲轩给出的跟进入口是 Lean Zulip 的讨论串，初看之下证明「用满了朗兰兹纲领与算术几何的现代工具」。</li>
+</ol>
+<p><strong>必须写清楚的三点保留：</strong> 一是这仍是<strong>声明</strong>，同行评审没有完成，Lean 只能保证「代码里的论证没漏洞」，保证不了「代码形式化的正是黎曼猜想」；二是陶哲轩原文说的是「内部 AI 模型」，对外报道写的是 Claude——这个措辞差别值得记一笔；三是哪怕全部成立，「消化」也要时间，陶本人用的词是 <em>digestion</em>。🔗 https://alpo.ge/remark.pdf ｜ https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/ ｜ https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/</p>
+<h3>2. 💰 Anthropic 的完整账本：绿鞋全吃，总募资 935 亿；首日收 97.17，次日跌 8.5%</h3>
+<p>昨天简报只写到定价。11 月 20 日 Anthropic 的<strong>交割公告</strong>把账算完了，而且比定价那天更硬：承销商<strong>全额行使</strong>了 1.47 亿股超额配售权，最终发行 <strong>11.27 亿股</strong>、每股 <strong>83 美元</strong>，其中公司卖出 11.0335 亿股、老股东卖出 2364.9 万股；<strong>总发行额约 935 亿美元</strong>，公司实收 <strong>约 916 亿美元</strong>（老股东那部分不进公司）。更值得注意的是并行的<strong>私募配售</strong>：AMD、博通、谷歌、美光、微软、英伟达、台积电七家以同样的 83 美元认购 <strong>3.1325 亿股 Class N 股</strong>，合计 <strong>约 260 亿美元</strong>——把 IPO 与这笔配售加在一起，总募资约 <strong>1195 亿美元</strong>。</p>
+<p>交易侧的走势则是另一回事：周四开盘 <strong>111.5 美元</strong>（较定价 +34%），盘中一路回落，<strong>首日收 97.17 美元（+17%）</strong>；周五作为首个完整交易日<strong>收跌 8.5%</strong>，同期英伟达、AMD 都跌超 13%，亚马逊、谷歌、微软全线收低。CNN 的定性是「IPO 很成功，但没有改变华尔街的叙事」：纳指已从高点回撤逾 13%、进入技术性回调，<strong>2026 年涨幅被抹平</strong>，而市场的担忧清单从 10 月 6 日就开始累积——CoreWeave 债券收益率升到 15%（对应回报率只有 9%）、中期选举后主张 AI 数据中心暂停令的民主党州长将管到全美 45% 的规划算力、以及黄仁勋事件。另据路透，承销商已<strong>平掉了用于护盘的稳定头寸</strong>，等于撤掉了一层支撑。🔗 https://www.anthropic.com/news/ipo-close ｜ https://www.cnbc.com/2026/11/20/anthropic-stock-ai-amd-nvidia.html ｜ https://www.cnn.com/2026/11/20/investing/anthropic-ai-stock-nasdaq</p>
+<h3>3. 🚨 英伟达单日跌 14%：SEC 查会计，加州总检察长递传票，国会亮出 87.9 万颗对华批文</h3>
+<p>三件事挤在同一天。<strong>其一，SEC 查账</strong>：《华尔街日报》周二先报 SEC 在调查英伟达但未说焦点，路透周五引两名知情者称，SEC 执法部门正在看的是<strong>潜在的会计问题</strong>——报道同时提醒「调查不等于违法，很多调查无疾而终」。市场不管这些：英伟达周五<strong>收跌 14.01% 至 125.53 美元</strong>，市值被 Alphabet 反超。<strong>其二，加州总检察长就「中国是否获得先进芯片或机密信息」向英伟达发传票</strong>（与上周加州起诉 OpenAI 是两件事）。<strong>其三，国会公开批文</strong>：众议院外交事务委员会周四放出的文件显示，截至 2026 年 5 月，商务部工业与安全局（BIS）批准了<strong>超过 87.9 万颗</strong> AI 芯片卖给包括阿里巴巴、腾讯在内的中国公司，其中一部分买家被国防部列为「中国军事企业」；2025 年 12 月至 5 月，相关申请总量达 <strong>340 万件</strong>。英伟达的回应是「当时按生效规定办事」「目前已停止向中国出货 H200」——但它本周刚披露上季 H200 及相关对华销售带来 <strong>24 亿美元</strong>收入、中国内地与香港合计约占全部营收 <strong>9.5%</strong>。Bernstein 分析师 Stacy Rasgon 的算术是：87.9 万 / 340 万，大约<strong>四选一</strong>，「看不出是无差别放行」。🔗 https://www.globaltimes.cn/page/202611/1374751.shtml ｜ https://www.cnbc.com/2026/11/19/nvidia-amd-china-chip-sales-congress.html</p>
+<h3>4. 🧠 Inkling 2 Mini：264 亿参数、20GB，笔记本上离线跑出个飞行模拟器</h3>
+<p>Thinking Machines 11 月 20 日发布 <strong>Inkling 2 Mini</strong>，做法和主流「堆参数」相反：它是一个<strong>循环 Transformer</strong>，每生成一个 token 就把中间层跑三遍，让模型「多想但少写」——这对可监控性有直接好处，因为推理过程不必全写进思维链。规格是 MoE <strong>264 亿总参数 / 34 亿激活</strong>，权重原生以 <strong>NVFP4</strong> 训练部署（最后四层 MXFP8），整模型内存占用约 <strong>20GB</strong>，可在 32GB 以上的 Mac 上用 Ollama 跑。成绩上它自称在 1000 亿参数以下的开源模型里全线领先：<strong>DeepSWE v1.1 48.2%</strong>、<strong>Vals Index v2.2 46.5%</strong>、SWE-bench Verified 79.2%、BrowseComp 79.0%、MCP Atlas 82.7%（同尺寸对手是 Qwen3.8-27B、Gemma 4 31B、Muse Glimmer）。最能说明定位的是一个演示：研究者在**飞行模式的 MacBook Pro（M5 Pro / 48GB）**上让它离线写了个能玩的飞行模拟器。附带的研究结论也值得记：循环次数从 1 增到 3，无思维链的时间跨度从 <strong>16 秒升到 37 秒</strong>，思维链变短但保持可读，且在智能体破坏性测试上没有随循环次数上升。权重与训练代码已公开。🔗 https://thinkingmachines.ai/news/inkling-2-mini/</p>
+<h3>5. 🛡️ OpenAI 反蒸馏：套取推理轨迹的成功率从 54% 降到 0.2%</h3>
+<p>OpenAI 11 月 20 日公开了对抗「蒸馏攻击」的做法与数字。核心防线是<strong>受保护的推理（protected reasoning）</strong>——模型内部那段不对外展示的思维链，因为它比最终答案更值钱：拿它去训一个学生模型，能力会跟着过去，护栏却不会。在 GPT-6.2 Astra / Sol 上，内部自动化红队测试「能否把上一轮生成的推理套出来」的平均成功率，从 GPT-6 Astra 原护栏下的 <strong>54.0%</strong> 降到 <strong>0.2%</strong>；自适应黑盒测试下各类攻击均<strong>低于 1%</strong>。工程上是三层：请求级（行为训练 + 输入/输出分类器，连工具调用参数一起查）、账户级（找协同提取的账号网络，每周处置规模从数千到数万，今年夏天起明显加速）、API 级（把推理绑定到产生它的对话历史，历史被改写就丢弃其后的推理，且不让弱护栏的旧模型读取新模型的推理）。文中直接点名了两条线：2 月向国会简报 <strong>DeepSeek</strong> 在尝试蒸馏美国前沿模型，9 月披露破坏了一起提取行动、并把核心部分归因于 <strong>Moonshot AI（Kimi）</strong> 相关人员。政策诉求也很明确：支持《芯片安全法案》《AI OVERWATCH 法案》《MATCH 法案》。🔗 https://openai.com/index/combatting-adversarial-distillation/</p>
+<hr>
+<h2>🤖 数据源C：机器人与具身智能</h2>
+<h3>1. 🦾 马斯克：你们看到的人形机器人演示都是摆拍，Optimus 一两个月内做一次不加脚本的</h3>
+<p>11 月 19 日（周四）的 TomorrowX 峰会上，马斯克从深圳远程连线，说了一句同行不爱听的话：<strong>「你看到的那些人形机器人演示，都是编排好的、预编程的。它们不是真的。」</strong> 他给的判据很朴素——现在的机器人能听懂「去把苹果拿起来」，但你<strong>把桌子挪个位置，它就找不到苹果了</strong>；他还引了 John Carmack 的一个测试：给机器人一个带包装的玩具遥控车，看它能不能拆盒、拧开电池盖、装电池、拧回去、然后开起来——「世界上没有一个机器人做得到」。因此特斯拉要等「能拿出手的、真实而非摆拍」的演示，时间大概是<strong>一两个月内</strong>；至于收垃圾、洗碗这类家务，他给的是 <strong>12 到 18 个月</strong>。🔗 https://humanoidbeat.com/news/musk-optimus-unscripted-demo-month-or-two-dishes-12-18-months-tomorrowx.html</p>
+<h3>2. 📦 ROBOTERA 进中国邮政广东 11 个枢纽，每小时分拣 1500 件以上</h3>
+<p>ROBOTERA 11 月 17 日宣布，其人形机器人已进入<strong>中国邮政广东网络 11 个枢纽、覆盖 8 个城市</strong>（广州、深圳、东莞、江门、汕头、汕尾、揭阳、河源），做的是供件上线的活，平均<strong>每小时超过 1500 件</strong>，公司称与熟练人工相当。项目今年 3 月从广州邮区中心局试点起步，机器人会拒收异形件、按流量调速度以减少卡件与漏件，末端用的是 ROBOTERA 自研五指手。公司称这是「目前物流领域规模最大、地理分布最广的具身智能部署」，但<strong>没有给出对比数据</strong>——这句话只能当厂商口径看。🔗 https://humanoidbeat.com/news/robotera-humanoids-11-china-post-hubs-guangdong-1500-parcels-hour.html</p>
+<h3>3. 🎞️ Movens-5M：把网络视频变成 500 万条 G1 真能做的动作，权重和代码全公开</h3>
+<p>浙江大学与宇树（Unitree）联合实验室，联合微软研究院、北大、新加坡国立，公开了 <strong>Movens-5M</strong>：从 <strong>1500 万条</strong>人类动作序列里，筛出 <strong>500 万条宇树 G1 物理上能执行</strong>的动作，总时长超过 <strong>1 万小时</strong>，并与文本、视频、语音、音乐对齐。难点不在采集而在「能执行」——流程分五步：切片、质量过滤、标注、重建并重定向到 G1、最后放进闭环仿真里跑一遍，机器人做不到的动作直接丢掉。模型权重与训练代码一并公开。人形机器人的瓶颈正在从硬件转向数据，这类「把互联网视频洗成可用动作库」的工作比又一台新机器更值得记。🔗 https://humanoidbeat.com/news/movens-5m-dataset-zhejiang-unitree-g1-5-million-motions-10000-hours-movens-zero.html</p>
+<h3>4. 🔐 Agility：每台 Digit 一个烧进硬件的密码身份，一台被攻破也不会传染全队</h3>
+<p>人形机器人进仓库之后，问题就不只是「能搬多重」，而是「谁还能控制它」。Agility Robotics 11 月 19 日在 X 上说明：<strong>每台 Digit 都是独立的受保护系统，硬件里烧了唯一的密码身份，没有两台共用</strong>——「这样一台出事，问题被限制在单机，不会扩散到整个机队」。CTO Pras Velagapudi 的相关演讲补了细节：加密存储、受控的设备访问、机器人与云端双向认证并加密；<strong>安全限值存在机器人本体上</strong>，所以断网、远程指令或外部访问都覆盖不了它。公司同时提到摄像头会拍到人脸、运单和客户商品，云端也得管。<strong>保留：</strong> 这是厂商自述，没有随附独立安全审计。🔗 https://humanoidbeat.com/news/agility-digit-unique-cryptographic-identity-every-robot-fleet-security.html</p>
+<hr>
+<h2>📡 数据源A：中文频道</h2>
+<h3>1. 🧾 「已通过初步独立编译检查」——频道这句话说早了</h3>
+<p>今天中文频道里传得最凶的就是黎曼猜想，转述大体准确（167 年、Claude、广义黎曼猜想），但有一处必须校正：频道写「代码<strong>已通过初步独立编译检查</strong>」。按《Scientific American》的说法，Lean 只负责逐条校验论证，专家仍要确认「被形式化的确实是黎曼猜想」，而陶哲轩的表述是「这份纯 Lean 的巨型证明<strong>正在</strong> Lean Zulip 上被验证、并要从中提取证明策略」。<strong>编译通过 ≠ 证明成立</strong>，这两件事之间还隔着形式化对不对、以及人能不能读懂。频道末尾那句「菲尔兹奖很快要停办」是玩笑，不必当真。🔗 https://t.me/aigc1024/27279</p>
+<h3>2. 🍎 换 ChatGPT 账号但 Apple ID 没换，钱扣了 Plus 加到了旧号</h3>
+<p>一个实操坑，值得记：用 App Store 订阅 ChatGPT 这类服务时，<strong>订阅是绑在「下单时登录的那个 ChatGPT 账号」上，不是绑在 Apple ID 上</strong>。所以只换 ChatGPT 账号、Apple ID 不动，再订一次，钱照样扣，Plus 身份却加到了旧账号——新号仍是白板。频道的说法是「之前买的号丢了、新注册的没到账，亏大了」。正确做法是先确认 App Store 里当前登录的 Apple ID，再确认要充值的 ChatGPT 账号，两者对齐后再付款；已经充错的，只能走 Apple 的订阅管理与退款流程，别重复下单。🔗 https://t.me/yunying23/12848</p>
+<hr>
+<h2>📊 今日小结</h2>
+<table>
+<thead>
+<tr>
+<th>领域</th>
+<th>热点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🧮 <strong>最热</strong></td>
+<td>Anthropic 数学家 Alpöge 称与 Claude 证出黎曼猜想并提交 Lean 代码；陶哲轩同日按「消化度」列出三项：三维无外力欧拉、三维无外力纳维-斯托克斯有限时间爆破（均有 Lean 形式化），以及仅 Lean 的 GRH 证明（验证仍在进行）</td>
+</tr>
+<tr>
+<td>💰 <strong>Anthropic</strong></td>
+<td>绿鞋 1.47 亿股全额行使，总发行 11.27 亿股 × 83 美元 = 935 亿，公司实收约 916 亿；另向 AMD/博通/谷歌/美光/微软/英伟达/台积电私募 3.13 亿股、约 260 亿；首日开 111.5、收 97.17（+17%），次日跌 8.5%</td>
+</tr>
+<tr>
+<td>🚨 <strong>英伟达</strong></td>
+<td>SEC 查潜在会计问题（WSJ/路透），加州总检察长就中国获取芯片发传票；国会文件：BIS 至 5 月批准 87.9 万颗对华 AI 芯片、申请量 340 万；周五收跌 14.01% 至 125.53 美元，市值被 Alphabet 反超</td>
+</tr>
+<tr>
+<td>📉 <strong>大盘</strong></td>
+<td>纳指回撤逾 13%、抹平 2026 年涨幅，标普与道指进回调；护盘头寸已平，AI 叙事从 10 月 6 日开始松动</td>
+</tr>
+<tr>
+<td>🧠 <strong>开源模型</strong></td>
+<td>Inkling 2 Mini：循环 Transformer，264 亿总参/34 亿激活，NVFP4 原生约 20GB，SWE-bench Verified 79.2%，飞行模式的 MacBook 上离线写出飞行模拟器</td>
+</tr>
+<tr>
+<td>🛡️ <strong>安全</strong></td>
+<td>OpenAI 反蒸馏：推理轨迹套取成功率 54% → 0.2%，每周处置数千至数万账号，点名 DeepSeek 与 Moonshot</td>
+</tr>
+<tr>
+<td>🦾 <strong>机器人</strong></td>
+<td>马斯克承认所有机器人演示都是预编程、承诺一两个月内做不加脚本的 Optimus 演示；ROBOTERA 进中国邮政广东 11 个枢纽、1500 件/小时；Movens-5M 公开 500 万条 G1 可执行动作</td>
+</tr>
+</tbody>
+</table>
+
+
+<div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(212,167,71,.06)">
+  <a href="https://bossman-lab.github.io/sheherazades-lantern/blog/" style="color:#424245;text-decoration:none;font-size:13px;">← Back to Blog</a>
+</div>
+</div>
+
+
+<footer>
+  
+  <p>提灯人 · 舍赫拉查德之灯</p>
+  
+  <p>一千零一夜的古老传说，为现代灵魂重新点燃。</p>
+  
+</footer>
+
+</body>
+</html>
